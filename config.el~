@@ -1,0 +1,21 @@
+;; created 20200704 to add templates
+;; org-roam configs 
+(after! org-roam
+	(setq org-roam-buffer "backlinks")
+	(setq org-roam-buffer-position "='right=")
+	(setq org-roam-buffer-width "20")
+	
+      (setq org-roam-ref-capture-templates
+            '(("d" "default" plain (function org-roam--capture-get-point)
+	       "%?"
+	       :file-name "%<%Y%m%d%H%M%S>-${slug}"
+	       :head "#+title: ${title}\n"
+	       :unnarrowed t)
+	      ("r" "ref" plain (function org-roam-capture--get-point)
+               "%?"
+               :file-name "websites/${slug}"
+               :head "#+TITLE: ${title}
+                      #+ROAM_KEY: ${ref}
+                      - source :: ${ref}"
+               :unnarrowed t))))
+

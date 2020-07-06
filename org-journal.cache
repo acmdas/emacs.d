@@ -1,0 +1,2 @@
+#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("/home/das/data/davids/journal/2020-07-06.org" (7 6 2020)))
+#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("/home/das/data/davids/journal/2020-07-06.org" (24323 42226 178994 60000)))

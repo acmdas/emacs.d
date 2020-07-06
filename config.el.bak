@@ -1,0 +1,19 @@
+;; created 20200704 to add templates
+;; org-roam configs 
+(after! org-roam
+(setq org-roam-capture-templates
+      '(("d" "default" plain
+         (function org-roam-capture--get-point)
+         "%?"
+         :file-name "%<%Y%m%d%H%M%S>-${slug}"
+         :head "#+TITLE: ${title}\n#+CREATED: %U\n#+LAST_MODIFIED: %U\n\n"
+         :unnarrowed t)
+        ("D" "default copy" plain
+         (function org-roam-capture--get-point)
+         "%?"
+         :file-name "%<%Y%m%d%H%M%S>-${slug}"
+         :head "#+TITLE: ${title}\n
+         :unnarrowed t)))
+
+)
+
