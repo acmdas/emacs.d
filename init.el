@@ -1,5 +1,6 @@
 ;; 20200701
 ;; 20200704 - uncommented org-roam to see how it works alongside my normal config.
+;; 20200709 - moved to the new Debian installation - issues with font and window size.
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'exec-path "/usr/bin/sqlite3")
@@ -15,15 +16,16 @@
 (setq confirm-nonexistent-file-or-buffer nil)
 
 ;; configure initial window size - added 20200704 1145
-(setq initial-frame-alist
+;; commented out 0709 to redo visual customization
+ (setq initial-frame-alist
       '(
 	(width . 102) ; character
-	(height . 100) ; lines
+	(height . 55) ; lines
 	))
 (setq default-frame-alist
       '(
 	(width . 102) ; character
-	(height . 100) ; lines
+	(height . 55) ; lines
 	))
 
 ;; configuring package
@@ -116,9 +118,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages (quote (org-journal emacsql-sqlite org-roam markdown-mode))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white smoke" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 128 :width normal :foundry "DAMA" :family "Ubuntu Mono")))))
+ '(default ((t (:inherit nil :stipple nil :background "black" :foreground "gainsboro" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 113 :width normal :foundry "PfEd" :family "DejaVu Sans Mono")))))
