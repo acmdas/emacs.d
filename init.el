@@ -1,10 +1,11 @@
 ;; 20200701
 ;; 20200704 - uncommented org-roam to see how it works alongside my normal config.
-;; 20200709 - moved to the new Debian installation - issues with font and window size.
+;; 20200709 - moved to the new Debian installation - issues with font and window size resolved.
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'exec-path "/usr/bin/sqlite3")
 (setq org-roam-directory "~/data/org-roam")
+(setq org-directory "~/data/org")
 
 ;; configure visual interface
 (menu-bar-mode -1)
@@ -14,9 +15,9 @@
       inhibit-startup-echo-area-message t)
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq confirm-nonexistent-file-or-buffer nil)
+(setq visible-bell 1)
 
 ;; configure initial window size - added 20200704 1145
-;; commented out 0709 to redo visual customization
  (setq initial-frame-alist
       '(
 	(width . 102) ; character
@@ -28,6 +29,26 @@
 	(height . 55) ; lines
 	))
 
+;; configuring recentf 20200717 - from masteringemacs.org
+(require 'recentf)
+
+;; get rid of `find-file-read-only' and replace it with something
+;; more useful.
+(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
+
+;; enable recent files mode.
+(recentf-mode t)
+
+; 50 files ought to be enough.
+(setq recentf-max-saved-items 50)
+
+(defun ido-recentf-open ()
+  "Use `ido-completing-read' to \\[find-file] a recent file"
+  (interactive)
+  (if (find-file (ido-completing-read "Find recent file: " recentf-list))
+      (message "Opening file...")
+    (message "Aborting")))
+
 ;; configuring package
 (require 'package)
 (add-to-list 'package-archives
@@ -38,15 +59,46 @@
 (add-to-list 'package-archives
 	     '("org" . "https://orgmode.org/elpa/") t)
 (require 'org)
+(setq org-startup-truncated nil)
+(setq org-todo-keywords
+      '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-switchb)
 
+;; Configuring org-capture
+(setq org-default-notes-file (concat org-directory "/data/org/inbox.org"))
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/data/org/inbox.org" "Tasks")
+	 "* TODO [#A]  %?\nSCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))\n")
+       ("j" "Journal" entry (file+datetree "~/data/org/inbox.org")
+	"* %?\nEntered on %U\n %i\n %a")))
+
+;; configuring org-agenda
+(global-set-key (kbd "C-c a") 'org-agenda)
+(setq org-agenda-window-setup (quote current-window))
+
+;; file to save todo items
+(setq org-agenda-files (file-expand-wildcards "~/data/org/*.org"))
+
+;; set priority range from A to C with default A
+(setq org-highest-priority ?A)
+(setq org-lowest-priority ?C)
+(setq org-default-priority ?A)
+
+;; set colors for priorities
+(setq org-priority-faces '((?A . (:foreground "#F0DFAF" :weight bold))
+			   (?B . (:foreground "LightSteelBlue"))
+			   (?C . (:foreground "OliveDrab"))))
+
+;; Configuring org-protocol
+(require 'org-protocol)
+
 ;; Configuring org-journal
 (customize-set-variable 'org-journal-date-prefix "#+TITLE: ")
 (customize-set-variable 'org-journal-file-format "%Y-%m-%d.org")
-(customize-set-variable 'org-journal-dir "~/data/davids/journal/")
+(customize-set-variable 'org-journal-dir "~/data/org/")
 (customize-set-variable 'org-journal-date-format "%A, %d %B %Y")
 (global-set-key "\C-cnj" 'org-journal-new-entry)
 
@@ -55,6 +107,7 @@
 (global-set-key (kbd "C-c n r") #'org-roam-buffer-toggle-display)
 (global-set-key (kbd "C-c n i") #'org-roam-insert)
 (global-set-key (kbd "C-c n /") #'org-roam-find-file)
+
 ;; org-roam templates
 (setq org-roam-capture-templates
       '(("d" "default" plain
@@ -63,7 +116,8 @@
          :file-name "%<%Y%m%d%H%M%S>-${slug}"
          :head "#+TITLE: ${title}\n#+CREATED: %U\n#+LAST_MODIFIED: %U\n\n"
          :unnarrowed t)
-        ("D" "default copy" plain
+        ("b" "book
+" plain
          (function org-roam-capture--get-point)
          "%?"
          :file-name "%<%Y%m%d%H%M%S>-${slug}"
@@ -117,7 +171,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (org-journal emacsql-sqlite org-roam markdown-mode))))
+ '(package-selected-packages
+   (quote
+    (slime org-protocol-jekyll org-journal emacsql-sqlite org-roam markdown-mode))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
