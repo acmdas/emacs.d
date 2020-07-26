@@ -4,7 +4,7 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored"
  (filename . "~/data/org/inbox.org")
- (front-context-string . "**** Agenda is p")
- (rear-context-string . "org\" \"Tasks\")]]\n")
- (position . 536))
+ (front-context-string . "** TODO [#A]  Au")
+ (rear-context-string . "2020-07-22 Wed>\n")
+ (position . 1027))
 )
