@@ -2,6 +2,7 @@
 ;; 20200704 - uncommented org-roam to see how it works alongside my normal config.
 ;; 20200709 - moved to the new Debian installation - issues with font and window size resolved.
 ;; 20200803 - installed elfeed and began configuration - installed use-package - gave up and deleted.
+;; 20200805 - recentf doesn't seem to work. Going to comment it out for now.
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'exec-path "/usr/bin/sqlite3")
@@ -31,24 +32,24 @@
 	))
 
 ;; configuring recentf 20200717 - from masteringemacs.org
-(require 'recentf)
+;(require 'recentf)
 
 ;; get rid of `find-file-read-only' and replace it with something
 ;; more useful.
-(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
+;(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
 
 ;; enable recent files mode.
-(recentf-mode t)
+;(recentf-mode t)
 
 ;; 50 files ought to be enough.
-(setq recentf-max-saved-items 50)
+;(setq recentf-max-saved-items 50)
 
-(defun ido-recentf-open ()
-  "Use `ido-completing-read' to \\[find-file] a recent file"
-  (interactive)
-  (if (find-file (ido-completing-read "Find recent file: " recentf-list))
-      (message "Opening file...")
-    (message "Aborting")))
+;(defun ido-recentf-open ()
+;  "Use `ido-completing-read' to \\[find-file] a recent file"
+;  (interactive)
+;  (if (find-file (ido-completing-read "Find recent file: " recentf-list))
+;      (message "Opening file...")
+;    (message "Aborting")))
 
 ;; configuring package
 (require 'package)
@@ -80,8 +81,8 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (setq org-agenda-window-setup (quote current-window))
 
-;; file to save todo items
-(setq org-agenda-files (file-expand-wildcards "~/data/org/*.org"))
+;; file to save todo items - 20200805 changed from .org to inbox.org
+(setq org-agenda-files (file-expand-wildcards "~/data/org/inbox.org"))
 
 ;; set priority range from A to C with default A
 (setq org-highest-priority ?A)
