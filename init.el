@@ -1,11 +1,7 @@
 ;; 20200701
 ;; 20200704 - uncommented org-roam to see how it works alongside my normal config.
 ;; 20200709 - moved to the new Debian installation - issues with font and window size resolved.
-;; 20200803 - installed elfeed and began configuration - installed use-package
-
-;; (eval-when-compile
-;;   (add-to-list 'load-path "~/.emacs.d/elpa/use-package-2.4")
-;;   (require 'use-package))
+;; 20200803 - installed elfeed and began configuration - installed use-package - gave up and deleted.
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'exec-path "/usr/bin/sqlite3")
@@ -169,23 +165,6 @@
        ("_(" . ,(vector (decode-char 'ucs #x208D)))
        ("_)" . ,(vector (decode-char 'ucs #x208E)))))
 
-;; Configuring elfeed added 20200803
-
-;(use-package elfeed
-;     :defer t
-;     :bind ("C-x w", elfeed)
-;     :init (setf url-queue-timeout 30)
-;     :config
-;     (require 'feed-setup)
-;     (push "-k" elfeed-curl-extra-arguments)
-;     (setf bookmark-default-file (locate-user-emacs-file "local/bookmarks")))
-
-;(setq elfeed-db-directory "~/data/elfeeddb")
-;(setq elfeed-feeds
-;      '(("https://irreal.org/blog" emacs second)
-;	("https://www.davidwarrenonline.com/" commentary second)))
-
-
 ;; more stuff
 
 (custom-set-variables
@@ -195,7 +174,7 @@
  ;; If there is more than one, they won't work right.
  '(org-agenda-files
    (quote
-    ("~/data/org/2020-02-20.org" "~/data/org/2020-02-21.org" "~/data/org/2020-02-22.org" "~/data/org/2020-02-23.org" "~/data/org/2020-02-24.org" "~/data/org/2020-02-25.org" "~/data/org/2020-02-26.org" "~/data/org/2020-02-27.org" "~/data/org/2020-02-28.org" "~/data/org/2020-02-29.org" "~/data/org/2020-03-01.org" "~/data/org/2020-03-02.org" "~/data/org/2020-03-04.org" "~/data/org/2020-03-05.org" "~/data/org/2020-03-06.org" "~/data/org/2020-03-07.org" "~/data/org/2020-03-08.org" "~/data/org/2020-03-09.org" "~/data/org/2020-03-11.org" "~/data/org/2020-03-12.org" "~/data/org/2020-03-15.org" "~/data/org/2020-03-16.org" "~/data/org/2020-03-20.org" "~/data/org/2020-03-21.org" "~/data/org/2020-03-22.org" "~/data/org/2020-03-23.org" "~/data/org/2020-03-27.org" "~/data/org/2020-03-28.org" "~/data/org/2020-03-30.org" "~/data/org/2020-03-31.org" "~/data/org/2020-04-02.org" "~/data/org/2020-04-03.org" "~/data/org/2020-04-05.org" "~/data/org/2020-04-09.org" "~/data/org/2020-04-11.org" "~/data/org/2020-04-18.org" "~/data/org/2020-04-26.org" "~/data/org/2020-04-27.org" "~/data/org/2020-04-28.org" "~/data/org/2020-05-03.org" "~/data/org/2020-05-07.org" "~/data/org/2020-05-08.org" "~/data/org/2020-05-09.org" "~/data/org/2020-05-15.org" "~/data/org/2020-05-16.org" "~/data/org/2020-05-18.org" "~/data/org/2020-05-19.org" "~/data/org/2020-05-20.org" "~/data/org/2020-06-28.org" "~/data/org/2020-06-29.org" "~/data/org/2020-06-30.org" "~/data/org/2020-07-01.org" "~/data/org/2020-07-02.org" "~/data/org/2020-07-03.org" "~/data/org/2020-07-04.org" "~/data/org/2020-07-05.org" "~/data/org/2020-07-06.org" "~/data/org/2020-07-07.org" "~/data/org/2020-07-08.org" "~/data/org/2020-07-09.org" "~/data/org/2020-07-10.org" "~/data/org/2020-07-11.org" "~/data/org/2020-07-12.org" "~/data/org/2020-07-13.org" "~/data/org/2020-07-14.org" "~/data/org/2020-07-15.org" "~/data/org/2020-07-16.org" "~/data/org/2020-07-17.org" "~/data/org/2020-07-18.org" "~/data/org/2020-07-19.org" "~/data/org/2020-07-20.org" "~/data/org/2020-07-21.org" "~/data/org/2020-07-22.org" "~/data/org/2020-07-23.org" "~/data/org/2020-07-24.org" "~/data/org/2020-07-25.org" "~/data/org/emacs_tutorial.org" "~/data/org/emacsnotes.org" "~/data/org/exegesis.org" "~/data/org/inbox.org" "~/data/org/org-mode.org" "~/data/org/todo.org" "~/data/org/tutorial.org")))
+    ("~/data/org/2020-02-20.org" "~/data/org/2020-02-21.org" "~/data/org/2020-02-22.org" "~/data/org/2020-02-23.org" "~/data/org/2020-02-24.org" "~/data/org/2020-02-25.org" "~/data/org/2020-02-26.org" "~/data/org/2020-02-27.org" "~/data/org/2020-02-28.org" "~/data/org/2020-02-29.org" "~/data/org/2020-03-01.org" "~/data/org/2020-03-02.org" "~/data/org/2020-03-04.org" "~/data/org/2020-03-05.org" "~/data/org/2020-03-06.org" "~/data/org/2020-03-07.org" "~/data/org/2020-03-08.org" "~/data/org/2020-03-09.org" "~/data/org/2020-03-11.org" "~/data/org/2020-03-12.org" "~/data/org/2020-03-15.org" "~/data/org/2020-03-16.org" "~/data/org/2020-03-20.org" "~/data/org/2020-03-21.org" "~/data/org/2020-03-22.org" "~/data/org/2020-03-23.org" "~/data/org/2020-03-27.org" "~/data/org/2020-03-28.org" "~/data/org/2020-03-30.org" "~/data/org/2020-03-31.org" "~/data/org/2020-04-02.org" "~/data/org/2020-04-03.org" "~/data/org/2020-04-05.org" "~/data/org/2020-04-09.org" "~/data/org/2020-04-11.org" "~/data/org/2020-04-18.org" "~/data/org/2020-04-26.org" "~/data/org/2020-04-27.org" "~/data/org/2020-04-28.org" "~/data/org/2020-05-03.org" "~/data/org/2020-05-07.org" "~/data/org/2020-05-08.org" "~/data/org/2020-05-09.org" "~/data/org/2020-05-15.org" "~/data/org/2020-05-16.org" "~/data/org/2020-05-18.org" "~/data/org/2020-05-19.org" "~/data/org/2020-05-20.org" "~/data/org/2020-06-28.org" "~/data/org/2020-06-29.org" "~/data/org/2020-06-30.org" "~/data/org/2020-07-01.org" "~/data/org/2020-07-02.org" "~/data/org/2020-07-03.org" "~/data/org/2020-07-04.org" "~/data/org/2020-07-05.org" "~/data/org/2020-07-06.org" "~/data/org/2020-07-07.org" "~/data/org/2020-07-08.org" "~/data/org/2020-07-09.org" "~/data/org/2020-07-10.org" "~/data/org/2020-07-11.org" "~/data/org/2020-07-12.org" "~/data/org/2020-07-13.org" "~/data/org/2020-07-14.org" "~/data/org/2020-07-15.org" "~/data/org/2020-07-16.org" "~/data/org/2020-07-17.org" "~/data/org/2020-07-18.org" "~/data/org/2020-07-19.org" "~/data/org/2020-07-20.org" "~/data/org/2020-07-21.org" "~/data/org/2020-07-22.org" "~/data/org/2020-07-23.org" "~/data/org/2020-07-24.org" "~/data/org/2020-07-25.org" "~/data/org/emacs_tutorial.org" "~/data/org/emacsnotes.org" "~/data/org/exegesis.org" "~/data/org/inbox.org" "~/data/org/org-mode.org" "~/data/org/tutorial.org")))
  '(package-selected-packages
    (quote
     (use-package elfeed slime org-protocol-jekyll org-journal emacsql-sqlite org-roam markdown-mode))))
