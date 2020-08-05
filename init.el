@@ -2,12 +2,10 @@
 ;; 20200704 - uncommented org-roam to see how it works alongside my normal config.
 ;; 20200709 - moved to the new Debian installation - issues with font and window size resolved.
 ;; 20200803 - installed elfeed and began configuration - installed use-package - gave up and deleted.
-;; 20200805 - recentf doesn't seem to work. Going to comment it out for now.
+;; 20200805 - recentf doesn't seem to work. Removed. org-agenda-files defined as inbox.org only
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'exec-path "/usr/bin/sqlite3")
-(setq org-roam-directory "~/data/org-roam")
-(setq org-directory "~/data/org")
 
 ;; configure visual interface
 (menu-bar-mode -1)
@@ -31,26 +29,6 @@
 	(height . 55) ; lines
 	))
 
-;; configuring recentf 20200717 - from masteringemacs.org
-;(require 'recentf)
-
-;; get rid of `find-file-read-only' and replace it with something
-;; more useful.
-;(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
-
-;; enable recent files mode.
-;(recentf-mode t)
-
-;; 50 files ought to be enough.
-;(setq recentf-max-saved-items 50)
-
-;(defun ido-recentf-open ()
-;  "Use `ido-completing-read' to \\[find-file] a recent file"
-;  (interactive)
-;  (if (find-file (ido-completing-read "Find recent file: " recentf-list))
-;      (message "Opening file...")
-;    (message "Aborting")))
-
 ;; configuring package
 (require 'package)
 (add-to-list 'package-archives
@@ -61,6 +39,7 @@
 (add-to-list 'package-archives
 	     '("org" . "https://orgmode.org/elpa/") t)
 (require 'org)
+(setq org-directory "~/data/org")
 (setq org-startup-truncated nil)
 (setq org-todo-keywords
       '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
@@ -80,6 +59,7 @@
 ;; configuring org-agenda
 (global-set-key (kbd "C-c a") 'org-agenda)
 (setq org-agenda-window-setup (quote current-window))
+(setq org-agenda-files "~/data/org/inbox.org")
 
 ;; file to save todo items - 20200805 changed from .org to inbox.org
 (setq org-agenda-files (file-expand-wildcards "~/data/org/inbox.org"))
@@ -105,6 +85,7 @@
 (global-set-key "\C-cnj" 'org-journal-new-entry)
 
 ;; configuring org-roam
+(setq org-roam-directory "~/data/org-roam")
 (add-hook 'after-init-hook 'org-roam-mode)
 (global-set-key (kbd "C-c n r") #'org-roam-buffer-toggle-display)
 (global-set-key (kbd "C-c n i") #'org-roam-insert)
@@ -173,9 +154,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files
-   (quote
-    ("~/data/org/2020-02-20.org" "~/data/org/2020-02-21.org" "~/data/org/2020-02-22.org" "~/data/org/2020-02-23.org" "~/data/org/2020-02-24.org" "~/data/org/2020-02-25.org" "~/data/org/2020-02-26.org" "~/data/org/2020-02-27.org" "~/data/org/2020-02-28.org" "~/data/org/2020-02-29.org" "~/data/org/2020-03-01.org" "~/data/org/2020-03-02.org" "~/data/org/2020-03-04.org" "~/data/org/2020-03-05.org" "~/data/org/2020-03-06.org" "~/data/org/2020-03-07.org" "~/data/org/2020-03-08.org" "~/data/org/2020-03-09.org" "~/data/org/2020-03-11.org" "~/data/org/2020-03-12.org" "~/data/org/2020-03-15.org" "~/data/org/2020-03-16.org" "~/data/org/2020-03-20.org" "~/data/org/2020-03-21.org" "~/data/org/2020-03-22.org" "~/data/org/2020-03-23.org" "~/data/org/2020-03-27.org" "~/data/org/2020-03-28.org" "~/data/org/2020-03-30.org" "~/data/org/2020-03-31.org" "~/data/org/2020-04-02.org" "~/data/org/2020-04-03.org" "~/data/org/2020-04-05.org" "~/data/org/2020-04-09.org" "~/data/org/2020-04-11.org" "~/data/org/2020-04-18.org" "~/data/org/2020-04-26.org" "~/data/org/2020-04-27.org" "~/data/org/2020-04-28.org" "~/data/org/2020-05-03.org" "~/data/org/2020-05-07.org" "~/data/org/2020-05-08.org" "~/data/org/2020-05-09.org" "~/data/org/2020-05-15.org" "~/data/org/2020-05-16.org" "~/data/org/2020-05-18.org" "~/data/org/2020-05-19.org" "~/data/org/2020-05-20.org" "~/data/org/2020-06-28.org" "~/data/org/2020-06-29.org" "~/data/org/2020-06-30.org" "~/data/org/2020-07-01.org" "~/data/org/2020-07-02.org" "~/data/org/2020-07-03.org" "~/data/org/2020-07-04.org" "~/data/org/2020-07-05.org" "~/data/org/2020-07-06.org" "~/data/org/2020-07-07.org" "~/data/org/2020-07-08.org" "~/data/org/2020-07-09.org" "~/data/org/2020-07-10.org" "~/data/org/2020-07-11.org" "~/data/org/2020-07-12.org" "~/data/org/2020-07-13.org" "~/data/org/2020-07-14.org" "~/data/org/2020-07-15.org" "~/data/org/2020-07-16.org" "~/data/org/2020-07-17.org" "~/data/org/2020-07-18.org" "~/data/org/2020-07-19.org" "~/data/org/2020-07-20.org" "~/data/org/2020-07-21.org" "~/data/org/2020-07-22.org" "~/data/org/2020-07-23.org" "~/data/org/2020-07-24.org" "~/data/org/2020-07-25.org" "~/data/org/emacs_tutorial.org" "~/data/org/emacsnotes.org" "~/data/org/exegesis.org" "~/data/org/inbox.org" "~/data/org/org-mode.org" "~/data/org/tutorial.org")))
  '(package-selected-packages
    (quote
     (slime org-protocol-jekyll org-journal emacsql-sqlite org-roam markdown-mode))))
