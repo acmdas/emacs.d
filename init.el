@@ -107,6 +107,10 @@
          :head "#+TITLE: ${title}\nn#+CREATED: %U\n#+LAST_MODIFIED: %U\n\n"
          :unnarrowed t)))
 
+;; configuring sdcv
+(require 'sdcv-mode)
+(global-set-key (kbd "C-c d") 'sdcv-search)
+
 ;; configure markdown
 (require 'typopunct)
 (typopunct-change-language 'english t)
