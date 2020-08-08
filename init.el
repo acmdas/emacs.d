@@ -2,7 +2,7 @@
 ;; 20200704 - uncommented org-roam to see how it works alongside my normal config.
 ;; 20200709 - moved to the new Debian installation - issues with font and window size resolved.
 ;; 20200803 - installed elfeed and began configuration - installed use-package - gave up and deleted.
-;; 20200805 - recentf doesn't seem to work. Removed. org-agenda-files defined as inbox.org only
+;; 20200805 - recentf removed. org-agenda-files defined as inbox.org only. sdcv added
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'exec-path "/usr/bin/sqlite3")
@@ -80,7 +80,7 @@
 ;; Configuring org-journal
 (customize-set-variable 'org-journal-date-prefix "#+TITLE: ")
 (customize-set-variable 'org-journal-file-format "%Y-%m-%d.org")
-(customize-set-variable 'org-journal-dir "~/data/org/")
+(customize-set-variable 'org-journal-dir "~/data/org/journal")
 (customize-set-variable 'org-journal-date-format "%A, %d %B %Y")
 (global-set-key "\C-cnj" 'org-journal-new-entry)
 
@@ -151,6 +151,11 @@
        ("_(" . ,(vector (decode-char 'ucs #x208D)))
        ("_)" . ,(vector (decode-char 'ucs #x208E)))))
 
+;; configuring recent
+(require 'recentf)
+(recentf-mode 1)
+(global-set-key "\C-xf" 'recentf-open-files)
+
 ;; more stuff
 
 (custom-set-variables
@@ -160,7 +165,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (slime org-protocol-jekyll org-journal emacsql-sqlite org-roam markdown-mode))))
+    (recently slime org-protocol-jekyll org-journal emacsql-sqlite org-roam markdown-mode))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
