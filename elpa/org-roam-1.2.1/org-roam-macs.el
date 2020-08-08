@@ -5,7 +5,7 @@
 ;; Author: Jethro Kuan <jethrokuan95@gmail.com>
 ;; URL: https://github.com/org-roam/org-roam
 ;; Keywords: org-mode, roam, convenience
-;; Version: 1.2.0
+;; Version: 1.2.1
 ;; Package-Requires: ((emacs "26.1") (dash "2.13") (f "0.17.2") (s "1.12.0") (org "9.3") (emacsql "3.0.0") (emacsql-sqlite3 "1.0.0"))
 
 ;; This file is NOT part of GNU Emacs.
@@ -33,6 +33,7 @@
 ;;
 ;;; Code:
 ;;;; Library Requires
+(require 'dash)
 
 (defvar org-roam-verbose)
 
@@ -44,7 +45,9 @@ If FILE, set `org-roam-temp-file-name' to file and insert its contents."
   (let ((current-org-roam-directory (make-symbol "current-org-roam-directory")))
     `(let ((,current-org-roam-directory org-roam-directory))
        (with-temp-buffer
-         (let ((org-roam-directory ,current-org-roam-directory))
+         (let ((org-roam-directory ,current-org-roam-directory)
+               (org-mode-hook nil))
+           (org-mode)
            (when ,file
              (insert-file-contents ,file)
              (setq-local org-roam-file-name ,file))
@@ -67,6 +70,12 @@ to look.
   "Pass FORMAT-STRING and ARGS to `message' when `org-roam-verbose' is t."
   (when org-roam-verbose
     (apply #'message `(,(concat "(org-roam) " format-string) ,@args))))
+
+(defun org-roam-string-quote (str)
+  "Quote STR."
+  (->> str
+       (s-replace "\\" "\\\\")
+       (s-replace "\"" "\\\"")))
 
 (provide 'org-roam-macs)
 

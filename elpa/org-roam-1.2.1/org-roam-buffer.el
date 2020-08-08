@@ -5,7 +5,7 @@
 ;; Author: Jethro Kuan <jethrokuan95@gmail.com>
 ;; URL: https://github.com/org-roam/org-roam
 ;; Keywords: org-mode, roam, convenience
-;; Version: 1.2.0
+;; Version: 1.2.1
 ;; Package-Requires: ((emacs "26.1") (dash "2.13") (f "0.17.2") (s "1.12.0") (org "9.3") (emacsql "3.0.0") (emacsql-sqlite3 "1.0.0"))
 
 ;; This file is NOT part of GNU Emacs.
@@ -84,7 +84,7 @@ Has an effect if and only if `org-roam-buffer-position' is `top' or `bottom'."
 
 (defcustom org-roam-buffer-prepare-hook '(org-roam-buffer--insert-title
                                           org-roam-buffer--insert-backlinks
-                                          org-roam-buffer--insert-citelinks)
+                                          org-roam-buffer--insert-ref-links)
   "Hook run in the `org-roam-buffer' before it is displayed."
   :type 'hook
   :group 'org-roam)
@@ -123,10 +123,9 @@ For example: (setq org-roam-buffer-window-parameters '((no-other-window . t)))"
                                    ,wrong-type))))))
     (concat string (when (> l 1) "s"))))
 
-(defun org-roam-buffer--insert-citelinks ()
-  "Insert citation backlinks for the current buffer."
-  (when-let ((org-ref-p (require 'org-ref nil t)) ;; Ensure that org-ref is present
-             (ref (cdr (with-temp-buffer
+(defun org-roam-buffer--insert-ref-links ()
+  "Insert ref backlinks for the current buffer."
+  (when-let ((ref (cdr (with-temp-buffer
                         (insert-buffer-substring org-roam-buffer--current)
                         (org-roam--extract-ref)))))
     (if-let* ((key-backlinks (org-roam--get-backlinks ref))
@@ -134,7 +133,7 @@ For example: (setq org-roam-buffer-window-parameters '((no-other-window . t)))"
         (progn
           (insert (let ((l (length key-backlinks)))
                     (format "\n\n* %d %s\n"
-                            l (org-roam-buffer--pluralize "Cite backlink" l))))
+                            l (org-roam-buffer--pluralize "Ref Backlink" l))))
           (dolist (group grouped-backlinks)
             (let ((file-from (car group))
                   (bls (cdr group)))
@@ -143,14 +142,12 @@ For example: (setq org-roam-buffer-window-parameters '((no-other-window . t)))"
                               (org-roam--get-title-or-slug file-from)))
               (dolist (backlink bls)
                 (pcase-let ((`(,file-from _ ,props) backlink))
-                  (insert (propertize
-                           (s-trim (s-replace "\n" " "
-                                              (plist-get props :content)))
+                  (insert (propertize (plist-get props :content)
                            'help-echo "mouse-1: visit backlinked note"
                            'file-from file-from
                            'file-from-point (plist-get props :point)))
                   (insert "\n\n"))))))
-      (insert "\n\n* No cite backlinks!"))))
+      (insert "\n\n* No ref backlinks!"))))
 
 (defun org-roam-buffer--insert-backlinks ()
   "Insert the org-roam-buffer backlinks string for the current buffer."

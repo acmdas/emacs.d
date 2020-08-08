@@ -73,6 +73,11 @@ included as a candidate.
 
 \(fn ARG &optional FILTER)" t nil)
 
+(autoload 'org-roam-random-note "org-roam" "\
+Find a random Org-roam file.
+
+\(fn)" t nil)
+
 (autoload 'org-roam-insert "org-roam" "\
 Find an Org-roam file, and insert a relative org link to it at point.
 Return selected file if it exists.

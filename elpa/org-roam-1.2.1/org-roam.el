@@ -5,7 +5,7 @@
 ;; Author: Jethro Kuan <jethrokuan95@gmail.com>
 ;; URL: https://github.com/org-roam/org-roam
 ;; Keywords: org-mode, roam, convenience
-;; Version: 1.2.0
+;; Version: 1.2.1
 ;; Package-Requires: ((emacs "26.1") (dash "2.13") (f "0.17.2") (s "1.12.0") (org "9.3") (emacsql "3.0.0") (emacsql-sqlite3 "1.0.0"))
 
 ;; This file is NOT part of GNU Emacs.
@@ -556,6 +556,7 @@ This is the format that emacsql expects when inserting into the database.
 FILE-FROM is typically the buffer file path, but this may not exist, for example
 in temp buffers.  In cases where this occurs, we do know the file path, and pass
 it as FILE-PATH."
+  (require 'org-ref nil t)
   (let ((file-path (or file-path
                        (file-truename (buffer-file-name))))
         links)
@@ -563,51 +564,45 @@ it as FILE-PATH."
       (lambda (link)
         (let* ((type (org-element-property :type link))
                (path (org-element-property :path link))
-               (start (org-element-property :begin link))
-               (id-data (org-roam-id-find path))
-               (link-type (cond ((and (string= type "file")
-                                      (org-roam--org-file-p path))
-                                 "file")
-                                ((and (string= type "id")
-                                      id-data)
-                                 "id")
-                                ((and
-                                  (require 'org-ref nil t)
-                                  (-contains? org-ref-cite-types type))
-                                 "cite")
-                                (t nil))))
-          (when link-type
-            (goto-char start)
-            (let* ((element (org-element-at-point))
-                   (begin (or (org-element-property :content-begin element)
-                              (org-element-property :begin element)))
-                   (content (or (org-element-property :raw-value element)
-                                (buffer-substring-no-properties
-                                 begin
-                                 (or (org-element-property :content-end element)
-                                     (org-element-property :end element)))))
-                   (content (string-trim content))
-                   ;; Expand all relative links to absolute links
-                   (content (org-roam--expand-links content file-path)))
-              (let ((properties (list :outline (mapcar (lambda (path)
-                                                         (org-roam--expand-links path file-path))
-                                                       (org-roam--get-outline-path))
-                                      :content content
-                                      :point begin))
-                    (names (pcase link-type
-                             ("file"
-                              (list (file-truename (expand-file-name path (file-name-directory file-path)))))
-                             ("id"
-                              (list (car id-data)))
-                             ("cite"
-                              (org-ref-split-and-strip-string path)))))
-                (seq-do (lambda (name)
+               (start (org-element-property :begin link)))
+          (goto-char start)
+          (let* ((element (org-element-at-point))
+                 (begin (or (org-element-property :content-begin element)
+                            (org-element-property :begin element)))
+                 (content (or (org-element-property :raw-value element)
+                              (buffer-substring-no-properties
+                               begin
+                               (or (org-element-property :content-end element)
+                                   (org-element-property :end element)))))
+                 (content (string-trim content))
+                 ;; Expand all relative links to absolute links
+                 (content (org-roam--expand-links content file-path)))
+            (let ((properties (list :outline (mapcar (lambda (path)
+                                                       (org-roam--expand-links path file-path))
+                                                     (org-roam--get-outline-path))
+                                    :content content
+                                    :point begin))
+                  (names (pcase type
+                           ("file"
+                            (if (file-remote-p path)
+                                (list path)
+                              (list (file-truename (expand-file-name path (file-name-directory file-path))))))
+                           ("id"
+                            (list (car (org-roam-id-find path))))
+                           ((pred (lambda (typ)
+                                    (and (boundp 'org-ref-cite-types)
+                                         (-contains? org-ref-cite-types typ))))
+                            (setq type "cite")
+                            (org-ref-split-and-strip-string path))
+                           (_ (list (org-element-property :raw-link link))))))
+              (seq-do (lambda (name)
+                        (when name
                           (push (vector file-path
                                         name
-                                        link-type
+                                        type
                                         properties)
-                                links))
-                        names)))))))
+                                links)))
+                      names))))))
     links))
 
 (defun org-roam--extract-headlines (&optional file-path)
@@ -783,7 +778,7 @@ Examples:
 
 (defun org-roam--get-title-or-slug (path)
   "Convert `PATH' to the file title, if it exists.  Else, return the path."
-  (or (car (org-roam-db--get-titles path))
+  (or (org-roam-db--get-titles path)
       (org-roam--path-to-slug path)))
 
 (defun org-roam--title-to-slug (title)
@@ -826,7 +821,7 @@ Examples:
   "Return an alist for completion.
 The car is the displayed title for completion, and the cdr is the
 to the file."
-  (let* ((rows (org-roam-db-query [:select [titles:file titles:titles tags:tags files:meta] :from titles
+  (let* ((rows (org-roam-db-query [:select [files:file titles:title tags:tags files:meta] :from titles
                                    :left :join tags
                                    :on (= titles:file tags:file)
                                    :left :join files
@@ -837,15 +832,13 @@ to the file."
                  #'time-less-p
                  rows)
     (dolist (row rows completions)
-      (pcase-let ((`(,file-path ,titles ,tags) row))
-        (let ((titles (or titles (list (org-roam--path-to-slug file-path)))))
-          (dolist (title titles)
-            (let ((k (concat
+      (pcase-let ((`(,file-path ,title ,tags) row))
+        (let ((k (concat
                       (when tags
                         (format "(%s) " (s-join org-roam-tag-separator tags)))
                       title))
                   (v (list :path file-path :title title)))
-              (push (cons k v) completions))))))))
+              (push (cons k v) completions))))))
 
 (defun org-roam--get-index-path ()
   "Return the path to the index in `org-roam-directory'.
@@ -865,43 +858,57 @@ whose title is 'Index'."
       index)))
 
 ;;;; org-roam-find-ref
-(defun org-roam--get-ref-path-completions (&optional interactive filter)
+(defun org-roam--get-ref-path-completions (&optional arg filter)
   "Return an alist of refs to absolute path of Org-roam files.
-When `org-roam-include-type-in-ref-path-completions' and
-INTERACTIVE are non-nil, format the car of the
-completion-candidates as 'type:ref'.
+
+When called interactively (i.e. when ARG is 1), formats the car
+of the completion-candidates with extra information: title, tags,
+and type \(when `org-roam-include-type-in-ref-path-completions'
+is non-nil).
+
+When called with a `C-u' prefix (i.e. when ARG is 4), forces the
+default format without the formatting.
+
 FILTER can either be a string or a function:
+
 - If it is a string, it should be the type of refs to include as
-candidates (e.g. \"cite\" ,\"website\" ,etc.)
+  candidates \(e.g. \"cite\", \"website\", etc.)
+
 - If it is a function, it should be the name of a function that
-takes three arguments: the type, the ref, and the file of the
-current candidate.  It should return t if that candidate is to be
-included as a candidate."
-  (let ((rows (org-roam-db-query [:select [refs:type refs:ref refs:file ] :from refs
-                                  :left :join files
-                                  :on (= refs:file files:file)]))
-        (include-type (and interactive
-                           org-roam-include-type-in-ref-path-completions))
+  takes three arguments: the type, the ref, and the file of the
+  current candidate. It should return t if that candidate is to
+  be included as a candidate."
+  (let ((rows (org-roam-db-query
+               [:select [refs:type refs:ref refs:file titles:title tags:tags]
+                :from titles
+                :left :join tags
+                :on (= titles:file tags:file)
+                :left :join refs :on (= titles:file refs:file)
+                :where refs:file :is :not :null]))
         completions)
     (seq-sort-by (lambda (x)
                    (plist-get (nth 3 x) :mtime))
                  #'time-less-p
                  rows)
     (dolist (row rows completions)
-      (pcase-let ((`(,type ,ref ,file-path) row))
+      (pcase-let ((`(,type ,ref ,file-path ,title ,tags) row))
         (when (pcase filter
-                ('nil t)
-                ((pred stringp) (string= type filter))
-                ((pred functionp) (funcall filter type ref file-path))
-                (wrong-type (signal 'wrong-type-argument
-                                    `((stringp functionp)
-                                      ,wrong-type))))
-          (let ((k (concat
-                    (when include-type
-                      (format "(%s) " type))
-                    ref))
-                (v (list :path file-path :type type :ref ref)))
-            (push (cons k v) completions)))))))
+                  ('nil t)
+                  ((pred stringp) (string= type filter))
+                  ((pred functionp) (funcall filter type ref file-path))
+                  (wrong-type (signal 'wrong-type-argument
+                                      `((stringp functionp)
+                                        ,wrong-type))))
+            (let ((k (if (eq arg 1)
+                         (concat
+                          (when org-roam-include-type-in-ref-path-completions
+                            (format "{%s} " type))
+                          (when tags
+                            (format "(%s) " (s-join org-roam-tag-separator tags)))
+                          (format "%s (%s)" title ref))
+                       ref))
+                  (v (list :path file-path :type type :ref ref)))
+              (push (cons k v) completions)))))))
 
 (defun org-roam--find-file (file)
   "Open FILE using `org-roam-find-file-function' or `find-file'."
@@ -998,7 +1005,8 @@ Applies `org-roam-link-current' if PATH corresponds to the
 currently opened Org-roam file in the backlink buffer, or
 `org-roam-link-face' if PATH corresponds to any other Org-roam
 file."
-  (cond ((not (file-exists-p path))
+  (cond ((and (not (file-remote-p path)) ;; Prevent lockups opening Tramp links
+              (not (file-exists-p path)))
          'org-roam-link-invalid)
         ((and (org-roam--in-buffer-p)
               (org-roam--backlink-to-current-p))
@@ -1225,13 +1233,15 @@ replaced links are made relative to the current buffer."
                     new-file-or-dir)))
     (when (and (not (auto-save-file-name-p old-file))
                (not (auto-save-file-name-p new-file))
-               (org-roam--org-roam-file-p new-file))
+               (not (backup-file-name-p old-file))
+               (not (backup-file-name-p new-file))
+               (org-roam--org-roam-file-p old-file))
       (org-roam-db--ensure-built)
       (let* ((old-path (file-truename old-file))
              (new-path (file-truename new-file))
              (old-slug (org-roam--get-title-or-slug old-file))
              (old-desc (org-roam--format-link-title old-slug))
-             (new-slug (or (car (org-roam-db--get-titles old-path))
+             (new-slug (or (org-roam-db--get-titles old-path)
                            (org-roam--path-to-slug new-path)))
              (new-desc (org-roam--format-link-title new-slug))
              (new-buffer (or (find-buffer-visiting new-path)
@@ -1262,7 +1272,8 @@ replaced links are made relative to the current buffer."
           (with-current-buffer new-buffer
             (org-roam--fix-relative-links old-path)
             (save-buffer)))
-        (org-roam-db--update-file new-path)))))
+        (when (org-roam--org-roam-file-p new-file)
+          (org-roam-db--update-file new-path))))))
 
 ;;;###autoload
 (define-minor-mode org-roam-mode
@@ -1288,7 +1299,7 @@ Otherwise, behave as if called interactively."
   :global t
   (cond
    (org-roam-mode
-    (unless (or (and (fboundp 'emacsql-sqlite3-executable)
+    (unless (or (and (boundp 'emacsql-sqlite3-executable)
                      (file-executable-p emacsql-sqlite3-executable))
                 (executable-find "sqlite3"))
       (lwarn '(org-roam) :error "Cannot find executable 'sqlite3'. \
@@ -1347,7 +1358,6 @@ which takes as its argument an alist of path-completions.  See
 `org-roam--get-title-path-completions' for details."
   (interactive)
   (unless org-roam-mode (org-roam-mode))
-  (when (org-roam-capture--in-process-p) (user-error "Org-roam capture in process"))
   (let* ((completions (funcall (or filter-fn #'identity)
                                (or completions (org-roam--get-title-path-completions))))
          (title-with-tags (org-roam-completion--completing-read "File: " completions
@@ -1359,7 +1369,7 @@ which takes as its argument an alist of path-completions.  See
       (let ((org-roam-capture--info `((title . ,title-with-tags)
                                       (slug  . ,(funcall org-roam-title-to-slug-function title-with-tags))))
             (org-roam-capture--context 'title))
-        (add-hook 'org-capture-after-finalize-hook #'org-roam-capture--find-file-h)
+        (setq org-roam-capture-additional-template-props (list :finalize 'find-file))
         (org-roam--with-template-error 'org-roam-capture-templates
           (org-roam-capture--capture))))))
 
@@ -1390,6 +1400,12 @@ included as a candidate."
          (file (-> (cdr (assoc ref completions))
                    (plist-get :path))))
     (org-roam--find-file file)))
+
+;;;###autoload
+(defun org-roam-random-note ()
+  "Find a random Org-roam file."
+  (interactive)
+  (find-file (seq-random-elt (org-roam--list-all-files))))
 
 ;;;###autoload
 (defun org-roam-insert (&optional lowercase completions filter-fn description)
@@ -1430,15 +1446,13 @@ If DESCRIPTION is provided, use this as the link label.  See
           (when region ;; Remove previously selected text.
             (delete-region (car region) (cdr region)))
           (insert (org-roam--format-link target-file-path link-description)))
-      (when (org-roam-capture--in-process-p)
-        (user-error "Nested Org-roam capture processes not supported"))
       (let ((org-roam-capture--info `((title . ,title-with-tags)
                                       (slug . ,(funcall org-roam-title-to-slug-function title-with-tags))))
             (org-roam-capture--context 'title))
-        (add-hook 'org-capture-after-finalize-hook #'org-roam-capture--insert-link-h)
         (setq org-roam-capture-additional-template-props (list :region region
+                                                               :insert-at (point-marker)
                                                                :link-description link-description
-                                                               :capture-fn 'org-roam-insert))
+                                                               :finalize 'insert-link))
         (org-roam--with-template-error 'org-roam-capture-templates
           (org-roam-capture--capture))))
     res))

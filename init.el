@@ -35,6 +35,12 @@
 	     '("melpa-stable" . "https://stable.melpa.org/packages/"))
 (package-initialize)
 
+;; configuring ido-mode
+(ido-mode 1)
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(setq ido-create-new-buffer 'always)
+
 ;; configuring org-mode
 (add-to-list 'package-archives
 	     '("org" . "https://orgmode.org/elpa/") t)
@@ -153,8 +159,10 @@
 
 ;; configuring recent
 (require 'recentf)
-(recentf-mode 1)
+(recentf-mode t)
 (global-set-key "\C-xf" 'recentf-open-files)
+(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
+(setq recentf-max-saved-items 50)
 
 ;; more stuff
 
@@ -165,7 +173,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (recently slime org-protocol-jekyll org-journal emacsql-sqlite org-roam markdown-mode))))
+    (org-roam recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

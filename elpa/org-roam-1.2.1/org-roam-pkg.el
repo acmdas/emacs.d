@@ -1,4 +1,4 @@
-(define-package "org-roam" "20200628.716" "Roam Research replica with Org-mode"
+(define-package "org-roam" "1.2.1" "Roam Research replica with Org-mode"
   '((emacs "26.1")
     (dash "2.13")
     (f "0.17.2")
@@ -6,7 +6,7 @@
     (org "9.3")
     (emacsql "3.0.0")
     (emacsql-sqlite3 "1.0.0"))
-  :commit "e33c3bcb3fae6927b023212a061c2273f0b9dea7" :keywords
+  :commit "89e9121f26cf03bb7820d257cd9d9106916cd1e9" :keywords
   '("org-mode" "roam" "convenience")
   :authors
   '(("Jethro Kuan" . "jethrokuan95@gmail.com"))

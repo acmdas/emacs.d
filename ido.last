@@ -2,30 +2,45 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/das/data/md/" . "das_fieldstones/")
  ("/home/das/data/Writing/Writing/acmdas/" . "das_fieldstones/")
  ("/home/das/data/Writing/Writing/" . "acmdas/")
  ("/home/das/data/Writing/" . "Writing/")
- ("/home/das/data/" . "Writing/")
+ ("/home/das/data/" . "md/")
  ("/home/das/Desktop/" . "notes/")
  ("/home/das/" . "Desktop/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/das/Desktop/notes/"
+ "/home/das/data/md/das_fieldstones/"
  "/home/das/.emacs.d/"
  "/home/das/data/Writing/Writing/acmdas/das_fieldstones/"
- "/home/das/Desktop/notes/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- "init.el"
+ "Debian.txt"
  "morefieldstones2020.md"
+ "init.el"
  "Ubuntu.txt"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/das/Desktop/notes/" (24365 61263 367248 500000) "FiOS.txt" "../" "Debian.txt" "Debian.txt~" "fb.txt" "emacsnotes.org~" "./" "emacsnotes.org")
+
+ ("/home/das/Desktop/" (24364 1627 940671 786000) "../" "./" "notes/")
+
+ ("/home/das/" (24366 54841 356851 815000) ".emacs.d/" ".gnupg/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" ".bashrc" "../" ".config/" ".xfce4-session.verbose-log.last" ".mozilla/" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" "Dropbox/" ".dropbox/" ".recently-used" ".pki/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".bash_history" "Downloads/" ".Xauthority" "./" ".gtk-bookmarks" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
+
+ ("/home/das/data/md/das_fieldstones/" (24364 3587 302776 375000) "fieldstones2015.html" ".gitignore" "README.md" "fieldstones2017.html" "../" ".git/" "index.html" "morefieldstones2015.md" "fieldstones2009.html" "morefieldstones2010.md" "morefieldstones2013.md" "morefieldstones2017.md" "media/" "morefieldstones2020.md" "fieldstones2019.html" "./" "fieldstones2020.html" "fieldstones2011.html" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
+
+ ("/home/das/data/md/" (24350 20144 167420 815000) "das_fieldstones/" "foreign/" "../" "moloch.md" "tanquerey.md" "barfield/" "warstory/" "Texts/" "quotes2.md" "TheSpaniel.md" "./" "moloch.md~" "fieldstones/" "acmdas/" "20170601-kindlehighlights.txt" "radical_jew.md")
+
+ ("/home/das/data/" (24360 20294 485108 14000) "hobbies/" ".Trash-1000/" "md/" "elfeeddb/" "recipes/" "org/" "../" "Calibre Library/" "texts/" "Zotero/" "epubs.txt" "camera/" "calibre-epub.txt" "Writing/" "Church/" "aa/" "humor/" "notes/" "texts2/" "org-roam/" "./" "blogs/" "backups/" "Lookup/" "manuals/" "Valerie/" "bills/" "Marketing/" "davids/" "Columbia/" "Ebook/" "family/" "Www/")
+
  ("/home/das/.emacs.d/" (24315 64069 755387 529000) "auto-save-list/" "./" "init.el~" "lisp/" "backup/" "init.el" "ido.last" "../" "elpa/")
 
  ("/home/das/data/Writing/Writing/acmdas/das_fieldstones/" (24315 63767 152625 738000) "fieldstones2015.html" ".gitignore" "habit.md" "README.md" "appearances.md" "fieldstones2017.html" "WorldsApart.md" "../" ".git/" "index.html" "literal.md" "morefieldstones2015.md" "barfield_quotes.md" "meaning.md" "meaning.html" "fieldstones2009.html" "morefieldstones2010.md" "barfield_quotes.html" "morefieldstones2013.md" "appearances/" "morefieldstones2017.md" "literal.html" "appearances.html" "media/" "morefieldstones2020.md" "fieldstones2019.html" "./" "fieldstones2020.html" "habit.html" "#morefieldstones2020.md#" "fieldstones2011.html" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "WorldsApart.html" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
@@ -35,14 +50,6 @@
  ("/home/das/data/Writing/Writing/" (24302 16824 782478 146000) "todo.org" "foreign/" "../" "moloch.md" "Leff.md~" "tanquerey.md" "warstory/" "CUSTOM.DIC" "barfield-majors.txt" "Texts/" "lists.md~" "quotes2.md" "radical.md~" "TheSpaniel.md" "./" "moloch.md~" "it.md~" "fieldstones/" "quotes.txt~" "CUSTOM2.DIC" "tanquerey.md~" "TheSpaniel.md~" "acmdas/" "20170601-kindlehighlights.txt" "todo.org~" "radical_jew.md" "quotes2.md~")
 
  ("/home/das/data/Writing/" (24157 17121 494130 841000) "websters1913/" "../" "Style/" "Writing/" "./" "Writers/" "Zettelkasten/" "McPhee/" "Pressfield/" "screen_plays/" "Tools/" "InfoSec for Journalists V1.3.pdf")
-
- ("/home/das/data/" (24315 41710 790096 289000) "hobbies/" ".Trash-1000/" "mHlth4Yth/" "recipes/" "../" "Money/" "Consultingsmiths/" "Calibre Library/" "texts/" "Zotero/" "epubs.txt" "camera/" "calibre-epub.txt" "Writing/" "Church/" "aa/" "humor/" "media/" "notes/" "texts2/" "org-roam/" "./" "blogs/" "backups/" "Lookup/" "manuals/" "Downloads/" "Valerie/" "bills/" "resources/" "Marketing/" "davids/" "Columbia/" "Ebook/" "family/" "sources/" "Www/")
-
- ("/home/das/Desktop/notes/" (24315 44650 837274 54000) "FiOS.txt~" "./" "Stand.txt~" "leicaiiic.txt~" "fb.txt~" "emacsnotes.txt" "leicam3.txt~" "Ubuntu.txt" "Quotes.txt~" "../" "FiOS.txt" "Ubuntu.txt~" "Institute.txt~" "emacsnotes.txt~" "Canon.txt~" "fb.txt")
-
- ("/home/das/Desktop/" (23627 4387 199692 197000) "./" "notes/" "../")
-
- ("/home/das/" (24315 60138 521385 345000) ".bashrc~" ".putty/" ".ssh/" ".profile" ".profile~" ".aspell.en.prepl" ".histfile" ".emacs.d/" ".gnome/" "bin/" ".thunderbird/" ".bash_logout" ".wget-hsts" "init.el~.pdf" "./" ".zotero/" ".zshrc" ".gitconfig" ".recollweb/" "Downloads/" ".cups/" ".racket/" ".ICEauthority" ".dropbox/" ".dbus/" ".odbc.ini" ".bash_profile" ".mozilla/" ".pam_environment" ".emacs.bak/" ".local/" ".sudo_as_admin_successful" ".zoom/" ".sbclrc~" ".viminfo" ".wine/" ".pki/" ".sbclrc" "media/" ".subversion/" ".cache/" ".xinputrc" ".bash_history" ".var/" ".gimp-2.8/" ".dico_history" ".zcompdump" ".dropbox-dist/" ".launchpadlib/" "quicklisp/" "data/" ".thumbnails/" ".bashrc" ".ccl-init.lisp" "../" "Dropbox/" "Desktop/" "init.el.pdf" ".aspell.en.pws" ".slime/" ".gnucash/" ".recoll/" ".config/" ".gnupg/")
 )
 
 ;; ----- ido-unc-hosts-cache -----

@@ -25,7 +25,7 @@ Org-roam User Manual
 ********************
 
 
-   This manual is for Org-roam version 1.2.0.
+   This manual is for Org-roam version 1.2.1.
 
      Copyright (C) 2020-2020 Jethro Kuan <jethrokuan95@gmail.com>
 
@@ -64,6 +64,7 @@ Org-roam User Manual
 Installation
 
 * Installing from MELPA::
+* Installing from Apt::
 * Installing from the Git Repository::
 * Post-Installation Tasks::
 
@@ -99,7 +100,7 @@ Roam Protocol
 * _::
 * Installation: Installation (1).
 * The roam-file protocol::
-* The roam-ref Protocol::
+* The roam-ref protocol::
 
 Performance Optimization
 
@@ -113,7 +114,9 @@ Appendix
 
 Ecosystem
 
-* Deft::
+* Browsing History with winner-mode::
+* Versioning Notes::
+* Full-text search interface with Deft::
 * Org-journal::
 * Note-taking Add-ons::
 
@@ -235,11 +238,12 @@ its development repository.
 * Menu:
 
 * Installing from MELPA::
+* Installing from Apt::
 * Installing from the Git Repository::
 * Post-Installation Tasks::
 
 
-File: org-roam.info,  Node: Installing from MELPA,  Next: Installing from the Git Repository,  Up: Installation
+File: org-roam.info,  Node: Installing from MELPA,  Next: Installing from Apt,  Up: Installation
 
 3.1 Installing from MELPA
 =========================
@@ -280,15 +284,28 @@ dependencies using:
    Now see *note Post-Installation Tasks::.
 
 
-File: org-roam.info,  Node: Installing from the Git Repository,  Next: Post-Installation Tasks,  Prev: Installing from MELPA,  Up: Installation
+File: org-roam.info,  Node: Installing from Apt,  Next: Installing from the Git Repository,  Prev: Installing from MELPA,  Up: Installation
 
-3.2 *TODO* Installing from the Git Repository
+3.2 Installing from Apt
+=======================
+
+Users of Debian 11 or later or Ubuntu 20.10 or later can simply install
+Org-roam using Apt:
+
+     apt-get install elpa-org-roam
+
+   Org-roam will then be autoloaded into Emacs.
+
+
+File: org-roam.info,  Node: Installing from the Git Repository,  Next: Post-Installation Tasks,  Prev: Installing from Apt,  Up: Installation
+
+3.3 *TODO* Installing from the Git Repository
 =============================================
 
 
 File: org-roam.info,  Node: Post-Installation Tasks,  Prev: Installing from the Git Repository,  Up: Installation
 
-3.3 Post-Installation Tasks
+3.4 Post-Installation Tasks
 ===========================
 
 Org-roam uses ‘emacsql-sqlite3’, which requires ‘sqlite3’ to be located
@@ -323,9 +340,12 @@ note-taking better – this often requires a radical change in your
 current note-taking workflow.  To understand more about the methods and
 madness, see *note Note-taking Workflows::.
 
-   To begin using Org-roam, one should set the ‘org-roam-directory’ to
-the directory containing your notes.  For this tutorial, create an empty
-directory, and set the ‘org-roam-directory’:
+   To first start using Org-roam, one needs to pick a location to store
+the Org-roam files.  The directory that will contain your notes, and
+database index is specified by the variable ‘org-roam-directory’.  This
+variable needs to be set before any calls to Org-roam functions,
+including enabling ‘org-roam-mode’.  For this tutorial, create an empty
+directory, and set ‘org-roam-directory’:
 
      (make-directory "~/org-roam")
      (setq org-roam-directory "~/org-roam")
@@ -524,15 +544,18 @@ templated content.  This may include:
    • Any other data you may want to input manually
 
    This requires a complex template insertion system.  Fortunately, Org
-ships with a powerful one: ‘org-capture’.  However, org-capture was not
-designed for such use.  Org-roam abuses ‘org-capture’, extending its
-syntax.  To first understand how org-roam’s templating system works, it
-may be useful to look into basic usage of ‘org-capture’.
+ships with a powerful one: ‘org-capture’ (see *note (org)capture::).
+However, org-capture was not designed for such use.  Org-roam abuses
+‘org-capture’, extending its syntax and capabilities.  To first
+understand how org-roam’s templating system works, it may be useful to
+look into basic usage of ‘org-capture’.
 
-   Org-roam’s templates can be customized by modifying the variable
-‘org-roam-capture-templates’.  Just like the base ‘org-capture’ this
-variable can contain multiple templates, in which case you will be
-prompted on which one to use when capturing a new note.
+   For these reasons, Org-roam capture templates are not compatible with
+regular ‘org-capture’.  Hence, Org-roam’s templates can be customized by
+instead modifying the variable ‘org-roam-capture-templates’.  Just like
+‘org-capture-templates’, ‘org-roam-capture-templates’ can contain
+multiple templates.  If ‘org-roam-capture-templates’ only contains one
+template, there will be no prompt for template selection.
 
 * Menu:
 
@@ -826,6 +849,15 @@ navigated: see *note Roam Protocol::.
 
      ‘nil’ uses ‘view-file’ to view the graph.
 
+     If you are using WSL2 and would like to open the graph in Windows,
+     you can use the second option to set the browser and network file
+     path:
+
+          (setq org-roam-graph-viewer
+              (lambda (file)
+                (let ((org-roam-graph-viewer "/mnt/c/Program Files/Mozilla Firefox/firefox.exe"))
+                  (org-roam-graph--open (concat "file://///wsl$/Ubuntu" file)))))
+
 * Menu:
 
 * Graph Options::
@@ -845,7 +877,7 @@ options.
    • User Option: org-roam-graph-extra-config
 
      Extra options passed to graphviz for the digraph (The “G”
-     attributes).  Example: ‘'=(("rankdir" . "LR"))’
+     attributes).  Example: ‘'~(("rankdir" . "LR"))’
 
    • User Option: org-roam-graph-node-extra-config
 
@@ -892,13 +924,17 @@ File: org-roam.info,  Node: Org-roam Completion System,  Next: Roam Protocol,  P
 11 Org-roam Completion System
 *****************************
 
-Org-roam offers completion when choosing note titles etc.  The
-completion system is configurable.  The default setting,
+Org-roam allows customization of which minibuffer completion system to
+use for its interactive commands.  The default setting uses Emacs’
+standard ‘completing-read’ mechanism.
 
      (setq org-roam-completion-system 'default)
 
-   uses Emacs’ standard ‘completing-read’.  If you prefer Helm
-(https://emacs-helm.github.io/helm/), use
+   If you have installed Helm or Ivy, and have their modes enabled,
+under the ‘'default’ setting they will be used.
+
+   In the rare scenario where you use Ivy globally, but prefer Helm
+(https://emacs-helm.github.io/helm/) for org-roam commands, set:
 
      (setq org-roam-completion-system 'helm)
 
@@ -915,7 +951,7 @@ File: org-roam.info,  Node: Roam Protocol,  Next: Daily Notes,  Prev: Org-roam C
 * _::
 * Installation: Installation (1).
 * The roam-file protocol::
-* The roam-ref Protocol::
+* The roam-ref protocol::
 
 
 File: org-roam.info,  Node: _,  Next: Installation (1),  Up: Roam Protocol
@@ -937,7 +973,7 @@ to your init file:
 
      (require 'org-roam-protocol)
 
-   The instructions for setting up ‘org-protocol=’ are reproduced below.
+   The instructions for setting up ‘org-protocol’ are reproduced below.
 
    We will also need to create a desktop application for ‘emacsclient’.
 The instructions for various platforms are shown below.
@@ -1028,21 +1064,41 @@ To make ‘OrgProtocol.app’ the default handler instead, run:
 
    Then restart your computer.
 
-
-File: org-roam.info,  Node: The roam-file protocol,  Next: The roam-ref Protocol,  Prev: Installation (1),  Up: Roam Protocol
+   For Windows, create a temporary ‘org-protocol.reg’ file:
 
-12.3 The ‘roam-file’ protocol
-=============================
+     REGEDIT4
+
+     [HKEY_CLASSES_ROOT\org-protocol]
+     @="URL:Org Protocol"
+     "URL Protocol"=""
+     [HKEY_CLASSES_ROOT\org-protocol\shell]
+     [HKEY_CLASSES_ROOT\org-protocol\shell\open]
+     [HKEY_CLASSES_ROOT\org-protocol\shell\open\command]
+     @="\"C:\\Windows\\System32\\wsl.exe\" emacsclient \"%1\""
+
+   The above will forward the protocol to WSL.  If you run Emacs
+natively on Windows, replace the last line with:
+
+     @="\"c:\\path\\to\\emacs\\bin\\emacsclientw.exe\"  \"%1\""
+
+   After executing the .reg file, the protocol is registered and you can
+delete the file.
+
+
+File: org-roam.info,  Node: The roam-file protocol,  Next: The roam-ref protocol,  Prev: Installation (1),  Up: Roam Protocol
+
+12.3 The roam-file protocol
+===========================
 
 This is a simple protocol that opens the path specified by the ‘file’
 key (e.g.  ‘org-protocol://roam-file?file=/tmp/file.org’).  This is used
 in the generated graph.
 
 
-File: org-roam.info,  Node: The roam-ref Protocol,  Prev: The roam-file protocol,  Up: Roam Protocol
+File: org-roam.info,  Node: The roam-ref protocol,  Prev: The roam-file protocol,  Up: Roam Protocol
 
-12.4 The ‘roam-ref’ Protocol
-============================
+12.4 The roam-ref protocol
+==========================
 
 This protocol finds or creates a new note with a given ‘roam_key’ (see
 *note Anatomy of an Org-roam File::):
@@ -1062,7 +1118,7 @@ This protocol finds or creates a new note with a given ‘roam_key’ (see
 (see Configuring qutebrowser
 (https://github.com/qutebrowser/qutebrowser/blob/master/doc/help/configuring.asciidoc)):
 
-     config.bind("<Ctrl-r>", "spawn bash -c 'emacsclient \"org-protocol://roam-ref?template=r&ref={url:pretty}&title={title}\" '")
+     config.bind("<Ctrl-r>", "open javascript:location.href='org-protocol://roam-ref?template=r&ref='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title)")
 
    where ‘template’ is the template key for a template in
 ‘org-roam-capture-ref-templates’ (see *note The Templating System::).
@@ -1194,19 +1250,57 @@ File: org-roam.info,  Node: Ecosystem,  Prev: Note-taking Workflows,  Up: Append
 16.2 Ecosystem
 ==============
 
-A number of packages work well combined with Org-Roam:
-
 * Menu:
 
-* Deft::
+* Browsing History with winner-mode::
+* Versioning Notes::
+* Full-text search interface with Deft::
 * Org-journal::
 * Note-taking Add-ons::
 
 
-File: org-roam.info,  Node: Deft,  Next: Org-journal,  Up: Ecosystem
+File: org-roam.info,  Node: Browsing History with winner-mode,  Next: Versioning Notes,  Up: Ecosystem
 
-16.2.1 Deft
------------
+16.2.1 Browsing History with winner-mode
+----------------------------------------
+
+‘winner-mode’ is a global minor mode that allows one to undo and redo
+changes in the window configuration.  It is included with GNU Emacs
+since version 20.
+
+   ‘winner-mode’ can be used as a simple version of browser history for
+Org-roam.  Each click through org-roam links (from both Org files and
+the backlinks buffer) causes changes in window configuration, which can
+be undone and redone using ‘winner-mode’.  To use ‘winner-mode’, simply
+enable it, and bind the appropriate interactive functions:
+
+     (winner-mode +1)
+     (define-key winner-mode-map (kbd "<M-left>") #'winner-undo)
+     (define-key winner-mode-map (kbd "<M-right>") #'winner-redo)
+
+
+
+File: org-roam.info,  Node: Versioning Notes,  Next: Full-text search interface with Deft,  Prev: Browsing History with winner-mode,  Up: Ecosystem
+
+16.2.2 Versioning Notes
+-----------------------
+
+Since Org-roam notes are just plain text, it is trivial to track changes
+in your notes database using version control systems such as Git
+(https://git-scm.com/).  Simply initialize ‘org-roam-directory’ as a Git
+repository, and commit your files at regular or appropriate intervals.
+Magit (https://magit.vc/) is a great interface to Git within Emacs.
+
+   In addition, it may be useful to observe how a particular note has
+evolved, by looking at the file history.  Git-timemachine
+(https://gitlab.com/pidu/git-timemachine) allows you to visit historic
+versions of a tracked Org-roam note.
+
+
+File: org-roam.info,  Node: Full-text search interface with Deft,  Next: Org-journal,  Prev: Versioning Notes,  Up: Ecosystem
+
+16.2.3 Full-text search interface with Deft
+-------------------------------------------
 
 Deft (https://jblevins.org/projects/deft/) provides a nice interface for
 browsing and filtering org-roam notes.
@@ -1255,9 +1349,9 @@ huge.  Notdeft (https://github.com/hasu/notdeft) is a fork of Deft that
 uses an external search engine and indexer.
 
 
-File: org-roam.info,  Node: Org-journal,  Next: Note-taking Add-ons,  Prev: Deft,  Up: Ecosystem
+File: org-roam.info,  Node: Org-journal,  Next: Note-taking Add-ons,  Prev: Full-text search interface with Deft,  Up: Ecosystem
 
-16.2.2 Org-journal
+16.2.4 Org-journal
 ------------------
 
 Org-journal (https://github.com/bastibe/org-journal) is a more powerful
@@ -1277,7 +1371,7 @@ to see all dated entries.
 
 File: org-roam.info,  Node: Note-taking Add-ons,  Prev: Org-journal,  Up: Ecosystem
 
-16.2.3 Note-taking Add-ons
+16.2.5 Note-taking Add-ons
 --------------------------
 
 These are some plugins that make note-taking in Org-mode more enjoyable.
@@ -1410,56 +1504,59 @@ instructions are provided in the repository
 
 Tag Table:
 Node: Top765
-Node: Introduction2793
-Node: A Brief Introduction to the Zettelkasten Method4913
-Node: Installation7793
-Node: Installing from MELPA8164
-Node: Installing from the Git Repository9480
-Node: Post-Installation Tasks9720
-Node: Getting Started10497
-Node: Anatomy of an Org-roam File14237
-Node: Titles14706
-Node: Tags16564
-Node: File Refs18465
-Node: The Templating System19270
-Node: Template Walkthrough20455
-Node: Org-roam Template Expansion22267
-Node: Concepts and Configuration24266
-Node: Directories and Files24824
-Node: The Org-roam Buffer25494
-Node: Org-roam Links26634
-Node: Org-roam Files27348
-Node: Navigating Around27645
-Node: Index File27824
-Node: Encryption28662
-Node: Graphing29427
-Node: Graph Options31155
-Node: Excluding Nodes and Edges32169
-Node: Org-roam Completion System32898
-Node: Roam Protocol33448
-Node: _33696
-Node: Installation (1)33913
-Node: The roam-file protocol37972
-Node: The roam-ref Protocol38342
-Node: Daily Notes39485
-Node: Diagnosing and Repairing Files39644
-Node: Performance Optimization41539
-Node: Profiling Key Operations41780
-Node: Garbage Collection41969
-Node: Appendix42796
-Node: Note-taking Workflows42966
-Node: Ecosystem44213
-Node: Deft44445
-Node: Org-journal46329
-Node: Note-taking Add-ons47003
-Node: Org-download47337
-Node: mathpixel47821
-Node: Org-noter / Interleave48387
-Node: Bibliography48766
-Node: Spaced Repetition49207
-Node: FAQ49604
-Node: How do I have more than one Org-roam directory?49784
-Node: How do I migrate from Roam Research?50647
+Node: Introduction2908
+Node: A Brief Introduction to the Zettelkasten Method5028
+Node: Installation7908
+Node: Installing from MELPA8303
+Node: Installing from Apt9604
+Node: Installing from the Git Repository9974
+Node: Post-Installation Tasks10212
+Node: Getting Started10989
+Node: Anatomy of an Org-roam File14935
+Node: Titles15404
+Node: Tags17262
+Node: File Refs19163
+Node: The Templating System19968
+Node: Template Walkthrough21361
+Node: Org-roam Template Expansion23173
+Node: Concepts and Configuration25172
+Node: Directories and Files25730
+Node: The Org-roam Buffer26400
+Node: Org-roam Links27540
+Node: Org-roam Files28254
+Node: Navigating Around28551
+Node: Index File28730
+Node: Encryption29568
+Node: Graphing30333
+Node: Graph Options32464
+Node: Excluding Nodes and Edges33478
+Node: Org-roam Completion System34207
+Node: Roam Protocol34962
+Node: _35210
+Node: Installation (1)35427
+Node: The roam-file protocol40137
+Node: The roam-ref protocol40499
+Node: Daily Notes41686
+Node: Diagnosing and Repairing Files41845
+Node: Performance Optimization43740
+Node: Profiling Key Operations43981
+Node: Garbage Collection44170
+Node: Appendix44997
+Node: Note-taking Workflows45167
+Node: Ecosystem46414
+Node: Browsing History with winner-mode46681
+Node: Versioning Notes47544
+Node: Full-text search interface with Deft48336
+Node: Org-journal50341
+Node: Note-taking Add-ons51047
+Node: Org-download51381
+Node: mathpixel51865
+Node: Org-noter / Interleave52431
+Node: Bibliography52810
+Node: Spaced Repetition53251
+Node: FAQ53648
+Node: How do I have more than one Org-roam directory?53828
+Node: How do I migrate from Roam Research?54691
 
 End Tag Table
 

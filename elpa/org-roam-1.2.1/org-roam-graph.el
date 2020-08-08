@@ -5,7 +5,7 @@
 ;; Author: Jethro Kuan <jethrokuan95@gmail.com>
 ;; URL: https://github.com/org-roam/org-roam
 ;; Keywords: org-mode, roam, convenience
-;; Version: 1.2.0
+;; Version: 1.2.1
 ;; Package-Requires: ((emacs "26.1") (dash "2.13") (f "0.17.2") (s "1.12.0") (org "9.3") (emacsql "3.0.0") (emacsql-sqlite3 "1.0.0"))
 
 ;; This file is NOT part of GNU Emacs.
@@ -192,14 +192,16 @@ into a digraph."
                                    ","))))
       (dolist (node nodes)
         (let* ((file (xml-escape-string (car node)))
-               (title (or (caadr node)
+               (title (or (cadr node)
                           (org-roam--path-to-slug file)))
                (shortened-title (pcase org-roam-graph-shorten-titles
                                   (`truncate (s-truncate org-roam-graph-max-title-length title))
                                   (`wrap (s-word-wrap org-roam-graph-max-title-length title))
                                   (_ title)))
+               (shortened-title (org-roam-string-quote shortened-title))
+               (title (org-roam-string-quote title))
                (node-properties
-                `(("label"   . ,(s-replace "\"" "\\\"" shortened-title))
+                `(("label"   . ,shortened-title)
                   ("URL"     . ,(concat "org-protocol://roam-file?file=" (url-hexify-string file)))
                   ("tooltip" . ,(xml-escape-string title)))))
           (insert
@@ -230,8 +232,9 @@ CALLBACK is passed the graph file as its sole argument."
                         "Please adjust `org-roam-graph-executable'")
                 org-roam-graph-executable))
   (let* ((node-query (or node-query
-                         `[:select [file titles] :from titles
-                           ,@(org-roam-graph--expand-matcher 'file t)]))
+                         `[:select [file title] :from titles
+                           ,@(org-roam-graph--expand-matcher 'file t)
+                           :group :by file]))
          (graph      (org-roam-graph--dot node-query))
          (temp-dot   (make-temp-file "graph." nil ".dot" graph))
          (temp-graph (make-temp-file "graph." nil ".svg")))
@@ -267,7 +270,7 @@ CALLBACK is passed to `org-roam-graph--build'."
                         (org-roam-db--links-with-max-distance file max-distance)
                       (org-roam-db--connected-component file))
                     (list file)))
-         (query `[:select [file titles]
+         (query `[:select [file title]
                   :from titles
                   :where (in file [,@files])]))
     (org-roam-graph--build query callback)))
