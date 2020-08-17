@@ -2,46 +2,64 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/" . "das/")
+ ("/" . "home/")
  ("/home/das/data/md/" . "das_fieldstones/")
  ("/home/das/data/Writing/Writing/acmdas/" . "das_fieldstones/")
  ("/home/das/data/Writing/Writing/" . "acmdas/")
  ("/home/das/data/Writing/" . "Writing/")
  ("/home/das/data/" . "md/")
  ("/home/das/Desktop/" . "notes/")
- ("/home/das/" . "Desktop/")
+ ("/home/das/" . "Downloads/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/das/Desktop/notes/"
  "/home/das/data/md/das_fieldstones/"
+ "/home/das/Desktop/notes/"
+ "/home/das/data/notes/"
+ "/home/das/Downloads/"
  "/home/das/.emacs.d/"
  "/home/das/data/Writing/Writing/acmdas/das_fieldstones/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- "Debian.txt"
  "morefieldstones2020.md"
+ "fb.txt"
+ "Debian.txt"
+ "BookCheatSheet.md"
+ "covid.txt"
+ "Mise-En-Place.md"
+ "CompleteGuide.md"
+ "summarize.txt"
  "init.el"
  "Ubuntu.txt"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/das/Desktop/notes/" (24365 61263 367248 500000) "FiOS.txt" "../" "Debian.txt" "Debian.txt~" "fb.txt" "emacsnotes.org~" "./" "emacsnotes.org")
+ ("/home/das/Desktop/notes/" (24376 4393 486296 464000) "FiOS.txt" "../" "Debian.txt" "Debian.txt~" "fb.txt" "emacsnotes.org~" "./" "emacsnotes.org")
+
+ ("/home/das/" (24376 10920 66802 730000) ".emacs.d/" ".gnupg/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" ".bashrc" "../" ".config/" ".xfce4-session.verbose-log.last" ".mozilla/" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" "Dropbox/" ".dropbox/" ".recently-used" ".pki/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".bash_history" "Downloads/" ".Xauthority" "./" ".gtk-bookmarks" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
+
+ ("/home/das/data/notes/" (24364 1609 160515 436000) "Ubuntu.txt" "emacsnotes.org" "../" "emacsnotes.txt" "Debian.txt" "Namecheap/" "./" "fb.txt" "2015-minos/" "FiOS.txt" "org.md")
+
+ ("/home/das/.emacs.d/" (24372 13814 180283 299000) "../" "org-journal.cache" "session.10924a55b795e9fa79159415267448662700000023070090" "init.el" ".org-id-locations" "session.1024c936ea413497f6159415058461280200000016210064" "ido.last~" "recentf" ".git/" "config.el~" "session.29167cb8b-7f4f-40a8-9706-25af64b5a925" "init.el~" "./" "auto-save-list/" "elpa/" "bookmarks" "ido.last" "config.el.bak" "README.md" "recentf~" "lisp/" "session.101bf10f9e745dd9ab159415424352303600000015540089" "session.1086df88fe7bc26279159430914380626900000042540099")
+
+ ("/home/das/data/md/das_fieldstones/" (24372 23983 507445 439000) "fieldstones2015.html" ".gitignore" "README.md" "fieldstones2017.html" "../" ".git/" "index.html" "morefieldstones2015.md" "fieldstones2009.html" "morefieldstones2010.md" "morefieldstones2013.md" "morefieldstones2017.md" "media/" "morefieldstones2020.md" "fieldstones2019.html" "./" "fieldstones2020.html" "fieldstones2011.html" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
+
+ ("/home/das/Downloads/" (24372 45642 198562 733000) "../" "Jesse-Grade10.pdf" "Recomendo_Book_Gumroad_Final.pdf" "covid.txt~" "tech/" "Forte/" "greatideasvolii030131mbp%2Fgreatideasvolii030131mbp.epub" "History.in.English.Words_1597285574290.txt" "./" "greatideasvolii030131mbp.pdf" "20200812-instapaper-export.html" "greatideasvolii030337mbp%2Fgreatideasvolii030337mbp.epub" "bucky/" "Eleventh Step Workshop.jpg" "summarize.txt~" "HowToMake2000.pdf" "covid.txt" "2014-02-14 A No-Excuses Guide to Blogging - Sacha Chua v4.pdf" "greatideasvolii030337mbp.pdf")
+
+ ("/home/das/data/org-roam/" (24367 61245 821019 997000) "20200801120549-howardnemerov.org" "20200714170607-index.org~" "20200714170129-barfield.org" "20200714165141-alphabet.org" ".#20200714171036-historyinenglishwords.org" "20200714165220-linear_b.org~" "20200714165104-crete.org" "#20200714170401-english_language.org#" "20200704153721-insert.org~" "20200704171228-templates.org~" "20200802084527-ideaofthebrain.org~" "../" "20200801120321-poeticdiction.org" "20200714164413-riddleofthelabyrinth.org" "20200714165748-greek.org~" "20200801115915-nemerovandobjectiveidealism.org~" "20200714171225-books.org" "20200704171638-capture.org~" "20200714171036-historyinenglishwords.org~" "20200714171445-savingtheappearances.org" "20200714165448-minoan.org" "20200714171036-historyinenglishwords.org" "20200801120958-objectiveidealism.org" "20200714170129-barfield.org~" "20200714165141-alphabet.org~" "20200714170237-language.org~" "20200801115915-nemerovandobjectiveidealism.org" "#20200714171036-historyinenglishwords.org#" "20200714165748-greek.org" "20200714170401-english_language.org" "20200714172630-english_history.org" ".#20200714170401-english_language.org" "./" "20200704152812-roam.org~" "20200714170401-english_language.org~" "20200714165220-linear_b.org" "20200714171445-savingtheappearances.org~" "20200802084527-ideaofthebrain.org" "20200714170607-index.org" "20200802085048-consciousness.org" "20200714165448-minoan.org~" "20200714164413-riddleofthelabyrinth.org~" "20200704152952-toggle_buffer.org~" "20200801120321-poeticdiction.org~" "20200714170237-language.org" "org-roam.db" "20200809083629-historyofconsciousness.org" "20200801120549-howardnemerov.org~" "20200809083629-historyofconsciousness.org~" "20200801154150-evolutionofconsciousness.org~" "20200714165104-crete.org~" "20200802085048-consciousness.org~" "20200714172630-english_history.org~" "20200801154150-evolutionofconsciousness.org" "20200714171225-books.org~")
+
+ ("/home/" (24327 29009 1703 343000) "das/" "../" "./")
 
  ("/home/das/Desktop/" (24364 1627 940671 786000) "../" "./" "notes/")
-
- ("/home/das/" (24366 54841 356851 815000) ".emacs.d/" ".gnupg/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" ".bashrc" "../" ".config/" ".xfce4-session.verbose-log.last" ".mozilla/" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" "Dropbox/" ".dropbox/" ".recently-used" ".pki/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".bash_history" "Downloads/" ".Xauthority" "./" ".gtk-bookmarks" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
-
- ("/home/das/data/md/das_fieldstones/" (24364 3587 302776 375000) "fieldstones2015.html" ".gitignore" "README.md" "fieldstones2017.html" "../" ".git/" "index.html" "morefieldstones2015.md" "fieldstones2009.html" "morefieldstones2010.md" "morefieldstones2013.md" "morefieldstones2017.md" "media/" "morefieldstones2020.md" "fieldstones2019.html" "./" "fieldstones2020.html" "fieldstones2011.html" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
 
  ("/home/das/data/md/" (24350 20144 167420 815000) "das_fieldstones/" "foreign/" "../" "moloch.md" "tanquerey.md" "barfield/" "warstory/" "Texts/" "quotes2.md" "TheSpaniel.md" "./" "moloch.md~" "fieldstones/" "acmdas/" "20170601-kindlehighlights.txt" "radical_jew.md")
 
  ("/home/das/data/" (24360 20294 485108 14000) "hobbies/" ".Trash-1000/" "md/" "elfeeddb/" "recipes/" "org/" "../" "Calibre Library/" "texts/" "Zotero/" "epubs.txt" "camera/" "calibre-epub.txt" "Writing/" "Church/" "aa/" "humor/" "notes/" "texts2/" "org-roam/" "./" "blogs/" "backups/" "Lookup/" "manuals/" "Valerie/" "bills/" "Marketing/" "davids/" "Columbia/" "Ebook/" "family/" "Www/")
-
- ("/home/das/.emacs.d/" (24315 64069 755387 529000) "auto-save-list/" "./" "init.el~" "lisp/" "backup/" "init.el" "ido.last" "../" "elpa/")
 
  ("/home/das/data/Writing/Writing/acmdas/das_fieldstones/" (24315 63767 152625 738000) "fieldstones2015.html" ".gitignore" "habit.md" "README.md" "appearances.md" "fieldstones2017.html" "WorldsApart.md" "../" ".git/" "index.html" "literal.md" "morefieldstones2015.md" "barfield_quotes.md" "meaning.md" "meaning.html" "fieldstones2009.html" "morefieldstones2010.md" "barfield_quotes.html" "morefieldstones2013.md" "appearances/" "morefieldstones2017.md" "literal.html" "appearances.html" "media/" "morefieldstones2020.md" "fieldstones2019.html" "./" "fieldstones2020.html" "habit.html" "#morefieldstones2020.md#" "fieldstones2011.html" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "WorldsApart.html" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
 

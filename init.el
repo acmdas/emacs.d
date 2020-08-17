@@ -3,9 +3,11 @@
 ;; 20200709 - moved to the new Debian installation - issues with font and window size resolved.
 ;; 20200803 - installed elfeed and began configuration - installed use-package - gave up and deleted.
 ;; 20200805 - recentf removed. org-agenda-files defined as inbox.org only. sdcv added
+;; 20200816 - installed offlineimap, mu and mu4e
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'exec-path "/usr/bin/sqlite3")
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
 
 ;; configure visual interface
 (menu-bar-mode -1)
@@ -34,6 +36,9 @@
 (add-to-list 'package-archives
 	     '("melpa-stable" . "https://stable.melpa.org/packages/"))
 (package-initialize)
+
+;; configuring mu4e
+(require 'mu4e)
 
 ;; configuring ido-mode
 (ido-mode 1)
