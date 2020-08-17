@@ -1,0 +1,70 @@
+[general]
+accounts = acmdas, kadashan, daslearns, consultingsmiths
+
+[Account acmdas]
+localrepository = acmdas-Local
+remoterepository = acmdas-Remote
+
+[Account kadashan]
+localrepository = kadashan-Local
+remoterepository = kadashan-Remote
+
+[Account daslearns]
+localrepository = daslearns-Local
+remoterepository = daslearns-Remote
+
+[Account consultingsmiths]
+localrepository = consultingsmiths-Local
+remoterepository = consultingsmiths-Remote
+
+[Repository acmdas-Local]
+type = Maildir
+localfolders = ~/data/Maildir/acmdas
+
+[Repository kadashan-Local]
+type = Maildir
+localfolders = ~/data/Maildir/kadashan
+
+[Repository daslearns-Local]
+type = Maildir
+localfolders = ~/data/Maildir/daslearns
+
+[Repository consultingsmiths-Local]
+type = Maildir
+localfolders = ~/data/Maildir/consultingsmiths
+
+[Repository acmdas-Remote]
+type = IMAP
+remotehost = imap.gmail.com
+remoteuser = acmdas@gmail.com
+remotepass = iazqtehktnnpijcb
+ssl = yes
+maxconnections = 1
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Repository kadashan-Remote]
+type = IMAP
+remotehost = imap.gmail.com
+remoteuser = kadashan76@gmail.com
+remotepass = uvostmixgdgedcwx
+ssl = yes
+maxconnections = 1
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Repository daslearns-Remote]
+type = IMAP
+remotehost = daslearns.ca
+remoteuser = das@daslearns.ca
+remotepass = i~=tC5KcLY~P
+ssl = yes
+maxconnections = 1
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Repository consultingsmiths-Remote]
+type = IMAP
+remotehost = consultingsmiths.com
+remoteuser = david@consultingsmiths.com
+remotepass = M7Dty2NVUwNW
+ssl = yes
+maxconnections = 1
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
