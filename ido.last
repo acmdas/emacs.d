@@ -10,21 +10,24 @@
  ("/home/das/data/Writing/" . "Writing/")
  ("/home/das/data/" . "md/")
  ("/home/das/Desktop/" . "notes/")
- ("/home/das/" . "Downloads/")
+ ("/home/das/" . "data/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/das/.emacs.d/"
+ "/home/das/"
  "/home/das/data/md/das_fieldstones/"
  "/home/das/Desktop/notes/"
  "/home/das/data/notes/"
  "/home/das/Downloads/"
- "/home/das/.emacs.d/"
  "/home/das/data/Writing/Writing/acmdas/das_fieldstones/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "init.el"
+ ".offlineimaprc"
  "morefieldstones2020.md"
  "fb.txt"
  "Debian.txt"
@@ -33,21 +36,23 @@
  "Mise-En-Place.md"
  "CompleteGuide.md"
  "summarize.txt"
- "init.el"
- "Ubuntu.txt"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/das/.emacs.d/" (24377 28928 971609 47000) "../" "org-journal.cache" "session.10924a55b795e9fa79159415267448662700000023070090" "init.el" ".org-id-locations" "session.1024c936ea413497f6159415058461280200000016210064" "ido.last~" "recentf" ".git/" "config.el~" "session.29167cb8b-7f4f-40a8-9706-25af64b5a925" "init.el~" "./" "auto-save-list/" "elpa/" "bookmarks" "ido.last" "config.el.bak" "README.md" "recentf~" "lisp/" "session.101bf10f9e745dd9ab159415424352303600000015540089" "session.1086df88fe7bc26279159430914380626900000042540099")
+
+ ("/home/das/" (24377 47918 398710 661000) ".emacs.d/" ".gnupg/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" ".bashrc" ".offlineimaprc" "../" ".config/" ".offlineimaprc~" ".xfce4-session.verbose-log.last" ".mozilla/" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" "Dropbox/" ".dropbox/" ".recently-used" ".pki/" ".offlineimap/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".bash_history" "Downloads/" ".Xauthority" "./" ".gtk-bookmarks" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
+
+ ("/home/das/data/org/" (24367 62256 252746 518000) "#2020-07-01.org#" "inbox.org" "2020-07-19.org~" "2020-03-21.org~" "inbox.org_archive~" "2020-07-06.org~" "inbox.org_archive" "2020-02-28.org~" "2020-02-22.org~" "2020-08-02.org~" "2020-04-09.org~" "org-mode.org" "inbox.org~" "2020-03-12.org~" "2020-07-30.org~" "2020-07-10.org~" "2020-07-15.org~" "2020-05-08.org~" "2020-07-07.org~" "emacsnotes.org" "2020-03-01.org~" "2020-08-07.org~" "2020-03-05.org~" "2020-05-18.org~" "tutorial.org~" "IdeaoftheBrain.org" "2020-03-27.org~" "2020-03-16.org~" "#IdeaoftheBrain.org#" "2020-07-29.org~" "2020-07-17.org~" "2020-02-26.org~" "2020-02-24.org~" "2020-02-20.org~" "2020-07-25.org~" "2020-06-29.org~" "2020-04-28.org~" "2020-07-18.org~" "2020-08-06.org~" "2020-02-27.org~" "2020-06-28.org~" "2020-07-24.org~" "2020-07-20.org~" "2020-03-07.org~" "2020-03-31.org~" "emacs_tutorial.org" "2020-07-09.org~" "2020-07-22.org~" "2020-05-03.org~" "#tutorial.org#" "journal/" "2020-04-02.org~" "2020-07-12.org~" "2020-04-18.org~" "2020-07-16.org~" "2020-07-11.org~" "2020-03-15.org~" "emacsnotes.org~" "2020-05-15.org~" "2020-07-14.org~" "2020-07-13.org~" "2020-03-09.org~" "2020-04-03.org~" "2020-05-19.org~" "2020-07-03.org~" "2020-07-04.org~" "2020-07-02.org~" "2020-03-30.org~" "2020-04-05.org~" "2020-03-08.org~" "2020-02-25.org~" "exegesis.org" "2020-03-02.org~" "2020-06-30.org~" "2020-05-07.org~" "2020-03-04.org~" "2020.txt" "2020-08-04.org~" "2020-08-03.org~" "2020-05-09.org~" "2020-07-01.org~" "2020-03-28.org~" "tutorial.org" "2020-07-21.org~" "2020-03-11.org~" "2020-07-26.org~" "2020-07-23.org~" "2020-08-01.org~" "2020-02-29.org~" "2020-08-05.org~" "2020-07-28.org~" "2020-05-20.org~" "2020-03-23.org~" "2020-04-26.org~" "2020-02-21.org~" "todo.org~" "2020-03-20.org~" "2020-07-27.org~" "2020-07-31.org~" "exegesis.org~" "../" "./")
+
+ ("/home/das/data/org/journal/" (24377 47209 241284 776000) "2020-07-07.org" "2020-05-08.org" "2020-08-11.org" "2020-08-16.org" "2020-07-10.org" "2020-04-18.org" "2020-07-18.org" "2020-07-22.org" "2020-04-09.org" "2020-08-08.org" "2020-02-28.org" "2020-04-02.org" "2020-08-06.org" "2020-02-21.org" "2020-08-09.org" "2020-08-07.org~" "2020-08-09.org~" "2020-07-21.org" "2020-03-21.org" "2020-03-06.org" "2020-08-04.org" "2020-02-23.org" "2020-07-26.org" "2020-05-16.org" "2020-07-11.org" "../" "2020-08-11.org~" "2020-03-15.org" "2020-08-16.org~" "2020-04-28.org" "2020-08-05.org" "2020-07-06.org" "2020-03-05.org" "2020-02-22.org" "2020-05-15.org" "2020-08-02.org" "2020-03-08.org" "2020-07-01.org" "2020-07-04.org" "2020-08-08.org~" "2020-05-09.org" "2020-03-31.org" "2020-02-24.org" "2020-06-30.org" "2020-03-30.org" "2020-07-20.org" "2020-07-31.org" "2020-03-07.org" "2020-03-22.org" "2020-06-29.org" "2020-07-29.org" "2020-07-16.org" "2020-07-14.org" "2020-08-12.org~" "2020-03-12.org" "2020-03-11.org" "2020-07-02.org" "2020-03-28.org" "2020-07-03.org" "2020-07-05.org" "./" "2020-03-16.org" "2020-02-27.org" "2020-08-01.org" "2020-03-23.org" "2020-07-09.org" "2020-02-29.org" "2020-02-25.org" "2020-05-20.org" "2020-04-11.org" "2020-04-05.org" "2020-02-20.org" "2020-06-28.org" "2020-07-27.org" "2020-08-14.org" "2020-08-12.org" "2020-08-03.org" "2020-04-26.org" "2020-07-24.org" "2020-05-03.org" "2020-03-01.org" "2020-03-09.org" "2020-05-18.org" "2020-05-07.org" "2020-07-19.org" "2020-08-10.org~" "2020-08-07.org" "2020-08-13.org" "2020-04-27.org" "2020-02-26.org" "2020-07-17.org" "2020-08-13.org~" "2020-03-04.org" "2020-07-15.org" "2020-03-02.org" "2020-08-10.org" "2020-07-08.org" "2020-07-28.org" "2020-07-12.org" "2020-03-27.org" "2020-04-03.org" "2020-08-15.org" "2020-07-23.org" "2020-08-14.org~" "2020-08-15.org~" "2020-03-20.org" "2020-05-19.org" "2020-07-30.org" "2020-07-25.org" "2020-07-13.org")
+
+ ("/home/das/data/md/das_fieldstones/" (24376 24022 982301 551000) "fieldstones2015.html" ".gitignore" "README.md" "fieldstones2017.html" "../" ".git/" "index.html" "morefieldstones2015.md" "fieldstones2009.html" "morefieldstones2010.md" "morefieldstones2013.md" "morefieldstones2017.md" "media/" "morefieldstones2020.md" "fieldstones2019.html" "./" "fieldstones2020.html" "fieldstones2011.html" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
+
  ("/home/das/Desktop/notes/" (24376 4393 486296 464000) "FiOS.txt" "../" "Debian.txt" "Debian.txt~" "fb.txt" "emacsnotes.org~" "./" "emacsnotes.org")
 
- ("/home/das/" (24376 10920 66802 730000) ".emacs.d/" ".gnupg/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" ".bashrc" "../" ".config/" ".xfce4-session.verbose-log.last" ".mozilla/" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" "Dropbox/" ".dropbox/" ".recently-used" ".pki/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".bash_history" "Downloads/" ".Xauthority" "./" ".gtk-bookmarks" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
-
  ("/home/das/data/notes/" (24364 1609 160515 436000) "Ubuntu.txt" "emacsnotes.org" "../" "emacsnotes.txt" "Debian.txt" "Namecheap/" "./" "fb.txt" "2015-minos/" "FiOS.txt" "org.md")
-
- ("/home/das/.emacs.d/" (24372 13814 180283 299000) "../" "org-journal.cache" "session.10924a55b795e9fa79159415267448662700000023070090" "init.el" ".org-id-locations" "session.1024c936ea413497f6159415058461280200000016210064" "ido.last~" "recentf" ".git/" "config.el~" "session.29167cb8b-7f4f-40a8-9706-25af64b5a925" "init.el~" "./" "auto-save-list/" "elpa/" "bookmarks" "ido.last" "config.el.bak" "README.md" "recentf~" "lisp/" "session.101bf10f9e745dd9ab159415424352303600000015540089" "session.1086df88fe7bc26279159430914380626900000042540099")
-
- ("/home/das/data/md/das_fieldstones/" (24372 23983 507445 439000) "fieldstones2015.html" ".gitignore" "README.md" "fieldstones2017.html" "../" ".git/" "index.html" "morefieldstones2015.md" "fieldstones2009.html" "morefieldstones2010.md" "morefieldstones2013.md" "morefieldstones2017.md" "media/" "morefieldstones2020.md" "fieldstones2019.html" "./" "fieldstones2020.html" "fieldstones2011.html" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
 
  ("/home/das/Downloads/" (24372 45642 198562 733000) "../" "Jesse-Grade10.pdf" "Recomendo_Book_Gumroad_Final.pdf" "covid.txt~" "tech/" "Forte/" "greatideasvolii030131mbp%2Fgreatideasvolii030131mbp.epub" "History.in.English.Words_1597285574290.txt" "./" "greatideasvolii030131mbp.pdf" "20200812-instapaper-export.html" "greatideasvolii030337mbp%2Fgreatideasvolii030337mbp.epub" "bucky/" "Eleventh Step Workshop.jpg" "summarize.txt~" "HowToMake2000.pdf" "covid.txt" "2014-02-14 A No-Excuses Guide to Blogging - Sacha Chua v4.pdf" "greatideasvolii030337mbp.pdf")
 
