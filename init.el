@@ -41,7 +41,7 @@
 (require 'mu4e)
 
 ;; configuring ido-mode
-(ido-mode 1)
+(ido-mode t)
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 (setq ido-create-new-buffer 'always)
@@ -170,6 +170,13 @@
 (setq recentf-max-saved-items 50)
 
 ;; more stuff
+
+(setq make-backup-files nil)
+(setq sentence-end-double-space nil)
+
+;; enable windmove - uses Shift-arrow to move between windows
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
