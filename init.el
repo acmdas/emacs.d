@@ -185,7 +185,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (org-roam recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode))))
+    (magit org-roam recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
