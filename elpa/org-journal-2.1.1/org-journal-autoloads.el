@@ -64,18 +64,17 @@ Open the current journal file
 \(fn)" t nil)
 
 (autoload 'org-journal-invalidate-cache "org-journal" "\
-Reset `org-journal-journals', `org-journal-dates' and remove the
-file `org-journal-cache-file'.
+Clear `org-journal--dates' hash table, and the cache file.
 
 \(fn)" t nil)
 
 (autoload 'org-journal-mark-entries "org-journal" "\
-Mark days in the calendar for which a diary entry is present
+Mark days in the calendar for which a journal entry is present.
 
 \(fn)" t nil)
 
 (autoload 'org-journal-read-entry "org-journal" "\
-Open journal entry for selected date for viewing
+Open journal entry for selected date for viewing.
 
 \(fn ARG &optional EVENT)" t nil)
 
