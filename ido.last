@@ -2,6 +2,7 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/das/data/org/" . "journal/")
  ("/home/" . "das/")
  ("/" . "home/")
  ("/home/das/data/md/" . "das_fieldstones/")
@@ -10,16 +11,18 @@
  ("/home/das/data/Writing/" . "Writing/")
  ("/home/das/data/" . "org/")
  ("/home/das/Desktop/" . "notes/")
- ("/home/das/" . "Downloads/")
+ ("/home/das/" . "data/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/das/data/org/"
- "/home/das/Downloads/"
+ "/home/das/data/org/journal/"
+ "/home/das/.emacs.d/"
  "/home/das/Desktop/notes/"
  "/home/das/data/md/das_fieldstones/"
- "/home/das/.emacs.d/"
+ "/home/das/data/md/"
+ "/home/das/data/org/"
+ "/home/das/Downloads/"
  "/home/das/"
  "/home/das/data/notes/"
  "/home/das/data/Writing/Writing/acmdas/das_fieldstones/"
@@ -27,45 +30,55 @@
 
 ;; ----- ido-work-file-list -----
 (
- "inbox.org"
- "Emmet.txt"
- "emacsnotes.org"
- "morefieldstones2020.md"
+ "2020-09-02"
  "init.el"
- ".offlineimaprc"
- "fb.txt"
+ "2020-09-01.org"
  "Debian.txt"
- "BookCheatSheet.md"
- "covid.txt"
+ "fb.txt"
+ "morefieldstones2020.md"
+ "morefieldstones2009.md"
+ "copybook_headings.md"
+ "latin_rosary.md"
+ "inbox.org_archive"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/das/data/org/" (24382 62025 98131 315000) "#2020-07-01.org#" "inbox.org" "2020-07-19.org~" "2020-03-21.org~" "inbox.org_archive~" "2020-07-06.org~" "inbox.org_archive" "2020-02-28.org~" "2020-02-22.org~" "2020-08-02.org~" "2020-04-09.org~" "org-mode.org" "inbox.org~" "2020-03-12.org~" "2020-07-30.org~" "2020-07-10.org~" "2020-07-15.org~" "2020-05-08.org~" "2020-07-07.org~" "emacsnotes.org" "2020-03-01.org~" "2020-08-07.org~" "2020-03-05.org~" "2020-05-18.org~" "tutorial.org~" "IdeaoftheBrain.org" "2020-03-27.org~" "2020-03-16.org~" "#IdeaoftheBrain.org#" "2020-07-29.org~" "2020-07-17.org~" "2020-02-26.org~" "2020-02-24.org~" "2020-02-20.org~" "2020-07-25.org~" "2020-06-29.org~" "2020-04-28.org~" "2020-07-18.org~" "2020-08-06.org~" "2020-02-27.org~" "2020-06-28.org~" "2020-07-24.org~" "2020-07-20.org~" "2020-03-07.org~" "2020-03-31.org~" "emacs_tutorial.org" "2020-07-09.org~" "2020-07-22.org~" "2020-05-03.org~" "#tutorial.org#" "journal/" "2020-04-02.org~" "2020-07-12.org~" "2020-04-18.org~" "2020-07-16.org~" "2020-07-11.org~" "2020-03-15.org~" "emacsnotes.org~" "2020-05-15.org~" "2020-07-14.org~" "2020-07-13.org~" "2020-03-09.org~" "2020-04-03.org~" "2020-05-19.org~" "2020-07-03.org~" "2020-07-04.org~" "2020-07-02.org~" "2020-03-30.org~" "2020-04-05.org~" "2020-03-08.org~" "2020-02-25.org~" "exegesis.org" "2020-03-02.org~" "2020-06-30.org~" "2020-05-07.org~" "2020-03-04.org~" "2020.txt" "2020-08-04.org~" "2020-08-03.org~" "2020-05-09.org~" "2020-07-01.org~" "2020-03-28.org~" "tutorial.org" "2020-07-21.org~" "2020-03-11.org~" "2020-07-26.org~" "2020-07-23.org~" "2020-08-01.org~" "2020-02-29.org~" "2020-08-05.org~" "2020-07-28.org~" "2020-05-20.org~" "2020-03-23.org~" "2020-04-26.org~" "2020-02-21.org~" "todo.org~" "2020-03-20.org~" "2020-07-27.org~" "2020-07-31.org~" "exegesis.org~" "../" "./")
+ ("/home/das/Downloads/" (24397 16162 314840 380000) "../" "Jesse-Grade10.pdf" "Recomendo_Book_Gumroad_Final.pdf" "Win 10 Pro Key.txt" "tech/" "Forte/" "./" "bucky/" "HowToMake2000.pdf" "covid.txt")
 
- ("/home/das/Downloads/" (24382 45299 911816 5000) "../" "Jesse-Grade10.pdf" "Recomendo_Book_Gumroad_Final.pdf" "Emmet.txt" "tech/" "Forte/" "./" "bucky/" "HowToMake2000.pdf" "8-6-20 RAC agenda.xlsx - Minutes.pdf" "covid.txt" "EA7400-MiniUG_EN_20160208_1534PST.pdf" "2014-02-14 A No-Excuses Guide to Blogging - Sacha Chua v4.pdf")
+ ("/home/das/data/md/das_fieldstones/" (24393 10238 150729 177000) "fieldstones2015.html" ".gitignore" "README.md" "fieldstones2017.html" "../" ".git/" "lehrer.html" "index.html" "morefieldstones2015.md" "fieldstones2009.html" "morefieldstones2010.md" "morefieldstones2013.md" "morefieldstones2017.md" "media/" "morefieldstones2020.md" "fieldstones2019.html" "./" "fieldstones2020.html" "fieldstones2011.html" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
 
- ("/home/das/data/org/journal/" (24382 36566 565819 800000) "2020-07-07.org" "2020-05-08.org" "2020-08-11.org" "2020-08-16.org" "2020-07-10.org" "2020-04-18.org" "2020-07-18.org" "2020-07-22.org" "2020-04-09.org" "2020-08-08.org" "2020-02-28.org" "2020-04-02.org" "2020-08-06.org" "2020-02-21.org" "2020-08-09.org" "2020-08-07.org~" "2020-08-09.org~" "2020-07-21.org" "2020-03-21.org" "2020-03-06.org" "2020-08-04.org" "2020-02-23.org" "2020-07-26.org" "2020-05-16.org" "2020-07-11.org" "../" "2020-08-11.org~" "2020-03-15.org" "2020-08-16.org~" "2020-04-28.org" "2020-08-05.org" "2020-07-06.org" "2020-03-05.org" "2020-02-22.org" "2020-05-15.org" "2020-08-02.org" "2020-03-08.org" "2020-07-01.org" "2020-07-04.org" "2020-08-08.org~" "2020-05-09.org" "2020-03-31.org" "2020-02-24.org" "2020-06-30.org" "2020-03-30.org" "2020-07-20.org" "2020-08-19.org" "2020-07-31.org" "2020-03-07.org" "2020-03-22.org" "2020-06-29.org" "2020-07-29.org" "2020-07-16.org" "2020-07-14.org" "2020-08-12.org~" "2020-03-12.org" "2020-03-11.org" "2020-07-02.org" "2020-03-28.org" "2020-07-03.org" "2020-07-05.org" "./" "2020-03-16.org" "2020-02-27.org" "2020-08-01.org" "2020-03-23.org" "2020-08-18.org" "2020-07-09.org" "2020-02-29.org" "2020-08-20.org" "2020-02-25.org" "2020-05-20.org" "2020-04-11.org" "2020-04-05.org" "2020-02-20.org" "2020-06-28.org" "2020-07-27.org" "2020-08-14.org" "2020-08-17.org~" "2020-08-12.org" "2020-08-03.org" "2020-04-26.org" "2020-08-17.org" "2020-07-24.org" "2020-05-03.org" "2020-03-01.org" "2020-03-09.org" "2020-05-18.org" "2020-05-07.org" "2020-07-19.org" "2020-08-10.org~" "2020-08-07.org" "2020-08-13.org" "2020-04-27.org" "2020-02-26.org" "2020-07-17.org" "2020-08-13.org~" "2020-03-04.org" "2020-07-15.org" "2020-08-18.org~" "2020-03-02.org" "2020-08-10.org" "2020-07-08.org" "2020-07-28.org" "2020-07-12.org" "2020-03-27.org" "2020-04-03.org" "2020-08-15.org" "2020-07-23.org" "2020-08-14.org~" "2020-08-15.org~" "2020-03-20.org" "2020-05-19.org" "2020-07-30.org" "2020-07-25.org" "2020-07-13.org")
+ ("/home/das/.emacs.d/" (24398 23332 123017 764000) ".offlineimaprc" "../" "org-journal.cache" "session.10924a55b795e9fa79159415267448662700000023070090" "init.el" ".org-id-locations" "session.1024c936ea413497f6159415058461280200000016210064" "ido.last~" "recentf" ".git/" "config.el~" "session.29167cb8b-7f4f-40a8-9706-25af64b5a925" "init.el~" "./" "auto-save-list/" "elpa/" "bookmarks" "ido.last" "config.el.bak" "README.md" "recentf~" "session.21eb4776a-eb9e-4f95-a5f3-89d28e1ca48a" "lisp/" "session.101bf10f9e745dd9ab159415424352303600000015540089" "session.1086df88fe7bc26279159430914380626900000042540099")
 
- ("/home/das/data/md/das_fieldstones/" (24378 29771 85402 654000) "fieldstones2015.html" ".gitignore" "README.md" "fieldstones2017.html" "../" ".git/" "index.html" "morefieldstones2015.md" "fieldstones2009.html" "morefieldstones2010.md" "morefieldstones2013.md" "morefieldstones2017.md" "media/" "morefieldstones2020.md" "fieldstones2019.html" "./" "fieldstones2020.html" "fieldstones2011.html" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
+ ("/home/das/data/org/journal/" (24398 23427 867829 69000) "2020-07-07.org" "2020-05-08.org" "2020-08-11.org" "2020-08-16.org" "2020-07-10.org" "2020-04-18.org" "2020-07-18.org" "2020-07-22.org" "2020-04-09.org" "2020-08-08.org" "2020-02-28.org" "2020-08-21.org" "2020-04-02.org" "2020-08-06.org" "2020-02-21.org" "2020-08-09.org" "2020-08-07.org~" "2020-08-09.org~" "2020-07-21.org" "2020-03-21.org" "2020-03-06.org" "2020-08-04.org" "2020-02-23.org" "2020-07-26.org" "2020-05-16.org" "2020-07-11.org" "../" "2020-08-11.org~" "2020-03-15.org" "2020-08-16.org~" "2020-04-28.org" "2020-08-05.org" "2020-07-06.org" "2020-03-05.org" "2020-02-22.org" "2020-08-26.org" "2020-05-15.org" "2020-08-02.org" "2020-08-27.org" "2020-03-08.org" "2020-07-01.org" "2020-08-31.org" "2020-07-04.org" "2020-08-08.org~" "2020-05-09.org" "2020-03-31.org" "2020-08-30.org" "2020-08-29.org" "2020-02-24.org" "2020-06-30.org" "2020-03-30.org" "2020-07-20.org" "2020-08-19.org" "2020-07-31.org" "2020-03-07.org" "2020-03-22.org" "2020-06-29.org" "2020-07-29.org" "2020-07-16.org" "2020-07-14.org" "2020-08-12.org~" "2020-03-12.org" "2020-03-11.org" "2020-07-02.org" "2020-09-01.org" "2020-03-28.org" "2020-07-03.org" "2020-08.org" "2020-07-05.org" "./" "2020-03-16.org" "2020-02-27.org" "2020-08-01.org" "2020-03-23.org" "2020-08-18.org" "2020-07-09.org" "2020-02-29.org" "2020-08-20.org" ".#20200901" "2020-02-25.org" "2020-05-20.org" "2020-04-11.org" "2020-04-05.org" "2020-02-20.org" "2020-06-28.org" "2020-07-27.org" "2020-08-14.org" "2020-08-17.org~" "2020-08-12.org" "2020-08-03.org" "2020-08-24.org" "2020-04-26.org" "2020-08-17.org" "2020-08-25.org" "2020-07-24.org" "2020-05-03.org" "2020-03-01.org" "2020-03-09.org" "2020-05-18.org" "2020-05-07.org" "2020-07-19.org" "2020-08-10.org~" "2020-08-07.org" "2020-08-13.org" "2020-04-27.org" "2020-02-26.org" "2020-07-17.org" "2020-08-13.org~" "2020-03-04.org" "2020-07-15.org" "2020-08-18.org~" "2020-03-02.org" "2020-08-10.org" "2020-07-08.org" "2020-08-23.org" "2020-07-28.org" "2020-07-12.org" "2020-03-27.org" "2020-04-03.org" "2020-08-15.org" "2020-07-23.org" "2020-08-28.org" "2020-08-14.org~" "2020-08-15.org~" "2020-03-20.org" "2020-05-19.org" "2020-07-30.org" "2020-07-25.org" "2020-07-13.org")
 
- ("/home/das/data/" (24378 35485 337102 417000) "hobbies/" ".Trash-1000/" "md/" "elfeeddb/" "recipes/" "org/" "../" "Calibre Library/" "texts/" "Zotero/" "epubs.txt" "camera/" "calibre-epub.txt" "Writing/" "Church/" "Maildir/" "aa/" "humor/" "notes/" "texts2/" "org-roam/" "./" "blogs/" "backups/" "Lookup/" "manuals/" "Valerie/" "bills/" "Marketing/" "davids/" "Columbia/" "Ebook/" "family/" "Www/")
+ ("/home/das/data/org/" (24396 20974 934047 841000) "inbox.org" "org-mode.org" "emacsnotes.org" "IdeaoftheBrain.org" "#IdeaoftheBrain.org#" "inbox.archive.org" "emacs_tutorial.org" "#tutorial.org#" "journal/" "exegesis.org" "2020.txt" "tutorial.org" "../" "./")
 
- ("/home/das/.emacs.d/" (24380 10456 149451 563000) ".offlineimaprc" "../" "org-journal.cache" "session.10924a55b795e9fa79159415267448662700000023070090" "init.el" ".org-id-locations" "session.1024c936ea413497f6159415058461280200000016210064" "ido.last~" "recentf" ".git/" "config.el~" "session.29167cb8b-7f4f-40a8-9706-25af64b5a925" "init.el~" "./" "auto-save-list/" "elpa/" "bookmarks" "ido.last" "config.el.bak" "README.md" "recentf~" "lisp/" "session.101bf10f9e745dd9ab159415424352303600000015540089" "session.1086df88fe7bc26279159430914380626900000042540099")
+ ("/home/das/data/" (24393 28934 370497 990000) "hobbies/" ".Trash-1000/" "md/" "elfeeddb/" "recipes/" "org/" "../" "Calibre Library/" "texts/" "Zotero/" "epubs.txt" "camera/" "calibre-epub.txt" "Writing/" "Church/" "Maildir/" "aa/" "humor/" "notes/" "texts2/" "org-roam/" "./" "blogs/" "backups/" "Lookup/" "manuals/" "Valerie/" "bills/" "Marketing/" "davids/" "Columbia/" "Ebook/" "family/" "Www/")
 
- ("/home/das/" (24380 8946 509915 138000) ".emacs.d/" ".gnupg/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" ".bashrc" ".offlineimaprc" "../" ".config/" ".offlineimaprc~" ".xfce4-session.verbose-log.last" ".mozilla/" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" "Dropbox/" ".dropbox/" ".recently-used" ".pki/" ".offlineimap/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".bash_history" "Downloads/" ".Xauthority" "./" ".gtk-bookmarks" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
+ ("/home/das/" (24398 21784 348972 169000) ".emacs.d/" ".gnupg/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" ".bashrc" ".offlineimaprc" "../" ".config/" ".offlineimaprc~" ".xfce4-session.verbose-log.last" ".mozilla/" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" "Dropbox/" ".dropbox/" ".recently-used" ".pki/" ".offlineimap/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".bash_history" "Downloads/" ".Xauthority" "./" ".gtk-bookmarks" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
 
- ("/home/das/Desktop/notes/" (24376 4393 486296 464000) "FiOS.txt" "../" "Debian.txt" "Debian.txt~" "fb.txt" "emacsnotes.org~" "./" "emacsnotes.org")
+ ("/home/das/Desktop/notes/" (24398 22012 863295 991000) "FiOS.txt" "../" "Debian.txt" "Debian.txt~" "fb.txt" "emacsnotes.org~" "./" "emacsnotes.org")
 
- ("/home/das/data/notes/" (24364 1609 160515 436000) "Ubuntu.txt" "emacsnotes.org" "../" "emacsnotes.txt" "Debian.txt" "Namecheap/" "./" "fb.txt" "2015-minos/" "FiOS.txt" "org.md")
+ ("/home/das/Desktop/" (24388 17767 211432 169000) "../" "./" "notes/")
+
+ ("/home/das/data/md/" (24392 3044 827267 727000) "das_fieldstones/" "copybook_headings.md" "foreign/" "../" "moloch.md" "cady/" "tanquerey.md" "barfield/" "warstory/" "Texts/" "quotes2.md" "TheSpaniel.md" "./" "moloch.md~" "fieldstones/" "latin_rosary.md" "acmdas/" "20170601-kindlehighlights.txt" "radical_jew.md")
+
+ ("/home/das/data/notes/" (24374 64704 939282 685000) "Debian.txt~" "Ubuntu.txt" "emacsnotes.org" "../" "emacsnotes.txt" "Debian.txt" "Namecheap/" "./" "fb.txt" "2015-minos/" "FiOS.txt" "org.md")
+
+ ("/home/das/data/texts/" (24239 14085 968785 9000) "The Frailest Thing.pdf" "Secondary/" "SexAndCulture.pdf" "Ressentiment.pdf" "ChesterBelloc/" "../" "ShiningStranger/" "AlfredAyer_LanguageTruthAndLogic.epub" "Christianity/" "The-Frailest-Thing-1576008735.epub" "Harvard.txt" "New Thought/" "kindle-notes/" "tol/" "Trojan Horse of Western History - Kondrashin, Victor.txt~" "CTU/" "The-Frailest-Thing-1576008745.mobi" "./" "SexAndCulture.epub" "ArthurO.LovejoyTheGreatChainOfBeing_Arthur+O.+Lovejoy+-+The+Great+Chain+of+Being.epub" "Judaism/" "Sex and Culture.txt" "Arthur O. Lovejoy - The Great Chain of Being.pdf" "Inklings/")
+
+ ("/home/das/data/texts/Christianity/" (24362 43690 528331 916000) "The Quest/" "Theology/" "twerp_1105_becker.pdf" "Gnostic/" "Ascetic/" "../" "Bible/" "misc/" "MoMA/" "Authors/" "Anglican/" "greatdiscourseof1899larn_djvu.txt~" "Latin/" "./" "Church of the East/" "Doctrine/" "._.DS_Store" "Catholic/" "Liturgy/" "Greek/")
+
+ ("/home/das/data/texts/Christianity/Authors/" (24035 10028 940044 477000) "Quick/" "Beveridge/" "Erasmus/" "Mascall/" "Larkin/" "Benson/" "Brengle/" "Ratzinger/" "Maclachlan/" "Wilhelm/" "Fortescue/" "Otto/" "Renan/" "Augustine/" "Newman/" "Shorthouse/" "Law/" "Clement/" "Harnack/" "Hervey/" "Danielou/" "BrotherLawrence/" "The-Flowing-Light-of-the-Godhead.pdf" "Carus/" "Inge/" "Troward/" "Pusey/" "../" "Seifert/" "Inchausti/" "Pieper/" "Vincentius/" "Oden/" "Barton/" "Smith/" "Kwasniewski/" "Bailey/" "Blunt/" "Dix/" "Huntington/" "JohnOfTheCross/" "Staley/" "Wesley/" "Mabry/" "Mallock/" "Figgis/" "Kierkegaard/" "Faustina/" "Jones/" "Sheen/" "Underhill/" "Moore/" "Bonhoeffer/" "Keble/" "Thornton/" "Hart/" "Francis/" "Fox/" "Iranaeus/" "Mystics/" "Allison/" "deLiguori/" "Baker/" "Sarah/" "Wrede/" "Streeter/" "Cobbett/" "Lucas/" "Bergamo/" "Thomas/" "./" "JohnPaulII/" "Ruden/" "Benedict XVI/" "Guardini/" "AnteNicene/" "Tyndale/" "Beale/" "Aquinas/" "Knowles/" "Laubach/" "Gracian/" "Isidore/" "Boehme/" "Willard/" "Collins/" "Meagher/" "More/" "Emerson/" "Cady/" "Fosdick/" "Murray/" "Burke/" "delTondo/" "Tanquerey/" "Loyola/" "Sammons/" "Schall/" "aKempis/")
+
+ ("/home/das/data/texts/Christianity/Authors/Cady/" (23585 26107 78032 532000) "From Medicine to Metaphysics | TruthUnity.html" "Seeking the Kingdom.txt" "en-emilie-cady-finding-the-christ-in-ourselves-1917.pdf" "../" "History/" "Card/" "All Sufficiency/" "Unadulterated Truth_Unity Magazine.pdf" "God A Present Help/" "charles-roth-lessons-in-truth-booklet.pdf" "./" "emilie-cady-the-will-of-god-1978.pdf" "Lessons/" "Miscellaneous Writings/" "Seeking the Kingdom.html" "GodAPresentHelp/" "Finding/" "How I Used Truth/" "MiscellaneousWritings/" "Lessons in Truth/" "HowIUsedTruth/" "Seeking the Kingdom_Unity Magazine.pdf" "emilie-cady-trusting-and-resting-in-his-name-1892.pdf" "pomeroy-ella-bio-by-raymond-barker.pdf" "cady-emilie-by-ella-pomeroy.pdf")
+
+ ("/home/das/data/texts/Christianity/Authors/Cady/MiscellaneousWritings/" (24385 27396 3483 930000) "MiscellaneousWritings.md" "README.md" "../" ".git/" "Miscellaneous_writings.epub" "MiscellaneousWritings.txt" "Cover.jpg" "toc.ncx" "./" "MiscellaneousWritings.opf" "toc.ncx~" "MiscellaneousWritings.doc" "MiscellaneousWritings.html" "MiscellaneousWritings.mobi")
 
  ("/home/das/data/org-roam/" (24367 61245 821019 997000) "20200801120549-howardnemerov.org" "20200714170607-index.org~" "20200714170129-barfield.org" "20200714165141-alphabet.org" ".#20200714171036-historyinenglishwords.org" "20200714165220-linear_b.org~" "20200714165104-crete.org" "#20200714170401-english_language.org#" "20200704153721-insert.org~" "20200704171228-templates.org~" "20200802084527-ideaofthebrain.org~" "../" "20200801120321-poeticdiction.org" "20200714164413-riddleofthelabyrinth.org" "20200714165748-greek.org~" "20200801115915-nemerovandobjectiveidealism.org~" "20200714171225-books.org" "20200704171638-capture.org~" "20200714171036-historyinenglishwords.org~" "20200714171445-savingtheappearances.org" "20200714165448-minoan.org" "20200714171036-historyinenglishwords.org" "20200801120958-objectiveidealism.org" "20200714170129-barfield.org~" "20200714165141-alphabet.org~" "20200714170237-language.org~" "20200801115915-nemerovandobjectiveidealism.org" "#20200714171036-historyinenglishwords.org#" "20200714165748-greek.org" "20200714170401-english_language.org" "20200714172630-english_history.org" ".#20200714170401-english_language.org" "./" "20200704152812-roam.org~" "20200714170401-english_language.org~" "20200714165220-linear_b.org" "20200714171445-savingtheappearances.org~" "20200802084527-ideaofthebrain.org" "20200714170607-index.org" "20200802085048-consciousness.org" "20200714165448-minoan.org~" "20200714164413-riddleofthelabyrinth.org~" "20200704152952-toggle_buffer.org~" "20200801120321-poeticdiction.org~" "20200714170237-language.org" "org-roam.db" "20200809083629-historyofconsciousness.org" "20200801120549-howardnemerov.org~" "20200809083629-historyofconsciousness.org~" "20200801154150-evolutionofconsciousness.org~" "20200714165104-crete.org~" "20200802085048-consciousness.org~" "20200714172630-english_history.org~" "20200801154150-evolutionofconsciousness.org" "20200714171225-books.org~")
 
  ("/home/" (24327 29009 1703 343000) "das/" "../" "./")
-
- ("/home/das/Desktop/" (24364 1627 940671 786000) "../" "./" "notes/")
-
- ("/home/das/data/md/" (24350 20144 167420 815000) "das_fieldstones/" "foreign/" "../" "moloch.md" "tanquerey.md" "barfield/" "warstory/" "Texts/" "quotes2.md" "TheSpaniel.md" "./" "moloch.md~" "fieldstones/" "acmdas/" "20170601-kindlehighlights.txt" "radical_jew.md")
 
  ("/home/das/data/Writing/Writing/acmdas/das_fieldstones/" (24315 63767 152625 738000) "fieldstones2015.html" ".gitignore" "habit.md" "README.md" "appearances.md" "fieldstones2017.html" "WorldsApart.md" "../" ".git/" "index.html" "literal.md" "morefieldstones2015.md" "barfield_quotes.md" "meaning.md" "meaning.html" "fieldstones2009.html" "morefieldstones2010.md" "barfield_quotes.html" "morefieldstones2013.md" "appearances/" "morefieldstones2017.md" "literal.html" "appearances.html" "media/" "morefieldstones2020.md" "fieldstones2019.html" "./" "fieldstones2020.html" "habit.html" "#morefieldstones2020.md#" "fieldstones2011.html" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "WorldsApart.html" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
 

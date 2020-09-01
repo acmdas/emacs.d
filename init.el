@@ -89,11 +89,13 @@
 (require 'org-protocol)
 
 ;; Configuring org-journal
-(customize-set-variable 'org-journal-date-prefix "#+TITLE: ")
-(customize-set-variable 'org-journal-file-format "%Y-%m-%d.org")
-(customize-set-variable 'org-journal-dir "~/data/org/journal")
-(customize-set-variable 'org-journal-date-format "%A, %d %B %Y")
-(global-set-key "\C-cnj" 'org-journal-new-entry)
+(require 'org-journal)
+(setq org-journal-file-type 'monthly)
+;; (setq org-journal-date-prefix "#+TITLE: ")
+;; (setq org-journal-file-format "%Y-%m.org")
+(setq org-journal-dir "~/data/org/journal")
+;; (setq org-journal-date-format "%A, %d %B %Y")
+;; (global-set-key "\C-cnj" 'org-journal-new-entry)
 
 ;; configuring org-roam
 (setq org-roam-directory "~/data/org-roam")
@@ -118,7 +120,7 @@
          :head "#+TITLE: ${title}\nn#+CREATED: %U\n#+LAST_MODIFIED: %U\n\n"
          :unnarrowed t)))
 
-;; configuring sdcv
+;; configuring sdcv for using the 1923 Websters Dictionary
 (require 'sdcv-mode)
 (global-set-key (kbd "C-c d") 'sdcv-search)
 
