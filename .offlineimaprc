@@ -1,4 +1,6 @@
 [general]
+maxsyncaccounts = 1
+
 accounts = acmdas, daslearns, consultingsmiths
 
 [Account acmdas]
@@ -16,23 +18,28 @@ remoterepository = consultingsmiths-Remote
 [Repository acmdas-Local]
 type = Maildir
 localfolders = ~/data/Maildir/acmdas
+sync_deletes = no
 
 [Repository daslearns-Local]
 type = Maildir
 localfolders = ~/data/Maildir/daslearns
+sync_deletes = no
 
 [Repository consultingsmiths-Local]
 type = Maildir
 localfolders = ~/data/Maildir/consultingsmiths
+sync_deletes = no
 
 [Repository acmdas-Remote]
 type = IMAP
 remotehost = imap.gmail.com
 remoteuser = acmdas@gmail.com
-remotepass = iazqtehktnnpijcb
+remotepass = cwvevjbxfjqzjbxo
 ssl = yes
 maxconnections = 1
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+sync_deletes = no
+folderfilter = lambda foldername: foldername in ['[Gmail]/All Mail', '[Gmail]/Drafts', '[Gmail]/Sent Mail']
 
 [Repository daslearns-Remote]
 type = IMAP
@@ -42,6 +49,7 @@ remotepass = i~=tC5KcLY~P
 ssl = yes
 maxconnections = 1
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+sync_deletes = no
 
 [Repository consultingsmiths-Remote]
 type = IMAP
@@ -51,3 +59,4 @@ remotepass = M7Dty2NVUwNW
 ssl = yes
 maxconnections = 1
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+sync_deletes = no
