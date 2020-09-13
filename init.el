@@ -173,6 +173,7 @@
 
 ;; more stuff
 
+(require 'whole-line-or-region)
 (setq make-backup-files nil)
 (setq sentence-end-double-space nil)
 
@@ -187,7 +188,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (magit org-roam recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode))))
+    (whole-line-or-region magit org-roam recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

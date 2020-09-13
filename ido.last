@@ -9,16 +9,16 @@
  ("/home/das/data/Writing/Writing/acmdas/" . "das_fieldstones/")
  ("/home/das/data/Writing/Writing/" . "acmdas/")
  ("/home/das/data/Writing/" . "Writing/")
- ("/home/das/data/" . "org/")
+ ("/home/das/data/" . "md/")
  ("/home/das/Desktop/" . "notes/")
  ("/home/das/" . "Desktop/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/das/data/md/das_fieldstones/"
  "/home/das/data/org/"
  "/home/das/Desktop/notes/"
- "/home/das/data/md/das_fieldstones/"
  "/home/das/"
  "/home/das/.emacs.d/"
  "/home/das/data/org/journal/"
@@ -30,9 +30,9 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "morefieldstones2020.md"
  "inbox.org"
  "fb.txt"
- "morefieldstones2020.md"
  ".offlineimaprc"
  "init.el"
  "Debian.txt"
