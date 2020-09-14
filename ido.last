@@ -16,39 +16,39 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/das/Downloads/"
+ "/home/das/.emacs.d/"
+ "/home/das/Desktop/notes/"
  "/home/das/data/md/das_fieldstones/"
  "/home/das/data/org/"
- "/home/das/Desktop/notes/"
  "/home/das/"
- "/home/das/.emacs.d/"
  "/home/das/data/org/journal/"
  "/home/das/data/md/"
- "/home/das/Downloads/"
  "/home/das/data/notes/"
  "/home/das/data/Writing/Writing/acmdas/das_fieldstones/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "make.txt"
+ "init.el"
+ "fb.txt"
  "morefieldstones2020.md"
  "inbox.org"
- "fb.txt"
  ".offlineimaprc"
- "init.el"
  "Debian.txt"
  "inbox.archive.org"
  "2020-09-02"
  "2020-09-01.org"
- "morefieldstones2009.md"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/das/Downloads/" (24411 22905 949180 499000) "article.txt" "../" "you-watching-youtube.jpg" "Jesse-Grade10.pdf" "Recomendo_Book_Gumroad_Final.pdf" "Win 10 Pro Key.txt" "CandidConversation-Playboy.pdf" "tech/" "Forte/" "Sept Agenda.pdf" "./" "ivar-drawer-white__AA-2026463-1_pub.pdf" "bucky/" "Mask Sept 9 2020.pdf" "HowToMake2000.pdf" "alastlighttowers.jpg")
+ ("/home/das/Downloads/" (24414 48472 506553 379000) "woodworkingforyoungmakers(1).mobi" "make_fabricandfiberinventions.mobi" "make_musicalinventions(1).pdf" "make_planesglidersandpaperrockets.pdf" "make_fabricandfiberinventions.pdf" "make_gettingstartedwitharduino_3rdedition.mobi" "make_likethepioneers.pdf" "make_illustratedguidetohomeforensicscienceexperiments.mobi" "article.txt" "make_planesglidersandpaperrockets.epub" "electricityforyoungmakers(1).epub" "makemoretinkering.mobi" "gettingstartedwithdrones_buildandcustomizeyourownquadcopter.mobi" "makestartmaking(1).pdf" "make_gettingstartedwithraspberrypi_3rdedition.epub" "make_gettingstartedwiththemicrobit.mobi" "atmosphericmonitoringwitharduino.pdf" "electricityforyoungmakers.mobi" "you-watching-youtube.jpg" "Jesse-Grade10.pdf" "illustratedguidetohomechemistryexperiments.epub" "illustratedguidetoastronomicalwonders.mobi" "make_gettingstartedwitharduino_3rdedition(1).epub" "make_musicalinventions(2).mobi" "Recomendo_Book_Gumroad_Final.pdf" "make_propsandcostumearmor.mobi" "make_vol71.pdf" "woodworkingforyoungmakers.mobi" "make_magazine_vol70_wecantquityou.pdf" "makemoretinkering.pdf" "makestartmaking.mobi" "make_illustratedguidetohomeforensicscienceexperiments.pdf" "make_inventingabettermousetrap.pdf" "makegettingstartedwithsoldering.epub" "atmosphericmonitoringwitharduino.epub" "electricityforyoungmakers(1).pdf" "illustratedguidetohomebiologyexperiments.mobi" "make_paperinventions.epub" "FrontGarden.png" "gettingstartedwithdrones_buildandcustomizeyourownquadcopter.epub" "makemoretinkering.epub" "make_mechanicalengineeringformakers.pdf" "makehowtouseabreadboard.epub" "Win 10 Pro Key.txt" "illustratedguidetohomechemistryexperiments.pdf" "make_gettingstartedwitharduino_3rdedition(1).pdf" "tech/" "atmosphericmonitoringwitharduino.mobi" "GardenLegend.png" "makestartmaking.pdf" "Forte/" "20-0911 LS PLAN.pdf" "woodworkingforyoungmakers(2).mobi" "make_theannotatedbuild-it-yourselfsciencelaboratory.mobi" "make_tinkering_2ndedition.epub" "electricityforyoungmakers.epub" "make_illustratedguidetohomeforensicscienceexperiments.epub" "make_musicalinventions(1).epub" "makehowtouseabreadboard.pdf" "make_illustratedguidetohomeforensicscienceexperiments(1).mobi" "make_gettingstartedwitharduino_3rdedition(2).mobi" "illustratedguidetohomebiologyexperiments.epub" "make_paperinventions.mobi" "make_tinkering_2ndedition.pdf" "make_theannotatedbuild-it-yourselfsciencelaboratory.epub" "woodworkingforyoungmakers(1).epub" "woodworkingforyoungmakers(1).pdf" "make_zerotomaker2ndedition.epub" "makestartmaking(1).mobi" "make_musicalinventions.mobi" "makingmakers.mobi" "make_gettingstartedwithraspberrypi_3rdedition.pdf" "make_zerotomaker2ndedition.pdf" "illustratedguidetohomebiologyexperiments(1).epub" "make_illustratedguidetohomeforensicscienceexperiments(1).pdf" "make_musicalinventions.epub" "make_gettingstartedwitharduino_3rdedition.pdf" "make_magazine_vol72_privatebydesign.pdf" "make_likethepioneers.epub" "illustratedguidetoastronomicalwonders.epub" "make_tinkering_2ndedition.mobi" "woodworkingforyoungmakers(2).epub" "make_paperinventions.pdf" "illustratedguidetohomechemistryexperiments.mobi" "make_zerotomaker2ndedition.mobi" "ivar-drawer-white__AA-2026463-1_pub.pdf" "makegettingstartedwithsoldering.mobi" "make_gettingstartedwitharduino_3rdedition.epub" "makingmakers.pdf" "woodworkingforyoungmakers.epub" "make_gettingstartedwiththemicrobit.pdf" "inventingabettermousetrap.epub" "bucky/" "makingmakers.epub" "make_likethepioneers.mobi" "Mask Sept 9 2020.pdf" "electricityforyoungmakers.pdf" "make_gettingstartedwitharduino_3rdedition(1).mobi" "make_musicalinventions.pdf" "make_propsandcostumearmor.epub" "makestartmaking.epub" "make_planesglidersandpaperrockets.mobi" "inventingabettermousetrap.mobi" "gettingstartedwithdrones_buildandcustomizeyourownquadcopter.pdf" "makestartmaking(1).epub" "illustratedguidetohomebiologyexperiments(1).mobi" "HowToMake2000.pdf" "make_volume73_diyheroes.pdf" "makegettingstartedwithsoldering.pdf" "illustratedguidetoastronomicalwonders.pdf" "makehowtouseabreadboard.mobi" "make_gettingstartedwithraspberrypi_3rdedition.mobi" "make_theannotatedbuild-it-yourselfsciencelaboratory.pdf" "woodworkingforyoungmakers.pdf" "illustratedguidetohomebiologyexperiments.pdf" "make_fabricandfiberinventions.epub" "make_musicalinventions(1).mobi" "CW2.png" "make_illustratedguidetohomeforensicscienceexperiments(1).epub" "illustratedguidetohomebiologyexperiments(1).pdf" "make_propsandcostumearmor.pdf" "electricityforyoungmakers(1).mobi" "make_gettingstartedwiththemicrobit.epub" "../" "./")
+
+ ("/home/das/.emacs.d/" (24414 37789 732537 245000) ".offlineimaprc" "../" "org-journal.cache" "session.10924a55b795e9fa79159415267448662700000023070090" "init.el" ".org-id-locations" "session.1024c936ea413497f6159415058461280200000016210064" "recentf" ".git/" "session.29167cb8b-7f4f-40a8-9706-25af64b5a925" "./" "auto-save-list/" "elpa/" "bookmarks" "ido.last" "config.el.bak" "README.md" "session.21eb4776a-eb9e-4f95-a5f3-89d28e1ca48a" "lisp/" "session.101bf10f9e745dd9ab159415424352303600000015540089" "session.1086df88fe7bc26279159430914380626900000042540099")
 
  ("/home/das/data/org/journal/" (24411 23711 814933 362000) "2020-07-07.org" "2020-05-08.org" "2020-08-11.org" "2020-08-16.org" "2020-07-10.org" "2020-04-18.org" "2020-07-18.org" "2020-07-22.org" "2020-04-09.org" "2020-08-08.org" "2020-02-28.org" "2020-08-21.org" "2020-04-02.org" "2020-08-06.org" "2020-02-21.org" "2020-08-09.org" "2020-08-07.org~" "2020-08-09.org~" "2020-07-21.org" "2020-03-21.org" "2020-03-06.org" "2020-08-04.org" "2020-02-23.org" "2020-07-26.org" "2020-05-16.org" "2020-07-11.org" "../" "2020-08-11.org~" "2020-03-15.org" "2020-08-16.org~" "2020-04-28.org" "2020-08-05.org" "2020-07-06.org" "2020-03-05.org" "2020-02-22.org" "2020-08-26.org" "2020-05-15.org" "2020-08-02.org" "2020-08-27.org" "2020-03-08.org" "2020-07-01.org" "2020-08-31.org" "2020-07-04.org" "2020-08-08.org~" "2020-05-09.org" "2020-03-31.org" "2020-08-30.org" "2020-08-29.org" "2020-02-24.org" "2020-06-30.org" "2020-03-30.org" "2020-07-20.org" "2020-08-19.org" "2020-07-31.org" "2020-03-07.org" "2020-03-22.org" "2020-06-29.org" "2020-07-29.org" "2020-07-16.org" "2020-07-14.org" "2020-08-12.org~" "2020-03-12.org" "2020-03-11.org" "2020-07-02.org" "2020-03-28.org" "2020-07-03.org" "2020-08.org" "2020-07-05.org" "./" "2020-03-16.org" "2020-02-27.org" "2020-08-01.org" "2020-03-23.org" "2020-08-18.org" "2020-07-09.org" "2020-02-29.org" "2020-08-20.org" "2020-02-25.org" "2020-05-20.org" "2020-04-11.org" "2020-04-05.org" "2020-02-20.org" "2020-06-28.org" "2020-07-27.org" "2020-08-14.org" "2020-08-17.org~" "2020-08-12.org" "2020-08-03.org" "2020-08-24.org" "2020-04-26.org" "2020-08-17.org" "2020-08-25.org" "2020-07-24.org" "2020-05-03.org" "2020-03-01.org" "2020-03-09.org" "2020-05-18.org" "2020-05-07.org" "2020-07-19.org" "2020-08-10.org~" "2020-08-07.org" "2020-08-13.org" "2020-04-27.org" "2020-02-26.org" "2020-07-17.org" "2020-08-13.org~" "2020-03-04.org" "2020-07-15.org" "2020-08-18.org~" "2020-03-02.org" "2020-08-10.org" "2020-07-08.org" "2020-08-23.org" "2020-07-28.org" "2020-07-12.org" "2020-03-27.org" "2020-04-03.org" "2020-08-15.org" "2020-07-23.org" "2020-08-28.org" "2020-08-14.org~" "2020-08-15.org~" "2020-03-20.org" "2020-05-19.org" "2020-07-30.org" "20200901" "2020-07-25.org" "2020-07-13.org")
-
- ("/home/das/.emacs.d/" (24410 54485 131235 30000) ".offlineimaprc" "../" "org-journal.cache" "session.10924a55b795e9fa79159415267448662700000023070090" "init.el" ".org-id-locations" "session.1024c936ea413497f6159415058461280200000016210064" "recentf" ".git/" "session.29167cb8b-7f4f-40a8-9706-25af64b5a925" "./" "auto-save-list/" "elpa/" "bookmarks" "ido.last" "config.el.bak" "README.md" "session.21eb4776a-eb9e-4f95-a5f3-89d28e1ca48a" "lisp/" "session.101bf10f9e745dd9ab159415424352303600000015540089" "session.1086df88fe7bc26279159430914380626900000042540099")
 
  ("/home/das/data/md/das_fieldstones/" (24408 56493 84580 720000) "fieldstones2015.html" ".gitignore" "README.md" "fieldstones2017.html" "../" ".git/" "lehrer.html" "index.html" "morefieldstones2015.md" "fieldstones2009.html" "morefieldstones2010.md" "morefieldstones2013.md" "morefieldstones2017.md" "media/" "morefieldstones2020.md" "fieldstones2019.html" "./" "fieldstones2020.html" "fieldstones2011.html" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
 
