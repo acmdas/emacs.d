@@ -4,6 +4,7 @@
 ;; 20200803 - installed elfeed and began configuration - installed use-package - gave up and deleted.
 ;; 20200805 - recentf removed. org-agenda-files defined as inbox.org only. sdcv added
 ;; 20200816 - installed offlineimap, mu and mu4e
+;; 20200919 - began using mu4e
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'exec-path "/usr/bin/sqlite3")
@@ -38,7 +39,13 @@
 (package-initialize)
 
 ;; configuring mu4e
+;; sending mail is not set up yet!! See the mu4e Manual 2.9
 (require 'mu4e)
+(setq
+ mu4e-sent-folder "/sent"
+ mu4e-drafts-folder "/drafts"
+ mu4e-trash-folder "/trash"
+ mu4e-refile-folder "/archive")
 
 ;; configuring ido-mode
 (ido-mode t)
