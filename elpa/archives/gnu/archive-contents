@@ -196,7 +196,7 @@
 	   (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com")
 	   (:url . "https://github.com/Malabarba/beacon"))])
  (bluetooth .
-	    [(0 1 2)
+	    [(0 2)
 	     ((emacs
 	       (25 1))
 	      (dash
@@ -204,7 +204,8 @@
 	     "A Major mode for Bluetooth devices" single
 	     ((:keywords "hardware")
 	      (:authors
-	       ("Raffael Stocker" . "r.stocker@mnet-mail.de"))
+	       ("Raffael Stocker" . "r.stocker@mnet-mail.de")
+	       ("Etienne Prud’homme" . "e.e.f.prudhomme@gmail.com"))
 	      (:maintainer "Raffael Stocker" . "r.stocker@mnet-mail.de")
 	      (:url . "https://gitlab.com/rstocker/emacs-bluetooth"))])
  (bnf-mode .
@@ -1511,6 +1512,17 @@
 	     (:authors
 	      ("Ian Dunn" . "dunni@gnu.org"))
 	     (:keywords "convenience" "text" "org"))])
+ (org-translate .
+		[(0 1)
+		 ((emacs
+		   (25 1))
+		  (org
+		   (9 1)))
+		 "Org-based translation environment" single
+		 ((:url . "http://elpa.gnu.org/packages/org-translate.html")
+		  (:authors
+		   ("Eric Abrahamsen" . "eric@ericabrahamsen.net"))
+		  (:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net"))])
  (orgalist .
 	   [(1 12)
 	    ((emacs

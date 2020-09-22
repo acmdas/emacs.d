@@ -998,7 +998,7 @@ Also refresh fontification if needed.
 
 ;;;***
 
-;;;### (autoloads nil "org" "org.el" "9dfbf8b60bfc1df26c3dece669641033")
+;;;### (autoloads nil "org" "org.el" "91bcfb802f8be4217e43df0aff3dca60")
 ;;; Generated autoloads from org.el
 
 (autoload 'org-babel-do-load-languages "org" "\
@@ -2409,15 +2409,13 @@ if ARG is `toggle'; disable the mode otherwise.
 
 ;;;***
 
-;;;### (autoloads nil "org-macs" "org-macs.el" (0 0 0 0))
+;;;### (autoloads nil "org-macs" "org-macs.el" "3517c9da87e8778e4abd7bb53586738e")
 ;;; Generated autoloads from org-macs.el
 
 (autoload 'org-load-noerror-mustsuffix "org-macs" "\
 Load FILE with optional arguments NOERROR and MUSTSUFFIX.
 
 \(fn FILE)" nil t)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-macs" '("org-")))
 
 ;;;***
 
@@ -2547,7 +2545,7 @@ prefix argument (`C-u C-u C-u C-c C-w').
 
 ;;;***
 
-;;;### (autoloads nil "org-table" "org-table.el" "89120f79b770ad318f75add0f262891b")
+;;;### (autoloads nil "org-table" "org-table.el" "e2d4aa40fc197473507fcbf22e196482")
 ;;; Generated autoloads from org-table.el
 
 (autoload 'org-table-header-line-mode "org-table" "\

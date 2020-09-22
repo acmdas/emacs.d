@@ -5,6 +5,7 @@
 ;; 20200805 - recentf removed. org-agenda-files defined as inbox.org only. sdcv added
 ;; 20200816 - installed offlineimap, mu and mu4e
 ;; 20200919 - began using mu4e
+;; 20200921-22 - fiddling with smtpmail & etc. to try to get sending working
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'exec-path "/usr/bin/sqlite3")
@@ -39,13 +40,34 @@
 (package-initialize)
 
 ;; configuring mu4e
-;; sending mail is not set up yet!! See the mu4e Manual 2.9
 (require 'mu4e)
 (setq
  mu4e-sent-folder "/sent"
  mu4e-drafts-folder "/drafts"
  mu4e-trash-folder "/trash"
- mu4e-refile-folder "/archive")
+ mu4e-refile-folder "/archive"
+ mu4e-get-mail-command "offlineimap"
+ mu4e-update-interval 300
+ mail-user-agent 'mu4e-user-agent)
+
+;; configuring smtpmail
+;; as of 2209 0923 still getting "Process smtpmail not running" errors
+; (require 'smtpmail)
+; (require 'starttls)
+
+; (setq mail-host-address "daslearns.ca")
+
+; (setq message-send-mail-function 'smtpmail-send-it)
+; (defun gnutls-available-p ()
+;  "Function redefined so as to not use built-in GnuTLS support"
+;  nil)
+; (setq starttls-gnutls-program "gnutls-cli")
+; (setq starttls-use-gnutls t)
+; (setq smtpmail-stream-type 'starttls)
+; (setq
+;  smtpmail-default-smtp-server "mail.daslearns.ca"
+;  smtpmail-smtpserver "mail.daslearns.ca"
+;  smtpmail-smtp-service 465)
 
 ;; configuring ido-mode
 (ido-mode t)
@@ -195,7 +217,9 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (whole-line-or-region magit org-roam recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode))))
+    (whole-line-or-region magit org-roam recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode)))
+ '(smtpmail-smtp-server "daslearns.ca")
+ '(smtpmail-smtp-service 465))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

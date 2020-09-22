@@ -11,17 +11,17 @@
  ("/home/das/data/Writing/" . "Writing/")
  ("/home/das/data/" . "md/")
  ("/home/das/Desktop/" . "notes/")
- ("/home/das/" . "data/")
+ ("/home/das/" . ".emacs.d/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/das/data/md/das_fieldstones/"
- "/home/das/data/org/"
- "/home/das/Desktop/notes/"
- "/home/das/Downloads/"
  "/home/das/.emacs.d/"
  "/home/das/"
+ "/home/das/data/md/das_fieldstones/"
+ "/home/das/Desktop/notes/"
+ "/home/das/data/org/"
+ "/home/das/Downloads/"
  "/home/das/data/org/journal/"
  "/home/das/data/md/"
  "/home/das/data/notes/"
@@ -30,33 +30,39 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "init.el"
+ ".authinfo"
  "morefieldstones2020.md"
- "inbox.org"
+ "morefieldstones2009.md"
  "Debian.txt"
+ "mu4e.txt"
+ "inbox.org"
  "inbox.archive.org"
  "make.txt"
- "init.el"
  "fb.txt"
- ".offlineimaprc"
- "2020-09-02"
- "2020-09-01.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/das/data/org/journal/" (24420 45426 334482 317000) "2020-07-07.org" "2020-05-08.org" "2020-08-11.org" "2020-08-16.org" "2020-07-10.org" "2020-04-18.org" "2020-07-18.org" "2020-07-22.org" "2020-04-09.org" "2020-08-08.org" "2020-02-28.org" "2020-08-21.org" "2020-04-02.org" "2020-08-06.org" "2020-02-21.org" "2020-08-09.org" "2020-08-07.org~" "2020-08-09.org~" "2020-07-21.org" "2020-03-21.org" "2020-03-06.org" "2020-08-04.org" "2020-02-23.org" "2020-07-26.org" "2020-05-16.org" "2020-07-11.org" "../" "2020-08-11.org~" "2020-03-15.org" "2020-08-16.org~" "2020-04-28.org" "2020-08-05.org" "2020-07-06.org" "2020-03-05.org" "2020-02-22.org" "2020-08-26.org" "2020-05-15.org" "2020-08-02.org" "2020-08-27.org" "2020-03-08.org" "2020-07-01.org" "2020-08-31.org" "2020-07-04.org" "2020-08-08.org~" "2020-05-09.org" "2020-03-31.org" "2020-08-30.org" "2020-08-29.org" "2020-02-24.org" "2020-06-30.org" "2020-03-30.org" "2020-07-20.org" "2020-08-19.org" "2020-07-31.org" "2020-03-07.org" "2020-03-22.org" "2020-06-29.org" "2020-07-29.org" "2020-07-16.org" "2020-07-14.org" "2020-08-12.org~" "2020-03-12.org" "2020-03-11.org" "2020-07-02.org" "2020-03-28.org" "2020-07-03.org" "2020-08.org" "2020-07-05.org" "./" "2020-03-16.org" "2020-02-27.org" "2020-08-01.org" "2020-03-23.org" "2020-08-18.org" "2020-07-09.org" "2020-02-29.org" "2020-08-20.org" ".#20200901" "2020-02-25.org" "2020-05-20.org" "2020-04-11.org" "2020-04-05.org" "2020-02-20.org" "2020-06-28.org" "2020-07-27.org" "2020-08-14.org" "2020-08-17.org~" "2020-08-12.org" "2020-08-03.org" "2020-08-24.org" "2020-04-26.org" "2020-08-17.org" "2020-08-25.org" "2020-07-24.org" "2020-05-03.org" "2020-03-01.org" "2020-03-09.org" "2020-05-18.org" "2020-05-07.org" "2020-07-19.org" "2020-08-10.org~" "2020-08-07.org" "2020-08-13.org" "2020-04-27.org" "2020-02-26.org" "2020-07-17.org" "2020-08-13.org~" "2020-03-04.org" "2020-07-15.org" "2020-08-18.org~" "2020-03-02.org" "2020-08-10.org" "2020-07-08.org" "2020-08-23.org" "2020-07-28.org" "2020-07-12.org" "2020-03-27.org" "2020-04-03.org" "2020-08-15.org" "2020-07-23.org" "2020-08-28.org" "2020-08-14.org~" "2020-08-15.org~" "2020-03-20.org" "2020-05-19.org" "2020-07-30.org" "20200901" "2020-07-25.org" "2020-07-13.org")
+ ("/home/das/.emacs.d/" (24425 64243 561082 902000) ".offlineimaprc" "../" "org-journal.cache" "session.10924a55b795e9fa79159415267448662700000023070090" "init.el" ".org-id-locations" "session.1024c936ea413497f6159415058461280200000016210064" "recentf" ".git/" "session.29167cb8b-7f4f-40a8-9706-25af64b5a925" "./" "auto-save-list/" "elpa/" "bookmarks" "ido.last" "config.el.bak" "README.md" "session.21eb4776a-eb9e-4f95-a5f3-89d28e1ca48a" "lisp/" "session.101bf10f9e745dd9ab159415424352303600000015540089" "session.1086df88fe7bc26279159430914380626900000042540099")
 
- ("/home/das/.emacs.d/" (24420 6946 111787 616000) ".offlineimaprc" "../" "org-journal.cache" "session.10924a55b795e9fa79159415267448662700000023070090" "init.el" ".org-id-locations" "session.1024c936ea413497f6159415058461280200000016210064" "recentf" ".git/" "session.29167cb8b-7f4f-40a8-9706-25af64b5a925" "./" "auto-save-list/" "elpa/" "bookmarks" "ido.last" "config.el.bak" "README.md" "session.21eb4776a-eb9e-4f95-a5f3-89d28e1ca48a" "lisp/" "session.101bf10f9e745dd9ab159415424352303600000015540089" "session.1086df88fe7bc26279159430914380626900000042540099")
+ ("/home/das/" (24426 466 873550 49000) ".emacs.d/" ".gnupg/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" ".bashrc" ".offlineimaprc" "../" ".config/" ".xfce4-session.verbose-log.last" ".mozilla/" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" "Dropbox/" ".dropbox/" "#*message*-20200921-195354#" ".recently-used" ".pki/" ".offlineimap/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".bash_history" ".authinfo.bak" "Downloads/" ".Xauthority" "./" ".gtk-bookmarks" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
 
- ("/home/das/Downloads/" (24419 38752 77460 431000) "Jesse-Grade10.pdf" "Recomendo_Book_Gumroad_Final.pdf" "FrontGarden.png" "tech/" "GardenLegend.png" "Forte/" "20-0911 LS PLAN.pdf" "windows/" "bucky/" "Mask Sept 9 2020.pdf" "HowToMake2000.pdf" "covid-article.txt" "transparency.article.board.pdf" "../" "./")
+ ("/home/das/data/Maildir/" (24422 23186 383439 6000) "daslearns/" "trash/" "../" "archive/" "kadashan/" "./" "consultingsmiths/" "sent/" "drafts/" "acmdas/")
 
- ("/home/das/data/md/das_fieldstones/" (24418 19360 297485 873000) "fieldstones2015.html" ".gitignore" "README.md" "fieldstones2017.html" "../" ".git/" "lehrer.html" "index.html" "morefieldstones2015.md" "fieldstones2009.html" "morefieldstones2010.md" "morefieldstones2013.md" "morefieldstones2017.md" "media/" "morefieldstones2020.md" "fieldstones2019.html" "./" "fieldstones2020.html" "fieldstones2011.html" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
+ ("/home/das/data/Maildir/drafts/" (24425 20854 934054 205000) "../" "cur/" "./")
 
- ("/home/das/Desktop/notes/" (24420 4657 424974 80000) "FiOS.txt" "../" "Debian.txt" "Debian.txt~" "fb.txt" "emacsnotes.org~" "./" "emacsnotes.org")
+ ("/home/das/data/Maildir/drafts/cur/" (24425 22815 103203 196000) "../" "1600737327.09b244e71f76fc7f.minos:2,DS" "1600739096.365e778fa40a5179.minos:2,DS" "./")
 
- ("/home/das/data/org/" (24419 39908 360854 775000) "inbox.org" "org-mode.org" "emacsnotes.org" "IdeaoftheBrain.org" "#IdeaoftheBrain.org#" "inbox.archive.org" "emacs_tutorial.org" "#tutorial.org#" "journal/" "exegesis.org" "2020.txt" "tutorial.org" "../" "./")
+ ("/home/das/data/org/journal/" (24424 58942 441414 463000) "2020-07-07.org" "2020-05-08.org" "2020-08-11.org" "2020-08-16.org" "2020-07-10.org" "2020-04-18.org" "2020-07-18.org" "2020-07-22.org" "2020-04-09.org" "2020-08-08.org" "2020-02-28.org" "2020-08-21.org" "2020-04-02.org" "2020-08-06.org" "2020-02-21.org" "2020-08-09.org" "2020-08-07.org~" "2020-08-09.org~" "2020-07-21.org" "2020-03-21.org" "2020-03-06.org" "2020-08-04.org" "2020-02-23.org" "2020-07-26.org" "2020-05-16.org" "2020-07-11.org" "../" "2020-08-11.org~" "2020-03-15.org" "2020-08-16.org~" "2020-04-28.org" "2020-08-05.org" "2020-07-06.org" "2020-03-05.org" "2020-02-22.org" "2020-08-26.org" "2020-05-15.org" "2020-08-02.org" "2020-08-27.org" "2020-03-08.org" "2020-07-01.org" "2020-08-31.org" "2020-07-04.org" "2020-08-08.org~" "2020-05-09.org" "2020-03-31.org" "2020-08-30.org" "2020-08-29.org" "2020-02-24.org" "2020-06-30.org" "2020-03-30.org" "2020-07-20.org" "2020-08-19.org" "2020-07-31.org" "2020-03-07.org" "2020-03-22.org" "2020-06-29.org" "2020-07-29.org" "2020-07-16.org" "2020-07-14.org" "2020-08-12.org~" "2020-03-12.org" "2020-03-11.org" "2020-07-02.org" "2020-03-28.org" "2020-07-03.org" "2020-08.org" "2020-07-05.org" "./" "2020-03-16.org" "2020-02-27.org" "2020-08-01.org" "2020-03-23.org" "2020-08-18.org" "2020-07-09.org" "2020-02-29.org" "2020-08-20.org" "2020-02-25.org" "2020-05-20.org" "2020-04-11.org" "2020-04-05.org" "2020-02-20.org" "2020-06-28.org" "2020-07-27.org" "2020-08-14.org" "2020-08-17.org~" "2020-08-12.org" "2020-08-03.org" "2020-08-24.org" "2020-04-26.org" "2020-08-17.org" "2020-08-25.org" "2020-07-24.org" "2020-05-03.org" "2020-03-01.org" "2020-03-09.org" "2020-05-18.org" "2020-05-07.org" "2020-07-19.org" "2020-08-10.org~" "2020-08-07.org" "2020-08-13.org" "2020-04-27.org" "2020-02-26.org" "2020-07-17.org" "2020-08-13.org~" "2020-03-04.org" "2020-07-15.org" "2020-08-18.org~" "2020-03-02.org" "2020-08-10.org" "2020-07-08.org" "2020-08-23.org" "2020-07-28.org" "2020-07-12.org" "2020-03-27.org" "2020-04-03.org" "2020-08-15.org" "2020-07-23.org" "2020-08-28.org" "2020-08-14.org~" "2020-08-15.org~" "2020-03-20.org" "2020-05-19.org" "2020-07-30.org" "20200901" "2020-07-25.org" "2020-07-13.org")
 
- ("/home/das/" (24418 32187 580692 346000) ".emacs.d/" ".gnupg/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" ".bashrc" ".offlineimaprc" "../" ".config/" ".xfce4-session.verbose-log.last" ".mozilla/" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" "Dropbox/" ".dropbox/" ".recently-used" ".pki/" ".offlineimap/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".bash_history" "Downloads/" ".Xauthority" "./" ".gtk-bookmarks" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
+ ("/home/das/Downloads/" (24423 63339 28638 276000) "Jesse-Grade10.pdf" "Recomendo_Book_Gumroad_Final.pdf" "tech/" "Forte/" "The_Diamond_Age.jpg" "windows/" "garden/" "bucky/" "Mask Sept 9 2020.pdf" "co2andTemps.gif" "HowToMake2000.pdf" "covid-article.txt" "../" "./")
+
+ ("/home/das/Desktop/notes/" (24422 40881 697454 321000) "mu4e.txt" "FiOS.txt" "../" "Debian.txt" "Debian.txt~" "fb.txt" "emacsnotes.org~" "./" "emacsnotes.org")
+
+ ("/home/das/data/org/" (24420 45568 747651 437000) "inbox.org" "org-mode.org" "emacsnotes.org" "IdeaoftheBrain.org" "#IdeaoftheBrain.org#" "inbox.archive.org" "emacs_tutorial.org" "#tutorial.org#" "journal/" "exegesis.org" "2020.txt" "tutorial.org" "../" "./")
+
+ ("/home/das/data/md/das_fieldstones/" (24421 18085 864175 564000) "fieldstones2015.html" ".gitignore" "README.md" "fieldstones2017.html" "../" ".git/" "lehrer.html" "index.html" "morefieldstones2015.md" "fieldstones2009.html" "morefieldstones2010.md" "morefieldstones2013.md" "morefieldstones2017.md" "media/" "morefieldstones2020.md" "fieldstones2019.html" "./" "fieldstones2020.html" "fieldstones2011.html" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
 
  ("/home/das/data/" (24414 49414 718526 86000) "hobbies/" ".Trash-1000/" "md/" "elfeeddb/" "recipes/" "org/" "../" "Calibre Library/" "texts/" "Zotero/" "epubs.txt" "camera/" "calibre-epub.txt" "Writing/" "Church/" "Maildir/" "aa/" "humor/" "notes/" "texts2/" "org-roam/" "./" "blogs/" "backups/" "Lookup/" "manuals/" "Valerie/" "bills/" "Marketing/" "davids/" "Columbia/" "Ebook/" "family/" "Www/")
 
