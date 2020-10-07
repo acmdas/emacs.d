@@ -11,13 +11,13 @@
  ("/home/das/data/Writing/" . "Writing/")
  ("/home/das/data/" . "md/")
  ("/home/das/Desktop/" . "notes/")
- ("/home/das/" . "Desktop/")
+ ("/home/das/" . "data/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/das/Desktop/notes/"
  "/home/das/data/md/das_fieldstones/"
+ "/home/das/Desktop/notes/"
  "/home/das/.emacs.d/"
  "/home/das/"
  "/home/das/data/org/"
@@ -30,11 +30,11 @@
 
 ;; ----- ido-work-file-list -----
 (
- "Debian.txt"
+ "morefieldstones2020.md"
  "notes.txt"
+ "Debian.txt"
  "fb.txt"
  "emacsnotes.org"
- "morefieldstones2020.md"
  "init.el"
  ".authinfo"
  "morefieldstones2009.md"
@@ -44,11 +44,13 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/das/Desktop/notes/" (24434 9336 112214 742000) "mu4e.txt" "FiOS.txt" "../" "notes.txt" "Debian.txt" "Debian.txt~" "fb.txt" "emacsnotes.org~" "./" "emacsnotes.org")
+ ("/home/das/data/md/das_fieldstones/" (24441 55741 649881 198000) "fieldstones2015.html" ".gitignore" "README.md" "fieldstones2017.html" "../" ".git/" "lehrer.html" "index.html" "morefieldstones2015.md" "fieldstones2009.html" "morefieldstones2010.md" "morefieldstones2013.md" "morefieldstones2017.md" "media/" "morefieldstones2020.md" "fieldstones2019.html" "./" "fieldstones2020.html" "fieldstones2011.html" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
 
- ("/home/das/" (24431 41784 515134 976000) ".emacs.d/" ".gnupg/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" ".bashrc" ".offlineimaprc" "../" ".config/" ".xfce4-session.verbose-log.last" ".mozilla/" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" "Dropbox/" ".dropbox/" ".recently-used" ".pki/" ".offlineimap/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".bash_history" ".authinfo.bak" "Downloads/" ".Xauthority" "./" ".gtk-bookmarks" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
+ ("/home/das/data/" (24434 27776 371605 383000) "hobbies/" ".Trash-1000/" "md/" "elfeeddb/" "recipes/" "org/" "../" "Calibre Library/" "texts/" "Zotero/" "epubs.txt" "camera/" "calibre-epub.txt" "Writing/" "Church/" "Maildir/" "aa/" "humor/" "notes/" "texts2/" "org-roam/" "./" "blogs/" "backups/" "Lookup/" "manuals/" "Valerie/" "bills/" "Marketing/" "davids/" "Columbia/" "Ebook/" "family/" "Www/")
 
- ("/home/das/data/md/das_fieldstones/" (24426 34165 95307 317000) "fieldstones2015.html" ".gitignore" "README.md" "fieldstones2017.html" "../" ".git/" "lehrer.html" "index.html" "morefieldstones2015.md" "fieldstones2009.html" "morefieldstones2010.md" "morefieldstones2013.md" "morefieldstones2017.md" "media/" "morefieldstones2020.md" "fieldstones2019.html" "./" "fieldstones2020.html" "fieldstones2011.html" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
+ ("/home/das/" (24443 9463 573994 89000) ".emacs.d/" ".gnupg/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" ".bashrc" ".offlineimaprc" "../" ".config/" ".xfce4-session.verbose-log.last" ".mozilla/" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" "Dropbox/" ".dropbox/" ".recently-used" ".pki/" "geeqie-file.pdf" ".offlineimap/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".bash_history" ".authinfo.bak" "Downloads/" ".Xauthority" "./" ".gtk-bookmarks" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
+
+ ("/home/das/Desktop/notes/" (24443 14904 514266 885000) "mu4e.txt" "FiOS.txt" "../" "notes.txt" "Debian.txt" "Debian.txt~" "fb.txt" "emacsnotes.org~" "./" "emacsnotes.org")
 
  ("/home/das/.emacs.d/" (24425 64243 561082 902000) ".offlineimaprc" "../" "org-journal.cache" "session.10924a55b795e9fa79159415267448662700000023070090" "init.el" ".org-id-locations" "session.1024c936ea413497f6159415058461280200000016210064" "recentf" ".git/" "session.29167cb8b-7f4f-40a8-9706-25af64b5a925" "./" "auto-save-list/" "elpa/" "bookmarks" "ido.last" "config.el.bak" "README.md" "session.21eb4776a-eb9e-4f95-a5f3-89d28e1ca48a" "lisp/" "session.101bf10f9e745dd9ab159415424352303600000015540089" "session.1086df88fe7bc26279159430914380626900000042540099")
 
@@ -63,8 +65,6 @@
  ("/home/das/Downloads/" (24423 63339 28638 276000) "Jesse-Grade10.pdf" "Recomendo_Book_Gumroad_Final.pdf" "tech/" "Forte/" "The_Diamond_Age.jpg" "windows/" "garden/" "bucky/" "Mask Sept 9 2020.pdf" "co2andTemps.gif" "HowToMake2000.pdf" "covid-article.txt" "../" "./")
 
  ("/home/das/data/org/" (24420 45568 747651 437000) "inbox.org" "org-mode.org" "emacsnotes.org" "IdeaoftheBrain.org" "#IdeaoftheBrain.org#" "inbox.archive.org" "emacs_tutorial.org" "#tutorial.org#" "journal/" "exegesis.org" "2020.txt" "tutorial.org" "../" "./")
-
- ("/home/das/data/" (24414 49414 718526 86000) "hobbies/" ".Trash-1000/" "md/" "elfeeddb/" "recipes/" "org/" "../" "Calibre Library/" "texts/" "Zotero/" "epubs.txt" "camera/" "calibre-epub.txt" "Writing/" "Church/" "Maildir/" "aa/" "humor/" "notes/" "texts2/" "org-roam/" "./" "blogs/" "backups/" "Lookup/" "manuals/" "Valerie/" "bills/" "Marketing/" "davids/" "Columbia/" "Ebook/" "family/" "Www/")
 
  ("/home/das/Desktop/" (24388 17767 211432 169000) "../" "./" "notes/")
 
