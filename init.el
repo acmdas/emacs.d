@@ -6,6 +6,7 @@
 ;; 20200816 - installed offlineimap, mu and mu4e
 ;; 20200919 - began using mu4e
 ;; 20200921-22 - fiddling with smtpmail & etc. to try to get sending working
+;; 20201018 - installed elfeed
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'exec-path "/usr/bin/sqlite3")
@@ -68,6 +69,27 @@
 ;  smtpmail-default-smtp-server "mail.daslearns.ca"
 ;  smtpmail-smtpserver "mail.daslearns.ca"
 ;  smtpmail-smtp-service 465)
+
+;; configure elfeed
+(require 'elfeed)
+
+(global-set-key (kbd "C-x w") 'elfeed)
+
+(setq elfeed-db-directory "~/data/elfeeddb")
+
+(setq elfeed-feeds
+      '(
+	;; emacs
+	("https://sachachua.com/blog/feed" sachachua)
+	("https://www.rousette.org.uk/index.xml" shesagirl)
+	("http://irreal.org/blog/?feed=rss2" irreal)
+	;; commentary
+	("http://assistantvillageidiot.blogspot.com/feeds/posts/default" avi)
+	))
+
+(setq-default elfeed-search-filter "@7-weeks")
+; (setq-default elfeed-search-title-max-width 100)
+; (setq-default elfeed-search-title-min-width 100)
 
 ;; configuring ido-mode
 (ido-mode t)
@@ -217,7 +239,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (whole-line-or-region magit org-roam recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode)))
+    (elfeed whole-line-or-region magit org-roam recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode)))
  '(smtpmail-smtp-server "daslearns.ca")
  '(smtpmail-smtp-service 465))
 
