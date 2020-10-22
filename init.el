@@ -7,6 +7,7 @@
 ;; 20200919 - began using mu4e
 ;; 20200921-22 - fiddling with smtpmail & etc. to try to get sending working
 ;; 20201018 - installed elfeed
+;; 20201022 - installed mu4e-views
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'exec-path "/usr/bin/sqlite3")
@@ -50,6 +51,11 @@
  mu4e-get-mail-command "offlineimap"
  mu4e-update-interval 300
  mail-user-agent 'mu4e-user-agent)
+
+; configuring mu4e-views
+(require 'mu4e-views)
+(define-key mu4e-headers-mode-map (kbd "v") #'mu4e-views-mu4e-select-view-msg-method)
+
 
 ;; configuring smtpmail
 ;; as of 2209 0923 still getting "Process smtpmail not running" errors
@@ -239,7 +245,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (elfeed whole-line-or-region magit org-roam recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode)))
+    (mu4e-views elfeed whole-line-or-region magit org-roam recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode)))
  '(smtpmail-smtp-server "daslearns.ca")
  '(smtpmail-smtp-service 465))
 
