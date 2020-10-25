@@ -8,6 +8,7 @@
 ;; 20200921-22 - fiddling with smtpmail & etc. to try to get sending working
 ;; 20201018 - installed elfeed
 ;; 20201022 - installed mu4e-views
+;; 20201025 - commented-out org-roam
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'exec-path "/usr/bin/sqlite3")
@@ -155,27 +156,27 @@
 ;; (global-set-key "\C-cnj" 'org-journal-new-entry)
 
 ;; configuring org-roam
-(setq org-roam-directory "~/data/org-roam")
-(add-hook 'after-init-hook 'org-roam-mode)
-(global-set-key (kbd "C-c n r") #'org-roam-buffer-toggle-display)
-(global-set-key (kbd "C-c n i") #'org-roam-insert)
-(global-set-key (kbd "C-c n /") #'org-roam-find-file)
+;(setq org-roam-directory "~/data/org-roam")
+;(add-hook 'after-init-hook 'org-roam-mode)
+;(global-set-key (kbd "C-c n r") #'org-roam-buffer-toggle-display)
+;(global-set-key (kbd "C-c n i") #'org-roam-insert)
+;(global-set-key (kbd "C-c n /") #'org-roam-find-file)
 
 ;; org-roam templates
-(setq org-roam-capture-templates
-      '(("d" "default" plain
-         (function org-roam-capture--get-point)
-         "%?"
-         :file-name "%<%Y%m%d%H%M%S>-${slug}"
-         :head "#+TITLE: ${title}\n#+CREATED: %U\n#+LAST_MODIFIED: %U\n\n"
-         :unnarrowed t)
-        ("b" "book
-" plain
-         (function org-roam-capture--get-point)
-         "%?"
-         :file-name "%<%Y%m%d%H%M%S>-${slug}"
-         :head "#+TITLE: ${title}\nn#+CREATED: %U\n#+LAST_MODIFIED: %U\n\n"
-         :unnarrowed t)))
+;(setq org-roam-capture-templates
+;      '(("d" "default" plain
+;         (function org-roam-capture--get-point)
+;         "%?"
+;         :file-name "%<%Y%m%d%H%M%S>-${slug}"
+;         :head "#+TITLE: ${title}\n#+CREATED: %U\n#+LAST_MODIFIED: %U\n\n"
+;         :unnarrowed t)
+;        ("b" "book
+;" plain
+;         (function org-roam-capture--get-point)
+;         "%?"
+;         :file-name "%<%Y%m%d%H%M%S>-${slug}"
+;         :head "#+TITLE: ${title}\nn#+CREATED: %U\n#+LAST_MODIFIED: %U\n\n"
+;         :unnarrowed t)))
 
 ;; configuring sdcv for using the 1923 Websters Dictionary
 (require 'sdcv-mode)
@@ -189,7 +190,7 @@
   (require 'typopunct)
   (typopunct-change-language 'english)
 
-  ;; add more superscripts
+;; add more superscripts
 (typopunct-mode 1))
 (require 'iso-transl)
     (iso-transl-define-keys
