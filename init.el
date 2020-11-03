@@ -50,7 +50,7 @@
  mu4e-trash-folder "/trash"
  mu4e-refile-folder "/archive"
  mu4e-get-mail-command "offlineimap"
- mu4e-update-interval 300
+ mu4e-update-interval 600
  mail-user-agent 'mu4e-user-agent)
 
 ; configuring mu4e-views
@@ -238,6 +238,8 @@
 ;; enable windmove - uses Shift-arrow to move between windows
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
+
+;; Hands off the following:
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
