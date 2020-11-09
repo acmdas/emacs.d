@@ -568,14 +568,6 @@ Add a hook to automatically encrypt entries before a file is saved to disk.
 
 ;;;***
 
-;;;### (autoloads "actual autoloads are elsewhere" "org-macs" "org-macs.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from org-macs.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-macs" '("org-")))
-
-;;;***
-
 ;;;### (autoloads "actual autoloads are elsewhere" "org-mobile" "org-mobile.el"
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from org-mobile.el
