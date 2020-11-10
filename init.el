@@ -51,7 +51,9 @@
  mu4e-refile-folder "/archive"
  mu4e-get-mail-command "offlineimap"
  mu4e-update-interval 600
- mail-user-agent 'mu4e-user-agent)
+ mail-user-agent 'mu4e-user-agent
+ mu4e-html2test-command 'mu4e-shr2text
+ mu4e-view-show-images t)
 
 ; configuring mu4e-views
 (require 'mu4e-views)

@@ -31,7 +31,6 @@
 
 ;; ----- ido-work-file-list -----
 (
- "time.txt"
  "kidde.txt"
  "morefieldstones2020.md"
  "Debian.txt"
@@ -41,13 +40,14 @@
  "OnViolence.txt"
  "inbox.org"
  "emacsnotes.org"
+ "inbox.archive.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/das/Downloads/" (24488 31276 158826 94000) "Jesse-Grade10.pdf" "SMTPError.txt" "Recomendo_Book_Gumroad_Final.pdf" "time.txt" "texinfo.pdf" "HowToMake2000.pdf" "george-carlin-thinking-good-american-opinions-government-media.jpg" "../" "./")
+ ("/home/das/Downloads/" (24484 24762 867527 979000) "Jesse-Grade10.pdf" "SMTPError.txt" "Recomendo_Book_Gumroad_Final.pdf" "kidde-email.pdf" "bucky/" "co2andTemps.gif" "texinfo.pdf" "HowToMake2000.pdf" "george-carlin-thinking-good-american-opinions-government-media.jpg" "RAC/" "Wget_Linux_Guide.pdf" "../" "./")
 
- ("/home/das/" (24488 17047 143506 321000) ".emacs.d/" ".gnupg/" ".gphoto/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" ".bashrc" ".offlineimaprc" "../" ".config/" ".nbrc" ".xfce4-session.verbose-log.last" ".mozilla/" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" ".w3m/" "Dropbox/" ".dropbox/" ".recently-used" ".pki/" ".nb/" ".offlineimap/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".elfeed/" ".bash_history" ".authinfo.bak" "Downloads/" ".Xauthority" "./" ".gtk-bookmarks" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
+ ("/home/das/" (24484 21079 82586 175000) ".emacs.d/" ".gnupg/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" ".bashrc" ".offlineimaprc" "../" ".config/" ".nbrc" ".xfce4-session.verbose-log.last" ".mozilla/" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" ".w3m/" "Dropbox/" ".dropbox/" ".recently-used" ".pki/" ".nb/" ".offlineimap/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".elfeed/" ".bash_history" ".authinfo.bak" "Downloads/" ".Xauthority" "./" ".gtk-bookmarks" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
 
  ("/home/das/data/md/das_fieldstones/" (24480 15227 846382 59000) "fieldstones2015.html" ".gitignore" "README.md" "fieldstones2017.html" "../" ".git/" "lehrer.html" "index.html" "morefieldstones2015.md" "fieldstones2009.html" "morefieldstones2010.md" "morefieldstones2013.md" "morefieldstones2017.md" "media/" "morefieldstones2020.md" "fieldstones2019.html" "./" "fieldstones2020.html" "fieldstones2011.html" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
 
