@@ -88,15 +88,18 @@
 
 (setq elfeed-feeds
       '(
-	("https://consultingsmiths.com/feed" me)
+	("https://consultingsmiths.com/feed/" me)
 	;; emacs
 	("https://sachachua.com/blog/feed" sachachua)
 	("https://www.rousette.org.uk/index.xml" shesagirl)
 	("http://irreal.org/blog/?feed=rss2" irreal)
 	;; commentary
 	("http://assistantvillageidiot.blogspot.com/feeds/posts/default" avi)
+	("http://accordingtohoyt.com/feed/" hoyt)
+	("http://www.anonymousconservative.com/blog/feed/" anoncons news twitter)
 	;; writing
 	("http://www.stevenpressfield.com/feed/" pressfield)
+	("http://feeds.feedburner.com/typepad/sethsmainblog" godin)
 	))
 
 (setq-default elfeed-search-filter "@7-weeks")
