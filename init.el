@@ -97,6 +97,8 @@
 	("http://assistantvillageidiot.blogspot.com/feeds/posts/default" avi)
 	("http://accordingtohoyt.com/feed/" hoyt)
 	("http://www.anonymousconservative.com/blog/feed/" anoncons news twitter)
+	("https://wattsupwiththat.com/feed/" climate science)
+	("https://judithcurry.com/feed/" climate science)
 	;; writing
 	("http://www.stevenpressfield.com/feed/" pressfield)
 	("http://feeds.feedburner.com/typepad/sethsmainblog" godin)
