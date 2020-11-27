@@ -9,10 +9,12 @@
 ;; 20201018 - installed elfeed
 ;; 20201022 - installed mu4e-views
 ;; 20201025 - commented-out org-roam
+;; 20201127 - installed nov.el
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'exec-path "/usr/bin/sqlite3")
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
+(add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
 
 ;; configure visual interface
 (menu-bar-mode -1)
