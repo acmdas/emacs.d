@@ -258,7 +258,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (mu4e-views elfeed whole-line-or-region magit org-roam recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode)))
+    (nov mu4e-views elfeed whole-line-or-region magit org-roam recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode)))
  '(smtpmail-smtp-server "daslearns.ca")
  '(smtpmail-smtp-service 465))
 
