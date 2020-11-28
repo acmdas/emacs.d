@@ -101,6 +101,7 @@
 	("http://assistantvillageidiot.blogspot.com/feeds/posts/default" avi)
 	("http://accordingtohoyt.com/feed/" hoyt)
 	("http://www.anonymousconservative.com/blog/feed/" anoncons news twitter)
+	("http://www.ncobrief.com/index.php/feed/" ncobrief)
 	("http://hallsofmacadamia.blogspot.com/feeds/posts/default" canada)
 	("http://wmbriggs.com/feed/" briggs statistics aquinas watts)
 	("https://wattsupwiththat.com/feed/" climate science)
