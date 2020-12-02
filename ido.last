@@ -11,15 +11,15 @@
  ("/home/das/data/Writing/" . "Writing/")
  ("/home/das/data/" . "md/")
  ("/home/das/Desktop/" . "notes/")
- ("/home/das/" . "data/")
+ ("/home/das/" . "Desktop/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/das/Desktop/notes/"
  "/home/das/data/md/barfield/"
  "/home/das/Downloads/"
  "/home/das/data/md/das_fieldstones/"
- "/home/das/Desktop/notes/"
  "/home/das/.emacs.d/"
  "/home/das/bin/"
  "/home/das/data/org/"
@@ -32,6 +32,8 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "orgnotes.org"
+ "Debian.txt"
  "appearances.epub"
  "mastering-emacs-v3.epub"
  "appearances.md"
@@ -40,12 +42,14 @@
  "morefieldstones2020.md"
  "fs.html"
  "index.html"
- "Debian.txt"
- "init.el"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/das/Desktop/notes/" (24519 38708 69761 688000) "mu4e.txt" "FiOS.txt" "../" "notes.txt" "Debian.txt" "Debian.txt~" "fb.txt" "Zoom.txt" "emacsnotes.org~" "orgnotes.org" "./" "emacsnotes.org")
+
+ ("/home/das/" (24518 14774 887635 128000) ".emacs.d/" ".gnupg/" ".gphoto/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" ".bashrc" ".offlineimaprc" "../" ".config/" ".nbrc" ".xfce4-session.verbose-log.last" ".mozilla/" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" ".w3m/" "Dropbox/" ".dropbox/" ".recently-used" ".pki/" ".nb/" ".offlineimap/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".elfeed/" ".bash_history" ".authinfo.bak" "Downloads/" ".Xauthority" "./" ".gtk-bookmarks" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
+
  ("/home/das/data/md/barfield/" (24513 17107 792841 43000) "habit.md" "appearances.md" "WorldsApart.md" "../" "literal.md" "barfield_quotes.md" "meaning.md" "meaning.html" "barfield_quotes.html" "appearances/" "literal.html" "barfield-majors.txt" "appearances.html" "./" "Nemerov.md~" "habit.html" "mcluhan.md" "Nemerov.md" "appearances.epub" "WorldsApart.html")
 
  ("/home/das/Downloads/" (24513 16107 33584 594000) "Royale-197104.JPG" "ZinkZ8-2\\.jpg" "Jesse-Grade10.pdf" "SMTPError.txt" "Recomendo_Book_Gumroad_Final.pdf" "mastering-emacs-v3.epub" "ZinkZ8.jpg" ".htaccess" "flowers.jpg" "time.txt" "www/" "mastering-emacs-v3.pdf" "BlogDaily.pdf" "HowToMake2000.pdf" "images/" "Challenge.pdf" "../" "./")
@@ -56,11 +60,7 @@
 
  ("/home/das/data/md/das_fieldstones/" (24504 16951 415582 532000) "fieldstones2015.html" ".gitignore" "README.md" "fieldstones2017.html" "../" ".git/" "lehrer.html" "index.html" "morefieldstones2015.md" "fieldstones2009.html" "morefieldstones2010.md" "fs.html" "morefieldstones2013.md" "morefieldstones2017.md" "media/" "morefieldstones2020.md" "fieldstones2019.html" "./" "fieldstones2020.html" "fieldstones2011.html" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
 
- ("/home/das/" (24500 17917 166400 203000) ".emacs.d/" ".gnupg/" ".gphoto/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" ".bashrc" ".offlineimaprc" "../" ".config/" ".nbrc" ".xfce4-session.verbose-log.last" ".mozilla/" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" ".w3m/" "Dropbox/" ".dropbox/" ".recently-used" ".pki/" ".nb/" ".offlineimap/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".elfeed/" ".bash_history" ".authinfo.bak" "Downloads/" ".Xauthority" "./" ".gtk-bookmarks" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
-
  ("/home/das/.emacs.d/" (24504 12001 328029 357000) "url/" ".offlineimaprc" "../" "org-journal.cache" "session.10924a55b795e9fa79159415267448662700000023070090" "init.el" ".org-id-locations" "session.1024c936ea413497f6159415058461280200000016210064" "recentf" ".git/" "org-roam.db" "session.29167cb8b-7f4f-40a8-9706-25af64b5a925" "./" "auto-save-list/" "elpa/" "bookmarks" "ido.last" "config.el.bak" "README.md" "session.21eb4776a-eb9e-4f95-a5f3-89d28e1ca48a" "lisp/" "session.101bf10f9e745dd9ab159415424352303600000015540089" "session.1086df88fe7bc26279159430914380626900000042540099")
-
- ("/home/das/Desktop/notes/" (24498 38838 853315 285000) "mu4e.txt" "FiOS.txt" "../" "notes.txt" "Debian.txt" "Debian.txt~" "fb.txt" "Zoom.txt" "emacsnotes.org~" "./" "emacsnotes.org")
 
  ("/home/das/bin/" (24484 16154 116925 576000) "warstory" "update2013" "update" "backup~" "../" "#backup#" "updatebarfield" "money~" "quote" "kindlegen" "update2012" "update2015" "backup_all" "money" "backup" "updateforeign" "appearance" "update2017" "epubcheck/" "update2018" "tor-browser_en-US/" "meaning" "ccl64" "racket/" "su" "habit" "./" "update2016" "update2009" "update2019" "updatewarstory" "literal" "update2010" "Zotero/" "worlds" "backup2" "ssh.davidrsync.net" "update2011")
 
