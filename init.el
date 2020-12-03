@@ -93,9 +93,10 @@
 	("https://consultingsmiths.com/feed/" me)
 	("https://casorosendi.wordpress.com/feed/" catholic)
 	;; emacs
-	("https://sachachua.com/blog/feed" sachachua)
-	("https://www.rousette.org.uk/index.xml" shesagirl)
-	("http://irreal.org/blog/?feed=rss2" irreal)
+	("https://sachachua.com/blog/feed" sachachua emacs)
+	("https://www.rousette.org.uk/index.xml" shesagirl emacs)
+	("http://irreal.org/blog/?feed=rss2" irreal emacs)
+	("cheapskatesguide.org/cheapskates-guide-rss-feed.xml" cheapskates tech)
 	;; commentary
 	("https://jamesaltucher.com/feed/" altucher)
 	("http://assistantvillageidiot.blogspot.com/feeds/posts/default" avi)

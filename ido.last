@@ -11,7 +11,7 @@
  ("/home/das/data/Writing/" . "Writing/")
  ("/home/das/data/" . "md/")
  ("/home/das/Desktop/" . "notes/")
- ("/home/das/" . "Desktop/")
+ ("/home/das/" . "data/")
 )
 
 ;; ----- ido-work-directory-list -----
@@ -32,7 +32,6 @@
 
 ;; ----- ido-work-file-list -----
 (
- "orgnotes.org"
  "Debian.txt"
  "appearances.epub"
  "mastering-emacs-v3.epub"
@@ -42,13 +41,14 @@
  "morefieldstones2020.md"
  "fs.html"
  "index.html"
+ "init.el"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/das/Desktop/notes/" (24519 38708 69761 688000) "mu4e.txt" "FiOS.txt" "../" "notes.txt" "Debian.txt" "Debian.txt~" "fb.txt" "Zoom.txt" "emacsnotes.org~" "orgnotes.org" "./" "emacsnotes.org")
+ ("/home/das/Desktop/notes/" (24516 24871 127541 827000) "mu4e.txt" "FiOS.txt" "../" "notes.txt" "Debian.txt" "Debian.txt~" "fb.txt" "Zoom.txt" "emacsnotes.org~" "./" "emacsnotes.org")
 
- ("/home/das/" (24518 14774 887635 128000) ".emacs.d/" ".gnupg/" ".gphoto/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" ".bashrc" ".offlineimaprc" "../" ".config/" ".nbrc" ".xfce4-session.verbose-log.last" ".mozilla/" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" ".w3m/" "Dropbox/" ".dropbox/" ".recently-used" ".pki/" ".nb/" ".offlineimap/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".elfeed/" ".bash_history" ".authinfo.bak" "Downloads/" ".Xauthority" "./" ".gtk-bookmarks" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
+ ("/home/das/" (24514 25326 731585 410000) ".emacs.d/" ".gnupg/" ".gphoto/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" ".bashrc" ".offlineimaprc" "../" ".config/" ".nbrc" ".xfce4-session.verbose-log.last" ".mozilla/" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" ".w3m/" "Dropbox/" ".dropbox/" ".recently-used" ".pki/" ".nb/" ".offlineimap/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".elfeed/" ".bash_history" ".authinfo.bak" "Downloads/" ".Xauthority" "./" ".gtk-bookmarks" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
 
  ("/home/das/data/md/barfield/" (24513 17107 792841 43000) "habit.md" "appearances.md" "WorldsApart.md" "../" "literal.md" "barfield_quotes.md" "meaning.md" "meaning.html" "barfield_quotes.html" "appearances/" "literal.html" "barfield-majors.txt" "appearances.html" "./" "Nemerov.md~" "habit.html" "mcluhan.md" "Nemerov.md" "appearances.epub" "WorldsApart.html")
 
