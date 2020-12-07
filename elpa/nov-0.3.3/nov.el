@@ -4,9 +4,9 @@
 
 ;; Author: Vasilij Schneidermann <mail@vasilij.de>
 ;; URL: https://depp.brause.cc/nov.el
-;; Package-Version: 0.3.2
-;; Package-Commit: c8a6de55fdbf2eb15d63f79f1645e0c0caee711d
-;; Version: 0.3.2
+;; Package-Version: 0.3.3
+;; Package-Commit: 0ece7ccbf79c074a3e4fbad1d1fa06647093f8e4
+;; Version: 0.3.3
 ;; Package-Requires: ((dash "2.12.0") (esxml "0.3.5") (emacs "24.4"))
 ;; Keywords: hypermedia, multimedia, epub
 
@@ -872,16 +872,15 @@ See also `nov-bookmark-make-record'."
                :link link
                :description description))))
 
-(with-suppressed-warnings ((obsolete org-add-link-type))
-  (cond
-   ((version< org-version "9.0")
-    (org-add-link-type "nov" 'nov-org-link-follow)
-    (add-hook 'org-store-link-functions 'nov-org-link-store))
-   (t
-    (org-link-set-parameters
-     "nov"
-     :follow 'nov-org-link-follow
-     :store 'nov-org-link-store))))
+(cond
+ ((version< org-version "9.0")
+  (org-add-link-type "nov" 'nov-org-link-follow)
+  (add-hook 'org-store-link-functions 'nov-org-link-store))
+ (t
+  (org-link-set-parameters
+   "nov"
+   :follow 'nov-org-link-follow
+   :store 'nov-org-link-store)))
 
 
 ;;; Imenu interop
