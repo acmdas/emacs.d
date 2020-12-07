@@ -91,8 +91,8 @@
        ((:url . "http://elpa.gnu.org/packages/all.html")
 	(:keywords "matching")
 	(:authors
-	 ("Per Abrahamsen" . "abraham@dina.kvl.dk"))
-	(:maintainer "Per Abrahamsen" . "abraham@dina.kvl.dk"))])
+	 ("Per Abrahamsen" . "per.abrahamsen@gmail.com"))
+	(:maintainer "Per Abrahamsen" . "per.abrahamsen@gmail.com"))])
  (ampc .
        [(0 2)
 	nil "Asynchronous Music Player Controller" single
@@ -397,12 +397,12 @@
 	     (24 5))
 	    (swiper
 	     (0 13 1)))
-	   "Various completion functions using Ivy" single
-	   ((:keywords "convenience" "matching" "tools")
+	   "Various completion functions using Ivy" tar
+	   ((:url . "https://github.com/abo-abo/swiper")
+	    (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
 	    (:authors
 	     ("Oleh Krehel" . "ohwoeowho@gmail.com"))
-	    (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
-	    (:url . "https://github.com/abo-abo/swiper"))])
+	    (:keywords "convenience" "matching" "tools"))])
  (cpio-mode .
 	    [(0 17)
 	     ((emacs
@@ -422,7 +422,7 @@
 	   ("Gary D. Foster" . "Gary.Foster@Corp.Sun.COM"))
 	  (:maintainer "Luke Lee" . "luke.yx.lee@gmail.com"))])
  (csv-mode .
-	   [(1 12)
+	   [(1 13)
 	    ((emacs
 	      (24 1))
 	     (cl-lib
@@ -2177,12 +2177,12 @@
 	    (24 5))
 	   (ivy
 	    (0 13 1)))
-	  "Isearch with an overview. Oh, man!" single
-	  ((:keywords "matching")
+	  "Isearch with an overview. Oh, man!" tar
+	  ((:url . "https://github.com/abo-abo/swiper")
+	   (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
 	   (:authors
 	    ("Oleh Krehel" . "ohwoeowho@gmail.com"))
-	   (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
-	   (:url . "https://github.com/abo-abo/swiper"))])
+	   (:keywords "matching"))])
  (system-packages .
 		  [(1 0 11)
 		   ((emacs
