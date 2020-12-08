@@ -44,6 +44,8 @@
 	     '("melpa-stable" . "https://stable.melpa.org/packages/"))
 (package-initialize)
 
+;; configuring magit
+
 ;; configuring mu4e
 (require 'mu4e)
 (setq
@@ -93,15 +95,17 @@
 	("https://consultingsmiths.com/feed/" me)
 	("https://casorosendi.wordpress.com/feed/" catholic)
 	;; emacs
+	("https://www.rousette.org.uk/index.xml" bsag emacs)
 	("https://sachachua.com/blog/feed" sachachua emacs)
 	("https://www.rousette.org.uk/index.xml" shesagirl emacs)
-	("http://irreal.org/blog/?feed=rss2" irreal emacs)
-	("cheapskatesguide.org/cheapskates-guide-rss-feed.xml" cheapskates tech)
+	("https://irreal.org/blog/?feed=rss2" irreal emacs)
+	("https://cheapskatesguide.org/cheapskates-guide-rss-feed.xml" cheapskates tech)
 	;; commentary
 	("https://jamesaltucher.com/feed/" altucher)
 	("http://assistantvillageidiot.blogspot.com/feeds/posts/default" avi)
 	("http://accordingtohoyt.com/feed/" hoyt)
 	("http://www.anonymousconservative.com/blog/feed/" anoncons news twitter)
+	("http://theconservativetreehouse.com/feed/" lastrefuge)
 	("http://www.ncobrief.com/index.php/feed/" ncobrief)
 	("http://hallsofmacadamia.blogspot.com/feeds/posts/default" canada)
 	("http://wmbriggs.com/feed/" briggs statistics aquinas watts)
