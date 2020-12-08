@@ -45,6 +45,9 @@
 (package-initialize)
 
 ;; configuring magit
+(require magit)
+
+(global-set-key (kbd "C-x g") 'magit-status)
 
 ;; configuring mu4e
 (require 'mu4e)
