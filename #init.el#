@@ -44,6 +44,11 @@
 	     '("melpa-stable" . "https://stable.melpa.org/packages/"))
 (package-initialize)
 
+;; configuring magit
+<<<<<<< HE
+=======
+>>>>>>> d12e7d1043e894823dd1070a742280bd379dc411
+
 ;; configuring mu4e
 (require 'mu4e)
 (setq
