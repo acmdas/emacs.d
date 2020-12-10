@@ -1,0 +1,5 @@
+# ignore auto-save-list
+auto-save-list/*
+
+# ignore url cache
+url/
