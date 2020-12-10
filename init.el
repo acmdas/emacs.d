@@ -109,8 +109,8 @@
 	("http://wmbriggs.com/feed/" briggs statistics aquinas watts)
 	("https://wattsupwiththat.com/feed/" climate science)
 	("https://judithcurry.com/feed/" climate science)
-	;; writing
-	("http://www.stevenpressfield.com/feed/" pressfield)
+	("https://greenwald.substack.com/feed" politics)
+	("https://stevenpressfield.com/feed/" pressfield writing)
 	("http://feeds.feedburner.com/typepad/sethsmainblog" godin)
 	))
 
