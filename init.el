@@ -22,13 +22,30 @@
 (setq user-full-name "David Smith"
       user-email-address "das@daslearns.ca")
 
-;; configuring package
-(require 'package)
+;; configuring package sources
 (add-to-list 'package-archives
 	     '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives
 	     '("org" . "https://orgmode.org/elpa/") t)
-;; (package-initialize)
+
+(add-to-list 'load-path "~/.emacs.d/lisp")
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
+(setq use-package-verbose t)
+(setq use-package-always-ensure t)
+(require 'use-package)
+(use-package auto-compile
+  :config (auto-compile-on-load-mode))
+(setq load-prefer-newer t)
+
+;; configure backups
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+(setq delete-old-versions -1)
+(setq version-control t)
+(setq vc-make-backup-files t)
+(setq auto-save-file-name-transforms '((".*" "~/.emacs.d/auto-save-list/" t)))
+
+;; maybe add SC's savehist section later
 
 ;; configure visual interface
 (menu-bar-mode -1)
@@ -39,6 +56,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq confirm-nonexistent-file-or-buffer nil)
 (setq visible-bell 1)
+(display-time-mode 1)
 
 ;; configure initial window size - added 20200704 1145
 (setq initial-frame-alist
@@ -52,6 +70,49 @@
 	(height . 55) ; lines
 	))
 
+;; configure winner mode
+(use-package winner
+  :defer t)
+
+;; sentences end with one space
+(setq sentence-end-double-space nil)
+
+;; configure helm completion instead of ido
+(use-package helm
+  :diminish helm-mode
+  :init
+  (progn
+    (require 'helm-config)
+    (setq helm-candidate-number-limit 100)
+    ;; From https://gist.github.com/antifuchs/9238468
+    (setq helm-idle-delay 0.0 ; update fast sources immediately (doesn't).
+          helm-input-idle-delay 0.01  ; this actually updates things
+                                        ; reeeelatively quickly.
+          helm-yas-display-key-on-candidate t
+          helm-quick-update t
+          helm-M-x-requires-pattern nil
+          helm-ff-skip-boring-files t)
+    (helm-mode))
+  :bind (("C-c h" . helm-mini)
+         ("C-h a" . helm-apropos)
+         ("C-x C-b" . helm-buffers-list)
+         ("C-x b" . helm-buffers-list)
+         ("M-y" . helm-show-kill-ring)
+         ("M-x" . helm-M-x)
+         ("C-x c o" . helm-occur)
+         ("C-x c s" . helm-swoop)
+         ("C-x c y" . helm-yas-complete)
+         ("C-x c Y" . helm-yas-create-snippet-on-region)
+         ("C-x c b" . my/helm-do-grep-book-notes)
+         ("C-x c SPC" . helm-all-mark-rings)))
+(ido-mode -1)
+
+(use-package helm-descbinds
+  :defer t
+  :bind (("C-h b" . helm-descbinds)
+         ("C-h w" . helm-descbinds)))
+
+;; mail stuff
 ;; configuring mu4e
 (require 'mu4e)
 (setq
@@ -125,12 +186,6 @@
 (setq-default elfeed-search-filter "@7-weeks")
 ; (setq-default elfeed-search-title-max-width 100)
 ; (setq-default elfeed-search-title-min-width 100)
-
-;; configuring ido-mode
-(ido-mode t)
-(setq ido-enable-flex-matching t)
-(setq ido-everywhere t)
-(setq ido-create-new-buffer 'always)
 
 ;; configuring org-mode
 (add-to-list 'package-archives
@@ -254,7 +309,7 @@
 (require 'recentf)
 (recentf-mode t)
 (global-set-key "\C-xf" 'recentf-open-files)
-(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
+;; (global-set-key (kbd "C-x C-r") 'ido-recentf-open)
 (setq recentf-max-saved-items 50)
 
 ;; more stuff
@@ -276,7 +331,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (use-package nov mu4e-views elfeed whole-line-or-region magit org-roam recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode)))
+    (helm auto-compile use-package nov mu4e-views elfeed whole-line-or-region magit org-roam recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode)))
  '(smtpmail-smtp-server "daslearns.ca")
  '(smtpmail-smtp-service 465))
 
