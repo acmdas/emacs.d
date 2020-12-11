@@ -9,12 +9,26 @@
 ;; 20201018 - installed elfeed
 ;; 20201022 - installed mu4e-views
 ;; 20201025 - commented-out org-roam
-;; 20201127 - installed nov.el
+;; 20201127 - installed nov.el for reading epubs
+;; 20201210 - installed use-package, began updating init.el per Sacha Chua
 
+(package-initialize)
+(setq use-package-always-ensure t)
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'exec-path "/usr/bin/sqlite3")
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
+
+(setq user-full-name "David Smith"
+      user-email-address "das@daslearns.ca")
+
+;; configuring package
+(require 'package)
+(add-to-list 'package-archives
+	     '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives
+	     '("org" . "https://orgmode.org/elpa/") t)
+;; (package-initialize)
 
 ;; configure visual interface
 (menu-bar-mode -1)
@@ -37,12 +51,6 @@
 	(width . 102) ; character
 	(height . 55) ; lines
 	))
-
-;; configuring package
-(require 'package)
-(add-to-list 'package-archives
-	     '("melpa-stable" . "https://stable.melpa.org/packages/"))
-(package-initialize)
 
 ;; configuring mu4e
 (require 'mu4e)
