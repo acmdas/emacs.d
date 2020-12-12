@@ -50,13 +50,17 @@
 ;; configure visual interface
 (menu-bar-mode -1)
 (tool-bar-mode -1)
-(scroll-bar-mode -1)
+(scroll-bar-mode 1)
 (setq inhibit-startup-message t
       inhibit-startup-echo-area-message t)
-(fset 'yes-or-no-p 'y-or-n-p)
 (setq confirm-nonexistent-file-or-buffer nil)
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+(setq mouse-wheel-progressive-speed nil)
 (setq visible-bell 1)
+(fset 'yes-or-no-p 'y-or-n-p)
+(column-number-mode 1)
 (display-time-mode 1)
+(delete-selection-mode 1)
 
 ;; configure initial window size - added 20200704 1145
 (setq initial-frame-alist
@@ -111,6 +115,10 @@
   :defer t
   :bind (("C-h b" . helm-descbinds)
          ("C-h w" . helm-descbinds)))
+
+;; skipping SC's additional helm/org tweaking
+
+(use-package smart-mode-line)
 
 ;; mail stuff
 ;; configuring mu4e
@@ -331,7 +339,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (helm auto-compile use-package nov mu4e-views elfeed whole-line-or-region magit org-roam recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode)))
+    (undo-tree smart-mode-line helm-descbinds helm auto-compile use-package nov mu4e-views elfeed whole-line-or-region magit org-roam recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode)))
  '(smtpmail-smtp-server "daslearns.ca")
  '(smtpmail-smtp-service 465))
 
