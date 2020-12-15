@@ -29,6 +29,8 @@
 	     '("org" . "https://orgmode.org/elpa/") t)
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
+
+;; configuring use-package
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
 (setq use-package-verbose t)
@@ -50,7 +52,7 @@
 ;; configure visual interface
 (menu-bar-mode -1)
 (tool-bar-mode -1)
-(scroll-bar-mode 1)
+(scroll-bar-mode -1) ; not sure that I like it, maybe try again later
 (setq inhibit-startup-message t
       inhibit-startup-echo-area-message t)
 (setq confirm-nonexistent-file-or-buffer nil)
@@ -82,39 +84,39 @@
 (setq sentence-end-double-space nil)
 
 ;; configure helm completion instead of ido
-(use-package helm
-  :diminish helm-mode
-  :init
-  (progn
-    (require 'helm-config)
-    (setq helm-candidate-number-limit 100)
-    ;; From https://gist.github.com/antifuchs/9238468
-    (setq helm-idle-delay 0.0 ; update fast sources immediately (doesn't).
-          helm-input-idle-delay 0.01  ; this actually updates things
-                                        ; reeeelatively quickly.
-          helm-yas-display-key-on-candidate t
-          helm-quick-update t
-          helm-M-x-requires-pattern nil
-          helm-ff-skip-boring-files t)
-    (helm-mode))
-  :bind (("C-c h" . helm-mini)
-         ("C-h a" . helm-apropos)
-         ("C-x C-b" . helm-buffers-list)
-         ("C-x b" . helm-buffers-list)
-         ("M-y" . helm-show-kill-ring)
-         ("M-x" . helm-M-x)
-         ("C-x c o" . helm-occur)
-         ("C-x c s" . helm-swoop)
-         ("C-x c y" . helm-yas-complete)
-         ("C-x c Y" . helm-yas-create-snippet-on-region)
-         ("C-x c b" . my/helm-do-grep-book-notes)
-         ("C-x c SPC" . helm-all-mark-rings)))
-(ido-mode -1)
+;(use-package helm
+;  :diminish helm-mode
+;  :init
+;  (progn
+;    (require 'helm-config)
+;    (setq helm-candidate-number-limit 100)
+;    ;; From https://gist.github.com/antifuchs/9238468
+;    (setq helm-idle-delay 0.0 ; update fast sources immediately (doesn't).
+;          helm-input-idle-delay 0.01  ; this actually updates things
+;                                        ; reeeelatively quickly.
+;          helm-yas-display-key-on-candidate t
+;          helm-quick-update t
+;          helm-M-x-requires-pattern nil
+;          helm-ff-skip-boring-files t)
+;    (helm-mode))
+;  :bind (("C-c h" . helm-mini)
+;         ("C-h a" . helm-apropos)
+;         ("C-x C-b" . helm-buffers-list)
+;         ("C-x b" . helm-buffers-list)
+;         ("M-y" . helm-show-kill-ring)
+;;         ("M-x" . helm-M-x)
+;         ("C-x c o" . helm-occur)
+;         ("C-x c s" . helm-swoop)
+;         ("C-x c y" . helm-yas-complete)
+;         ("C-x c Y" . helm-yas-create-snippet-on-region)
+;         ("C-x c b" . my/helm-do-grep-book-notes)
+;         ("C-x c SPC" . helm-all-mark-rings)))
+;(ido-mode -1)
 
-(use-package helm-descbinds
-  :defer t
-  :bind (("C-h b" . helm-descbinds)
-         ("C-h w" . helm-descbinds)))
+;(use-package helm-descbinds
+;  :defer t
+;  :bind (("C-h b" . helm-descbinds)
+;         ("C-h w" . helm-descbinds)))
 
 ;; skipping SC's additional helm/org tweaking
 
@@ -170,11 +172,15 @@
 	("https://consultingsmiths.com/feed/" me)
 	("https://casorosendi.wordpress.com/feed/" catholic)
 	;; emacs
+	("https://batsov.com/atom.xml" batsov emacs)
+	("https://cheapskatesguide.org/cheapskates-guide-rss-feed.xml" cheapskates tech)
+	("https://emacsredux.com/atom.xml" batsov emacs)
+	("https://irreal.org/blog/?feed=rss2" irreal emacs)
+	("https://metaredux.com/feed.xml" batsov emacs)
+	("https://protesilaos.com/codelog.xml" protesilaos emacs)
 	("https://www.rousette.org.uk/index.xml" bsag emacs)
 	("https://sachachua.com/blog/feed" sachachua emacs)
-	("https://www.rousette.org.uk/index.xml" shesagirl emacs)
-	("https://irreal.org/blog/?feed=rss2" irreal emacs)
-	("https://cheapskatesguide.org/cheapskates-guide-rss-feed.xml" cheapskates tech)
+	
 	;; commentary
 	("https://jamesaltucher.com/feed/" altucher)
 	("http://assistantvillageidiot.blogspot.com/feeds/posts/default" avi)
@@ -182,7 +188,7 @@
 	("http://www.anonymousconservative.com/blog/feed/" anoncons news twitter)
 	("http://theconservativetreehouse.com/feed/" lastrefuge)
 	("http://www.ncobrief.com/index.php/feed/" ncobrief)
-	("http://hallsofmacadamia.blogspot.com/feeds/posts/default" canada)
+;;	("http://hallsofmacadamia.blogspot.com/feeds/posts/default" canada)
 	("http://wmbriggs.com/feed/" briggs statistics aquinas watts)
 	("https://wattsupwiththat.com/feed/" climate science)
 	("https://judithcurry.com/feed/" climate science)
