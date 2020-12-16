@@ -319,32 +319,6 @@ You can set your own list of commands with
 ;;;### (autoloads nil "helm-files" "helm-files.el" (0 0 0 0))
 ;;; Generated autoloads from helm-files.el
 
-(defvar helm-ff-cache-mode nil "\
-Non-nil if Helm-Ff-Cache mode is enabled.
-See the `helm-ff-cache-mode' command
-for a description of this minor mode.
-Setting this variable directly does not take effect;
-either customize it (see the info node `Easy Customization')
-or call the function `helm-ff-cache-mode'.")
-
-(custom-autoload 'helm-ff-cache-mode "helm-files" nil)
-
-(autoload 'helm-ff-cache-mode "helm-files" "\
-Auto refresh `helm-find-files' cache when emacs is idle.
-
-You probably don't want to start this mode directly.  Instead you
-should customize `helm-ff-keep-cached-candidates' to a non nil
-value to enable it.
-
-With `helm-ff-keep-cached-candidates' set to a nil value the mode
-will disable itself.
-
-When Emacs is idle, refresh the cache all the
-`helm-ff-refresh-cache-delay' seconds then stop when done or after
-`helm-ff-cache-mode-max-idle-time' if emacs is still idle.
-
-\(fn &optional ARG)" t nil)
-
 (autoload 'helm-projects-history "helm-files" "\
 
 
