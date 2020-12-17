@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "mu4e-views" "20200830.1608" "View emails in mu4e using xwidget-webkit" '((emacs "26.1") (xwidgets-reuse "0.2") (ht "2.2")) :commit "af3916b2639a5a94676d4f11471e25b63ba76d0a" :keywords '("mail") :authors '(("Boris Glavic" . "lordpretzel@gmail.com")) :maintainer '("Boris Glavic" . "lordpretzel@gmail.com") :url "https://github.com/lordpretzel/mu4e-views")

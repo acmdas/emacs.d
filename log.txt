@@ -1,0 +1,394 @@
+commit 767b9c7babaecbd06f0e526606a5e36e5a5dbda2
+Author: David <das@acm.org>
+Date:   Wed Dec 16 22:28:31 2020 -0500
+
+    Restored helm and helm-descbind.
+
+commit 34cbddf66d4146a440ad65418e671017d1b23b26
+Author: David <das@acm.org>
+Date:   Wed Dec 16 21:43:21 2020 -0500
+
+    First use with version 27.1.5, updated org-20201216, org-roam-20201216.1312 and slime-202016.2342
+
+commit 2690cd57d3c2de0566c5b754a89d588184323656
+Author: David <das@acm.org>
+Date:   Tue Dec 15 21:42:59 2020 -0500
+
+    Updated helm in case I decide to use it i.e., research helm and learn how to use it without it bothering me.
+
+commit 5142d15d27511a25b81754d36f721108559874a1
+Author: David <das@acm.org>
+Date:   Tue Dec 15 12:14:03 2020 -0500
+
+    Commented-out helm, didn't remove helm from custom. Many other updates - magit, markdown-mode, multiple org-roam-related, slime, tramp, etc.
+
+commit 48a529c20a624c9939861e9dd862319d185968e6
+Author: David <das@acm.org>
+Date:   Fri Dec 11 22:09:05 2020 -0500
+
+    Added a few more SC suggestions.
+
+commit 58422aa59a4ce03acf0fac7d34becefa5d644510
+Author: David <das@acm.org>
+Date:   Thu Dec 10 22:21:25 2020 -0500
+
+    More changes, mainly adding helm.
+
+commit 6ee85885f3e95e512f186be87ce44a97bfb44b3e
+Author: David <das@acm.org>
+Date:   Thu Dec 10 21:45:26 2020 -0500
+
+    Switched from stable-melpa to melpa, added orgmode archive, refreshed, updated 27 packages, removed 3 no longer needed.
+
+commit 25c91bdae4245ba96ac700faa4dd7b7cd081220d
+Author: David <das@acm.org>
+Date:   Thu Dec 10 21:25:41 2020 -0500
+
+    Added use-package
+
+commit d924b7f10e0e335855b433410ff40988ffa9c0ca
+Author: David <das@acm.org>
+Date:   Thu Dec 10 14:03:55 2020 -0500
+
+    Added a gitignore
+
+commit 1ae79dbb2617509fdca626aff3ffd4bf9cbb7f3c
+Author: David <das@acm.org>
+Date:   Wed Dec 9 23:08:12 2020 -0500
+
+    Added elfeed sites
+
+commit 1133af308571e1106492d34984938d103a67680f
+Merge: bf9754f d12e7d1
+Author: David <das@acm.org>
+Date:   Tue Dec 8 12:17:58 2020 -0500
+
+    Reverting
+
+commit bf9754f167273a7176f17c05ea30ddc3ccf15dab
+Author: David <das@acm.org>
+Date:   Tue Dec 8 12:14:14 2020 -0500
+
+    Mod to add a Magit keybinding
+
+commit 89c10b8f5b2021a9e3f70d415bd23013f9a2b6c2
+Author: David <das@acm.org>
+Date:   Tue Dec 8 11:47:26 2020 -0500
+
+    Added a magit key binding - possibly not correctly. This is my first magit attempt.
+
+commit d12e7d1043e894823dd1070a742280bd379dc411
+Author: David <das@acm.org>
+Date:   Tue Dec 8 11:47:26 2020 -0500
+
+    added some blogs to elfeed.
+
+commit 857c8aa57810ce3f8eb7397db73949c4488577be
+Author: David <das@acm.org>
+Date:   Mon Dec 7 09:29:34 2020 -0500
+
+    Updated nov-03-02.
+
+commit 49545fc6824a56301de763605d661dfa105a7faf
+Author: David <das@acm.org>
+Date:   Sun Dec 6 20:00:13 2020 -0500
+
+    Updated to org-20201130
+
+commit a4c0ac6e76e7181205983c25cadc1f4793022bb7
+Author: David <das@acm.org>
+Date:   Thu Dec 3 10:42:45 2020 -0500
+
+    Added cheapskatesguide to elfeed list
+
+commit 693aab5fcbd5870c406f7e7792c7594d728fa0cd
+Author: David <das@acm.org>
+Date:   Wed Dec 2 08:59:41 2020 -0500
+
+    Updated nov-0.3.1, esxml-0.3.4, org-20201123
+
+commit e3c1d0f3b4f1bb37ce4717279910882f323b0217
+Author: David <das@acm.org>
+Date:   Sat Nov 28 14:52:06 2020 -0500
+
+    Adding elfeed items
+
+commit 5bb6aeae80b5fd86a26168f4947a003fd027ca4c
+Author: David <das@acm.org>
+Date:   Sat Nov 28 12:30:21 2020 -0500
+
+    Adding elfeed items
+
+commit 7c44d8c478455d8f7ea7c7dfbcdabc85d840da07
+Author: David <das@acm.org>
+Date:   Fri Nov 27 13:10:58 2020 -0500
+
+    Added nov.el to init.el
+
+commit 8ad7c876716a1ade476f0960a86ba0237a7383b2
+Author: David <das@acm.org>
+Date:   Fri Nov 27 13:05:30 2020 -0500
+
+    Added nov.el
+
+commit 00736f8b97260cc5f5ea54d0d299075212c3fc75
+Author: David <das@acm.org>
+Date:   Fri Nov 27 13:03:21 2020 -0500
+
+    Updated to org-20201123
+
+commit a1fd6f3188013b4aa31c61acd13e338ab7143899
+Author: David <das@acm.org>
+Date:   Sun Nov 22 11:40:12 2020 -0500
+
+    Added some elfeed feeds, updated ghub-3.4.2, org-20201109.
+
+commit 560f49e32cf737de1863c7de2b7ff79880182c47
+Author: David <das@acm.org>
+Date:   Sun Nov 15 12:39:34 2020 -0500
+
+    org-roam updated, several blogs added to elfeed
+
+commit e1371fdb9bbcbe26f81d058d42e16bbdee26c717
+Author: David <das@acm.org>
+Date:   Mon Nov 9 19:50:11 2020 -0500
+
+    added some elfeed sites
+
+commit bef9f03c88246f4080bb2fedf26aaae33bc1808f
+Author: David <das@acm.org>
+Date:   Mon Nov 9 19:25:40 2020 -0500
+
+    added two setq commands to mu4e config
+
+commit 22b7ea81de8db6edb847360a0430af516b2e7b62
+Author: David <das@acm.org>
+Date:   Sun Nov 8 21:44:06 2020 -0500
+
+    Updated org to 20021102
+
+commit 6da595e2efebf274394313fc8ff2876998d0866f
+Author: David <das@acm.org>
+Date:   Tue Nov 3 11:40:38 2020 -0500
+
+    Updated org, ghub and with-editor
+
+commit 2a6db51eed8a16941fd47a18b17529c5cb1bc059
+Author: David <das@acm.org>
+Date:   Sun Oct 25 11:34:04 2020 -0400
+
+    commented-out org-roam for now
+
+commit 77d0c870ed82d527fea82a7f7544a08f08535256
+Author: David <das@acm.org>
+Date:   Thu Oct 22 16:18:37 2020 -0400
+
+    Added mu4e-views, not broken, but not entirely configured yet.
+
+commit 920dc99dbd9366f1135d0189af1e8acbb488e12c
+Author: David <das@acm.org>
+Date:   Sun Oct 18 21:14:53 2020 -0400
+
+    Updated org to 10-12-2020 and installed and configured elfeed
+
+commit f9bcb03024d15ca1f31a4684260f0ebf3438e2a3
+Author: David <das@acm.org>
+Date:   Tue Oct 13 14:59:40 2020 -0400
+
+    Updated org to 20201012
+
+commit 746393c728a09c9955f69b46efa8b7dc5bc81031
+Author: David <das@acm.org>
+Date:   Wed Oct 7 17:41:15 2020 -0400
+
+    updated org and org-roam
+
+commit 5af9eaf6a731d22270be1754e30357600ffe895f
+Author: David <das@acm.org>
+Date:   Thu Oct 1 22:04:42 2020 -0400
+
+    Yet another org update
+
+commit 529b922353ed7b5ff0f2aaf6c947bdbc48338034
+Author: David <das@acm.org>
+Date:   Tue Sep 22 10:05:31 2020 -0400
+
+    Updated org-mode to 09-14, lots of fiddling in init.el re mu4e and commented-out stuff trying to get smpt working.
+
+commit ae5e0bbdba0e32cf0ffd4200d8bb118abb6d74a9
+Author: David <das@acm.org>
+Date:   Sat Sep 19 15:31:31 2020 -0400
+
+    configured mu4e
+
+commit bb62483bed248c5374c6902fbdfcb235e1701165
+Author: David <das@acm.org>
+Date:   Mon Sep 14 13:42:58 2020 -0400
+
+    Upgraded org-mode to version 9.4
+
+commit af764064534d8f163355f1d65e6f7abb3900993e
+Author: David <das@acm.org>
+Date:   Sun Sep 13 17:51:59 2020 -0400
+
+    added whole-line-or-region
+
+commit e30b6bb6bb59a45f6da68d03dd9880798ff90990
+Author: David <das@acm.org>
+Date:   Sat Sep 12 21:01:47 2020 -0400
+
+    org-mode update
+
+commit 2d0aa0561166a5be2b8210c9ba2b7af6a41933a1
+Author: David <das@acm.org>
+Date:   Fri Sep 4 22:46:46 2020 -0400
+
+    Added the offlineimaprc to keep track of it
+
+commit 82277676440ad2df1d0b0f2724df90910bfefa56
+Author: David <das@acm.org>
+Date:   Tue Sep 1 17:16:13 2020 -0400
+
+    org-mode update
+
+commit 6095a66df8cadc43623c0c6886ebbecc9fe310dd
+Author: David <das@acm.org>
+Date:   Tue Sep 1 12:19:14 2020 -0400
+
+    Simplified org-journal config - seems to be working with monthly file. Will know after 9-02 entry.
+
+commit 98c57660d57f9acba20e62a3331018f6d54e2419
+Author: David <das@acm.org>
+Date:   Mon Aug 24 15:09:01 2020 -0400
+
+    updated org and org-journal
+
+commit 4f9ea193be1de5638d2f7f7c645ab321829ea4d1
+Author: David <das@acm.org>
+Date:   Thu Aug 20 22:10:51 2020 -0400
+
+    installed magit 2.90
+
+commit 3399589e71cf314efd64a26b63da73510b4573ca
+Author: David <das@acm.org>
+Date:   Tue Aug 18 23:17:08 2020 -0400
+
+    Some small suggested changes to init.el
+
+commit b76f8e7634a259e5412d8516142d64ce3c92706a
+Author: David <das@acm.org>
+Date:   Tue Aug 18 15:16:20 2020 -0400
+
+    updated offlineimaprc with kadashan removed
+
+commit dddc9483cc376e0fce0bbde9e1abeea900120a89
+Author: David <das@acm.org>
+Date:   Mon Aug 17 16:28:29 2020 -0400
+
+    Copied offlineimaprc to emacs.d to include in this repository
+
+commit ed2dd9c9bf297fca87647f71e47326e4d19270a4
+Author: David <das@acm.org>
+Date:   Mon Aug 17 08:44:18 2020 -0400
+
+    Started configuring offlineimap, mu4e
+
+commit 5d6a8e5ae28e311b3bf22897ef926e3110d04dfe
+Author: David <das@acm.org>
+Date:   Sat Aug 8 19:20:54 2020 -0400
+
+    Deleted and reinstalled org-roam - it hasn't been updating
+
+commit ae1a01fb3ea8ba1484466507c946e6133079c2e7
+Author: David <das@acm.org>
+Date:   Fri Aug 7 20:48:34 2020 -0400
+
+    Added recentf and moved journal files
+
+commit 2ea8b08a182c43e699a1b30f9166d301cb4fcc9d
+Author: David <das@acm.org>
+Date:   Wed Aug 5 20:21:01 2020 -0400
+
+    Installed sdcv and Websters 1913
+
+commit d9ef740edbf722b1e59a8bfc0eaaaf0e160c27d4
+Author: David <das@acm.org>
+Date:   Wed Aug 5 15:20:03 2020 -0400
+
+    Set org-agenda-files to inbox.org only
+
+commit c43b6f68ab847744da30937226462dfcc2785779
+Author: David <das@acm.org>
+Date:   Wed Aug 5 11:57:59 2020 -0400
+
+    Commented-out recently used, corrected todo file
+
+commit 7e72de346cc68d5485bfc042fb0f1217323d55d5
+Author: David <das@acm.org>
+Date:   Wed Aug 5 11:48:06 2020 -0400
+
+    Updated org-mode and removed bind-key
+
+commit 1143996f8c85ab5902570181d84afbba62a9047f
+Author: David <das@acm.org>
+Date:   Wed Aug 5 11:42:19 2020 -0400
+
+    Removed Elfeed and use-package from packages
+
+commit bc63ab0ca8a208bf6afc37148f8068b0bf24525a
+Author: David <das@acm.org>
+Date:   Wed Aug 5 11:37:19 2020 -0400
+
+    Removed Elfeed and use-package from init.el
+
+commit cb1f4d20a2794e2a169b099d471b1d739ce5e9af
+Author: David <das@acm.org>
+Date:   Tue Aug 4 08:48:30 2020 -0400
+
+    Tried to add use-package
+
+commit ab8bd12a878e2049fe3f772d9d0582efd78b4d57
+Author: David <das@acm.org>
+Date:   Sun Jul 26 17:40:10 2020 -0400
+
+    Updated package list
+
+commit b67baa5bbdbd20b6c0848e19f4b0f60bca559fff
+Author: David <das@acm.org>
+Date:   Tue Jul 21 09:28:36 2020 -0400
+
+    Added org-mode TODO stuff
+
+commit 13b1dbb4bbb9e58f2034c801973ff1be10534ad4
+Merge: 6a713c6 3acd322
+Author: David <das@minos.kootenay.home>
+Date:   Fri Jul 10 13:10:50 2020 -0400
+
+    Merge branch 'master' of github.com:acmdas/emacs.d
+    Adding the README file from github
+
+commit 6a713c658c388d12c631a1c1e9c732ac2c9ee3c0
+Author: David <das@minos.kootenay.home>
+Date:   Fri Jul 10 13:05:30 2020 -0400
+
+    minor edits due to move to Debian
+
+commit 3acd3221936b42f687d498a05f6b8796568f19de
+Author: David Smith <acmdas@gmail.com>
+Date:   Mon Jul 6 19:36:19 2020 -0400
+
+    Update README.md
+    
+    Minor edits.
+
+commit 105d7f29c9818a57fc3cda228a2d765ac60189e8
+Author: David Smith <acmdas@gmail.com>
+Date:   Mon Jul 6 19:35:33 2020 -0400
+
+    Create README.md
+
+commit f397d525fe878b9847472cbfb21acc9a808b6771
+Author: David <das@acm.org>
+Date:   Mon Jul 6 19:25:28 2020 -0400
+
+    New repository July 4
