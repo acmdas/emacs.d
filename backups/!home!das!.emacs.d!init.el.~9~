@@ -1,4 +1,4 @@
-;; 20200701
+1;; 20200701
 ;; 20200704 - uncommented org-roam to see how it works alongside my normal config.
 ;; 20200709 - moved to the new Debian installation - issues with font and window size resolved.
 ;; 20200803 - installed elfeed and began configuration - installed use-package - gave up and deleted.
@@ -15,7 +15,7 @@
 ;; 20201217 - commented-out helm, org-roam, other SC updates, added ido
 
 (require 'package)
-; (package-initialize)
+(package-initialize)
 (setq use-package-always-ensure t)
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'exec-path "/usr/bin/sqlite3")
@@ -32,8 +32,8 @@
 (setq use-package-verbose t)
 (setq use-package-always-ensure t)
 (require 'use-package)
-(use-package auto-compile
-  :config (auto-compile-on-load-mode))
+; (use-package auto-compile
+;   :config (auto-compile-on-load-mode))
 ; (setq load-prefer-newer t)
 
 ;; configure backups
@@ -69,17 +69,11 @@
 	))
 
 ;; configure themes
-(use-package modus-themes
-  :ensure
-  :init
-  (set-face-attribute 'default nil :family "DejaVu Sans Mono" :height 115)
-  (set-face-attribute 'variable-pitch nil :family "DejaVu Serif" :height 1.2)
-  (set-face-attribute 'fixed-pitch nil :family "DejaVu Sans Mono" :height 1.0)
-  (use-package modus-operandi-theme)
-  (use-package modus-vivendi-theme)
-  :config
-  (modus-themes-load-operandi)
-  :bind ("<f5>" . modus-themes-toggle))
+(require 'modus-themes)          ; common code
+(require 'modus-operandi-theme)  ; light theme
+(require 'modus-vivendi-theme)   ; dark theme
+
+(load-theme 'modus-operandi t)
 
 ;; configure winner mode
 ; (use-package winner
@@ -315,9 +309,9 @@
  '(smtpmail-smtp-server "daslearns.ca")
  '(smtpmail-smtp-service 465))
 
-;; (custom-set-faces
+(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- ;; '(default ((t (:inherit nil :stipple nil :background "black" :foreground "gainsboro" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 113 :width normal :foundry "PfEd" :family "DejaVu Sans Mono")))))
+;; '(default ((t (:inherit nil :stipple nil :background "black" :foreground "gainsboro" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 113 :width normal :foundry "PfEd" :family "DejaVu Sans Mono")))))

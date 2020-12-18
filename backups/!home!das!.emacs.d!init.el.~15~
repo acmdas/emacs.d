@@ -15,7 +15,7 @@
 ;; 20201217 - commented-out helm, org-roam, other SC updates, added ido
 
 (require 'package)
-; (package-initialize)
+(package-initialize)
 (setq use-package-always-ensure t)
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'exec-path "/usr/bin/sqlite3")

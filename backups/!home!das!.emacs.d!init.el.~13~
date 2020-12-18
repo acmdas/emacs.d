@@ -15,7 +15,7 @@
 ;; 20201217 - commented-out helm, org-roam, other SC updates, added ido
 
 (require 'package)
-; (package-initialize)
+(package-initialize)
 (setq use-package-always-ensure t)
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'exec-path "/usr/bin/sqlite3")
@@ -73,7 +73,7 @@
   :ensure
   :init
   (set-face-attribute 'default nil :family "DejaVu Sans Mono" :height 115)
-  (set-face-attribute 'variable-pitch nil :family "DejaVu Serif" :height 1.2)
+  (set-face-attribute 'variable-pitch nil :family "Gentium Book Basic" :height 1.0)
   (set-face-attribute 'fixed-pitch nil :family "DejaVu Sans Mono" :height 1.0)
   (use-package modus-operandi-theme)
   (use-package modus-vivendi-theme)
