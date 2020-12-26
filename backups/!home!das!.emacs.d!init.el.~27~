@@ -151,7 +151,6 @@
 	("https://irreal.org/blog/?feed=rss2" irreal emacs)
 	("https://metaredux.com/feed.xml" batsov emacs)
 	("http://planet.lisp.org/rss20.xml" planetlisp lisp)
-	("https://programminghistorian.org/feed.xml" historian emacs)
 	("https://protesilaos.com/codelog.xml" protesilaos emacs)
 	("https://www.rousette.org.uk/index.xml" bsag emacs)
 	("https://sachachua.com/blog/feed" sachachua emacs)

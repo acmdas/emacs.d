@@ -83,17 +83,12 @@
 (setq sentence-end-double-space nil)
 
 ;; configuring recent
-(recentf-mode t)
-(setq recentf-max-saved-items 50)
-(global-set-key (kbd "C-x f") 'recentf-open-files)
-(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
-
-(defun ido-recentf-open ()
-  "Use `ido-completing-read' to \\[find-file] a recent file"
-  (interactive)
-  (if (find-file (ido-completing-read "Find recent file: " recentf-list))
-      (message "Opening file...")
-    (message "Aborting")))
+(use-package recentf
+  :init
+  :config
+  (recentf-mode t)
+  (setq recentf-max-saved-items 50)
+  :bind ("\C-xf" . recentf-open-files))
 
 ;; mail stuff
 ;; configuring mu4e
@@ -150,8 +145,6 @@
 	("https://emacsredux.com/atom.xml" batsov emacs)
 	("https://irreal.org/blog/?feed=rss2" irreal emacs)
 	("https://metaredux.com/feed.xml" batsov emacs)
-	("http://planet.lisp.org/rss20.xml" planetlisp lisp)
-	("https://programminghistorian.org/feed.xml" historian emacs)
 	("https://protesilaos.com/codelog.xml" protesilaos emacs)
 	("https://www.rousette.org.uk/index.xml" bsag emacs)
 	("https://sachachua.com/blog/feed" sachachua emacs)
@@ -172,7 +165,7 @@
 	("http://feeds.feedburner.com/typepad/sethsmainblog" godin)
 	))
 
-(setq-default elfeed-search-filter "@1-year-old")
+(setq-default elfeed-search-filter "@7-weeks")
 ; (setq-default elfeed-search-title-max-width 100)
 ; (setq-default elfeed-search-title-min-width 100)
 
@@ -208,7 +201,8 @@
   :bind (("C-c l" . org-store-link)
 	 ("C-c a" . org-agenda)
 	 ("C-c c" . org-capture)
-	 ("C-c b" . org-switchb)))
+	 ("C-c b" . org-switchb)
+	 ("C-c a" . org-agenda)))
 	 
 ;; Configuring org-protocol
 (require 'org-protocol)

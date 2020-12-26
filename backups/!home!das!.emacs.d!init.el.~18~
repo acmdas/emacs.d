@@ -16,6 +16,7 @@
 
 (require 'package)
 ; (package-initialize)
+(setq use-package-always-ensure t)
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'exec-path "/usr/bin/sqlite3")
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
@@ -33,6 +34,7 @@
 (require 'use-package)
 (use-package auto-compile
   :config (auto-compile-on-load-mode))
+; (setq load-prefer-newer t)
 
 ;; configure backups
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
@@ -79,21 +81,14 @@
   (modus-themes-load-operandi)
   :bind ("<f5>" . modus-themes-toggle))
 
+;; configure winner mode
+; (use-package winner
+;   :defer t)
+
 ;; sentences end with one space
 (setq sentence-end-double-space nil)
 
-;; configuring recent
-(recentf-mode t)
-(setq recentf-max-saved-items 50)
-(global-set-key (kbd "C-x f") 'recentf-open-files)
-(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
-
-(defun ido-recentf-open ()
-  "Use `ido-completing-read' to \\[find-file] a recent file"
-  (interactive)
-  (if (find-file (ido-completing-read "Find recent file: " recentf-list))
-      (message "Opening file...")
-    (message "Aborting")))
+; (use-package smart-mode-line)
 
 ;; mail stuff
 ;; configuring mu4e
@@ -150,8 +145,6 @@
 	("https://emacsredux.com/atom.xml" batsov emacs)
 	("https://irreal.org/blog/?feed=rss2" irreal emacs)
 	("https://metaredux.com/feed.xml" batsov emacs)
-	("http://planet.lisp.org/rss20.xml" planetlisp lisp)
-	("https://programminghistorian.org/feed.xml" historian emacs)
 	("https://protesilaos.com/codelog.xml" protesilaos emacs)
 	("https://www.rousette.org.uk/index.xml" bsag emacs)
 	("https://sachachua.com/blog/feed" sachachua emacs)
@@ -172,7 +165,7 @@
 	("http://feeds.feedburner.com/typepad/sethsmainblog" godin)
 	))
 
-(setq-default elfeed-search-filter "@1-year-old")
+(setq-default elfeed-search-filter "@7-weeks")
 ; (setq-default elfeed-search-title-max-width 100)
 ; (setq-default elfeed-search-title-min-width 100)
 
@@ -208,7 +201,8 @@
   :bind (("C-c l" . org-store-link)
 	 ("C-c a" . org-agenda)
 	 ("C-c c" . org-capture)
-	 ("C-c b" . org-switchb)))
+	 ("C-c b" . org-switchb)
+	 ("C-c a" . org-agenda)))
 	 
 ;; Configuring org-protocol
 (require 'org-protocol)
@@ -263,6 +257,23 @@
        ("_(" . ,(vector (decode-char 'ucs #x208D)))
        ("_)" . ,(vector (decode-char 'ucs #x208E)))))
 
+;; configuring recent
+(require 'recentf)
+(recentf-mode t)
+(global-set-key "\C-xf" 'recentf-open-files)
+;; (global-set-key (kbd "C-x C-r") 'ido-recentf-open)
+(setq recentf-max-saved-items 50)
+
+;; more stuff
+
+; (require 'whole-line-or-region)
+; (setq make-backup-files nil)
+(setq sentence-end-double-space nil)
+
+;; enable windmove - uses Shift-arrow to move between windows
+; (when (fboundp 'windmove-default-keybindings)
+;   (windmove-default-keybindings))
+
 ;; Hands off the following:
 
 (custom-set-variables
@@ -271,12 +282,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(recentf modus-themes modus-vivendi-theme modus-operandi-theme mu4e-views elfeed whole-line-or-region recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode))
+   '(modus-themes modus-vivendi-theme modus-operandi-theme mu4e-views elfeed whole-line-or-region recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode))
  '(smtpmail-smtp-server "daslearns.ca")
  '(smtpmail-smtp-service 465))
-(custom-set-faces
+
+;; (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ ;; '(default ((t (:inherit nil :stipple nil :background "black" :foreground "gainsboro" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 113 :width normal :foundry "PfEd" :family "DejaVu Sans Mono")))))
