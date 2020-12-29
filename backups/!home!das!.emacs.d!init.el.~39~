@@ -1,12 +1,18 @@
 ;; 20200701
+;; 20200704 - uncommented org-roam to see how it works alongside my normal config.
 ;; 20200709 - moved to the new Debian installation - issues with font and window size resolved.
+;; 20200803 - installed elfeed and began configuration - installed use-package - gave up and deleted.
 ;; 20200805 - recentf removed. org-agenda-files defined as inbox.org only. sdcv added
 ;; 20200816 - installed offlineimap, mu and mu4e
 ;; 20200919 - began using mu4e
+;; 20200921-22 - fiddling with smtpmail & etc. to try to get sending working
 ;; 20201018 - installed elfeed
 ;; 20201022 - installed mu4e-views
-;; 20201210 - installed use-package, began updating init.el
+;; 20201025 - commented-out org-roam
+;; 20201127 - installed nov.el for reading epubs
+;; 20201210 - installed use-package, began updating init.el per Sacha Chua
 ;; 20201216 - built from source version 27.1.50
+;; 20201217 - commented-out helm, org-roam, other SC updates, added ido
 
 (require 'package)
 ; (package-initialize)
@@ -46,6 +52,9 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (column-number-mode 1)
 (display-time-mode 1)
+; (delete-selection-mode 1)
+
+;; configure initial window size - added 20200704 1145
 (setq initial-frame-alist
       '(
 	(width . 102) ; character
@@ -229,7 +238,6 @@
        ("_=" . ,(vector (decode-char 'ucs #x208C)))
        ("_(" . ,(vector (decode-char 'ucs #x208D)))
        ("_)" . ,(vector (decode-char 'ucs #x208E)))))
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

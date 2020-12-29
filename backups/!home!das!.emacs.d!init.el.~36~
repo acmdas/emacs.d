@@ -1,12 +1,18 @@
 ;; 20200701
+;; 20200704 - uncommented org-roam to see how it works alongside my normal config.
 ;; 20200709 - moved to the new Debian installation - issues with font and window size resolved.
+;; 20200803 - installed elfeed and began configuration - installed use-package - gave up and deleted.
 ;; 20200805 - recentf removed. org-agenda-files defined as inbox.org only. sdcv added
 ;; 20200816 - installed offlineimap, mu and mu4e
 ;; 20200919 - began using mu4e
+;; 20200921-22 - fiddling with smtpmail & etc. to try to get sending working
 ;; 20201018 - installed elfeed
 ;; 20201022 - installed mu4e-views
-;; 20201210 - installed use-package, began updating init.el
+;; 20201025 - commented-out org-roam
+;; 20201127 - installed nov.el for reading epubs
+;; 20201210 - installed use-package, began updating init.el per Sacha Chua
 ;; 20201216 - built from source version 27.1.50
+;; 20201217 - commented-out helm, org-roam, other SC updates, added ido
 
 (require 'package)
 ; (package-initialize)
@@ -46,6 +52,9 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (column-number-mode 1)
 (display-time-mode 1)
+; (delete-selection-mode 1)
+
+;; configure initial window size - added 20200704 1145
 (setq initial-frame-alist
       '(
 	(width . 102) ; character
@@ -105,41 +114,47 @@
 (define-key mu4e-headers-mode-map (kbd "v") #'mu4e-views-mu4e-select-view-msg-method)
 
 ;; configure elfeed
-(use-package elfeed
-  :ensure t
-  :config
-  (global-set-key (kbd "C-x w") 'elfeed)
-  (setq elfeed-db-directory "~/data/elfeeddb")
-  (setq elfeed-feeds
-	'(
-	  ("https://consultingsmiths.com/feed/" me)
-	  ("https://casorosendi.wordpress.com/feed/" catholic)
-	  ;; emacs
-	  ("https://batsov.com/atom.xml" batsov emacs)
-	  ("https://cheapskatesguide.org/cheapskates-guide-rss-feed.xml" cheapskates tech)
-	  ("https://emacsredux.com/atom.xml" batsov emacs)
-	  ("https://irreal.org/blog/?feed=rss2" irreal emacs)
-	  ("https://metaredux.com/feed.xml" batsov emacs)
-	  ("http://planet.lisp.org/rss20.xml" planetlisp lisp)
-	  ("https://programminghistorian.org/feed.xml" historian emacs)
-	  ("https://protesilaos.com/codelog.xml" protesilaos emacs)
-	  ("https://www.rousette.org.uk/index.xml" bsag emacs)
-	  ("https://sachachua.com/blog/feed" sachachua emacs)
-	  ;; commentary
-	  ("https://jamesaltucher.com/feed/" altucher)
-	  ("http://assistantvillageidiot.blogspot.com/feeds/posts/default" avi)
-	  ("http://accordingtohoyt.com/feed/" hoyt)
-	  ("http://www.anonymousconservative.com/blog/feed/" anoncons news twitter)
-	  ("http://theconservativetreehouse.com/feed/" lastrefuge)
-	  ("http://www.ncobrief.com/index.php/feed/" ncobrief)
-	  ("http://wmbriggs.com/feed/" briggs statistics aquinas watts)
-	  ("https://wattsupwiththat.com/feed/" climate science)
-	  ("https://judithcurry.com/feed/" climate science)
-	  ("https://greenwald.substack.com/feed" politics)
-	  ("https://stevenpressfield.com/feed/" pressfield writing)
-	  ("http://feeds.feedburner.com/typepad/sethsmainblog" godin)
-	  ))
-  (setq-default elfeed-search-filter "@1-year-old"))
+(require 'elfeed)
+
+(global-set-key (kbd "C-x w") 'elfeed)
+
+(setq elfeed-db-directory "~/data/elfeeddb")
+
+(setq elfeed-feeds
+      '(
+	("https://consultingsmiths.com/feed/" me)
+	("https://casorosendi.wordpress.com/feed/" catholic)
+	;; emacs
+	("https://batsov.com/atom.xml" batsov emacs)
+	("https://cheapskatesguide.org/cheapskates-guide-rss-feed.xml" cheapskates tech)
+	("https://emacsredux.com/atom.xml" batsov emacs)
+	("https://irreal.org/blog/?feed=rss2" irreal emacs)
+	("https://metaredux.com/feed.xml" batsov emacs)
+	("http://planet.lisp.org/rss20.xml" planetlisp lisp)
+	("https://programminghistorian.org/feed.xml" historian emacs)
+	("https://protesilaos.com/codelog.xml" protesilaos emacs)
+	("https://www.rousette.org.uk/index.xml" bsag emacs)
+	("https://sachachua.com/blog/feed" sachachua emacs)
+	
+	;; commentary
+	("https://jamesaltucher.com/feed/" altucher)
+	("http://assistantvillageidiot.blogspot.com/feeds/posts/default" avi)
+	("http://accordingtohoyt.com/feed/" hoyt)
+	("http://www.anonymousconservative.com/blog/feed/" anoncons news twitter)
+	("http://theconservativetreehouse.com/feed/" lastrefuge)
+	("http://www.ncobrief.com/index.php/feed/" ncobrief)
+;;	("http://hallsofmacadamia.blogspot.com/feeds/posts/default" canada)
+	("http://wmbriggs.com/feed/" briggs statistics aquinas watts)
+	("https://wattsupwiththat.com/feed/" climate science)
+	("https://judithcurry.com/feed/" climate science)
+	("https://greenwald.substack.com/feed" politics)
+	("https://stevenpressfield.com/feed/" pressfield writing)
+	("http://feeds.feedburner.com/typepad/sethsmainblog" godin)
+	))
+
+(setq-default elfeed-search-filter "@1-year-old")
+; (setq-default elfeed-search-title-max-width 100)
+; (setq-default elfeed-search-title-min-width 100)
 
 ;; configuring org
 (use-package org
@@ -152,7 +167,7 @@
   (setq org-todo-keywords
 	'((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
 
-;; configuring org-capture
+;; Configuring org-capture
   (setq org-default-notes-file (concat org-directory "/data/org/inbox.org"))
   (setq org-capture-templates
 	'(("t" "Todo" entry (file+headline "~/data/org/inbox.org" "Tasks"))
@@ -178,7 +193,7 @@
 	 ("C-c b" . org-switchb)))
 	 
 ;; Configuring org-protocol
-(require 'org-protocol)
+(use-package org-protocol)
 
 ;; Configuring org-journal
 (use-package org-journal
@@ -229,17 +244,3 @@
        ("_=" . ,(vector (decode-char 'ucs #x208C)))
        ("_(" . ,(vector (decode-char 'ucs #x208D)))
        ("_)" . ,(vector (decode-char 'ucs #x208E)))))
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(org-protocol whole-line-or-region use-package slime recently org-protocol-jekyll org-journal nov mu4e-views modus-vivendi-theme modus-themes modus-operandi-theme markdown-mode elfeed auto-compile)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
