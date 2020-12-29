@@ -273,7 +273,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(nov recentf modus-themes modus-vivendi-theme modus-operandi-theme mu4e-views elfeed whole-line-or-region recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode))
+   '(recentf modus-themes modus-vivendi-theme modus-operandi-theme mu4e-views elfeed whole-line-or-region recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode))
  '(smtpmail-smtp-server "daslearns.ca")
  '(smtpmail-smtp-service 465))
 (custom-set-faces

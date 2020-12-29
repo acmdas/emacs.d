@@ -138,270 +138,6 @@ Call `indent-rigidly-right-to-tab-stop' on region or PREFIX whole lines.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/bind-key-20200805.1727/bind-key-autoloads.el"))
-
-(add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/bind-key-20200805.1727/bind-key-autoloads.el") (car load-path))))
-
-
-
-(autoload 'bind-key "bind-key" "\
-Bind KEY-NAME to COMMAND in KEYMAP (`global-map' if not passed).
-
-KEY-NAME may be a vector, in which case it is passed straight to
-`define-key'. Or it may be a string to be interpreted as
-spelled-out keystrokes, e.g., \"C-c C-z\". See documentation of
-`edmacro-mode' for details.
-
-COMMAND must be an interactive function or lambda form.
-
-KEYMAP, if present, should be a keymap variable or symbol.
-For example:
-
-  (bind-key \"M-h\" #'some-interactive-function my-mode-map)
-
-  (bind-key \"M-h\" #'some-interactive-function 'my-mode-map)
-
-If PREDICATE is non-nil, it is a form evaluated to determine when
-a key should be bound. It must return non-nil in such cases.
-Emacs can evaluate this form at any time that it does redisplay
-or operates on menu data structures, so you should write it so it
-can safely be called at any time.
-
-\(fn KEY-NAME COMMAND &optional KEYMAP PREDICATE)" nil t)
-
-(autoload 'unbind-key "bind-key" "\
-Unbind the given KEY-NAME, within the KEYMAP (if specified).
-See `bind-key' for more details.
-
-\(fn KEY-NAME &optional KEYMAP)" nil t)
-
-(autoload 'bind-key* "bind-key" "\
-Similar to `bind-key', but overrides any mode-specific bindings.
-
-\(fn KEY-NAME COMMAND &optional PREDICATE)" nil t)
-
-(autoload 'bind-keys "bind-key" "\
-Bind multiple keys at once.
-
-Accepts keyword arguments:
-:map MAP               - a keymap into which the keybindings should be
-                         added
-:prefix KEY            - prefix key for these bindings
-:prefix-map MAP        - name of the prefix map that should be created
-                         for these bindings
-:prefix-docstring STR  - docstring for the prefix-map variable
-:menu-name NAME        - optional menu string for prefix map
-:filter FORM           - optional form to determine when bindings apply
-
-The rest of the arguments are conses of keybinding string and a
-function symbol (unquoted).
-
-\(fn &rest ARGS)" nil t)
-
-(autoload 'bind-keys* "bind-key" "\
-
-
-\(fn &rest ARGS)" nil t)
-
-(autoload 'describe-personal-keybindings "bind-key" "\
-Display all the personal keybindings defined by `bind-key'." t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "bind-key" '("bind-key" "compare-keybindings" "get-binding-description" "override-global-m" "personal-keybindings")))
-
-
-)
-(let ((load-file-name "/home/das/.emacs.d/elpa/use-package-20201110.2133/use-package-autoloads.el"))
-
-(add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/use-package-20201110.2133/use-package-autoloads.el") (car load-path))))
-
-
-
-(autoload 'use-package-autoload-keymap "use-package-bind-key" "\
-Loads PACKAGE and then binds the key sequence used to invoke
-this function to KEYMAP-SYMBOL. It then simulates pressing the
-same key sequence a again, so that the next key pressed is routed
-to the newly loaded keymap.
-
-This function supports use-package's :bind-keymap keyword. It
-works by binding the given key sequence to an invocation of this
-function for a particular keymap. The keymap is expected to be
-defined by the package. In this way, loading the package is
-deferred until the prefix key sequence is pressed.
-
-\(fn KEYMAP-SYMBOL PACKAGE OVERRIDE)" nil nil)
-
-(autoload 'use-package-normalize-binder "use-package-bind-key" "\
-
-
-\(fn NAME KEYWORD ARGS)" nil nil)
-
-(defalias 'use-package-normalize/:bind 'use-package-normalize-binder)
-
-(defalias 'use-package-normalize/:bind* 'use-package-normalize-binder)
-
-(defalias 'use-package-autoloads/:bind 'use-package-autoloads-mode)
-
-(defalias 'use-package-autoloads/:bind* 'use-package-autoloads-mode)
-
-(autoload 'use-package-handler/:bind "use-package-bind-key" "\
-
-
-\(fn NAME KEYWORD ARGS REST STATE &optional BIND-MACRO)" nil nil)
-
-(defalias 'use-package-normalize/:bind-keymap 'use-package-normalize-binder)
-
-(defalias 'use-package-normalize/:bind-keymap* 'use-package-normalize-binder)
-
-(autoload 'use-package-handler/:bind-keymap "use-package-bind-key" "\
-
-
-\(fn NAME KEYWORD ARGS REST STATE &optional OVERRIDE)" nil nil)
-
-(autoload 'use-package-handler/:bind-keymap* "use-package-bind-key" "\
-
-
-\(fn NAME KEYWORD ARG REST STATE)" nil nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "use-package-bind-key" '("use-package-handler/:bind*")))
-
-
-
-(autoload 'use-package "use-package-core" "\
-Declare an Emacs package by specifying a group of configuration options.
-
-For full documentation, please see the README file that came with
-this file.  Usage:
-
-  (use-package package-name
-     [:keyword [option]]...)
-
-:init            Code to run before PACKAGE-NAME has been loaded.
-:config          Code to run after PACKAGE-NAME has been loaded.  Note that
-                 if loading is deferred for any reason, this code does not
-                 execute until the lazy load has occurred.
-:preface         Code to be run before everything except `:disabled'; this
-                 can be used to define functions for use in `:if', or that
-                 should be seen by the byte-compiler.
-
-:mode            Form to be added to `auto-mode-alist'.
-:magic           Form to be added to `magic-mode-alist'.
-:magic-fallback  Form to be added to `magic-fallback-mode-alist'.
-:interpreter     Form to be added to `interpreter-mode-alist'.
-
-:commands        Define autoloads for commands that will be defined by the
-                 package.  This is useful if the package is being lazily
-                 loaded, and you wish to conditionally call functions in your
-                 `:init' block that are defined in the package.
-:hook            Specify hook(s) to attach this package to.
-
-:bind            Bind keys, and define autoloads for the bound commands.
-:bind*           Bind keys, and define autoloads for the bound commands,
-                 *overriding all minor mode bindings*.
-:bind-keymap     Bind a key prefix to an auto-loaded keymap defined in the
-                 package.  This is like `:bind', but for keymaps.
-:bind-keymap*    Like `:bind-keymap', but overrides all minor mode bindings
-
-:defer           Defer loading of a package -- this is implied when using
-                 `:commands', `:bind', `:bind*', `:mode', `:magic', `:hook',
-                 `:magic-fallback', or `:interpreter'.  This can be an integer,
-                 to force loading after N seconds of idle time, if the package
-                 has not already been loaded.
-:after           Delay the use-package declaration until after the named modules
-                 have loaded. Once load, it will be as though the use-package
-                 declaration (without `:after') had been seen at that moment.
-:demand          Prevent the automatic deferred loading introduced by constructs
-                 such as `:bind' (see `:defer' for the complete list).
-
-:if EXPR         Initialize and load only if EXPR evaluates to a non-nil value.
-:disabled        The package is ignored completely if this keyword is present.
-:defines         Declare certain variables to silence the byte-compiler.
-:functions       Declare certain functions to silence the byte-compiler.
-:load-path       Add to the `load-path' before attempting to load the package.
-:diminish        Support for diminish.el (if installed).
-:delight         Support for delight.el (if installed).
-:custom          Call `custom-set' or `set-default' with each variable
-                 definition without modifying the Emacs `custom-file'.
-                 (compare with `custom-set-variables').
-:custom-face     Call `customize-set-faces' with each face definition.
-:ensure          Loads the package using package.el if necessary.
-:pin             Pin the package to an archive.
-
-\(fn NAME &rest ARGS)" nil t)
-
-(function-put 'use-package 'lisp-indent-function '1)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "use-package-core" '("use-package-")))
-
-
-
-(autoload 'use-package-normalize/:delight "use-package-delight" "\
-Normalize arguments to delight.
-
-\(fn NAME KEYWORD ARGS)" nil nil)
-
-(autoload 'use-package-handler/:delight "use-package-delight" "\
-
-
-\(fn NAME KEYWORD ARGS REST STATE)" nil nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "use-package-delight" '("use-package-normalize-delight")))
-
-
-
-(autoload 'use-package-normalize/:diminish "use-package-diminish" "\
-
-
-\(fn NAME KEYWORD ARGS)" nil nil)
-
-(autoload 'use-package-handler/:diminish "use-package-diminish" "\
-
-
-\(fn NAME KEYWORD ARG REST STATE)" nil nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "use-package-diminish" '("use-package-normalize-diminish")))
-
-
-
-(autoload 'use-package-normalize/:ensure "use-package-ensure" "\
-
-
-\(fn NAME KEYWORD ARGS)" nil nil)
-
-(autoload 'use-package-handler/:ensure "use-package-ensure" "\
-
-
-\(fn NAME KEYWORD ENSURE REST STATE)" nil nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "use-package-ensure" '("use-package-")))
-
-
-
-(autoload 'use-package-jump-to-package-form "use-package-jump" "\
-Attempt to find and jump to the `use-package' form that loaded
-PACKAGE. This will only find the form if that form actually
-required PACKAGE. If PACKAGE was previously required then this
-function will jump to the file that originally required PACKAGE
-instead.
-
-\(fn PACKAGE)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "use-package-jump" '("use-package-find-require")))
-
-
-
-(autoload 'use-package-lint "use-package-lint" "\
-Check for errors in use-package declarations.
-For example, if the module's `:if' condition is met, but even
-with the specified `:load-path' the module cannot be found." t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "use-package-lint" '("use-package-lint-declaration")))
-
-
-
-
-)
 (let ((load-file-name "/home/das/.emacs.d/elpa/macrostep-20161120.2106/macrostep-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
@@ -536,17 +272,6 @@ BUFFER-NAME, if given, should be a string for buffer to create.
 \(fn &optional BUFFER-NAME)" t nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "recently" '("recently-")))
-
-
-)
-(let ((load-file-name "/home/das/.emacs.d/elpa/packed-20201120.2047/packed-autoloads.el"))
-
-(add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/packed-20201120.2047/packed-autoloads.el") (car load-path))))
-
-
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "packed" '("packed-")))
 
 
 )
@@ -1307,10 +1032,10 @@ Search for TODOs within all future entries." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20201223.1755/dash-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20201227.2101/dash-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20201223.1755/dash-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20201227.2101/dash-autoloads.el") (car load-path))))
 
 
 
@@ -1364,6 +1089,39 @@ See `dash-fontify-mode' for more information on Dash-Fontify mode.
 
 
 )
+(let ((load-file-name "/home/das/.emacs.d/elpa/esxml-20201226.2146/esxml-autoloads.el"))
+
+(add-to-list 'load-path (directory-file-name
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/esxml-20201226.2146/esxml-autoloads.el") (car load-path))))
+
+
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "esxml" '("attr" "esxml-" "pp-esxml-to-xml" "string-trim-whitespace" "sxml-to-" "xml-to-esxml")))
+
+
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "esxml-query" '("esxml-")))
+
+
+
+
+)
+(let ((load-file-name "/home/das/.emacs.d/elpa/nov-20201207.3/nov-autoloads.el"))
+
+(add-to-list 'load-path (directory-file-name
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/nov-20201207.3/nov-autoloads.el") (car load-path))))
+
+
+
+(autoload 'nov-mode "nov" "\
+Major mode for reading EPUB documents
+
+\(fn)" t nil)
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "nov" '("nov-")))
+
+
+)
 (let ((load-file-name "/home/das/.emacs.d/elpa/ht-20201119.518/ht-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
@@ -1375,10 +1133,10 @@ See `dash-fontify-mode' for more information on Dash-Fontify mode.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/mu4e-views-20200830.1608/mu4e-views-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/mu4e-views-20201229.216/mu4e-views-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/mu4e-views-20200830.1608/mu4e-views-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/mu4e-views-20201229.216/mu4e-views-autoloads.el") (car load-path))))
 
 
 
@@ -1388,19 +1146,13 @@ Apply METHOD for viewing emails in mu4e-headers view.
 \(fn METHOD)" nil nil)
 
 (autoload 'mu4e-views-mu4e-headers-windows-only "mu4e-views" "\
-Show only the headers window of mu4e.
-
-\(fn)" t nil)
+Show only the headers window of mu4e." t nil)
 
 (autoload 'mu4e-views-cursor-msg-view-window-down "mu4e-views" "\
-Scroll message view down if we are viewing the message using xwidget-webkit.
-
-\(fn)" t nil)
+Scroll message view down if we are viewing the message using xwidget-webkit." t nil)
 
 (autoload 'mu4e-views-cursor-msg-view-window-up "mu4e-views" "\
-Scroll message view up if we are viewing the message using xwidget-webkit.
-
-\(fn)" t nil)
+Scroll message view up if we are viewing the message using xwidget-webkit." t nil)
 
 (autoload 'mu4e-views-mu4e-headers-next "mu4e-views" "\
 Move to next message in headers view.
@@ -1419,18 +1171,19 @@ message.  With prefix argument move N steps backwards instead.
 \(fn &optional N)" t nil)
 
 (autoload 'mu4e-views-mu4e-headers-move "mu4e-views" "\
+Move point LINES lines.
+Forward (if LINES is positive) or backward (if LINES is negative).
+If this succeeds, return the new docid.  Otherwise, return nil.
+
+\(fn LINES)" nil nil)
+
+(autoload 'mu4e-views-mu4e-headers-move-wrapper "mu4e-views" "\
 Move by N steps in the headers view.
 
-Negative numbers move backwards.  If the message view is open
-show message in the view.
+Negative numbers move backwards.  Record the window that we started from to
+be able to respect `mu4e-views-next-previous-message-behaviour'.
 
 \(fn N)" t nil)
-
-(autoload 'mu4e-views-mu4e-after-headers-mode "mu4e-views" "\
-Called when `mu4e~headers-move' is called to record from where it was called.
-Ignore N.
-
-\(fn N)" nil nil)
 
 (autoload 'mu4e-views-mu4e-extract-urls-from-msg "mu4e-views" "\
 Prepare mu4e message data structure for MSG.
@@ -1440,81 +1193,58 @@ urls in `mu4e-views' xwidget message view.
 \(fn MSG)" t nil)
 
 (autoload 'mu4e-views-mu4e-select-url-from-message "mu4e-views" "\
-Select a url from a mu4e message.
-
-\(fn)" t nil)
+Select a url from a mu4e message." t nil)
 
 (autoload 'mu4e-views-mu4e-open-attachment "mu4e-views" "\
-Select an attached from a mu4e message and open it.
-
-\(fn)" t nil)
+Select an attached from a mu4e message and open it." t nil)
 
 (autoload 'mu4e-views-mu4e-save-attachment "mu4e-views" "\
-Select an attached from a mu4e message and save it.
-
-\(fn)" t nil)
+Select an attached from a mu4e message and save it." t nil)
 
 (autoload 'mu4e-views-mu4e-save-all-attachments "mu4e-views" "\
-Save all attachments to a single directory chosen by the user.
-
-\(fn)" t nil)
+Save all attachments to a single directory chosen by the user." t nil)
 
 (autoload 'mu4e-views-mu4e-view-open-attachment "mu4e-views" "\
 Wraps the `mu4e-view-open-attachment' function.
 
-Passes on the message stored in `mu4e-views--current-mu4e-message'.
-
-\(fn)" t nil)
+Passes on the message stored in `mu4e-views--current-mu4e-message'." t nil)
 
 (autoload 'mu4e-views-mu4e-view-go-to-url "mu4e-views" "\
 Wraps the `mu4e-view-go-to-url' function.
 
-Passes on the message stored in `mu4e-views--current-mu4e-message'.
-
-\(fn)" t nil)
+Passes on the message stored in `mu4e-views--current-mu4e-message'." t nil)
 
 (autoload 'mu4e-views-mu4e-view-save-url "mu4e-views" "\
 Wraps the `mu4e-view-save-url' function.
 
- Passes on the message stored in `mu4e-views--current-mu4e-message'.
-
-\(fn)" t nil)
+ Passes on the message stored in `mu4e-views--current-mu4e-message'." t nil)
 
 (autoload 'mu4e-views-mu4e-view-save-attachment "mu4e-views" "\
 Wraps the `mu4e-save-attachment' function.
 
- Passes on the message stored in `mu4e-views--current-mu4e-message'.
-
-\(fn)" t nil)
+ Passes on the message stored in `mu4e-views--current-mu4e-message'." t nil)
 
 (autoload 'mu4e-views-mu4e-view-save-all-attachments "mu4e-views" "\
-Wraps function to save all attachments using `mu4e-views--current-mu4e-message'.
-
-\(fn)" t nil)
+Wraps function to save all attachments using `mu4e-views--current-mu4e-message'." t nil)
 
 (autoload 'mu4e-views-mu4e-view-action "mu4e-views" "\
 Wraps the `mu4e-view-action' function.
 
-Passes on the message stored in `mu4e-views--current-mu4e-message'.
-
-\(fn)" t nil)
+Passes on the message stored in `mu4e-views--current-mu4e-message'." t nil)
 
 (autoload 'mu4e-views-mu4e-view-fetch-url "mu4e-views" "\
 Wraps the `mu4e-view-fetch-url' function.
 
-Passes on the message stored in `mu4e-views--current-mu4e-message'.
-
-\(fn)" t nil)
+Passes on the message stored in `mu4e-views--current-mu4e-message'." t nil)
 
 (autoload 'mu4e-views-mu4e-select-view-msg-method "mu4e-views" "\
-Select the method for viewing emails in `mu4e'.
+Select the method for viewing emails in `mu4e'." t nil)
 
-\(fn)" t nil)
+(autoload 'mu4e-views-toggle-auto-view-selected-message "mu4e-views" "\
+Toggle automatic viewing of message when moving around in the mu4e-headers view." t nil)
 
 (autoload 'mu4e-views-unload-function "mu4e-views" "\
-Uninstalls the advices on mu4e functions created by mu4e-views.
-
-\(fn)" t nil)
+Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "mu4e-views" '("mu4e-views-")))
 
@@ -1533,10 +1263,10 @@ Uninstalls the advices on mu4e functions created by mu4e-views.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20201224.2015/modus-themes-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20201229.2008/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20201224.2015/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20201229.2008/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -1549,6 +1279,9 @@ Measure WCAG contrast ratio between C1 and C2.
 C1 and C2 are color values written in hexadecimal RGB.
 
 \(fn C1 C2)" nil nil)
+
+(autoload 'modus-themes-active-theme-colors "modus-themes" "\
+Return appropriate alist of color values for active theme." nil nil)
 
 (autoload 'modus-themes-color "modus-themes" "\
 Return color value for KEY.
@@ -1574,8 +1307,8 @@ Also run `modus-themes-after-load-theme-hook'." nil nil)
 
 (autoload 'modus-themes-toggle "modus-themes" "\
 Toggle between `modus-operandi' and `modus-vivendi' themes.
-Also runs `modus-themes-after-load-theme-hook' by virtue of
-calling the internal `modus-themes-load-operandi' and
+Also runs `modus-themes-after-load-theme-hook' at its last stage
+by virtue of calling either of `modus-themes-load-operandi' and
 `modus-themes-load-vivendi' functions." t nil)
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
@@ -1750,144 +1483,16 @@ Show the bookmarked entry saved in the `RECORD'.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/auto-compile-20201122.1157/auto-compile-autoloads.el"))
-
-(add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/auto-compile-20201122.1157/auto-compile-autoloads.el") (car load-path))))
-
-
-
-(autoload 'auto-compile-mode "auto-compile" "\
-Compile Emacs Lisp source files after the visiting buffers are saved.
-
-If called interactively, enable Auto-Compile mode if ARG is
-positive, and disable it if ARG is zero or negative.  If called
-from Lisp, also enable the mode if ARG is omitted or nil, and
-toggle it if ARG is `toggle'; disable the mode otherwise.
-
-After a buffer containing Emacs Lisp code is saved to its source
-file update the respective byte code file.  If the latter does
-not exist do nothing.  Therefore to disable automatic compilation
-remove the byte code file.  See command `toggle-auto-compile' for
-a convenient way to do so.
-
-This mode should be enabled globally, using it's globalized
-variant `auto-compile-on-save-mode'.  Also see the related
-`auto-compile-on-load-mode'.
-
-\(fn &optional ARG)" t nil)
-
-(put 'auto-compile-on-save-mode 'globalized-minor-mode t)
-
-(defvar auto-compile-on-save-mode nil "\
-Non-nil if Auto-Compile-On-Save mode is enabled.
-See the `auto-compile-on-save-mode' command
-for a description of this minor mode.
-Setting this variable directly does not take effect;
-either customize it (see the info node `Easy Customization')
-or call the function `auto-compile-on-save-mode'.")
-
-(custom-autoload 'auto-compile-on-save-mode "auto-compile" nil)
-
-(autoload 'auto-compile-on-save-mode "auto-compile" "\
-Toggle Auto-Compile mode in all buffers.
-With prefix ARG, enable Auto-Compile-On-Save mode if ARG is positive;
-otherwise, disable it.  If called from Lisp, enable the mode if
-ARG is omitted or nil.
-
-Auto-Compile mode is enabled in all buffers where
-`turn-on-auto-compile-mode' would do it.
-See `auto-compile-mode' for more information on Auto-Compile mode.
-
-\(fn &optional ARG)" t nil)
-
-(autoload 'toggle-auto-compile "auto-compile" "\
-Toggle automatic compilation of an Emacs Lisp source file or files.
-
-Read a file or directory name from the minibuffer defaulting to
-the visited Emacs Lisp source file or `default-directory' if no
-such file is being visited in the current buffer.
-
-If the user selects a file then automatic compilation of only
-that file is toggled.  Since both `auto-compile-on-save' and
-`auto-compile-on-save' only ever _recompile_ byte code files,
-toggling automatic compilation is done simply by creating or
-removing the respective byte code file.
-
-If the user selects a directory then automatic compilation for
-multiple files is toggled as follows:
-
-* With a positive prefix argument always compile source files;
-  with a negative prefix argument always remove byte code files.
-
-* Otherwise the existence or absence of the byte code file of
-  the source file that was current when this command was invoked
-  determines whether byte code files should be created or removed.
-
-* If no Emacs Lisp source file is being visited in the buffer
-  that was current when the command was invoked ask the user what
-  to do.
-
-* When _removing_ byte code files then all byte code files are
-  removed.  If `auto-compile-deletes-stray-dest' is non-nil this
-  even includes byte code files for which no source file exists.
-
-* When _creating_ byte code files only do so for source files
-  that are actual libraries.  Source files that provide the
-  correct feature are considered to be libraries; see
-  `packed-library-p'.
-
-* Note that non-libraries can still be automatically compiled,
-  you just cannot _recursively_ turn on automatic compilation
-  using this command.
-
-* When `auto-compile-toggle-recompiles' is non-nil recompile all
-  affected source files even when the respective source files are
-  up-to-date.  Do so even for non-library source files.
-
-* Only enter subdirectories for which `packed-ignore-directory-p'
-  returns nil; i.e. don't enter hidden directories or directories
-  containing a file named \".nosearch\".
-
-\(fn FILE ACTION)" t nil)
-
-(defvar auto-compile-on-load-mode nil "\
-Non-nil if Auto-Compile-On-Load mode is enabled.
-See the `auto-compile-on-load-mode' command
-for a description of this minor mode.")
-
-(custom-autoload 'auto-compile-on-load-mode "auto-compile" nil)
-
-(autoload 'auto-compile-on-load-mode "auto-compile" "\
-Before loading a library recompile it if it needs recompilation.
-
-If called interactively, enable Auto-Compile-On-Load mode if ARG
-is positive, and disable it if ARG is zero or negative.  If
-called from Lisp, also enable the mode if ARG is omitted or nil,
-and toggle it if ARG is `toggle'; disable the mode otherwise.
-
-A library needs to be recompiled if the source file is newer than
-it's byte-compile destination.  Without this advice the outdated
-byte code file would be loaded instead.
-
-Also see the related `auto-compile-on-save-mode'.
-
-\(fn &optional ARG)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "auto-compile" '("auto-compile-" "byte-compile-log-warning" "load" "mode-line-" "require" "save-buffers-kill-" "turn-on-auto-compile-mode")))
-
-
-)
 (setq package-activated-list
       (append
-       '(xwidgets-reuse whole-line-or-region bind-key use-package macrostep slime recently packed org-protocol-jekyll org org-journal dash ht mu4e-views modus-vivendi-theme modus-themes modus-operandi-theme markdown-mode elfeed auto-compile)
+       '(xwidgets-reuse whole-line-or-region macrostep slime recently org-protocol-jekyll org org-journal dash esxml nov ht mu4e-views modus-vivendi-theme modus-themes modus-operandi-theme markdown-mode elfeed)
        package-activated-list))
 (progn
   (require 'info)
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/dash-20201223.1755" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20201216.2342" "/home/das/.emacs.d/elpa/use-package-20201110.2133")
+	 '("/home/das/.emacs.d/elpa/dash-20201227.2101" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20201216.2342")
 	 Info-directory-list)))
 
 ;; Local Variables:

@@ -186,15 +186,13 @@
   (setq org-adapt-indentation nil)
   (setq org-todo-keywords
 	'((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
-
-;; Configuring org-capture
+  ;; Configuring org-capture
   (setq org-default-notes-file (concat org-directory "/data/org/inbox.org"))
   (setq org-capture-templates
 	'(("t" "Todo" entry (file+headline "~/data/org/inbox.org" "Tasks"))
 	  ("j" "Journal" entry (file+datetree "~/data/org/inbox.org")
 	   "* %?\nEntered on %U\n %i\n %a")))
-
-;; configuring org-agenda
+  ;; configuring org-agenda
   (setq org-agenda-window-setup (quote current-window))
   (setq org-agenda-files "~/data/org/inbox.org")
   ;; file to save todo items - 20200805 changed from .org to inbox.org
@@ -273,7 +271,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(nov recentf modus-themes modus-vivendi-theme modus-operandi-theme mu4e-views elfeed whole-line-or-region recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode))
+   '(recentf modus-themes modus-vivendi-theme modus-operandi-theme mu4e-views elfeed whole-line-or-region recently slime org-protocol-jekyll org-journal emacsql-sqlite markdown-mode))
  '(smtpmail-smtp-server "daslearns.ca")
  '(smtpmail-smtp-service 465))
 (custom-set-faces
