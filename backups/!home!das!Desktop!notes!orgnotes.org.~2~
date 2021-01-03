@@ -1,0 +1,66 @@
+;; #+STARTUP: overview
+org-mode-specific notes
+
+* Configuring org-mode
+
+  org-mode directory - ~/data/org
+  (require 'org)
+  C-c l - org-store-link
+  C-c a - org-agenda
+  C-c c - org-capture
+  C-c b - org-switchb)
+
+* Configuring org-capture/ToDo
+
+  C-c c Start a capture process
+  C-c C-c Finish a capture process
+  C-c C-t Rotate TODO state
+
+* Bindings available in the calendar-mode:
+
+  j - view an entry in a new buffer.
+  C-j - view an entry but do not switch to it.
+  i j - add a new entry into the day’s file (creates the file if not present).
+  f w - search in all entries of the current week.
+  f m - search in all entries of the current month.
+  f y - search in all entries of the current year.
+  f f - search in all entries of all time.
+  f F - search in all entries in the future.
+  [   - go to previous day with journal entries.
+  ]   - go to next day with journal entries.
+
+* Configuring org-roam
+
+  org-roam directory ~/data/org-roam
+  C-c n r - toggle buffer
+  C-c n i - insert link
+  C-c n / - find file
+  
+* Configuring org-journal
+
+  org-journal directory ~/data/org/journal
+  C-c C-f - go to the next journal file
+  C-c C-b - go to the previous journal file
+  C-c C-j - insert a new entry into the current journal file (creates the file if not present)
+  C-c C-s - search the journal for a string
+  C-u C-c C-j - view the current journal file without creating an entry
+
+  All journal entries are registered in the Emacs Calendar
+  To see available journal entries do M-x calendar
+
+
+** org-journal and org-mode keybinding conflicts
+  
+***  When working in an org-mode buffer the following org-journal key bindings are overwritten:
+
+    C-c C-s (org-journal-search) with org-schedule
+    C-c C-f (org-journal-open-next-entry) with org-forward-heading-same-level
+    C-c C-b (org-journal-open-previous-entry) with org-backward-heading-same-level
+    C-c C-j (org-journal-new-entry) with org-goto
+
+***  When working in an org-journal buffer the following org-mode key bindings are overwritten:
+
+    C-c C-s (org-schedule) with org-journal-search
+    C-c C-f (org-forward-heading-same-level) with org-journal-open-next-entry
+    C-c C-b (org-backward-heading-same-level) with org-journal-open-previous-entry
+    C-c C-j (org-goto) with org-journal-new-entry

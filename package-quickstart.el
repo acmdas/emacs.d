@@ -453,7 +453,7 @@ behaviors.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/slime-20201216.2342/slime-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/slime-20210103.1244/slime-autoloads.el"))
 
 
 
@@ -461,7 +461,7 @@ behaviors.
 
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/slime-20201216.2342/slime-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/slime-20210103.1244/slime-autoloads.el") (car load-path))))
 
 (autoload 'slime "slime"
   "Start a Lisp subprocess and connect to its Swank server." t)
@@ -1307,10 +1307,10 @@ Search for TODOs within all future entries." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20201227.2101/dash-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210103.1524/dash-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20201227.2101/dash-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210103.1524/dash-autoloads.el") (car load-path))))
 
 
 
@@ -1538,10 +1538,10 @@ Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20201229.2008/modus-themes-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210103.1536/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20201229.2008/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210103.1536/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -1555,22 +1555,21 @@ C1 and C2 are color values written in hexadecimal RGB.
 
 \(fn C1 C2)" nil nil)
 
-(autoload 'modus-themes-active-theme-colors "modus-themes" "\
-Return appropriate alist of color values for active theme." nil nil)
-
 (autoload 'modus-themes-color "modus-themes" "\
-Return color value for KEY.
-The KEY is the car of each cons cell in the alists
-`modus-themes-colors-operandi', `modus-themes-colors-vivendi'.
+Return color value for COLOR from current palette.
+COLOR is a key in `modus-themes-operandi-colors' or
+`modus-themes-vivendi-colors'.
 
-\(fn KEY)" nil nil)
+\(fn COLOR)" nil nil)
 
 (autoload 'modus-themes-color-alts "modus-themes" "\
-Return color value for KEY-LIGHT and KEY-DARK.
-Both arguments must reference the car of a cons cell in
-`modus-themes-colors-operandi', `modus-themes-colors-vivendi'.
+Return color value from current palette.
+When Modus Operandi is enabled, return color value for color
+LIGHT-COLOR.  When Modus Vivendi is enabled, return color value
+for DARK-COLOR.  LIGHT-COLOR and DARK-COLOR are keys in
+`modus-themes-operandi-colors' or `modus-themes-vivendi-colors'.
 
-\(fn KEY-LIGHT KEY-DARK)" nil nil)
+\(fn LIGHT-COLOR DARK-COLOR)" nil nil)
 
 (autoload 'modus-themes-load-operandi "modus-themes" "\
 Load `modus-operandi' and disable `modus-vivendi'.
@@ -1589,10 +1588,6 @@ by virtue of calling either of `modus-themes-load-operandi' and
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "modus-themes" '("modus-themes-")))
-
-
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "modus-themes-core" '("modus-themes-core-theme")))
 
 
 
@@ -1895,7 +1890,7 @@ Also see the related `auto-compile-on-save-mode'.
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/dash-20201227.2101" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20201216.2342" "/home/das/.emacs.d/elpa/use-package-20201110.2133")
+	 '("/home/das/.emacs.d/elpa/modus-themes-20210103.1536" "/home/das/.emacs.d/elpa/dash-20210103.1524" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210103.1244" "/home/das/.emacs.d/elpa/use-package-20201110.2133")
 	 Info-directory-list)))
 
 ;; Local Variables:
