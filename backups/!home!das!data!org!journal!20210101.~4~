@@ -1,0 +1,31 @@
+* Friday, 01/01/2021
+:PROPERTIES:
+:CREATED:  20210101
+:END:
+** 14:02 Happy New Year! I neglected to start a 20210101 backup of the data drive, so I didn't begin this until it had finished (and I did a GNUCash backup and started the media backup). I slept well, 0033-0857, 7:49 90. Michael S. called - second day in a row. Valerie suggested that we replace the mattress, and I wholeheartedly agree. We'll begin some research to make our choice. Miriam's whole family came by around 1300 with a Birthday card (handmade) and a Happy New Years card, plus an oragami phoenix. Joey isn't doing well and may be put down soon. I got into my second cupa too soon and became quite dizzy and eyes unfocused around noon. Just tapering off now. Guess I'll have to get used to the half-caf stuff from Wegmans. It's really not that bad.
+** 17:21 By now the media backup is a little over half done. A pretty quiet day. I'll be fixing Mission BBQ's recipe for black-eyed peas. Apparently eating them on New Years Day brings good luck. We renewed our Lacquie Lawson account and sent cards to family and friends.
+** 19:39 Got almost to the end of the media backup and noticed that I had removed the "exclude media/backup" instruction, so I've restarted the whole media backup. It will finish sometime around 0200-0300 tomorrow. No biggie. I'll get that straightened out by next month, I'm sure - just have to get everything used to being 2021. Made the black-eyed peas - they were good but if I do it again I'll leave the cayenne out entirely. Did the dishes, it's raining to beat the band right now. Predicted 54 and sunny tomorrow, then another day of rain on Sunday, high 41.
+** 22:27 Had my cereal - play a game and go to bed. When the Media backup finishes, tomorrow, I'll move the camera files from data to media. They're almost completely stable and have been for some time.
+
+* Saturday, 01/02/2021
+:PROPERTIES:
+:CREATED:  20210102
+:END:
+** 08:42 For once I slept better than I thought, according to fitbit: 2339-0719, 6:42 89. Foolish dreams about wandering around in large buildings and having luggage stolen at the airport. Won't try to analyze that too deeply. The grow-light burned out this morning, so there's one task for today. I did remember to copy the camera files from data to media - almost all copied over (37GB). Will also copy media/backups to backup/tarfiles.
+
+** 14:56 Went to Home Depot and got a LED grow light. Returned the Rosseti book on Time on the way. Helped Valerie clean front door and kitchen door windows.
+** 16:31 Just finished a shower. Valerie has sliced the big sweet potato on the mandolin and baked it as chips. She's talking to Ans now.
+
+* Sunday, 01/03/2021
+:PROPERTIES:
+:CREATED:  20210103
+:END:
+** 08:40 Been copying the media tar to OFFSITE2 overnight, seems to be stalled with 100GB still to go. Wonder whether it's a flaw in the file manager app (Thunar?). The "File Operation Progress" process says 262.3GB has been copied. I'm tempted to kill the copy and restart it using only the terminal. Judging from the activity light on the remote drive, very little is happening.
+** 08:54 Decided to use rsync from a bash buffer in this emacs window. Using -ah --progress flags it says that it'll take 3-6 hours. Transfer rate fluctuates between 14-32MB/s. 
+** 08:58 Another night where I seem to have slept better than it seemed: 2350-0739, 7:00 88. Lots of rain overnight, just a little now.
+** 11:28 Transfer is at 46% now, still fluctuating between 15-33MB/s, 1.5-3 hours remaining.
+** 12:53 Transfer is at 64% now, and rate is fluctuating between 400kB/s-12MB/s. Perhaps the right way to keep the media drive, which changes much less frequently, properly backed up is to tar each top-level directory and keep the latest on the OFFSITE drives.
+
+** 13:02 That's what I'll do. Creating a new tar for pictures, copying both Thunderbird archives, music for starters.
+** 15:27 Just back from a short, wet walk with Valerie. greatcourses tar almost finished copying to OFFSITE2, seems that there isn't a copy of the new data tar, so that has to be done, and the new pictures tar, and then that will finally be done.
+** 21:01 The final tar file, the pictures, is on its way. We did the Dutch sausage, kraut and potatoes with gravy for dinner - it was good. Watched a little TV and just raised the desk about an inch or so and put the right hand arm rest back on the chair. This may not work - the keyboard may be too high. If it isn't, I may remove the plastic drawer that I glued to the underside of the desk - that's the only thing that's rubbing on the arms now. 

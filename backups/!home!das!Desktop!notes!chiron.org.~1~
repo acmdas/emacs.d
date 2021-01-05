@@ -1,0 +1,13 @@
+chiron installations
+
+debian 10
+foo, foo
+
+sda mount size
+1 / 25GB
+5 /var 10GB
+6 swap 17.2GB
+7 /tmp 2GB
+8 /home 445.9GB
+
+kernel 4-19-0-3

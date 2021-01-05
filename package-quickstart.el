@@ -1307,10 +1307,10 @@ Search for TODOs within all future entries." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210103.1524/dash-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210105.414/dash-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210103.1524/dash-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210105.414/dash-autoloads.el") (car load-path))))
 
 
 
@@ -1538,10 +1538,10 @@ Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210103.1536/modus-themes-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210105.527/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210103.1536/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210105.527/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -1890,7 +1890,7 @@ Also see the related `auto-compile-on-save-mode'.
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/modus-themes-20210103.1536" "/home/das/.emacs.d/elpa/dash-20210103.1524" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210103.1244" "/home/das/.emacs.d/elpa/use-package-20201110.2133")
+	 '("/home/das/.emacs.d/elpa/modus-themes-20210105.527" "/home/das/.emacs.d/elpa/dash-20210105.414" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210103.1244" "/home/das/.emacs.d/elpa/use-package-20201110.2133")
 	 Info-directory-list)))
 
 ;; Local Variables:
