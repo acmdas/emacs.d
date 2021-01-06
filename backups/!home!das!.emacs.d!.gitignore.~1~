@@ -3,6 +3,3 @@ auto-save-list/*
 
 # ignore url cache
 url/
-
-# ignore backup files
-backup/*
