@@ -73,11 +73,6 @@
 ;; sentences end with one space
 (setq sentence-end-double-space nil)
 
-;; configuring ido-mode
-(ido-mode 1)
-(setq ido-enable-flex-matching t)
-(setq ido-everywhere t)
-
 ;; configuring recent
 (recentf-mode t)
 (setq recentf-max-saved-items 50)
