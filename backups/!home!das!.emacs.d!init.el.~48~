@@ -151,8 +151,6 @@
 	  ("http://assistantvillageidiot.blogspot.com/feeds/posts/default" avi)
 	  ("http://accordingtohoyt.com/feed/" hoyt)
 	  ("http://www.anonymousconservative.com/blog/feed/" anoncons news twitter)
-	  ("https://clarissasblog.com/feed/" clarissa)
-	  ("https://www.coffeetalking.com/feeds/posts/default" coffeetalking)
 	  ("http://theconservativetreehouse.com/feed/" lastrefuge)
 	  ("http://www.thesavvystreet.com/feed/" savvystreet)
 	  ("http://www.ncobrief.com/index.php/feed/" ncobrief)
@@ -162,7 +160,6 @@
 	  ("https://greenwald.substack.com/feed" politics)
 	  ("https://stevenpressfield.com/feed/" pressfield writing)
 	  ("http://feeds.feedburner.com/typepad/sethsmainblog" godin)
-	  ("http://voxday.blogspot.com/feeds/posts/default" Vox)
 	  ))
   (setq-default elfeed-search-filter "@1-year-old"))
 

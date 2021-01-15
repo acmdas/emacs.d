@@ -1,0 +1,60 @@
+* Friday, 01/01/2021
+:PROPERTIES:
+:CREATED:  20210101
+:END:
+** 14:02 Happy New Year! I neglected to start a 20210101 backup of the data drive, so I didn't begin this until it had finished (and I did a GNUCash backup and started the media backup). I slept well, 0033-0857, 7:49 90. Michael S. called - second day in a row. Valerie suggested that we replace the mattress, and I wholeheartedly agree. We'll begin some research to make our choice. Miriam's whole family came by around 1300 with a Birthday card (handmade) and a Happy New Years card, plus an oragami phoenix. Joey isn't doing well and may be put down soon. I got into my second cupa too soon and became quite dizzy and eyes unfocused around noon. Just tapering off now. Guess I'll have to get used to the half-caf stuff from Wegmans. It's really not that bad.
+** 17:21 By now the media backup is a little over half done. A pretty quiet day. I'll be fixing Mission BBQ's recipe for black-eyed peas. Apparently eating them on New Years Day brings good luck. We renewed our Lacquie Lawson account and sent cards to family and friends.
+** 19:39 Got almost to the end of the media backup and noticed that I had removed the "exclude media/backup" instruction, so I've restarted the whole media backup. It will finish sometime around 0200-0300 tomorrow. No biggie. I'll get that straightened out by next month, I'm sure - just have to get everything used to being 2021. Made the black-eyed peas - they were good but if I do it again I'll leave the cayenne out entirely. Did the dishes, it's raining to beat the band right now. Predicted 54 and sunny tomorrow, then another day of rain on Sunday, high 41.
+** 22:27 Had my cereal - play a game and go to bed. When the Media backup finishes, tomorrow, I'll move the camera files from data to media. They're almost completely stable and have been for some time.
+
+* Saturday, 01/02/2021
+:PROPERTIES:
+:CREATED:  20210102
+:END:
+** 08:42 For once I slept better than I thought, according to fitbit: 2339-0719, 6:42 89. Foolish dreams about wandering around in large buildings and having luggage stolen at the airport. Won't try to analyze that too deeply. The grow-light burned out this morning, so there's one task for today. I did remember to copy the camera files from data to media - almost all copied over (37GB). Will also copy media/backups to backup/tarfiles.
+
+** 14:56 Went to Home Depot and got a LED grow light. Returned the Rosseti book on Time on the way. Helped Valerie clean front door and kitchen door windows.
+** 16:31 Just finished a shower. Valerie has sliced the big sweet potato on the mandolin and baked it as chips. She's talking to Ans now.
+
+* Sunday, 01/03/2021
+:PROPERTIES:
+:CREATED:  20210103
+:END:
+** 08:40 Been copying the media tar to OFFSITE2 overnight, seems to be stalled with 100GB still to go. Wonder whether it's a flaw in the file manager app (Thunar?). The "File Operation Progress" process says 262.3GB has been copied. I'm tempted to kill the copy and restart it using only the terminal. Judging from the activity light on the remote drive, very little is happening.
+** 08:54 Decided to use rsync from a bash buffer in this emacs window. Using -ah --progress flags it says that it'll take 3-6 hours. Transfer rate fluctuates between 14-32MB/s. 
+** 08:58 Another night where I seem to have slept better than it seemed: 2350-0739, 7:00 88. Lots of rain overnight, just a little now.
+** 11:28 Transfer is at 46% now, still fluctuating between 15-33MB/s, 1.5-3 hours remaining.
+** 12:53 Transfer is at 64% now, and rate is fluctuating between 400kB/s-12MB/s. Perhaps the right way to keep the media drive, which changes much less frequently, properly backed up is to tar each top-level directory and keep the latest on the OFFSITE drives.
+
+** 13:02 That's what I'll do. Creating a new tar for pictures, copying both Thunderbird archives, music for starters.
+** 15:27 Just back from a short, wet walk with Valerie. greatcourses tar almost finished copying to OFFSITE2, seems that there isn't a copy of the new data tar, so that has to be done, and the new pictures tar, and then that will finally be done.
+** 21:01 The final tar file, the pictures, is on its way. We did the Dutch sausage, kraut and potatoes with gravy for dinner - it was good. Watched a little TV and just raised the desk about an inch or so and put the right hand arm rest back on the chair. This may not work - the keyboard may be too high. If it isn't, I may remove the plastic drawer that I glued to the underside of the desk - that's the only thing that's rubbing on the arms now. 
+
+* Monday, 01/04/2021
+:PROPERTIES:
+:CREATED:  20210104
+:END:
+** 08:44 Both of us suffered from our old mattress last night - it bothered Valerie's sleep a lot, mine a lot less: 2337-0736, 7:19 85.
+** 10:38 Removed the little drawer under the desk - it came off quite cleanly and intact - it may be reattached on the left side where it will protrude slightly but not be in the way so much. So far the keyboard is tolerable at the present height, but it might end up being too high and call for dropping the desk an inch or so to still clear the arms. Such a lot of mind-space for such a small thing! Valerie has yoga shortly.
+** 15:42 After yoga Valerie was feeling energized, and decided to make scones. I helped a tiny bit and they're all out of the oven and taste magnificent. I found some great quotes, beginning with the ones from the "Large Regular" blog, then moved out to Niels Bohr. One of those was quoted by Heisenberg, so that led me to "Physics and Beyond" which I was surprised and pleased to find that I had a pdf copy of.
+** 17:04 Downloaded the newest kindle books to the mac and moved them to Calibre on minos. 
+** 22:58 A good meeting - Carl S.'s sponsor. Watched a few videos about language and Gandalf.
+
+* Tuesday, 01/05/2021
+:PROPERTIES:
+:CREATED:  20210105
+:END:
+** 08:18 Another good night's sleep - 0001-0700, 6:13 85. Overcast, not too cold (37), highs in the low 40s the coming week, lows just under freezing, no precip until next Tuesday. Might see the mud pit in the back yard dry up some. Sounds like Valerie just got up.
+** 11:50 Sacha Chua's Emacs News included mu4e-views update, so I updated its configuration which triggered a "not compiled for xwidgets support" - took some looking but found the switches to look for, but finally found the answer and used "./configure --with-mailutils --with-xwidgets --with-imagemagick" and recompiled. Now version 29.1.9 and viewing html mail in mu4e is great! Worth the effort. While it was building I went to Giant and got milk for both of us and a 120-count baby aspirin and took back "Knocking on Heaven't Door" which proved to be pretty much "isn't scientism great!"
+** 19:43 We took a long walk after lunch, then Valerie went to Wegman's. I read and dozed until she got home, then we both read and dozed until her phone rang. We finished the potatoes/kraut/sausage dinner tonight with fresh broccoli. Mmmm. Fiddled some with init.el and got ido-mode back the way I'm used to.
+** 19:49 Mu4e doesn't seem to be updating - new mail arrives and the counter doesn't increment. When I initiate an update it says that the update is already running. There's always a process running when I stop it. Whether that's part of the new compile, or the mu4e-views package, or the mu4e-views config I don't know yet. I guess the first step will be to comment out the whole mu4e-views config, then if that works, see if I can add elements one at a time to find the one that's breaking it.
+** 21:42 With all of mu4e-views commented out, mu4e seems to work. I'm sending one more message to be sure.
+** 22:34 And yes, it is definitely working. Now, if I can only get mu4e-views working enough to display html mail as html I'll be pleased. If not, I'd rather have it working as it was before I recompiled and fiddled with it. At least then the messages were all getting into the db. Fading away. Will have a game and maybe a bath, then off to dreamland.
+
+* Wednesday, 01/06/2021
+:PROPERTIES:
+:CREATED:  20210106
+:END:
+** 08:39 Pretty good sleep: 2357-0810, 7:53 87. Have to rush to get to Michael by 0900.
+** 13:13 Walk went pretty well until we reached the tot lot north of 175. Michael wanted to rest, saying that he was nauseous and dizzy. He rested often as we walked back to the SS, and waited for an hour in his car before heading out. I waited with him until 1030. Just now talked with him, he'd just gotten home after having another "swoon" at Costco and rested in his car again. He says that he's about to call his doctor. Hope he does. The nooner was good. I'm expecting to go to Costco shortly for a few things and a chicken, also to Aldi. May try to get to Trader Joe's tomorrow morning for Japanese Rice, might leave Aldi for then.
+** 20:54 Costco Gas was too busy, but Costco wasn't and we got Valerie's Rx, a chicken, cereal and pistachios. Aldi was quick, too. An hour's nap, then fixed chicken, baked potatoes and broccoli. A quiet evening since then.

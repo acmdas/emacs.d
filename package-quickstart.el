@@ -1171,10 +1171,10 @@ Inserted by installing Org or when a release is made." nil nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/org-journal-20201222.750/org-journal-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/org-journal-20210109.913/org-journal-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-journal-20201222.750/org-journal-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-journal-20210109.913/org-journal-autoloads.el") (car load-path))))
 
 
 
@@ -1187,9 +1187,9 @@ Mode for writing or viewing entries written in the journal.
 
 \(fn)" t nil)
 
-(define-obsolete-function-alias 'org-journal-open-next-entry 'org-journal-next-entry)
+(define-obsolete-function-alias 'org-journal-open-next-entry 'org-journal-next-entry "2.1.0")
 
-(define-obsolete-function-alias 'org-journal-open-previous-entry 'org-journal-previous-entry)
+(define-obsolete-function-alias 'org-journal-open-previous-entry 'org-journal-previous-entry "2.1.0")
 
 (autoload 'org-journal-convert-created-property-timestamps "org-journal" "\
 Convert CREATED property timestamps to `org-journal-created-property-timestamp-format'.
@@ -1307,10 +1307,10 @@ Search for TODOs within all future entries." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210106.2158/dash-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210114.2017/dash-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210106.2158/dash-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210114.2017/dash-autoloads.el") (car load-path))))
 
 
 
@@ -1358,6 +1358,10 @@ See `dash-fontify-mode' for more information on Dash-Fontify mode.
 
 \(fn &optional ARG)" t nil)
 
+(autoload 'dash-register-info-lookup "dash" "\
+Register the Dash Info manual with `info-lookup-symbol'.
+This allows Dash symbols to be looked up with \\[info-lookup-symbol]." t nil)
+
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dash" '("!cdr" "!cons" "--" "->" "-a" "-butlast" "-c" "-d" "-e" "-f" "-gr" "-i" "-keep" "-l" "-m" "-non" "-only-some" "-p" "-r" "-s" "-t" "-u" "-value-to-list" "-when-let" "-zip" "dash-")))
 
 
@@ -1397,10 +1401,10 @@ Major mode for reading EPUB documents
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/ht-20201119.518/ht-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/ht-20210113.822/ht-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/ht-20201119.518/ht-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/ht-20210113.822/ht-autoloads.el") (car load-path))))
 
 
 
@@ -1538,10 +1542,10 @@ Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210106.748/modus-themes-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210114.1245/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210106.748/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210114.1245/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -1570,6 +1574,17 @@ for DARK-COLOR.  LIGHT-COLOR and DARK-COLOR are keys in
 `modus-themes-operandi-colors' or `modus-themes-vivendi-colors'.
 
 \(fn LIGHT-COLOR DARK-COLOR)" nil nil)
+
+(autoload 'modus-themes-load-themes "modus-themes" "\
+Ensure that the Modus themes are in `custom-enabled-themes'.
+
+This function is intended for use in package declarations such as
+those defined with the help of `use-package'.  The idea is to add
+this function to the `:init' stage of the package's loading, so
+that subsequent calls that assume the presence of a loaded theme,
+like `modus-themes-toggle' or `modus-themes-load-operandi', will
+continue to work as intended even if they are lazy-loaded (such
+as when they are declared in the `:config' phase)." nil nil)
 
 (autoload 'modus-themes-load-operandi "modus-themes" "\
 Load `modus-operandi' and disable `modus-vivendi'.
@@ -1610,10 +1625,10 @@ by virtue of calling either of `modus-themes-load-operandi' and
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/markdown-mode-20210107.101/markdown-mode-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/markdown-mode-20210112.1557/markdown-mode-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/markdown-mode-20210107.101/markdown-mode-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/markdown-mode-20210112.1557/markdown-mode-autoloads.el") (car load-path))))
 
 
 
@@ -1890,7 +1905,7 @@ Also see the related `auto-compile-on-save-mode'.
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/modus-themes-20210106.748" "/home/das/.emacs.d/elpa/dash-20210106.2158" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210105.2148" "/home/das/.emacs.d/elpa/use-package-20210106.2145")
+	 '("/home/das/.emacs.d/elpa/modus-themes-20210114.1245" "/home/das/.emacs.d/elpa/dash-20210114.2017" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210105.2148" "/home/das/.emacs.d/elpa/use-package-20210106.2145")
 	 Info-directory-list)))
 
 ;; Local Variables:

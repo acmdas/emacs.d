@@ -1,0 +1,24 @@
+#!/bin/bash
+echo "adding new post to github das_fieldstones"
+
+cd ~/data/md/barfield/
+
+echo "* converting markdown file to html"
+
+pandoc -s --metadata pagetitle="Saving the Appearances" appearances.md -o appearances.html
+
+echo "* git add --all"
+
+git add --all
+
+echo "* commit"
+
+git commit -m "added to appearances.md"
+
+echo "*push to github"
+
+git push -u origin master
+
+echo "* Last run at"
+
+date
