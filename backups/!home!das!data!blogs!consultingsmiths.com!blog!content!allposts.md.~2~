@@ -1,0 +1,16 @@
++++
+title = "Consultingsmiths"
+author = ["David Smith"]
+draft = false
++++
+
+## Posts {#posts}
+
+​\*\* My First Post
+
+\#+begin\_src toml :front\_matter\_extra t
+bigimg= [{src="/img/hugoemacs.png"}]
+:EXPORT\_FILE\_NAME: my-post-title
+:EXPORT_DATE: 2021-01-18
+
+this is the text of the post. This is even more text of the post.

@@ -1,0 +1,18 @@
+#+hugo_section: ./
+#+hubo_base_dir: ../
+#+hugo_custom_front_matter: :author “David Smith”
+
+* Posts
+:PROPERTIES:
+:EXPORT_AUTHOR:
+:EXPORT_HUGO_SECTION: post
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :comments true
+:END:
+​** My First Post
+:PROPERTIES:
+#+begin_src toml :front_matter_extra t
+bigimg= [{src="/img/hugoemacs.png"}]
+:EXPORT_FILE_NAME: my-post-title
+:EXPORT_DATE: 2021-01-18
+:END:
+this is the text of the post. This is even more text of the post.

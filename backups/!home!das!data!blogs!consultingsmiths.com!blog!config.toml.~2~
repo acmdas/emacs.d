@@ -1,0 +1,8 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Consultingsmiths"
+theme = "refined"
+
+[Taxonomies]
+  category = "categories" # SINGULAR = "PLURAL"
+  tag = "tags"

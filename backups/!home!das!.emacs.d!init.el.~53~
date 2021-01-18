@@ -211,11 +211,6 @@
   (setq org-journal-file-type 'monthly)
   (setq org-journal-dir "~/data/org/journal"))
 
-;; configuring ox-hugo
-(use-package ox-hugo
-  :ensure t            ;Auto-install the package from Melpa (optional)
-  :after ox)
-
 ;; configuring the 1923 Websters' Dictionary
 (require 'sdcv-mode)
 (global-set-key (kbd "C-c d") 'sdcv-search)
