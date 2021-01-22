@@ -1,0 +1,193 @@
+* Friday, 01/01/2021
+:PROPERTIES:
+:CREATED:  20210101
+:END:
+** 14:02 Happy New Year! I neglected to start a 20210101 backup of the data drive, so I didn't begin this until it had finished (and I did a GNUCash backup and started the media backup). I slept well, 0033-0857, 7:49 90. Michael S. called - second day in a row. Valerie suggested that we replace the mattress, and I wholeheartedly agree. We'll begin some research to make our choice. Miriam's whole family came by around 1300 with a Birthday card (handmade) and a Happy New Years card, plus an oragami phoenix. Joey isn't doing well and may be put down soon. I got into my second cupa too soon and became quite dizzy and eyes unfocused around noon. Just tapering off now. Guess I'll have to get used to the half-caf stuff from Wegmans. It's really not that bad.
+** 17:21 By now the media backup is a little over half done. A pretty quiet day. I'll be fixing Mission BBQ's recipe for black-eyed peas. Apparently eating them on New Years Day brings good luck. We renewed our Lacquie Lawson account and sent cards to family and friends.
+** 19:39 Got almost to the end of the media backup and noticed that I had removed the "exclude media/backup" instruction, so I've restarted the whole media backup. It will finish sometime around 0200-0300 tomorrow. No biggie. I'll get that straightened out by next month, I'm sure - just have to get everything used to being 2021. Made the black-eyed peas - they were good but if I do it again I'll leave the cayenne out entirely. Did the dishes, it's raining to beat the band right now. Predicted 54 and sunny tomorrow, then another day of rain on Sunday, high 41.
+** 22:27 Had my cereal - play a game and go to bed. When the Media backup finishes, tomorrow, I'll move the camera files from data to media. They're almost completely stable and have been for some time.
+
+* Saturday, 01/02/2021
+:PROPERTIES:
+:CREATED:  20210102
+:END:
+** 08:42 For once I slept better than I thought, according to fitbit: 2339-0719, 6:42 89. Foolish dreams about wandering around in large buildings and having luggage stolen at the airport. Won't try to analyze that too deeply. The grow-light burned out this morning, so there's one task for today. I did remember to copy the camera files from data to media - almost all copied over (37GB). Will also copy media/backups to backup/tarfiles.
+
+** 14:56 Went to Home Depot and got a LED grow light. Returned the Rosseti book on Time on the way. Helped Valerie clean front door and kitchen door windows.
+** 16:31 Just finished a shower. Valerie has sliced the big sweet potato on the mandolin and baked it as chips. She's talking to Ans now.
+
+* Sunday, 01/03/2021
+:PROPERTIES:
+:CREATED:  20210103
+:END:
+** 08:40 Been copying the media tar to OFFSITE2 overnight, seems to be stalled with 100GB still to go. Wonder whether it's a flaw in the file manager app (Thunar?). The "File Operation Progress" process says 262.3GB has been copied. I'm tempted to kill the copy and restart it using only the terminal. Judging from the activity light on the remote drive, very little is happening.
+** 08:54 Decided to use rsync from a bash buffer in this emacs window. Using -ah --progress flags it says that it'll take 3-6 hours. Transfer rate fluctuates between 14-32MB/s. 
+** 08:58 Another night where I seem to have slept better than it seemed: 2350-0739, 7:00 88. Lots of rain overnight, just a little now.
+** 11:28 Transfer is at 46% now, still fluctuating between 15-33MB/s, 1.5-3 hours remaining.
+** 12:53 Transfer is at 64% now, and rate is fluctuating between 400kB/s-12MB/s. Perhaps the right way to keep the media drive, which changes much less frequently, properly backed up is to tar each top-level directory and keep the latest on the OFFSITE drives.
+
+** 13:02 That's what I'll do. Creating a new tar for pictures, copying both Thunderbird archives, music for starters.
+** 15:27 Just back from a short, wet walk with Valerie. greatcourses tar almost finished copying to OFFSITE2, seems that there isn't a copy of the new data tar, so that has to be done, and the new pictures tar, and then that will finally be done.
+** 21:01 The final tar file, the pictures, is on its way. We did the Dutch sausage, kraut and potatoes with gravy for dinner - it was good. Watched a little TV and just raised the desk about an inch or so and put the right hand arm rest back on the chair. This may not work - the keyboard may be too high. If it isn't, I may remove the plastic drawer that I glued to the underside of the desk - that's the only thing that's rubbing on the arms now. 
+
+* Monday, 01/04/2021
+:PROPERTIES:
+:CREATED:  20210104
+:END:
+** 08:44 Both of us suffered from our old mattress last night - it bothered Valerie's sleep a lot, mine a lot less: 2337-0736, 7:19 85.
+** 10:38 Removed the little drawer under the desk - it came off quite cleanly and intact - it may be reattached on the left side where it will protrude slightly but not be in the way so much. So far the keyboard is tolerable at the present height, but it might end up being too high and call for dropping the desk an inch or so to still clear the arms. Such a lot of mind-space for such a small thing! Valerie has yoga shortly.
+** 15:42 After yoga Valerie was feeling energized, and decided to make scones. I helped a tiny bit and they're all out of the oven and taste magnificent. I found some great quotes, beginning with the ones from the "Large Regular" blog, then moved out to Niels Bohr. One of those was quoted by Heisenberg, so that led me to "Physics and Beyond" which I was surprised and pleased to find that I had a pdf copy of.
+** 17:04 Downloaded the newest kindle books to the mac and moved them to Calibre on minos. 
+** 22:58 A good meeting - Carl S.'s sponsor. Watched a few videos about language and Gandalf.
+
+* Tuesday, 01/05/2021
+:PROPERTIES:
+:CREATED:  20210105
+:END:
+** 08:18 Another good night's sleep - 0001-0700, 6:13 85. Overcast, not too cold (37), highs in the low 40s the coming week, lows just under freezing, no precip until next Tuesday. Might see the mud pit in the back yard dry up some. Sounds like Valerie just got up.
+** 11:50 Sacha Chua's Emacs News included mu4e-views update, so I updated its configuration which triggered a "not compiled for xwidgets support" - took some looking but found the switches to look for, but finally found the answer and used "./configure --with-mailutils --with-xwidgets --with-imagemagick" and recompiled. Now version 29.1.9 and viewing html mail in mu4e is great! Worth the effort. While it was building I went to Giant and got milk for both of us and a 120-count baby aspirin and took back "Knocking on Heaven't Door" which proved to be pretty much "isn't scientism great!"
+** 19:43 We took a long walk after lunch, then Valerie went to Wegman's. I read and dozed until she got home, then we both read and dozed until her phone rang. We finished the potatoes/kraut/sausage dinner tonight with fresh broccoli. Mmmm. Fiddled some with init.el and got ido-mode back the way I'm used to.
+** 19:49 Mu4e doesn't seem to be updating - new mail arrives and the counter doesn't increment. When I initiate an update it says that the update is already running. There's always a process running when I stop it. Whether that's part of the new compile, or the mu4e-views package, or the mu4e-views config I don't know yet. I guess the first step will be to comment out the whole mu4e-views config, then if that works, see if I can add elements one at a time to find the one that's breaking it.
+** 21:42 With all of mu4e-views commented out, mu4e seems to work. I'm sending one more message to be sure.
+** 22:34 And yes, it is definitely working. Now, if I can only get mu4e-views working enough to display html mail as html I'll be pleased. If not, I'd rather have it working as it was before I recompiled and fiddled with it. At least then the messages were all getting into the db. Fading away. Will have a game and maybe a bath, then off to dreamland.
+
+* Wednesday, 01/06/2021
+:PROPERTIES:
+:CREATED:  20210106
+:END:
+** 08:39 Pretty good sleep: 2357-0810, 7:53 87. Have to rush to get to Michael by 0900.
+** 13:13 Walk went pretty well until we reached the tot lot north of 175. Michael wanted to rest, saying that he was nauseous and dizzy. He rested often as we walked back to the SS, and waited for an hour in his car before heading out. I waited with him until 1030. Just now talked with him, he'd just gotten home after having another "swoon" at Costco and rested in his car again. He says that he's about to call his doctor. Hope he does. The nooner was good. I'm expecting to go to Costco shortly for a few things and a chicken, also to Aldi. May try to get to Trader Joe's tomorrow morning for Japanese Rice, might leave Aldi for then.
+** 20:54 Costco Gas was too busy, but Costco wasn't and we got Valerie's Rx, a chicken, cereal and pistachios. Aldi was quick, too. An hour's nap, then fixed chicken, baked potatoes and broccoli. A quiet evening since then.
+** 23:03 Listening to Uncle Dave's Emacs Tutorial 1 on YouTube. It's a few years old - covers version 25.3 - September, 2017. His videos are a decent length - 10-20 minutes each, instead of an hour each for the System Crafters videos. He has a touch of some Eastern European accent, not a problem, don't know yet whether he's going to be bearable. He talks at a reasonable rate, at least.
+** 23:14 Tried to change the CapsLock to Ctrl, using the guide in EmacsWiki - didn't work so far.
+** 23:22 Tried using the xkcd keyboard settings tool - didn't seem to work. It turned the caps lock off (maybe a good thing) but didn't make it a ctrl key. However, it did disable the left ctrl. I changed the settings back to "default" and logged out/in again. All's OK now. Probably time to put this and me to bed.
+
+* Thursday, 01/07/2021
+:PROPERTIES:
+:CREATED:  20210107
+:END:
+** 08:35 Slept 0033-0731, 6:23 86. However today goes, blaming it on a bad night's sleep won't work. Haven't been entirely successful in ignoring everything that's going on that is out of my control, but I'm somewhat better at just worrying myself sick over it. I can't help feeling that there's some obligation on my part to be involved in our growth or whatever, but it isn't directly involved in what's going down these days. I'm certainly offended and amazed at what's being attempted by the "masters" or "elites" or "experts" - so self-evidently stupid or foolish, but they've sold their souls for the opportunity to do this, which I've not been willing to do. So for now, while I've no doubt been ID'd as a "wrongthinker", I'm almost certainly also not a danger right away. We'll see how things go.
+** 17:34 I got the application for Canada Pension completed - Miriam will sign the copies of my citizenship papers tomorrow, and then off in the mail. That's a long-time todo 99% done. Otherwise, not all that much done. Went up Thunder Hill to look at the trash enclosure at the pizza shop and took some pictures.
+** 23:30 RAC went smoothly. Wasted the rest of the evening with YouTube.
+
+* Friday, 01/08/2021
+:PROPERTIES:
+:CREATED:  20210108
+:END:
+** 08:31 Asleep at 0026, up at 0704, 6:08 85 - average sleep score the past week is 86. Not sure what that means, I still want a nap some afternoons, but that's what the fitbit says. I guess I don't care enough to put in the time to research how fitbit determines when I'm dreaming, why it seems to think I'm awake a lot more than I do (does it define "awake" differently?). The "digitized self" idea doesn't move me the way it seems to do some folks. OTOH, I do like getting decent sleep.
+** 08:36 I did comment of Day by Day now two nights in a row. He called-out "Insty" which I used as a generic for all the somewhat-anti-Deep-State sites/commenters who immediately fell into line, buying the Official Report on what happened at the Capitol the other afternoon. I'm unable to avoid thinking that there's such a thing as "my side" although I do want to not get overly gut-ground about daily events. I do honestly believe that there's a "Narrative" and evil motivation - whether there's a Cabal driving it or not, or whether it's just the natural outcome of the late '60s combination of Fashionable Marxism and Upward Mobility, or whether the Cabal built on the Fashionable Marxism and Upward Mobility, or just what's going on. It does seem like a distraction from getting the War Story and Foreign Country projects happening. Well, I've been seeing Don Surber and David Warren and others saying to avoid responding to current events, depending on who says it the pause in 24 hours, a week or a year, it does seem like a good idea. And maybe distinguish between useful online sources and the online sources' personal opinions. And that's all I have to say about that for now.
+** 16:31 Been busy doing this and that. Took Canada Pension app to Miriam to sign. Contacted Novartis and finally got the right info to download the application for their "poor folks" program. Should have both ready by Monday.
+
+* Saturday, 01/09/2021
+:PROPERTIES:
+:CREATED:  20210109
+:END:
+** 08:52 Valerie's Birthday! She thinks she slept well, got up not long ago. I slept well, I think, and fitbit agrees: 2336-0802, 7:45 91.
+** 10:35 She's happy with her gifts - she always is. Took the lights down from the deck rail and rolled up the power cords. Just the tree to deal with now. Will need to be down in the crawl space to get the tree box. Probably not today, unless that seems like something she wants to do on her birthday. Maybe leave it for tomorrow.
+** 17:08 Spent some time catching up with blogs, email back and forth with Harold, took a walk with Valerie. She's on the "phone" with Ans now since 1530. Got the rest of the Christmas lights inside or at least off the deck railing. All three wreaths are inside the green bag. The tree is in the kitchen drying out. Plans for tonight are to get Shrimp Pad Thai for dinner. Vivi texted Valerie a piano concert of "Happy Birthday" and Rob called her. Pretty quiet otherwise. A card did arrive from Nancy.
+** 17:43 Installed Brave, 1Password, uBlock Origin, Library Extension, set as default, transferred the bookmarks, saved the whole set of bookmarks and began thinning them out - did camera heading and some of church. 
+** 18:52 Probably about time to order food.
+** 22:43 We paid for shrimp and got chicken, so we're down a few dollars and I don't feel like going back for a refund. Tough. Really sleepy.
+
+* Sunday, 01/10/2021
+:PROPERTIES:
+:CREATED:  20210110
+:END:
+** 09:18 And a good night's sleep - woke up a bit confused - misread the clock as 0902 instead of 0802. Still, good numbers: 2358-0802, 7:25 86. Didn't get out of bed once overnight. Went to sleep reading Saving the Appearances, chapter XXII and finding a fair number of little typos. I must check the git update to see where the last edits were, and carry on cleaning up the text.
+** 13:11 Just bought a new mattress - by the same maker as the one that Miriam has, and an upgrade that she would like to buy. And she's always right, right? It's a hybrid - has coils and a foam top. No word on its arrival date, hopefull by the time that the county will remove the old one on its normal "big load" schedule (end of the month?). There is a free "try it" period. Valerie also wants to get linen sheets. When she does in the next day or two we'll bundle them into an AmEx plan and pay no interest for a year.
+** 16:24 Tried hard to get a good alternative to FireFox - installed Brave and got it all set up but then found that there was no way to forbid 3rd-party cookied from everyone *except* Instapaper. Finally gave up and installed Chrome, which I know does, but after a lot of setup, found that it's the source of Brave's change from before. So both of them are uninstalled and I'm back to Firefox. For now I'll just have to hold my nose and use Mozilla's tool.
+
+* Monday, 01/11/2021
+:PROPERTIES:
+:CREATED:  20210111
+:END:
+** 09:04 Down at 0014, up at 0756, 7:00 89, so another good sleep, it says. Meet with Maria at 10, will shower and start bread before.
+** 12:22 Managed to shower and start the bread before 10. Actually getting connected to the tele-health link was impossible. Fortunately, Maria called and we talked. Bread has just been punched-down and is rising for the second time. Valerie has gone to Dr. Lazris' office to leave a urine sample.
+** 12:53 Updated theme, org-journal and dash (again?). Not sure that everything is working properly, suspicious since "autoremove" keeps wanting to remove packages that are just reinstalled next time I start. T'ain't right.
+** 14:09 Bread is almost raised in the pans - giving it another 10. Valerie is talking with Susan so I'll give her as much privacy as I can. Chicken bones are boiling for soup. It's been a busy day so far.
+** 21:52 Good meeting - "Programming Historian" just published an article about command-line OCR conversion of a PDF to text. Uses ImageMagick to convert PDF to TIFF, then Tesseract to OCR. I installed Tesseract including hebrew and greek language packs.
+
+* Tuesday, 01/12/2021
+:PROPERTIES:
+:CREATED:  20210112
+:END:
+** 09:08 Another good night's sleep - not bored of writing that yet! 0000-0738, 7:09 91. Valerie has taken her urine sample to Dr. Lazris' office and my papers to Maria Gregory. Birds are fed, I'm dressed and evacuated my bowels, so all's right with the world. It's cold and sunny, predicted to be moderate - 46F. District meeting tonight instead of OMCA Board meeting, only the second one I'll have missed in the past year. Checking in with Ben at 11.
+** 13:44 Seems that our Cisco stock was transferred to the State of MD some time ago. I'm sure that it was totally legal. Working on the Vestry minutes now.
+** 22:36 Turns out that District meetings are on Thursdays, so I attended the OMCA Board meeting. Watched a wee bit of tv, did some editing the Appearance. About done for the evening.
+
+* Wednesday, 01/13/2021
+:PROPERTIES:
+:CREATED:  20210113
+:END:
+** 08:06 Woke when Valerie came to bed at 0200, again at 0430 and turned the TV off, then up at 0717. Good numbers, 2341-0717, 7:17 86. Will get dressed and meet Michael at 0900.
+** 16:51 Walk went well, I came home quite "serene" and didn't do much before the nooner. There, I came too close to being a Bleeding Deacon, fortunately I did apologize to some of them afterward. Will have to remember to do the same to the rest of the gang next Wednesday. Went to Costco for gas and Aldi for this and that. Valerie got the chili almost done - I did the last little bit while she lay down. Time to get her up now.
+
+* Thursday, 01/14/2021
+:PROPERTIES:
+:CREATED:  20210114
+:END:
+** 08:17 2358-0713, 6:18 87. Or so it says. 
+** 11:32 Dove right in to copying all of the posts from the consultingsmiths.com blog in preparation for deleting the WP presence at that address. As of now, the database seems to have been deleted (I should check that it's actually not there rather than just given some "not there" value with the data still in place). Should also have them delete the backups if I can. As of a few minutes ago the WP application files are in place, but my new index.html file is what appears if I go to that address. So, if the php filed don't disappear, I can always delete them myself. I did put a ticket in asking how best to delete the WP files, and also whether to use that folder or the ~/public_html/consultingsmiths folder. I'm sure to hear from them in a day or so. Planning to install Valerie's bidet this afternoon.
+** 12:50 Heard from Namecheap support and everything is done. There's a basic index.html in place - .htaccess files will need editing - and that's good for now. Next step will be to get a workflow with Emacs and hugo or something like that in place, and git of course. I've gotten a good start on Valerie's plumbing project. Next is to drill the hole in the vanity to let the hot water supply get to the bidet. There's some anxiety about choosing the right place, but it can't be too awfully wrong wherever I do it if I'm not terribly stupid about it.
+** 14:20 Had some of Valerie's left over pad thai, then went for a walk with Valerie. Just arranged with AmEx to pay for the mattress over a year with no interest or fee.
+** 16:02 Bidet is installed, seems to work and so far no leaks.
+** 18:48 And still no leaks, so that's probably that. About to log in to the District AA Meeting.
+
+* Friday, 01/15/2021
+:PROPERTIES:
+:CREATED:  20210115
+:END:
+** 09:30 Stayed up late, 0109-0829, 6:43 89 so I seem to have slept OK anyway. Had a very hot bath before getting into bed. Plan is to get down into the crawl space, retrieve the Christmas tree box, and get all the decorations back under the floor today. Valerie has a noon meeting and a 1400 appointment.
+** 12:44 Got the box up from the crawl space and took the box of blankets down. Vacuumed the back end of the house pretty well. Valerie is on the Al-Anon nooner now. I've spent some time looking for a way to have org-mode use typographic quotes. It might work for exports. At any rate, I'd like to do some basic trials getting org-mode and hugo working to replace the consultingsmiths.com blog. Keeping the blog going isn't really that critical - I have no evidence that anyone looks at it other than Google, but I'd like to know how to have a workflow that goes from Emacs and git at the desktop to a working, growing static web site somewhere on the internet. 
+** 12:49 Emacs is updated with new markdown, theme, dash and ht.
+** 13:07 Added org-mode to typopunct and typographic quotes and dashes work for org documents, too. “See, it’s working—just like in markdown—which is just what I wanted all along”!
+** 15:50 Spent some time vacuuming, then took the garland down and put the batteries in the charger. Packed the tree into the box and took a short walk. Valerie got home just before I did—says that she’s feeling better but a little dopey. At any rate we both got things done today around the house. We can now move over to the stuff we want for our own little priorities.
+** 21:39 I got go and hugo installed, and got too far ahead of myself following a tutorial and started the blog over again. It’s (consultingsmiths) basically working, and now I have to read the docs and get my head around how it works, and how to make it behave the way I want it to. Then I reorganized the Instapaper store to have a Hugo folder and a config just under Emacs. Enough Emacs fiddling for tonight, I think. Maybe look into Hugo again some tomorrow.
+** 21:57 This will take some getting used to. I ran across an old steveyegge article about being effective with Emacs, and it had the code to swap left ctrl and caps lock, so I put it into .profile and etc. and now it works! Very cool. Except I’ve been using left ctrl for 30/40 years and it’s going to take some getting used to using the caps lock location. Oh, well, I’ll just have to work at it. And if I don’t like it 2-3 weeks from now I can make it go away.
+
+* Saturday, 01/16/2021
+:PROPERTIES:
+:CREATED:  20210116
+:END:
+** 09:17 So far, I’ve remembered to use caps lock as left ctrl - I know that I’ll goof some today. Slept well again, 2358-0751, 7:12 88. Will try to get a better understanding of Hugo and ox-hugo today. It may or may not be worth figuring out how to structure daslearns.ca with Hugo to be a fieldstones repository (single file, combining all the various years, maybe not correcting chronological order for the older ones?), notes for various key books (History in English Words, Poetic Diction, Saving the Appearances, The Shining Stranger, The Order of Time, Reality is Not What it Seems, Seven Brief Lessons on Physics, The Idea of the World, etc.). Since a Hugo repository for all of those would be on my data drive, would I benefit from actually pushing it to namecheap? Is there a local search tool that I could use that would do what Google’s Advanced search page does?
+** 10:00 I managed to get my 250 steps in for the first hour today. My Google/Fitbit overlords are not going to be disappointed with me today!
+** 11:50 Did dishes, have walked 250 steps three hours in a row. Whoopee! Bird seed is outside.
+** 13:57 Steps now 5 hours out of 5. About to walk with Valerie.
+** 16:24 Now it’s 8 of 12 done - it’s a silly game but I’m playing it, at least today. Went to both Giants looking for V’s Tofutti, got onions, sour cream, bananas and milk. Helped with the soup a little and now am going to lie down for a few. Lower back is hurting.
+** 18:08 Awoke in time to squeeze 250 steps in before the hour - I believe I had taken 8 at ten to. It did get my heart started again having so little time, but it seems to have worked out. So that’s 9 of 12 hours today, fwiw. V has made soup, right now she’s knitting and watching something on TV. Perhaps time to look at Hugo docs and begin to get my head around it.
+** 18:46 Installing fslint and recoll. The first to locate, mainly, copies of document files that are in Calibre and also other places, mainly in the data/WWW folders. Recoll is a search engine for text that comes highly recommended. Uses xapian for the index, like mu does. We’ll see how that goes.
+** 19:59 FSLint seems to blow the xmodemap rewrite right off, and does some other odd things to the keyboard. “source .profile” after exiting fslint seems to put it all right again. Checking the whole data drive uncovers a whole lot of extranious hits - like emails. Better to choose particular folders.
+** 20:55 Removed all duplicates from Calibre.
+** 23:02 Still having trouble with the new ctrl. Fiddled with fslint probably too long today, but there you go. enough. play a game, eat some cereal and go to bed.
+
+* Sunday, 01/17/2021
+:PROPERTIES:
+:CREATED:  20210117
+:END:
+** 09:10 0034-0749, 6:07 83.
+** 14:23 Miriam and the girls came by around 1000 - a birthday card and origami peacock for Valerie. FedEx stopped while they were here and we thought that it was our mattress a day early. A bit later they (FedEx) came by again and it was the mattress. They brought it up to the kitchen door. I dragged it into the bedroom, got the old mattress off the bed, and followed their instructions for getting it out of the box and in place. Took maybe a half hour. Looks promising - it’s comfortable now, should be better tonight, and they predict will be even better after 24 hours. Valerie is off looking for a new mattress cover. Ours is 7 years old, and some expert says to replace them every two years. Not sure why, but then I’m not an expert! Woke up with low back pain, there’s a little bit still, but it’s much better. Did the dishes and boiled more eggs.
+** 14:36 Might need to pull my stuff from GitHub - I wonder whether GitLab is any better? Or do I really need either?
+** 19:00 We’ve had dinner, the sheets are washed and the bed is made with the new mattress cover and clean sheets.
+** 21:19 I discovered a folder under WWW named “Blogs” and inside it, a pdf with 2010-2011 consultingsmith blog content. I tried out the OCR trick with ImageMagick to change the pdf to tiff, then tesseract to do OCR on the tiff. I then had to go through and clean up line breaks and the like, but the OCR seemed perfect. A good technique, and now I have all of those pithy sayings in markdown format.
+** 21:57 So now I’m on gab as @thewordsmith - I followed Harold and he followed me.
+** 22:50 And it’s almost 11 and I’m shutting this down. Bought linen sheets for the new mattress-Valerie will be pleased. Tonight we try the new mattress, new cover and old sheets out. I have high hopes.
+
+* Monday, 01/18/2021
+:PROPERTIES:
+:CREATED:  20210118
+:END:
+** 08:40 0005-0744, 6:51 86. Had hoped that a new mattress would ease the pain in my left hip while sleeping on my left side, but no luck. Nevertheless, it is comfortable. Looking at the forecast the coming week will be pretty uneventful - mid-40s and nights just below freezing. Some snow showers next week.
+** 12:25 I’ve relocated a lot of text files after noticing how little I use the data/writing folder and how disbursed a lot of files are. I’m not at all near being done, but it’s a start. Probably time to do an interim backup of data, by the way. Showered, staying up on my 250 steps so far. And upon looking, there’s no snar file for the latest data tar, so that won’t happen this month.
+** 21:31 FWIW, I got the 250 steps in all 12 hours today. Got a good start on having the website hosted with Hugo. Ran into some tutorials that seemed to be useful which ended up not being so good. My old friend Flavio came through, though. Just have to choose the template and figure how to get Hugo to post updates to namecheap. Shouldn’t be too terribly arcane. Still botching the ctrl key, but maybe a little less often, or catching it faster.
+** 23:06 Looks like ssh and rsync is the way to get the files to namecheap, although maybe git can do it. Anyway, we’re both going to hit the hay early tonight. Bye.
+
+* Tuesday, 01/19/2021
+:PROPERTIES:
+:CREATED:  20210119
+:END:
+** 08:27 Fitbit’s notion of my sleep last night is quite weird. 2357-0121, then 0257-0746, 5:38 74. I really don’t remember being “awake” for an hour and a half in the middle of the night in any meaningful sense of “awake”. Also, now that I look at the app on the phone, it’s telling me that my “hourly activity” aka hourly steps were met one time yesterday. Of course, although my impression is that it was telling me “good goin’, kid” last night for hitting all 12 hours, now the phone app is saying 1 of 12 hours. It’s really hard to take it very seriously. The unit’s charge is 79%, so low power isn’t likely to be the issue. Aaaand, a phone reboot and now it’s saying 12 of 12 yesterday. Maybe I’ll wear it again today - I do think that it’s a good thing to get up and walk more often then I’m likely to without some sort of program.
+** 08:39 It seems like it’s leading me around by the nose - I’m mostly pleased with me when it says I slept well or got lots of exercise, less so when my sleep score is below 80 or I don’t get full credit for my “steps” (even though I realize that they’re not steps at all but arm swings). And now that it all belongs to Google/Alphabet...
+** 13:59 Feeling a little better about Hugo according to Flavio’s tutorial. OTOH, I may give some sort of emacs-based solution a try. Still up in the air.
+** 17:29 Had a nap, Valerie woke me with a cookie. She lay down herself and I did the dishes while I fried two eggs. Getting ready to head to Crownsville for the Vestry meeting. See you in a few hours.
+** 20:38 Back from Vestry, trash is out and recycling emptied. Heated a small bowl of chili.
+** 23:09 And that’s it. I’ll be hiking with Michael at 0900 tomorrow, so maybe a good sleep would be a good idea. G’night.

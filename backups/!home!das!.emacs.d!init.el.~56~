@@ -108,6 +108,23 @@
  mu4e-html2test-command 'mu4e-shr2text
  mu4e-view-show-images t)
 
+; configuring mu4e-views
+;(use-package mu4e-views
+;  :after mu4e
+;  :defer nil
+;  :bind (:map mu4e-headers-mode-map
+;	      ("v" . mumu4e-views-mu4e-select-view-msg-method) ;; select viewing method
+;	      ("M-n" . mu4e-views-cursor-msg-view-window-down) ;; from headers window scroll the email view
+;	      ("M-p" . mu4e-views-cursor-msg-view-window-up) ;; from headers window scroll the email view
+;	      ("f" . mu4e-views-toggle-auto-view-selected-message) ;; toggle opening messages automatically when moving in the headers view
+;	      )
+;  :config
+;  (setq mu4e-views-completion-method 'ido) ;; use ido for completion
+;  (setq mu4e-views-default-view-method "html") ;; make xwidgets default
+;  (mu4e-views-mu4e-use-view-msg-method "html") ;; select the default
+;  (setq mu4e-views-next-previous-message-behaviour 'stick-to-current-window) ;; when pressing n and p stay in the current window
+;  (setq mu4e-views-auto-view-selected-message t)) ;; automatically open messages when moving in the headers view
+
 ;; configure elfeed
 (use-package elfeed
   :ensure t
@@ -196,46 +213,9 @@
   (setq org-journal-dir "~/data/org/journal"))
 
 ;; configuring ox-hugo
-; (use-package ox-hugo
-;   :ensure t            ;Auto-install the package from Melpa (optional)
-;   :after ox)
-
-;; configuring org-static-blog - following jao.io/blog/2020-02-11-simplicity.htmlXC
-(use-package org-static-blog
-  :ensure t
-  :init
-  (setq org-static-blog-use-preview t
-	org-static-blog-preview-convert-titles t
-	org-static-blog-preview-ellipsis "..."
-	org-static-blog-enable-tags t
-	org-static-blog-publish-title "Consultingsmiths"
-	org-static-blog-publish-url "https://consultingsmiths.com/"
-	org-static-blog-publish-directory "~/data/blogs/consultingsmiths.com/blog/"
-	org-static-blog-posts-directory "~/data/blogs/consultingsmiths.com/blog/posts/"
-	org-static-blog-drafts-directory "~/data/blogs/consultingsmiths.com/blog/drafts/"
-	org-static-blog-enable-tags t
-	org-export-with-toc nil
-	org-export-with-section-numbers nil)
-
-  (setq org-static-blog-page-header
-	(concat
-	 "<meta name=\"author\" content=\"David\">"
-	 "<meta name=\"referrer\" content=\"no-referrer\">"
-	 "<link href= \"static/style.css\" rel=\"stylesheet\" type=\"text/css\" />"
-	 "<link rel=\"icon\" href=\"static/favicon.ico\">")
-
-        org-static-blog-page-preamble
-	(concat
-	 "<div class=\"header\">"
-	 "  <a href=\"https://consultingsmiths.com\">Consultingsmiths</a>"
-	 "  </div>")
-
-
-        org-static-blog-page-postamble
-	(with-temp-buffer
-	  (insert-file-contents "~/data/blogs/consultingsmiths.com/blog/postamble.html")
-	  (buffer-string))))
-	 
+(use-package ox-hugo
+  :ensure t            ;Auto-install the package from Melpa (optional)
+  :after ox)
 
 ;; configuring the 1923 Websters' Dictionary
 (require 'sdcv-mode)

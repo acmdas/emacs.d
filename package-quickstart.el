@@ -1408,6 +1408,52 @@ buffer and returned as a string in Org format." t nil)
 
 
 )
+(let ((load-file-name "/home/das/.emacs.d/elpa/org-static-blog-20210120.1931/org-static-blog-autoloads.el"))
+
+(add-to-list 'load-path (directory-file-name
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-static-blog-20210120.1931/org-static-blog-autoloads.el") (car load-path))))
+
+
+
+(autoload 'org-static-blog-publish "org-static-blog" "\
+Render all blog posts, the index, archive, tags, and RSS feed.
+Only blog posts that changed since the HTML was created are
+re-rendered.
+
+With a prefix argument, all blog posts are re-rendered
+unconditionally.
+
+\(fn &optional FORCE-RENDER)" t nil)
+
+(autoload 'org-static-blog-publish-file "org-static-blog" "\
+Publish a single POST-FILENAME.
+The index, archive, tags, and RSS feed are not updated.
+
+\(fn POST-FILENAME)" t nil)
+
+(autoload 'org-static-blog-create-new-post "org-static-blog" "\
+Creates a new blog post.
+Prompts for a title and proposes a file name. The file name is
+only a suggestion; You can choose any other file name if you so
+choose.
+
+\(fn &optional DRAFT)" t nil)
+
+(autoload 'org-static-blog-create-new-draft "org-static-blog" "\
+Creates a new blog draft.
+Prompts for a title and proposes a file name. The file name is
+only a suggestion; You can choose any other file name if you so
+choose." t nil)
+
+(autoload 'org-static-blog-mode "org-static-blog" "\
+Blogging with org-mode and emacs.
+
+\(fn)" t nil)
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-static-blog" '("concat-to-dir" "org-static-blog-")))
+
+
+)
 (let ((load-file-name "/home/das/.emacs.d/elpa/org-protocol-jekyll-20170328.1639/org-protocol-jekyll-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
@@ -1419,10 +1465,10 @@ buffer and returned as a string in Org format." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/org-journal-20210117.1822/org-journal-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/org-journal-20210119.2137/org-journal-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-journal-20210117.1822/org-journal-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-journal-20210119.2137/org-journal-autoloads.el") (car load-path))))
 
 
 
@@ -1555,10 +1601,10 @@ Search for TODOs within all future entries." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210118.1831/dash-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210119.1855/dash-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210118.1831/dash-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210119.1855/dash-autoloads.el") (car load-path))))
 
 
 
@@ -1649,10 +1695,10 @@ Major mode for reading EPUB documents
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/ht-20210113.822/ht-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/ht-20210119.741/ht-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/ht-20210113.822/ht-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/ht-20210119.741/ht-autoloads.el") (car load-path))))
 
 
 
@@ -1790,10 +1836,10 @@ Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210118.1726/modus-themes-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210121.923/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210118.1726/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210121.923/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -1916,10 +1962,10 @@ and toggle it if ARG is `toggle'; disable the mode otherwise.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/elfeed-20201220.1359/elfeed-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/elfeed-20210122.125/elfeed-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/elfeed-20201220.1359/elfeed-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/elfeed-20210122.125/elfeed-autoloads.el") (car load-path))))
 
 
 
@@ -2146,14 +2192,14 @@ Also see the related `auto-compile-on-save-mode'.
 )
 (setq package-activated-list
       (append
-       '(xwidgets-reuse whole-line-or-region bind-key use-package macrostep slime recently packed org ox-hugo org-protocol-jekyll org-journal dash esxml nov ht mu4e-views modus-vivendi-theme modus-themes modus-operandi-theme markdown-mode elfeed auto-compile)
+       '(xwidgets-reuse whole-line-or-region bind-key use-package macrostep slime recently packed org ox-hugo org-static-blog org-protocol-jekyll org-journal dash esxml nov ht mu4e-views modus-vivendi-theme modus-themes modus-operandi-theme markdown-mode elfeed auto-compile)
        package-activated-list))
 (progn
   (require 'info)
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/modus-themes-20210118.1726" "/home/das/.emacs.d/elpa/dash-20210118.1831" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210117.1942" "/home/das/.emacs.d/elpa/use-package-20210106.2145")
+	 '("/home/das/.emacs.d/elpa/modus-themes-20210121.923" "/home/das/.emacs.d/elpa/dash-20210119.1855" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210117.1942" "/home/das/.emacs.d/elpa/use-package-20210106.2145")
 	 Info-directory-list)))
 
 ;; Local Variables:

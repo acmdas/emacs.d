@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://consultingsmiths.com/rss.xml"
+      title="RSS feed for https://consultingsmiths.com/">
+<title>Consultingsmiths</title>
+<meta name="author" content="David"><meta name="referrer" content="no-referrer"><link href= "static/style.css" rel="stylesheet" type="text/css" /><link rel="icon" href="static/favicon.ico"></head>
+<body>
+<div id="preamble" class="status"><div class="header">  <a href="https://consultingsmiths.com">Consultingsmiths</a>  </div></div>
+<div id="content">
+<h1 class="title">Posts tagged "totd":</h1><h2 class="post-title"><a href="https://consultingsmiths.com/2021-01-21-second-post.html">Second Post</a></h2><div class="post-date">21 Jan 2021</div><p>
+This is the second post to see whether we have enough setup to actually create html files.
+</p><div class="taglist"><a href="https://consultingsmiths.com/tags.html">Tags</a>: <a href="https://consultingsmiths.com/tag-totd.html">totd</a> </div><h2 class="post-title"><a href="https://consultingsmiths.com/2021-01-21-hello,-world.html">Hello, World</a></h2><div class="post-date">21 Jan 2021</div><p>
+Hello, World
+</p><div class="taglist"><a href="https://consultingsmiths.com/tags.html">Tags</a>: <a href="https://consultingsmiths.com/tag-totd.html">totd</a> </div><div id="archive">
+<a href="https://consultingsmiths.com/archive.html">Other posts</a>
+</div>
+</div>
+<div id="postamble" class="status"><div id="archive"><a href="/blog/archive.html">Other posts</a></div>
+<center>
+  <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">
+  <img alt="Creative Commons License" style="border-width:0"
+       src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" />
+  </a>
+  <br />
+  <span xmlns:dct="https://purl.org/dc/terms/"
+        href="https://purl.org/dc/dcmitype/Text" property="dct:title"
+        rel="dct:type">Consultingsmiths</span> by
+  <a xmlns:cc="https://creativecommons.org/ns#" href="https://consultingsmiths.com"
+     property="cc:attributionName" rel="cc:attributionURL">David</a>
+  is licensed under a
+  <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">
+    Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+</center>
+</div>
+</body>
+</html>

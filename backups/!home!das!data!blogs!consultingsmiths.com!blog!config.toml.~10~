@@ -1,0 +1,17 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Consultingsmiths"
+theme = "ghostwriter"
+
+[Params]
+    mainSections = ["post"]
+    intro = true
+    headline = "My TOTD"
+    description = "Ravings of an ex-consultant"
+    email = "david@consultingsmiths.com"
+    opengraph = true
+    shareTwitter = false
+    dateFormat = "Mon, 2 Jan, 2006"
+
+[Permalinks]
+    post = "/:filename/"

@@ -233,7 +233,7 @@
 
         org-static-blog-page-postamble
 	(with-temp-buffer
-	  (insert-file-contents "~/data/blogs/consultingsmiths.com/blog/postamble.html")
+	  (insert-file-contents "~/.emacs.d/postamble.html")
 	  (buffer-string))))
 	 
 
