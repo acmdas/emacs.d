@@ -1,0 +1,24 @@
+#!/bin/bash
+echo "adding new post to my github website:https://daslearns.ca"
+
+cd ~/data/md/das_fieldstones/
+
+echo "* converting markdown file to html"
+
+pandoc -s --metadata pagetitle="More Fieldstones 2021" morefieldstones2021.md -o fieldstones2021.html
+
+echo "* git add --all"
+
+git add --all
+
+echo "* commit"
+
+git commit -m "added new post"
+
+echo "*push to github"
+
+git push -u origin master
+
+echo "* Last run at"
+
+date
