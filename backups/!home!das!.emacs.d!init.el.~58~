@@ -35,20 +35,17 @@
 (setq vc-make-backup-files t)
 (setq auto-save-file-name-transforms '((".*" "~/.emacs.d/auto-save-list/" t)))
 
-;; configure defaults
+;; configure visual interface
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (setq inhibit-startup-message t
-      inhibit-startup-echo-area-message t
-      confirm-nonexistent-file-or-buffer nil
-      visible-bell 1
-      sentence-end-double-space nil)
+      inhibit-startup-echo-area-message t)
+(setq confirm-nonexistent-file-or-buffer nil)
+(setq visible-bell 1)
 (fset 'yes-or-no-p 'y-or-n-p)
 (column-number-mode 1)
-(display-time-mode)
-(delete-selection-mode t)
-(global-display-line-numbers-mode t)
+(display-time-mode 1)
 (setq initial-frame-alist
       '(
 	(width . 102) ; character
@@ -73,6 +70,9 @@
   (modus-themes-load-operandi)
   :bind ("<f5>" . modus-themes-toggle))
 
+;; sentences end with one space
+(setq sentence-end-double-space nil)
+
 ;; configuring ido-mode
 (ido-mode 1)
 (setq ido-enable-flex-matching t)
@@ -82,7 +82,6 @@
 
 ;; configuring recent
 (require 'recentf)
-(add-to-list 'recentf-exclude "\\elpa")
 (recentf-mode t)
 (setq recentf-max-saved-items 50)
 (global-set-key (kbd "C-x f") 'recentf-open-files)
@@ -94,15 +93,6 @@
   (if (find-file (ido-completing-read "Find recent file: " recentf-list))
       (message "Opening file...")
     (message "Aborting")))
-
-;; always use UTF-8
-(set-charset-priority 'unicode)
-(setq locale-coding-system 'utf-8)
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(set-selection-coding-system 'utf-8)
-(prefer-coding-system 'utf-8)
-(setq default-process-coding-system '(utf-8-unix . utf-8-unix))
 
 ;; mail stuff
 ;; configuring mu4e
@@ -148,13 +138,12 @@
 	  ("https://clarissasblog.com/feed/" clarissa)
 	  ("https://www.coffeetalking.com/feeds/posts/default" coffeetalking)
 	  ("http://theconservativetreehouse.com/feed/" lastrefuge)
-	  ("https://greenwald.substack.com/feed" politics)
-	  ("https://judithcurry.com/feed/" climate science)
-	  ("http://www.ncobrief.com/index.php/feed/" ncobrief)
-	  ("http://www.thepassivevoice.com/feed/" passivevoice)
 	  ("http://www.thesavvystreet.com/feed/" savvystreet)
+	  ("http://www.ncobrief.com/index.php/feed/" ncobrief)
 	  ("http://wmbriggs.com/feed/" briggs statistics aquinas watts)
 	  ("https://wattsupwiththat.com/feed/" climate science)
+	  ("https://judithcurry.com/feed/" climate science)
+	  ("https://greenwald.substack.com/feed" politics)
 	  ("https://stevenpressfield.com/feed/" pressfield writing)
 	  ("http://feeds.feedburner.com/typepad/sethsmainblog" godin)
 	  ("http://voxday.blogspot.com/feeds/posts/default" Vox)
@@ -299,20 +288,13 @@
        ("_(" . ,(vector (decode-char 'ucs #x208D)))
        ("_)" . ,(vector (decode-char 'ucs #x208E)))))
 
-(use-package i-ching
-    :config (setq i-ching-hexagram-size 18
-                  i-ching-hexagram-font "DejaVu Sans"
-                  i-ching-divination-method '3-coins
-                  i-ching-randomness-source 'pseudo)
-    :bind (("H-i h" . i-ching-insert-hexagram)))
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(i-ching org-static-blog ox-hugo org-protocol whole-line-or-region use-package slime recently org-protocol-jekyll org-journal nov mu4e-views modus-vivendi-theme modus-themes modus-operandi-theme markdown-mode elfeed auto-compile)))
+   '(org-static-blog ox-hugo org-protocol whole-line-or-region use-package slime recently org-protocol-jekyll org-journal nov mu4e-views modus-vivendi-theme modus-themes modus-operandi-theme markdown-mode elfeed auto-compile)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

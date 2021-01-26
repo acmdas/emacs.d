@@ -148,13 +148,12 @@
 	  ("https://clarissasblog.com/feed/" clarissa)
 	  ("https://www.coffeetalking.com/feeds/posts/default" coffeetalking)
 	  ("http://theconservativetreehouse.com/feed/" lastrefuge)
-	  ("https://greenwald.substack.com/feed" politics)
-	  ("https://judithcurry.com/feed/" climate science)
-	  ("http://www.ncobrief.com/index.php/feed/" ncobrief)
-	  ("http://www.thepassivevoice.com/feed/" passivevoice)
 	  ("http://www.thesavvystreet.com/feed/" savvystreet)
+	  ("http://www.ncobrief.com/index.php/feed/" ncobrief)
 	  ("http://wmbriggs.com/feed/" briggs statistics aquinas watts)
 	  ("https://wattsupwiththat.com/feed/" climate science)
+	  ("https://judithcurry.com/feed/" climate science)
+	  ("https://greenwald.substack.com/feed" politics)
 	  ("https://stevenpressfield.com/feed/" pressfield writing)
 	  ("http://feeds.feedburner.com/typepad/sethsmainblog" godin)
 	  ("http://voxday.blogspot.com/feeds/posts/default" Vox)
@@ -299,20 +298,13 @@
        ("_(" . ,(vector (decode-char 'ucs #x208D)))
        ("_)" . ,(vector (decode-char 'ucs #x208E)))))
 
-(use-package i-ching
-    :config (setq i-ching-hexagram-size 18
-                  i-ching-hexagram-font "DejaVu Sans"
-                  i-ching-divination-method '3-coins
-                  i-ching-randomness-source 'pseudo)
-    :bind (("H-i h" . i-ching-insert-hexagram)))
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(i-ching org-static-blog ox-hugo org-protocol whole-line-or-region use-package slime recently org-protocol-jekyll org-journal nov mu4e-views modus-vivendi-theme modus-themes modus-operandi-theme markdown-mode elfeed auto-compile)))
+   '(org-static-blog ox-hugo org-protocol whole-line-or-region use-package slime recently org-protocol-jekyll org-journal nov mu4e-views modus-vivendi-theme modus-themes modus-operandi-theme markdown-mode elfeed auto-compile)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

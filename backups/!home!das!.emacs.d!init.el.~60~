@@ -299,20 +299,13 @@
        ("_(" . ,(vector (decode-char 'ucs #x208D)))
        ("_)" . ,(vector (decode-char 'ucs #x208E)))))
 
-(use-package i-ching
-    :config (setq i-ching-hexagram-size 18
-                  i-ching-hexagram-font "DejaVu Sans"
-                  i-ching-divination-method '3-coins
-                  i-ching-randomness-source 'pseudo)
-    :bind (("H-i h" . i-ching-insert-hexagram)))
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(i-ching org-static-blog ox-hugo org-protocol whole-line-or-region use-package slime recently org-protocol-jekyll org-journal nov mu4e-views modus-vivendi-theme modus-themes modus-operandi-theme markdown-mode elfeed auto-compile)))
+   '(org-static-blog ox-hugo org-protocol whole-line-or-region use-package slime recently org-protocol-jekyll org-journal nov mu4e-views modus-vivendi-theme modus-themes modus-operandi-theme markdown-mode elfeed auto-compile)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

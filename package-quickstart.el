@@ -453,7 +453,7 @@ behaviors.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/slime-20210117.1942/slime-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/slime-20210125.646/slime-autoloads.el"))
 
 
 
@@ -461,7 +461,7 @@ behaviors.
 
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/slime-20210117.1942/slime-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/slime-20210125.646/slime-autoloads.el") (car load-path))))
 
 (autoload 'slime "slime"
   "Start a Lisp subprocess and connect to its Swank server." t)
@@ -504,6 +504,17 @@ behaviors.
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "slime-tests" '("arglist" "async-eval-debugging" "break" "comp" "def-slime-test" "dis" "end-of-file" "find-definition" "flow-control" "indentation" "inspector" "inter" "locally-bound-debugger-hook" "loop-interrupt-" "macroexpand" "narrowing" "read" "report-condition-with-circular-list" "sbcl-world-lock" "sexp-at-point.1" "symbol-at-point." "traditional-recipe" "unwind-to-previous-sldb-level" "utf-8-source")))
 
+)
+(let ((load-file-name "/home/das/.emacs.d/elpa/request-20201026.2324/request-autoloads.el"))
+
+(add-to-list 'load-path (directory-file-name
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/request-20201026.2324/request-autoloads.el") (car load-path))))
+
+
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "request" '("request-")))
+
+
 )
 (let ((load-file-name "/home/das/.emacs.d/elpa/recently-20200120.1432/recently-autoloads.el"))
 
@@ -1160,10 +1171,10 @@ Inserted by installing Org or when a release is made." nil nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/ox-hugo-20210118.1641/ox-hugo-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/ox-hugo-20210126.1518/ox-hugo-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/ox-hugo-20210118.1641/ox-hugo-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/ox-hugo-20210126.1518/ox-hugo-autoloads.el") (car load-path))))
 
 
 
@@ -1601,10 +1612,10 @@ Search for TODOs within all future entries." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210123.1222/dash-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210124.1524/dash-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210123.1222/dash-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210124.1524/dash-autoloads.el") (car load-path))))
 
 
 
@@ -1836,10 +1847,10 @@ Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210124.1155/modus-themes-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210125.801/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210124.1155/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210125.801/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -1959,6 +1970,59 @@ and toggle it if ARG is `toggle'; disable the mode otherwise.
 \(fn &optional ARG)" t nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "markdown-mode" '("defun-markdown-" "gfm-" "markdown")))
+
+
+)
+(let ((load-file-name "/home/das/.emacs.d/elpa/i-ching-20210124.1104/i-ching-autoloads.el"))
+
+(add-to-list 'load-path (directory-file-name
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/i-ching-20210124.1104/i-ching-autoloads.el") (car load-path))))
+
+
+
+(autoload 'i-ching-describe-hexagram "i-ching" "\
+Show the name of a HEXAGRAM (between POINT and MARK) based on it's unicode name.
+
+\(fn POINT MARK)" t nil)
+
+(autoload 'i-ching-cast "i-ching" "\
+Cast a Hexagram using a particular METHOD.
+
+There are various methods to divine a specific hexagram.
+Depending on the context and circumstance some methods may be more suitable.
+
+see: `i-ching-divination-method' & `i-ching-randomness-source' for details.
+
+\(fn &optional METHOD)" t nil)
+
+(autoload 'i-ching-insert-hexagram "i-ching" "\
+Insert a hexagram either by casting or it's NUMBER in the King Wen sequence.
+
+\(fn &optional NUMBER)" t nil)
+
+(autoload 'i-ching-insert-hexagram-and-name "i-ching" "\
+Insert a hexagram either by casting or it's NUMBER in the King Wen sequence.
+
+\(fn &optional NUMBER)" t nil)
+
+(autoload 'i-ching-interpretation "i-ching" "\
+Consult the I Ching to show an interpretation of a single HEXAGRAM.
+
+\(fn HEXAGRAM)" t nil)
+
+(autoload 'i-ching-query-string "i-ching" "\
+Consult the I Ching using a particular METHOD.
+
+\(fn &optional METHOD)" t nil)
+
+(autoload 'i-ching-query "i-ching" "\
+Consult the I Ching using a particular METHOD.
+
+\(fn &optional METHOD)" t nil)
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "i-ching" '("i-ching-")))
+
+
 
 
 )
@@ -2192,14 +2256,14 @@ Also see the related `auto-compile-on-save-mode'.
 )
 (setq package-activated-list
       (append
-       '(xwidgets-reuse whole-line-or-region bind-key use-package macrostep slime recently packed org ox-hugo org-static-blog org-protocol-jekyll org-journal dash esxml nov ht mu4e-views modus-vivendi-theme modus-themes modus-operandi-theme markdown-mode elfeed auto-compile)
+       '(xwidgets-reuse whole-line-or-region bind-key use-package macrostep slime request recently packed org ox-hugo org-static-blog org-protocol-jekyll org-journal dash esxml nov ht mu4e-views modus-vivendi-theme modus-themes modus-operandi-theme markdown-mode i-ching elfeed auto-compile)
        package-activated-list))
 (progn
   (require 'info)
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/modus-themes-20210124.1155" "/home/das/.emacs.d/elpa/dash-20210123.1222" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210117.1942" "/home/das/.emacs.d/elpa/use-package-20210106.2145")
+	 '("/home/das/.emacs.d/elpa/i-ching-20210124.1104" "/home/das/.emacs.d/elpa/modus-themes-20210125.801" "/home/das/.emacs.d/elpa/dash-20210124.1524" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210125.646" "/home/das/.emacs.d/elpa/use-package-20210106.2145")
 	 Info-directory-list)))
 
 ;; Local Variables:
