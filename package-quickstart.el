@@ -1171,10 +1171,10 @@ Inserted by installing Org or when a release is made." nil nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/ox-hugo-20210126.1518/ox-hugo-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/ox-hugo-20210129.2241/ox-hugo-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/ox-hugo-20210126.1518/ox-hugo-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/ox-hugo-20210129.2241/ox-hugo-autoloads.el") (car load-path))))
 
 
 
@@ -1476,10 +1476,10 @@ Blogging with org-mode and emacs.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/org-journal-20210119.2137/org-journal-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/org-journal-20210130.1410/org-journal-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-journal-20210119.2137/org-journal-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-journal-20210130.1410/org-journal-autoloads.el") (car load-path))))
 
 
 
@@ -1612,10 +1612,10 @@ Search for TODOs within all future entries." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210124.1524/dash-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210130.1611/dash-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210124.1524/dash-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210130.1611/dash-autoloads.el") (car load-path))))
 
 
 
@@ -1847,10 +1847,10 @@ Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210125.801/modus-themes-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210130.945/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210125.801/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210130.945/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -1930,10 +1930,10 @@ by virtue of calling either of `modus-themes-load-operandi' and
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/markdown-mode-20210123.1547/markdown-mode-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/markdown-mode-20210128.41/markdown-mode-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/markdown-mode-20210123.1547/markdown-mode-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/markdown-mode-20210128.41/markdown-mode-autoloads.el") (car load-path))))
 
 
 
@@ -2263,7 +2263,7 @@ Also see the related `auto-compile-on-save-mode'.
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/i-ching-20210124.1104" "/home/das/.emacs.d/elpa/modus-themes-20210125.801" "/home/das/.emacs.d/elpa/dash-20210124.1524" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210125.646" "/home/das/.emacs.d/elpa/use-package-20210106.2145")
+	 '("/home/das/.emacs.d/elpa/i-ching-20210124.1104" "/home/das/.emacs.d/elpa/modus-themes-20210130.945" "/home/das/.emacs.d/elpa/dash-20210130.1611" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210125.646" "/home/das/.emacs.d/elpa/use-package-20210106.2145")
 	 Info-directory-list)))
 
 ;; Local Variables:
