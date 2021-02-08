@@ -1,0 +1,66 @@
+* Monday, 02/01/2021
+:PROPERTIES:
+:CREATED:  20210201
+:END:
+** 07:41 0014-0706, 6:10 86. Made it to 3rd Step.
+** 08:49 Overcast, forecast is snow showers turning to light snow, temps like yesterday. Valerie’s still asleep so I’ll wait until she gets up to finish dressing and take the birds their feed.
+** 11:04 She got up around 9, we had rolled oats.
+** 13:38 Actually working on the January Vestry minutes. Imagine that. All the backups are run and copied around as planned.
+** 16:19 Left listening to the Vestry audio for later.
+** 18:03 We walked to Miriam’s and picked up eggs and coffee that she’d gotten for us at Wegman’s.
+** 21:26 We made a great dinner with a chicken breast, potatoes and zucchini, all roast for 40 minutes or so. With a salad. Mmmm
+** 22:43 About to climb into a tub. Mmmm again.
+* Tuesday, 02/02/2021
+:PROPERTIES:
+:CREATED:  20210202
+:END:
+** 06:43 Up at 0626, solar-powered light was flashing again, went out with a screw driver and removed it and brought them both inside. That got me awake right away! 2327-0626, 6:24 81.
+** 08:44 A good meeting - 2nd tradition. Noticed that writing with my left hand was hurting, so I gave my right a little more practice. Might be worth working on - as I thought a year ago.
+** 11:33 Spoke with Janet the PT before Valerie’s appt. I really am going to have to attend to my shoulder sooner rather than later. Did a little bit of shoveling just now. Determined to only do a bit at a time - maybe one set of panels on the driveway each hour. See whether that sets my shoulder screaming at me or not. Updated the appearances.md instead of the ,org version - will need to do another conversion now, I guess.
+** 12:55 Had lunch, did another round of shoveling, updated the appearances.md by mistake (instead of org), so worked out exporting the md to org, then got the export from org to html (not using pandoc at all) carrying typographic quotes and dashes. Will have to go through it and get the “poetry” with line breaks fixed. Otherwise it looks good at first glance. The command is “M-x org-html-export-to-html”.
+** 13:23 Another shot at the driveway. Probably one more. See that the way to have the poetry formatted correctly is to use #+BEGIN_VERSE and #+END_VERSE. Makes sense.
+** 14:28 All seems good with the org export except for the head section - massive css with code for every type of “code” highlighting, and no way (that I know of yet) to manage things like the page title. I’ll get that handled, but for now, it’s good enough. Oops, I see now that it’s putting “&rsquo;” on the left where there should be “&lsquo;” - still room for improvement, I guess.
+** 20:15 I went back to using the markdown copy, made a few fixes to endnote formatting, generated html and then epub. From there, I generated an AZW3, which Amazon rejected, and then a mobi and sent it to kindle. That way I can edit the most current version.
+** 22:55 I’ve read through to the last chapter and it looks pretty good. Watched some videos about the GOT actors. Time for bed.
+* Wednesday, 02/03/2021
+:PROPERTIES:
+:CREATED:  20210203
+:END:
+** 07:13 Slept from 2330-0631, 6:17 86.
+** 10:21 The meeting was good - Joe N. led on steps 10-12. Met Michael and found that he’s been having constant urges and called yesterday morning while in a liquor store parking lot. He says that he trusts God in everything but his alcoholism, which is his fault and God won’t help him with. He’s to call me before he leaves home - every time. He’s thinking about attending Zoom treatment at a local rehab. I was clear that I didn’t think it would be that helpful, but go ahead if he wants to. He also told me that he’s bipolar and that his nurse wife says that his meds are ineffective if he drinks. We’ll have a zoom call tomorrow at 3. The walk totaled almost 3 miles, over 5,000 steps.
+** 13:02 Noon meeting is over - Michael has signed-up for the Colmac rehab.
+** 20:54 Nanaimo bar is started, chicken breasts are roasted. We’re on the way to being ready with Chuch and Uncle Hank’s dinner Friday evening.
+* Thursday, 02/04/2021
+:PROPERTIES:
+:CREATED:  20210204
+:END:
+** 07:29 2328-0650 - 6:49 85.
+** 09:05 A good meeting - Dan led, Elizabeth celebrated 32 years. Back feeder was empty when I checked at 0830 - deer tracks so that’s probably the culprit. Means taking it in every night again. Oh, well! We both had good sleeps last night. Today we prepare for Meal Train tomorrow, I go to the library around noon and can get any groceries we need, then talk Zoom with Michael at 1500 and RAC tonight.
+** 11:42 I’ll be going to the Library and Giant soon. Just learned that Jill from the Dr’s office died at the end of January. Very sad.
+** 13:20 Just got back from the library and Giant. Both were crowded, but everything went smoothly. Time to check on RAC entries to see whether I need to visit any of them.
+** 21:40 RAC dragged on a bit but wasn’t dull.
+* Friday, 02/05/2021
+:PROPERTIES:
+:CREATED:  20210205
+:END:
+** 07:29 0042-0635, 5:28 79. Logged into the 3rd Step Group now.
+** 08:38 Yet another good meeting. Valerie got up earlier than usual today. It’s sunny, 37F with a forecast high of 51F! Mild weather until Sunday when snow is predicted - 1.5”. Today we make chili and etc. for Chuck and Uncle Hank.
+** 14:44 Nanaimo bar is finished but not cut, chili is started, all the pieces are in house and ready to go. It’ll be a busy few hours but we’re doing OK.
+** 15:26 Chili is mostly together, just need to put beans and corn into the mix and cook some. Might have a problem getting it all into the Dutch oven and maybe will need to move it to the Big Pot.
+** 23:06 It did need to go into the big pot. It turned out to be very spicy, but we did get everything to Chuck right at 1700. I attended the Longfellow meeting at Chuck’s suggestion because Allan was celebrating 12 years. It was a nice meeting. I didn’t mention that I got a call from Michael that he’d drunk again today.
+* Saturday, 02/06/2021
+:PROPERTIES:
+:CREATED:  20210206
+:END:
+** 07:13 Didn’t wear my fitbit to bed so I only imagine that I slept OK but was awake off and on. Down before midnight, up by 0630 or so. Expect to see Ray at the meeting this morning.
+** 10:06 Today we bake bread and get the kitchen cleaned up from yesterday’s work. Won’t be a big deal. Should be warm and a good day to walk. Snow expected tomorrow morning, then cold most of next week.
+** 12:22 Bread is rising in the oven. We took food to the Other Barn and I walked home from there while the sponge rose.
+** 22:32 Bread got too gassy, tastes great, great texture, one had a big bubble on top. Last prove was probably too warm. We roast salmon, potatoes and squash with salad for supper, then watched the second half of “The Dig”. Now I’m planning to play a game or two and hit the sack.
+* Sunday, 02/07/2021
+:PROPERTIES:
+:CREATED:  20210207
+:END:
+** 08:20 I had decided to stick to my old Bloomington habit of going to 3rd Step six days a week and reserving Sunday for sleeping late. Didn’t really work that well - I awoke at 0600 and 0620 and 0645 or something like that, and finally got up at 0720. Fitbit gives me good marks anyway - 2320-0719, 7:15 89.
+** 08:23 Heard rain last night, probably fairly late/early, then saw “wintery mix” when I got up - snowflakes coming down the way rain would - straight down and not floating at all. It’s been steady now for the past hour or so, building up and being really steady snow. Forecast is 1-3” and a high of 42F, then 19F overnight. Only another hour or so of real snow changing to rain, then light rain, then showers ending around 1400. We shall see.
+** 16:57 It’s been dry and sunny for 2-3 hours. Starting to cool off. We’ve been indoors all day but have managed to stay busy. I finished the last edits to Appearances and broke it into chapters, then got them all into epub with a TOC. Learned too late that the Calibre E-book Editor will break the large html file into chapters for me. So, I did extra work, whatever! It displays fine in the Macbook iBooks, but won’t load into the iPad. Tried deleting some files but that didn’t help.
+** 22:57 Might play a game, but otherwise I’m off to bed.

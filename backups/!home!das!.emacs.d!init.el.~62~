@@ -1,0 +1,321 @@
+;; 20200701
+;; 20200709 - moved to the new Debian installation - issues with font and window size resolved.
+;; 20200805 - recentf removed. org-agenda-files defined as inbox.org only. sdcv added
+;; 20200816 - installed offlineimap, mu and mu4e
+;; 20200919 - began using mu4e
+;; 20201018 - installed elfeed
+;; 20201022 - installed mu4e-views
+;; 20201210 - installed use-package, began updating init.el
+;; 20201216 - built from source version 27.1.50
+
+(require 'package)
+; (package-initialize)
+(add-to-list 'load-path "~/.emacs.d/lisp")
+(add-to-list 'exec-path "/usr/bin/sqlite3")
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
+(add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+
+(setq user-full-name "David Smith"
+      user-email-address "das@daslearns.ca")
+
+;; configuring use-package
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
+(setq use-package-verbose t)
+(setq use-package-always-ensure t)
+(require 'use-package)
+(use-package auto-compile
+  :config (auto-compile-on-load-mode))
+
+;; configure backups
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+(setq delete-old-versions -1)
+(setq version-control t)
+(setq vc-make-backup-files t)
+(setq auto-save-file-name-transforms '((".*" "~/.emacs.d/auto-save-list/" t)))
+
+;; configure defaults
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(setq inhibit-startup-message t
+      inhibit-startup-echo-area-message t
+      confirm-nonexistent-file-or-buffer nil
+      visible-bell 1
+      sentence-end-double-space nil)
+(fset 'yes-or-no-p 'y-or-n-p)
+(column-number-mode 1)
+(display-time-mode)
+(delete-selection-mode t)
+(global-display-line-numbers-mode t)
+(setq initial-frame-alist
+      '(
+	(width . 102) ; character
+	(height . 55) ; lines
+	))
+(setq default-frame-alist
+      '(
+	(width . 102) ; character
+	(height . 55) ; lines
+	))
+
+;; configure themes
+(use-package modus-themes
+  :ensure
+  :init
+  (set-face-attribute 'default nil :family "DejaVu Sans Mono" :height 115)
+  (set-face-attribute 'variable-pitch nil :family "DejaVu Serif" :height 1.2)
+  (set-face-attribute 'fixed-pitch nil :family "DejaVu Sans Mono" :height 1.0)
+  (use-package modus-operandi-theme)
+  (use-package modus-vivendi-theme)
+  :config
+  (modus-themes-load-operandi)
+  :bind ("<f5>" . modus-themes-toggle))
+
+;; configuring ido-mode
+(ido-mode 1)
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(setq ido-file-extensions-order '(".org" ".md" ".txt" ".el" ".html"))
+(setq ido-ignore-extensions t)
+
+;; configuring recent
+(require 'recentf)
+(add-to-list 'recentf-exclude "\\elpa")
+(recentf-mode t)
+(setq recentf-max-saved-items 50)
+(global-set-key (kbd "C-x f") 'recentf-open-files)
+(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
+
+(defun ido-recentf-open ()
+  "Use `ido-completing-read' to \\[find-file] a recent file"
+  (interactive)
+  (if (find-file (ido-completing-read "Find recent file: " recentf-list))
+      (message "Opening file...")
+    (message "Aborting")))
+
+;; always use UTF-8
+(set-charset-priority 'unicode)
+(setq locale-coding-system 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-selection-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+(setq default-process-coding-system '(utf-8-unix . utf-8-unix))
+
+;; mail stuff
+;; configuring mu4e
+(require 'mu4e)
+(setq
+ mu4e-sent-folder "/sent"
+ mu4e-drafts-folder "/drafts"
+ mu4e-trash-folder "/trash"
+ mu4e-refile-folder "/archive"
+ mu4e-get-mail-command "offlineimap"
+ mu4e-update-interval 600
+ mail-user-agent 'mu4e-user-agent
+ mu4e-html2test-command 'mu4e-shr2text
+ mu4e-view-show-images t)
+
+;; configure elfeed
+(use-package elfeed
+  :ensure t
+  :config
+  (global-set-key (kbd "C-x w") 'elfeed)
+  (setq elfeed-db-directory "~/data/elfeeddb")
+  (setq elfeed-feeds
+	'(
+	  ("https://consultingsmiths.com/feed/" me)
+	  ("https://casorosendi.wordpress.com/feed/" catholic)
+	  ;; emacs
+	  ("https://batsov.com/atom.xml" batsov emacs)
+	  ("https://cheapskatesguide.org/cheapskates-guide-rss-feed.xml" cheapskates tech)
+	  ("https://emacsredux.com/atom.xml" batsov emacs)
+	  ("https://irreal.org/blog/?feed=rss2" irreal emacs)
+	  ("https://jao.io/blog/rss.xml" jao emacs physics)
+	  ("https://metaredux.com/feed.xml" batsov emacs)
+	  ("http://planet.lisp.org/rss20.xml" planetlisp lisp)
+	  ("https://programminghistorian.org/feed.xml" historian emacs)
+	  ("https://protesilaos.com/codelog.xml" protesilaos emacs)
+	  ("https://www.rousette.org.uk/index.xml" bsag emacs)
+	  ("https://sachachua.com/blog/feed" sachachua emacs)
+	  ;; commentary
+	  ("https://jamesaltucher.com/feed/" altucher)
+	  ("http://assistantvillageidiot.blogspot.com/feeds/posts/default" avi)
+	  ("http://accordingtohoyt.com/feed/" hoyt)
+	  ("http://www.anonymousconservative.com/blog/feed/" anoncons news twitter)
+	  ("https://clarissasblog.com/feed/" clarissa)
+	  ("https://www.coffeetalking.com/feeds/posts/default" coffeetalking)
+	  ("http://theconservativetreehouse.com/feed/" lastrefuge)
+	  ("https://greenwald.substack.com/feed" politics)
+	  ("https://judithcurry.com/feed/" climate science)
+	  ("http://www.ncobrief.com/index.php/feed/" ncobrief)
+	  ("http://www.thepassivevoice.com/feed/" passivevoice)
+	  ("http://www.thesavvystreet.com/feed/" savvystreet)
+	  ("http://wmbriggs.com/feed/" briggs statistics aquinas watts)
+	  ("https://wattsupwiththat.com/feed/" climate science)
+	  ("https://stevenpressfield.com/feed/" pressfield writing)
+	  ("http://feeds.feedburner.com/typepad/sethsmainblog" godin)
+	  ("http://voxday.blogspot.com/feeds/posts/default" Vox)
+	  ))
+  (setq-default elfeed-search-filter "@1-year-old"))
+
+;; configuring org
+(use-package org
+  :init
+  (setq org-directory "~/data/org")
+  :config
+  (setq org-startup-truncated nil)
+  (setq org-indent-indentation-per-level 1)
+  (setq org-adapt-indentation nil)
+  (setq org-todo-keywords
+	'((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
+
+;; configuring org-capture
+  (setq org-default-notes-file (concat org-directory "/data/org/inbox.org"))
+  (setq org-capture-templates
+	'(("t" "Todo" entry (file+headline "~/data/org/inbox.org" "Tasks"))
+	  ("j" "Journal" entry (file+datetree "~/data/org/inbox.org")
+	   "* %?\nEntered on %U\n %i\n %a")))
+
+;; configuring org-agenda
+  (setq org-agenda-window-setup (quote current-window))
+  (setq org-agenda-files "~/data/org/inbox.org")
+  ;; file to save todo items - 20200805 changed from .org to inbox.org
+  (setq org-agenda-files (file-expand-wildcards "~/data/org/inbox.org"))
+  ;; set priority range from A to C with default A
+  (setq org-highest-priority ?A)
+  (setq org-lowest-priority ?C)
+  (setq org-default-priority ?A)
+  ;; set colors for priorities
+  (setq org-priority-faces '((?A . (:foreground "#F0DFAF" :weight bold))
+			     (?B . (:foreground "LightSteelBlue"))
+			     (?C . (:foreground "OliveDrab"))))
+  :bind (("C-c l" . org-store-link)
+	 ("C-c a" . org-agenda)
+	 ("C-c c" . org-capture)
+	 ("C-c b" . org-switchb)))
+	 
+;; Configuring org-protocol
+(require 'org-protocol)
+
+;; Configuring org-journal
+(use-package org-journal
+  :init
+  (setq org-journal-file-type 'monthly)
+  (setq org-journal-dir "~/data/org/journal"))
+
+;; configuring ox-hugo
+; (use-package ox-hugo
+;   :ensure t            ;Auto-install the package from Melpa (optional)
+;   :after ox)
+
+;; configuring org-static-blog - following jao.io/blog/2020-02-11-simplicity.htmlXC
+(use-package org-static-blog
+  :ensure t
+  :init
+  (setq org-static-blog-use-preview t
+	org-static-blog-preview-convert-titles t
+	org-static-blog-preview-ellipsis "..."
+	org-static-blog-enable-tags t
+	org-static-blog-publish-title "Consultingsmiths"
+	org-static-blog-publish-url "https://consultingsmiths.com/"
+	org-static-blog-publish-directory "~/data/blogs/consultingsmiths.com/blog/"
+	org-static-blog-posts-directory "~/data/blogs/consultingsmiths.com/blog/posts/"
+	org-static-blog-drafts-directory "~/data/blogs/consultingsmiths.com/blog/drafts/"
+	org-static-blog-enable-tags t
+	org-export-with-toc nil
+	org-export-with-section-numbers nil)
+
+  (setq org-static-blog-page-header
+	(concat
+	 "<meta name=\"author\" content=\"David\">"
+	 "<meta name=\"referrer\" content=\"no-referrer\">"
+	 "<link href= \"static/style.css\" rel=\"stylesheet\" type=\"text/css\" />"
+	 "<link rel=\"icon\" href=\"static/favicon.ico\">")
+
+        org-static-blog-page-preamble
+	(concat
+	 "<div class=\"header\">"
+	 "  <a href=\"https://consultingsmiths.com\">Consultingsmiths</a>"
+	 "  </div>")
+
+
+        org-static-blog-page-postamble
+	(with-temp-buffer
+	  (insert-file-contents "~/data/blogs/consultingsmiths.com/blog/postamble.html")
+	  (buffer-string))))
+	 
+
+;; configuring the 1923 Websters' Dictionary
+(require 'sdcv-mode)
+(global-set-key (kbd "C-c d") 'sdcv-search)
+
+;; configure typopunct
+(require 'typopunct)
+(typopunct-change-language 'english t)
+
+(add-hook 'markdown-mode-hook 'my-markdown-init)
+(defun my-markdown-init ()
+  (require 'typopunct)
+  (typopunct-change-language 'english)
+  (typopunct-mode 1))
+
+(add-hook 'org-mode-hook 'my-org-init)
+(defun my-org-init ()
+  (require 'typopunct)
+  (typopunct-change-language 'english)
+  (typopunct-mode 1))
+
+;; add more superscripts
+(require 'iso-transl)
+    (iso-transl-define-keys
+     `(("^0" . ,(vector (decode-char 'ucs #x2070)))
+       ("^4" . ,(vector (decode-char 'ucs #x2074))) 
+       ("^5" . ,(vector (decode-char 'ucs #x2075)))
+       ("^6" . ,(vector (decode-char 'ucs #x2076)))
+       ("^7" . ,(vector (decode-char 'ucs #x2077)))
+       ("^8" . ,(vector (decode-char 'ucs #x2078)))
+       ("^9" . ,(vector (decode-char 'ucs #x2079)))
+       ("^+" . ,(vector (decode-char 'ucs #x207A)))
+       ("^-" . ,(vector (decode-char 'ucs #x207B)))
+       ("^=" . ,(vector (decode-char 'ucs #x207C)))
+       ("^(" . ,(vector (decode-char 'ucs #x207D)))
+       ("^)" . ,(vector (decode-char 'ucs #x207E)))
+       ("_0" . ,(vector (decode-char 'ucs #x2080)))
+       ("_1" . ,(vector (decode-char 'ucs #x2081)))
+       ("_2" . ,(vector (decode-char 'ucs #x2082)))
+       ("_3" . ,(vector (decode-char 'ucs #x2083)))
+       ("_4" . ,(vector (decode-char 'ucs #x2084)))
+       ("_5" . ,(vector (decode-char 'ucs #x2085)))
+       ("_6" . ,(vector (decode-char 'ucs #x2086)))
+       ("_7" . ,(vector (decode-char 'ucs #x2087)))
+       ("_8" . ,(vector (decode-char 'ucs #x2088)))
+       ("_9" . ,(vector (decode-char 'ucs #x2089)))
+       ("_+" . ,(vector (decode-char 'ucs #x208A)))
+       ("_-" . ,(vector (decode-char 'ucs #x208B)))
+       ("_=" . ,(vector (decode-char 'ucs #x208C)))
+       ("_(" . ,(vector (decode-char 'ucs #x208D)))
+       ("_)" . ,(vector (decode-char 'ucs #x208E)))))
+
+(use-package i-ching
+    :config (setq i-ching-hexagram-size 18
+                  i-ching-hexagram-font "DejaVu Sans"
+                  i-ching-divination-method '3-coins
+                  i-ching-randomness-source 'pseudo)
+    :bind (("H-i h" . i-ching-insert-hexagram)))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(i-ching org-static-blog ox-hugo org-protocol whole-line-or-region use-package slime recently org-protocol-jekyll org-journal nov mu4e-views modus-vivendi-theme modus-themes modus-operandi-theme markdown-mode elfeed auto-compile)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

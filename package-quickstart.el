@@ -211,10 +211,10 @@ Display all the personal keybindings defined by `bind-key'." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/use-package-20210106.2145/use-package-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/use-package-20210207.1926/use-package-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/use-package-20210106.2145/use-package-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/use-package-20210207.1926/use-package-autoloads.el") (car load-path))))
 
 
 
@@ -453,7 +453,7 @@ behaviors.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/slime-20210125.646/slime-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/slime-20210202.1426/slime-autoloads.el"))
 
 
 
@@ -461,7 +461,7 @@ behaviors.
 
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/slime-20210125.646/slime-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/slime-20210202.1426/slime-autoloads.el") (car load-path))))
 
 (autoload 'slime "slime"
   "Start a Lisp subprocess and connect to its Swank server." t)
@@ -1476,10 +1476,10 @@ Blogging with org-mode and emacs.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/org-journal-20210130.1410/org-journal-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/org-journal-20210204.820/org-journal-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-journal-20210130.1410/org-journal-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-journal-20210204.820/org-journal-autoloads.el") (car load-path))))
 
 
 
@@ -1612,10 +1612,10 @@ Search for TODOs within all future entries." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210130.1611/dash-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210202.1153/dash-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210130.1611/dash-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210202.1153/dash-autoloads.el") (car load-path))))
 
 
 
@@ -1847,10 +1847,10 @@ Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210130.945/modus-themes-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210208.1204/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210130.945/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210208.1204/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -1930,10 +1930,10 @@ by virtue of calling either of `modus-themes-load-operandi' and
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/markdown-mode-20210128.41/markdown-mode-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/markdown-mode-20210204.2346/markdown-mode-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/markdown-mode-20210128.41/markdown-mode-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/markdown-mode-20210204.2346/markdown-mode-autoloads.el") (car load-path))))
 
 
 
@@ -1973,10 +1973,10 @@ and toggle it if ARG is `toggle'; disable the mode otherwise.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/i-ching-20210124.1104/i-ching-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/i-ching-20210208.1251/i-ching-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/i-ching-20210124.1104/i-ching-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/i-ching-20210208.1251/i-ching-autoloads.el") (car load-path))))
 
 
 
@@ -2005,6 +2005,11 @@ Insert a hexagram either by casting or it's NUMBER in the King Wen sequence.
 
 \(fn &optional NUMBER)" t nil)
 
+(autoload 'i-ching-hexagram-and-name-string "i-ching" "\
+Return a hexagram either by casting or it's NUMBER in the King Wen sequence.
+
+\(fn &optional NUMBER)" t nil)
+
 (autoload 'i-ching-interpretation "i-ching" "\
 Consult the I Ching to show an interpretation of a single HEXAGRAM.
 
@@ -2026,10 +2031,10 @@ Consult the I Ching using a particular METHOD.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/elfeed-20210122.125/elfeed-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/elfeed-20210131.143/elfeed-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/elfeed-20210122.125/elfeed-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/elfeed-20210131.143/elfeed-autoloads.el") (car load-path))))
 
 
 
@@ -2263,7 +2268,7 @@ Also see the related `auto-compile-on-save-mode'.
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/i-ching-20210124.1104" "/home/das/.emacs.d/elpa/modus-themes-20210130.945" "/home/das/.emacs.d/elpa/dash-20210130.1611" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210125.646" "/home/das/.emacs.d/elpa/use-package-20210106.2145")
+	 '("/home/das/.emacs.d/elpa/i-ching-20210208.1251" "/home/das/.emacs.d/elpa/modus-themes-20210208.1204" "/home/das/.emacs.d/elpa/dash-20210202.1153" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210202.1426" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
 	 Info-directory-list)))
 
 ;; Local Variables:

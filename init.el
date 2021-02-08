@@ -48,7 +48,7 @@
 (column-number-mode 1)
 (display-time-mode)
 (delete-selection-mode t)
-(global-display-line-numbers-mode t)
+; (global-display-line-numbers-mode t)
 (setq initial-frame-alist
       '(
 	(width . 102) ; character
@@ -145,6 +145,7 @@
 	  ("http://assistantvillageidiot.blogspot.com/feeds/posts/default" avi)
 	  ("http://accordingtohoyt.com/feed/" hoyt)
 	  ("http://www.anonymousconservative.com/blog/feed/" anoncons news twitter)
+	  ("http://charltonteaching.blogspot.com/feeds/posts/default" charlton)
 	  ("https://clarissasblog.com/feed/" clarissa)
 	  ("https://www.coffeetalking.com/feeds/posts/default" coffeetalking)
 	  ("http://theconservativetreehouse.com/feed/" lastrefuge)
@@ -152,6 +153,8 @@
 	  ("https://judithcurry.com/feed/" climate science)
 	  ("http://www.ncobrief.com/index.php/feed/" ncobrief)
 	  ("http://www.thepassivevoice.com/feed/" passivevoice)
+	  ("https://pluralistic.net/feed/" doctorow)
+	  ("https://readingjunkie.com/feed/" readingjunkie)
 	  ("http://www.thesavvystreet.com/feed/" savvystreet)
 	  ("http://wmbriggs.com/feed/" briggs statistics aquinas watts)
 	  ("https://wattsupwiththat.com/feed/" climate science)
@@ -167,6 +170,7 @@
   (setq org-directory "~/data/org")
   :config
   (setq org-startup-truncated nil)
+  (setq org-export-with-smart-quotes t)
   (setq org-indent-indentation-per-level 1)
   (setq org-adapt-indentation nil)
   (setq org-todo-keywords
@@ -211,7 +215,7 @@
 ;   :ensure t            ;Auto-install the package from Melpa (optional)
 ;   :after ox)
 
-;; configuring org-static-blog - following jao.io/blog/2020-02-11-simplicity.htmlXC
+;; configuring org-static-blog - following jao.io/blog/2020-02-11-simplicity.html
 (use-package org-static-blog
   :ensure t
   :init
