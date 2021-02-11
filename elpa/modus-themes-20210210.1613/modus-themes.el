@@ -1604,9 +1604,12 @@ retaining their original fairly vivid color.
 
 Option `underline-only' applies an underline while making the
 affected text colorless (it uses the same foreground as the
-theme's default)."
+theme's default).
+
+Option `neutral-underline-only' makes the text colorless while
+using a subtle underline below it."
   :group 'modus-themes
-  :package-version '(modus-themes . "1.1.0")
+  :package-version '(modus-themes . "1.2.0")
   :version "28.1"
   :type '(choice
           (const :tag "Undeline link using the same color as the text (default)" nil)
@@ -1614,7 +1617,8 @@ theme's default)."
           (const :tag "Change the color of link underlines to a neutral grey" neutral-underline)
           (const :tag "Desaturated foreground with neutral grey underline" faint-neutral-underline)
           (const :tag "Remove underline property from links, keeping their foreground as-is" no-underline)
-          (const :tag "Apply underline only; use default foreground" underline-only)))
+          (const :tag "Apply underline only; use default foreground" underline-only)
+          (const :tag "Like `underline-only' but with a subtle underline" neutral-underline-only)))
 
 (defcustom modus-themes-region nil
   "Change the overall appearance of the active region.
@@ -2115,15 +2119,18 @@ underline.  UNDERLINE is a grey color only for the undeline."
     ('faint-neutral-underline (list :foreground fgfaint :underline underline))
     ('no-underline (list :foreground fg :underline nil))
     ('underline-only (list :underline t))
+    ('neutral-underline-only (list :underline underline))
     (_ (list :foreground fg :underline t))))
 
-(defun modus-themes--link-color (fg fgfaint)
+(defun modus-themes--link-color (fg fgfaint &optional neutralfg)
   "Extends `modus-themes--link'.
-FG is the main foreground.  FGFAINT is the desaturated one."
+FG is the main accented foreground.  FGFAINT is also accented,
+yet desaturated.  Optional NEUTRALFG is a gray value."
   (pcase modus-themes-links
     ('faint (list :foreground fgfaint))
     ('faint-neutral-underline (list :foreground fgfaint))
-    ('underline-only (list :underline t))
+    ('underline-only (list :underline t :foreground (or neutralfg 'unspecified)))
+    ('neutral-underline-only (list :underline 'unspecified :foreground (or neutralfg 'unspecified)))
     (_ (list :foreground fg))))
 
 (defun modus-themes--scale (amount)
@@ -2521,7 +2528,7 @@ by virtue of calling either of `modus-themes-load-operandi' and
     `(link ((,class :inherit button)))
     `(link-visited ((,class :inherit button
                             ,@(modus-themes--link-color
-                               magenta-alt-other magenta-alt-other-faint))))
+                               magenta-alt-other magenta-alt-other-faint fg-alt))))
     `(tooltip ((,class :background ,bg-special-cold :foreground ,fg-main)))
     `(widget-button ((,class :inherit button)))
     `(widget-button-pressed ((,class :inherit button
@@ -2683,17 +2690,17 @@ by virtue of calling either of `modus-themes-load-operandi' and
     `(bm-fringe-persistent-face ((,class :inherit modus-theme-fringe-blue)))
     `(bm-persistent-face ((,class :inherit modus-theme-intense-blue :extend t)))
 ;;;;; bongo
-    `(bongo-album-title ((,class :foreground ,cyan-active)))
+    `(bongo-album-title ((,class :foreground ,green-active)))
     `(bongo-artist ((,class :foreground ,magenta-active)))
     `(bongo-currently-playing-track ((,class :inherit bold)))
     `(bongo-elapsed-track-part ((,class :inherit modus-theme-subtle-magenta :underline t)))
-    `(bongo-filled-seek-bar ((,class :background ,blue-subtle-bg :foreground ,fg-main)))
+    `(bongo-filled-seek-bar ((,class :background ,blue-intense-bg :foreground ,fg-main)))
     `(bongo-marked-track ((,class :foreground ,fg-mark-alt)))
     `(bongo-marked-track-line ((,class :background ,bg-mark-alt)))
     `(bongo-played-track ((,class :foreground ,fg-unfocused :strike-through t)))
-    `(bongo-track-length ((,class :foreground ,blue-alt-other)))
-    `(bongo-track-title ((,class :foreground ,blue-active)))
-    `(bongo-unfilled-seek-bar ((,class :background ,blue-nuanced-bg :foreground ,fg-main)))
+    `(bongo-track-length ((,class :foreground ,fg-active)))
+    `(bongo-track-title ((,class :foreground ,cyan-active)))
+    `(bongo-unfilled-seek-bar ((,class :background ,bg-special-cold :foreground ,fg-main)))
 ;;;;; boon
     `(boon-modeline-cmd ((,class :inherit modus-theme-active-blue)))
     `(boon-modeline-ins ((,class :inherit modus-theme-active-red)))
@@ -3010,7 +3017,7 @@ by virtue of calling either of `modus-themes-load-operandi' and
     `(diff-hl-reverted-hunk-highlight ((,class :inherit (modus-theme-active-magenta bold))))
 ;;;;; diff-mode
     `(diff-added ((,class :inherit modus-theme-diff-added)))
-    `(diff-changed ((,class :inherit modus-theme-diff-changed)))
+    `(diff-changed ((,class :inherit modus-theme-diff-changed :extend t)))
     `(diff-context ((,class :foreground ,fg-unfocused)))
     `(diff-error ((,class :inherit modus-theme-intense-red)))
     `(diff-file-header ((,class :inherit bold)))
@@ -5038,12 +5045,12 @@ by virtue of calling either of `modus-themes-load-operandi' and
     `(recursion-indicator-general ((,class :foreground ,blue-active)))
     `(recursion-indicator-minibuffer ((,class :foreground ,red-active)))
 ;;;;; regexp-builder (re-builder)
-    `(reb-match-0 ((,class :inherit modus-theme-refine-blue)))
-    `(reb-match-1 ((,class :inherit modus-theme-refine-magenta)))
-    `(reb-match-2 ((,class :inherit modus-theme-refine-green)))
-    `(reb-match-3 ((,class :inherit modus-theme-special-calm)))
-    `(reb-regexp-grouping-backslash ((,class :inherit bold :foreground ,fg-escape-char-backslash)))
-    `(reb-regexp-grouping-construct ((,class :inherit bold :foreground ,fg-escape-char-construct)))
+    `(reb-match-0 ((,class :inherit modus-theme-refine-cyan)))
+    `(reb-match-1 ((,class :inherit modus-theme-subtle-magenta)))
+    `(reb-match-2 ((,class :inherit modus-theme-subtle-green)))
+    `(reb-match-3 ((,class :inherit modus-theme-refine-yellow)))
+    `(reb-regexp-grouping-backslash ((,class :inherit font-lock-regexp-grouping-backslash)))
+    `(reb-regexp-grouping-construct ((,class :inherit font-lock-regexp-grouping-construct)))
 ;;;;; rg (rg.el)
     `(rg-column-number-face ((,class :foreground ,magenta-alt-other)))
     `(rg-context-face ((,class :foreground ,fg-unfocused)))
@@ -5452,9 +5459,9 @@ by virtue of calling either of `modus-themes-load-operandi' and
     `(vc-dir-file ((,class :foreground ,fg-main)))
     `(vc-dir-header ((,class :foreground ,cyan-alt-other)))
     `(vc-dir-header-value ((,class :foreground ,magenta-alt-other)))
-    `(vc-dir-ignored ((,class :foreground ,fg-unfocused)))
     `(vc-dir-mark-indicator ((,class :foreground ,blue-alt-other)))
     `(vc-dir-status-edited ((,class :foreground ,yellow)))
+    `(vc-dir-status-ignored ((,class :foreground ,fg-unfocused)))
     `(vc-dir-status-up-to-date ((,class :foreground ,cyan)))
     `(vc-dir-status-warning ((,class :foreground ,red)))
     `(vc-conflict-state ((,class :inherit modus-theme-slant :foreground ,red-active)))

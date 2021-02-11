@@ -138,10 +138,10 @@ Call `indent-rigidly-right-to-tab-stop' on region or PREFIX whole lines.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/bind-key-20200805.1727/bind-key-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/bind-key-20210210.1609/bind-key-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/bind-key-20200805.1727/bind-key-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/bind-key-20210210.1609/bind-key-autoloads.el") (car load-path))))
 
 
 
@@ -504,6 +504,33 @@ behaviors.
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "slime-tests" '("arglist" "async-eval-debugging" "break" "comp" "def-slime-test" "dis" "end-of-file" "find-definition" "flow-control" "indentation" "inspector" "inter" "locally-bound-debugger-hook" "loop-interrupt-" "macroexpand" "narrowing" "read" "report-condition-with-circular-list" "sbcl-world-lock" "sexp-at-point.1" "symbol-at-point." "traditional-recipe" "unwind-to-previous-sldb-level" "utf-8-source")))
 
+)
+(let ((load-file-name "/home/das/.emacs.d/elpa/shrink-whitespace-20181003.321/shrink-whitespace-autoloads.el"))
+
+(add-to-list 'load-path (directory-file-name
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/shrink-whitespace-20181003.321/shrink-whitespace-autoloads.el") (car load-path))))
+
+
+
+(autoload 'shrink-whitespace "shrink-whitespace" "\
+Remove whitespace around cursor to just one or none.
+If current line contains non-white space chars, then shrink any
+whitespace char surrounding cursor to just one space.  If current
+line does not contain non-white space chars, then remove blank
+lines to just one.
+Argument ARG Prevents removal of newlines when no other whitespace exists.
+
+\(fn ARG)" t nil)
+
+(autoload 'shrink-whitespace-grow-whitespace-around "shrink-whitespace" "\
+Counterpart to 'shrink-whitespace', grow whitespace in a smartish way." t nil)
+
+(autoload 'shrink-whitespace-shrink-whitespace-around "shrink-whitespace" "\
+Shrink whitespace surrounding point." t nil)
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "shrink-whitespace" '("grow-whitespace-around" "shrink-whitespace-")))
+
+
 )
 (let ((load-file-name "/home/das/.emacs.d/elpa/request-20201026.2324/request-autoloads.el"))
 
@@ -1612,10 +1639,10 @@ Search for TODOs within all future entries." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210202.1153/dash-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210210.1427/dash-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210202.1153/dash-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210210.1427/dash-autoloads.el") (car load-path))))
 
 
 
@@ -1847,10 +1874,10 @@ Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210208.1204/modus-themes-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210210.1613/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210208.1204/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210210.1613/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -1930,10 +1957,10 @@ by virtue of calling either of `modus-themes-load-operandi' and
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/markdown-mode-20210204.2346/markdown-mode-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/markdown-mode-20210210.636/markdown-mode-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/markdown-mode-20210204.2346/markdown-mode-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/markdown-mode-20210210.636/markdown-mode-autoloads.el") (car load-path))))
 
 
 
@@ -2261,14 +2288,14 @@ Also see the related `auto-compile-on-save-mode'.
 )
 (setq package-activated-list
       (append
-       '(xwidgets-reuse whole-line-or-region bind-key use-package macrostep slime request recently packed org ox-hugo org-static-blog org-protocol-jekyll org-journal dash esxml nov ht mu4e-views modus-vivendi-theme modus-themes modus-operandi-theme markdown-mode i-ching elfeed auto-compile)
+       '(xwidgets-reuse whole-line-or-region bind-key use-package macrostep slime shrink-whitespace request recently packed org ox-hugo org-static-blog org-protocol-jekyll org-journal dash esxml nov ht mu4e-views modus-vivendi-theme modus-themes modus-operandi-theme markdown-mode i-ching elfeed auto-compile)
        package-activated-list))
 (progn
   (require 'info)
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/i-ching-20210208.1251" "/home/das/.emacs.d/elpa/modus-themes-20210208.1204" "/home/das/.emacs.d/elpa/dash-20210202.1153" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210202.1426" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
+	 '("/home/das/.emacs.d/elpa/i-ching-20210208.1251" "/home/das/.emacs.d/elpa/modus-themes-20210210.1613" "/home/das/.emacs.d/elpa/dash-20210210.1427" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210202.1426" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
 	 Info-directory-list)))
 
 ;; Local Variables:
