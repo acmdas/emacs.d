@@ -453,7 +453,7 @@ behaviors.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/slime-20210202.1426/slime-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/slime-20210214.2243/slime-autoloads.el"))
 
 
 
@@ -461,7 +461,7 @@ behaviors.
 
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/slime-20210202.1426/slime-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/slime-20210214.2243/slime-autoloads.el") (car load-path))))
 
 (autoload 'slime "slime"
   "Start a Lisp subprocess and connect to its Swank server." t)
@@ -532,10 +532,10 @@ Shrink whitespace surrounding point." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/request-20201026.2324/request-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/request-20210214.37/request-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/request-20201026.2324/request-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/request-20210214.37/request-autoloads.el") (car load-path))))
 
 
 
@@ -1446,10 +1446,10 @@ buffer and returned as a string in Org format." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/org-static-blog-20210120.1931/org-static-blog-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/org-static-blog-20210211.933/org-static-blog-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-static-blog-20210120.1931/org-static-blog-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-static-blog-20210211.933/org-static-blog-autoloads.el") (car load-path))))
 
 
 
@@ -1874,10 +1874,10 @@ Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210210.1613/modus-themes-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210214.458/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210210.1613/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210214.458/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -2058,10 +2058,10 @@ Consult the I Ching using a particular METHOD.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/elfeed-20210131.143/elfeed-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/elfeed-20210212.1601/elfeed-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/elfeed-20210131.143/elfeed-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/elfeed-20210212.1601/elfeed-autoloads.el") (car load-path))))
 
 
 
@@ -2295,7 +2295,7 @@ Also see the related `auto-compile-on-save-mode'.
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/i-ching-20210208.1251" "/home/das/.emacs.d/elpa/modus-themes-20210210.1613" "/home/das/.emacs.d/elpa/dash-20210210.1427" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210202.1426" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
+	 '("/home/das/.emacs.d/elpa/i-ching-20210208.1251" "/home/das/.emacs.d/elpa/modus-themes-20210214.458" "/home/das/.emacs.d/elpa/dash-20210210.1427" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210214.2243" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
 	 Info-directory-list)))
 
 ;; Local Variables:
