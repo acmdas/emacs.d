@@ -1446,10 +1446,10 @@ buffer and returned as a string in Org format." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/org-static-blog-20210211.933/org-static-blog-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/org-static-blog-20210222.1035/org-static-blog-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-static-blog-20210211.933/org-static-blog-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-static-blog-20210222.1035/org-static-blog-autoloads.el") (car load-path))))
 
 
 
@@ -1957,10 +1957,10 @@ by virtue of calling either of `modus-themes-load-operandi' and
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/markdown-mode-20210216.852/markdown-mode-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/markdown-mode-20210220.1301/markdown-mode-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/markdown-mode-20210216.852/markdown-mode-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/markdown-mode-20210220.1301/markdown-mode-autoloads.el") (car load-path))))
 
 
 

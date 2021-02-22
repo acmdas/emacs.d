@@ -6,8 +6,8 @@
 ;; luhuaei, zngguvnf, Qiantan Hong, Jonas Bernoulli, Théo Jacquin,
 ;; K. Scarlet, zsxh
 ;; URL: https://github.com/bastibe/org-static-blog
-;; Package-Version: 20210211.933
-;; Package-Commit: a66d1e43882978a9da82c033a809765061c71052
+;; Package-Version: 20210222.1035
+;; Package-Commit: 9b9f7a994be54a10f5ac2a58221d52555574f78d
 ;; Version: 1.4.0
 ;; Package-Requires: ((emacs "24.3"))
 
@@ -147,6 +147,11 @@ If nil (the default), all existing posts are included."
 
 (defcustom org-static-blog-page-postamble ""
   "HTML to put after the content of each page."
+  :type '(string)
+  :safe t)
+
+(defcustom org-static-blog-index-front-matter ""
+  "HTML to put at the beginning of the index page."
   :type '(string)
   :safe t)
 
@@ -594,7 +599,8 @@ posts as full text posts."
                                                                          (org-static-blog-get-date y)))))
     (org-static-blog-assemble-multipost-page
      (concat-to-dir org-static-blog-publish-directory org-static-blog-index-file)
-     (last post-filenames org-static-blog-index-length))))
+     (last post-filenames org-static-blog-index-length)
+     org-static-blog-index-front-matter)))
 
 (defun org-static-blog-assemble-multipost-page (pub-filename post-filenames &optional front-matter)
   "Assemble a page that contains multiple posts one after another.
