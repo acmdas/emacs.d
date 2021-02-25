@@ -1,7 +1,7 @@
-(define-package "i-ching" "20210208.1251" "The Book of Changes"
+(define-package "i-ching" "20210222.1519" "The Book of Changes"
   '((emacs "25.1")
     (request "0.3"))
-  :commit "706052ba196797fd32e6d6d05e059b1f5dd4f2c9" :authors
+  :commit "51a3180ed07ae9f8b7ff3f2b822d998495864a07" :authors
   '(("nik gaffney" . "nik@fo.am"))
   :maintainer
   '("nik gaffney" . "nik@fo.am")

@@ -1874,10 +1874,10 @@ Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210220.826/modus-themes-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210224.1027/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210220.826/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210224.1027/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -2000,10 +2000,10 @@ and toggle it if ARG is `toggle'; disable the mode otherwise.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/i-ching-20210208.1251/i-ching-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/i-ching-20210222.1519/i-ching-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/i-ching-20210208.1251/i-ching-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/i-ching-20210222.1519/i-ching-autoloads.el") (car load-path))))
 
 
 
@@ -2039,6 +2039,7 @@ Return a hexagram either by casting or it's NUMBER in the King Wen sequence.
 
 (autoload 'i-ching-interpretation "i-ching" "\
 Consult the I Ching to show an interpretation of a single HEXAGRAM.
+The hexagram can be entered as a string, or by number.
 
 \(fn HEXAGRAM)" t nil)
 
@@ -2295,7 +2296,7 @@ Also see the related `auto-compile-on-save-mode'.
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/i-ching-20210208.1251" "/home/das/.emacs.d/elpa/modus-themes-20210220.826" "/home/das/.emacs.d/elpa/dash-20210210.1449" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210214.2243" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
+	 '("/home/das/.emacs.d/elpa/i-ching-20210222.1519" "/home/das/.emacs.d/elpa/modus-themes-20210224.1027" "/home/das/.emacs.d/elpa/dash-20210210.1449" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210214.2243" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
 	 Info-directory-list)))
 
 ;; Local Variables:

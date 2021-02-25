@@ -41,6 +41,7 @@ Return a hexagram either by casting or it's NUMBER in the King Wen sequence.
 
 (autoload 'i-ching-interpretation "i-ching" "\
 Consult the I Ching to show an interpretation of a single HEXAGRAM.
+The hexagram can be entered as a string, or by number.
 
 \(fn HEXAGRAM)" t nil)
 

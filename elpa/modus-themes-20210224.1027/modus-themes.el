@@ -314,6 +314,7 @@
 ;;     ruler-mode
 ;;     sallet
 ;;     selectrum
+;;     selectrum-prescient
 ;;     semantic
 ;;     sesman
 ;;     shell-script-mode
@@ -1641,7 +1642,7 @@ A description of all possible values:
 + `no-color-no-bold' is like `no-color' but without the bold
   weight."
   :group 'modus-themes
-  :package-version '(modus-themes . "1.1.0")
+  :package-version '(modus-themes . "1.2.0")
   :version "28.1"
   :type
   '(alist
@@ -1663,8 +1664,8 @@ A description of all possible values:
             (const :tag "Like `section' without bold weight" section-no-bold)
             (const :tag "Like `section' with more colorful foreground" rainbow-section)
             (const :tag "Like `rainbow-section' without bold weight" rainbow-section-no-bold)
-            (const :tag "Do not use any color; just bold weight" no-color)
-            (const :tag "Like `no-bold' but without the bold weight" no-color-no-bold)))
+            (const :tag "Do not use any distinct foreground color; just bold weight" no-color)
+            (const :tag "Like `no-bold' but without the distinct foreground color" no-color-no-bold)))
   :link '(info-link "(modus-themes) Heading styles"))
 
 (defcustom modus-themes-scale-headings nil
@@ -3235,7 +3236,7 @@ by virtue of calling either of `modus-themes-load-operandi' and
 ;;;;; aw (ace-window)
     `(aw-background-face ((,class :background ,bg-dim :foreground ,fg-dim)))
     `(aw-key-face ((,class :inherit bold :foreground ,blue-intense)))
-    `(aw-leading-char-face ((,class :inherit bold :height 1.5 :background ,bg-main :foreground ,red-intense)))
+    `(aw-leading-char-face ((,class :inherit bold :height 1.5 :slant normal :background ,bg-main :foreground ,red-intense)))
     `(aw-minibuffer-leading-char-face ((,class :foreground ,magenta-active)))
     `(aw-mode-line-face ((,class :inherit bold)))
 ;;;;; awesome-tray
@@ -4598,8 +4599,8 @@ by virtue of calling either of `modus-themes-load-operandi' and
     `(indium-repl-prompt-face ((,class :foreground ,cyan-alt-other)))
     `(indium-repl-stdout-face ((,class :foreground ,fg-main)))
 ;;;;; info
-    `(Info-quoted ((,class ,@(modus-themes--mixed-fonts)
-                           :foreground ,magenta))) ; the capitalization is canonical
+    `(Info-quoted ((,class ,@(modus-themes--mixed-fonts) ; the capitalization is canonical
+                           :background ,bg-alt :foreground ,fg-special-calm)))
     `(info-header-node ((,class :inherit bold :foreground ,fg-alt)))
     `(info-header-xref ((,class :foreground ,blue-active)))
     `(info-index-match ((,class :inherit match)))
@@ -4613,15 +4614,15 @@ by virtue of calling either of `modus-themes-load-operandi' and
 ;;;;; info-colors
     `(info-colors-lisp-code-block ((,class :inherit fixed-pitch)))
     `(info-colors-ref-item-command ((,class :foreground ,magenta)))
-    `(info-colors-ref-item-constant ((,class :foreground ,blue-alt-other)))
-    `(info-colors-ref-item-function ((,class :foreground ,magenta)))
-    `(info-colors-ref-item-macro ((,class :inherit modus-theme-bold :foreground ,magenta-alt-other)))
-    `(info-colors-ref-item-other ((,class :foreground ,cyan)))
-    `(info-colors-ref-item-special-form ((,class :inherit modus-theme-bold :foreground ,magenta-alt-other)))
-    `(info-colors-ref-item-syntax-class ((,class :foreground ,magenta)))
-    `(info-colors-ref-item-type ((,class :foreground ,magenta-alt)))
-    `(info-colors-ref-item-user-option ((,class :foreground ,cyan)))
-    `(info-colors-ref-item-variable ((,class :foreground ,cyan)))
+    `(info-colors-ref-item-constant ((,class :inherit font-lock-constant-face)))
+    `(info-colors-ref-item-function ((,class :inherit font-lock-function-name-face)))
+    `(info-colors-ref-item-macro ((,class :inherit font-lock-keyword-face)))
+    `(info-colors-ref-item-other ((,class :inherit font-lock-doc-face)))
+    `(info-colors-ref-item-special-form ((,class :inherit font-lock-keyword-face)))
+    `(info-colors-ref-item-syntax-class ((,class :inherit font-lock-builtin-face)))
+    `(info-colors-ref-item-type ((,class :inherit font-lock-type-face)))
+    `(info-colors-ref-item-user-option ((,class :inherit font-lock-variable-name-face)))
+    `(info-colors-ref-item-variable ((,class :inherit font-lock-variable-name-face)))
 ;;;;; interaction-log
     `(ilog-buffer-face ((,class :foreground ,magenta-alt-other)))
     `(ilog-change-face ((,class :foreground ,magenta-alt)))
@@ -5004,7 +5005,8 @@ by virtue of calling either of `modus-themes-load-operandi' and
     `(markdown-language-info-face ((,class ,@(modus-themes--mixed-fonts)
                                            :foreground ,fg-special-cold)))
     `(markdown-language-keyword-face ((,class ,@(modus-themes--mixed-fonts)
-                                              :foreground ,green-alt-other)))
+                                              :background ,bg-alt
+                                              :foreground ,fg-alt)))
     `(markdown-line-break-face ((,class :inherit modus-theme-refine-cyan :underline t)))
     `(markdown-link-face ((,class :inherit button)))
     `(markdown-link-title-face ((,class :inherit modus-theme-slant :foreground ,fg-special-cold)))
@@ -5698,19 +5700,36 @@ by virtue of calling either of `modus-themes-load-operandi' and
                                          'modus-theme-nuanced-blue
                                          blue-alt-other))))
 ;;;;; selectrum
+;; NOTE 2021-02-22: The `selectrum-primary-highlight' and
+;; `selectrum-secondary-highlight' are deprecated upstream in favour of
+;; their selectrum-prescient counterparts.  We shall remove those faces
+;; from the themes once we are certain that they are no longer relevant.
     `(selectrum-current-candidate
       ((,class :inherit bold :foreground ,fg-main
                :background ,@(pcase modus-themes-completions
                                ('opinionated (list bg-active))
                                (_ (list bg-inactive))))))
-    `(selectrum-primary-highlight ((,class :inherit bold
-                                           ,@(modus-themes--standard-completions
-                                              magenta-alt magenta-nuanced-bg
-                                              magenta-refine-bg magenta-refine-fg))))
-    `(selectrum-secondary-highlight ((,class :inherit bold
-                                             ,@(modus-themes--standard-completions
-                                                cyan-alt-other cyan-nuanced-bg
-                                                cyan-refine-bg cyan-refine-fg))))
+    `(selectrum-primary-highlight
+      ((,class :inherit bold
+               ,@(modus-themes--standard-completions
+                  magenta-alt magenta-nuanced-bg
+                  magenta-refine-bg magenta-refine-fg))))
+    `(selectrum-secondary-highlight
+      ((,class :inherit bold
+               ,@(modus-themes--standard-completions
+                  cyan-alt-other cyan-nuanced-bg
+                  cyan-refine-bg cyan-refine-fg))))
+;;;;; selectrum-prescient
+    `(selectrum-prescient-primary-highlight
+      ((,class :inherit bold
+               ,@(modus-themes--standard-completions
+                  magenta-alt magenta-nuanced-bg
+                  magenta-refine-bg magenta-refine-fg))))
+    `(selectrum-prescient-secondary-highlight
+      ((,class :inherit bold
+               ,@(modus-themes--standard-completions
+                  cyan-alt-other cyan-nuanced-bg
+                  cyan-refine-bg cyan-refine-fg))))
 ;;;;; semantic
     `(semantic-complete-inline-face ((,class :foreground ,fg-special-warm :underline t)))
     `(semantic-decoration-on-fileless-includes ((,class :inherit modus-theme-refine-green)))
