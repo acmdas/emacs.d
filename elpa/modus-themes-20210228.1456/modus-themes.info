@@ -38,7 +38,7 @@ does not yet form part of the latest tagged commit, is explicitly marked
 as such.
 
    Current development target is 1.2.0-dev.  This manual was rebuilt on
-2021-02-24 09:09 +0200.
+2021-02-28 16:52 +0200.
 
 * Menu:
 
@@ -983,6 +983,7 @@ Symbol: ‘modus-themes-diffs’
   2. ‘desaturated’
   3. ‘fg-only’
   4. ‘bg-only’
+  5. ‘deuteranopia’ (coming in version ‘1.2.0’)
 
    By default the themes apply rich coloration to the output of diffs,
 such as those of ‘diff-mode’, ‘ediff’, ‘smerge-mode’, and Magit.  These
@@ -1008,6 +1009,11 @@ is, nonetheless, more subtle than its default equivalent.
 override any syntax highlighting that may be present.  This makes it
 suitable for use with a non-nil value for ‘diff-font-lock-syntax’ (which
 is the default for ‘diff-mode’ buffers in Emacs 27 or higher).
+
+   Option ‘deuteranopia’ optimizes for red-green color deficiency.  It
+replaces all instances of green with blue variants.  This is to ensure
+that indicators for “removed” and “added” states are not mistaken for
+each other.
 
    Concerning Magit, an extra set of tweaks are introduced for the
 effect of highlighting the current diff hunk, so as to remain aligned
@@ -1464,6 +1470,9 @@ that tweaks two faces and then gets added to the hook:
 
      (add-hook 'modus-themes-after-load-theme-hook #'my-modus-themes-custom-faces)
 
+   *note A theme-agnostic hook for theme loading: A theme-agnostic hook
+for theme loading (DIY).
+
    Using this principle, it is possible to override the styles of faces
 without having to find color values for each case.
 
@@ -1591,6 +1600,9 @@ function and then assign that function to the hook.  Thus:
                                               :foreground ,red-alt-other))))))
 
      (add-hook 'modus-themes-after-load-theme-hook #'my-modus-themes-custom-faces)
+
+   *note A theme-agnostic hook for theme loading: A theme-agnostic hook
+for theme loading (DIY).
 
    To discover the faces defined by all loaded libraries, you may invoke
 ‘M-x list-faces-display’.  Be warned that when you ‘:inherit’ a face you
@@ -1988,11 +2000,13 @@ functions.
    A theme-agnostic setup can be configured thus:
 
      (defvar after-enable-theme-hook nil
-       "Normal hook run after enabling a theme.")
+        "Normal hook run after enabling a theme.")
 
-     (define-advice enable-theme (:after (&rest _args) run-after-enable-theme-hook)
-       "Run `after-enable-theme-hook'."
-       (run-hooks 'after-enable-theme-hook))
+     (defun run-after-enable-theme-hook (&rest _args)
+        "Run `after-enable-theme-hook'."
+        (run-hooks 'after-enable-theme-hook))
+
+     (advice-add 'enable-theme :after #'run-after-enable-theme-hook)
 
    This creates the ‘after-enable-theme-hook’ and makes it run after
 each call to ‘enable-theme’, which means that it will work for all
@@ -2212,6 +2226,7 @@ have lots of extensions, so the “full support” may not be 100% true…
    • messages
    • minibuffer-line
    • minimap
+   • mmm-mode (Part of 1.2.0-dev)
    • modeline
    • mood-line
    • moody
@@ -2276,6 +2291,7 @@ have lots of extensions, so the “full support” may not be 100% true…
    • semantic
    • sesman
    • shell-script-mode
+   • shortdoc (Part of 1.2.0-dev)
    • show-paren-mode
    • shr
    • side-notes
@@ -3491,51 +3507,51 @@ Node: Line numbers33376
 Node: Matching parentheses34490
 Node: Active region35380
 Node: Diffs36316
-Node: Org mode blocks38602
-Node: Org agenda habits39960
-Node: Heading styles41795
-Node: Scaled headings45794
-Node: Scaled heading sizes46397
-Node: UI typeface49531
-Node: Headings' typeface50377
-Node: Advanced customization (do-it-yourself)51001
-Node: Per-theme customization settings (DIY)52159
-Node: Case-by-case face specs using the themes' palette (DIY)53505
-Node: Face specs at scale using the themes' palette (DIY)57871
-Node: Override colors (DIY)64696
-Node: Font configurations for Org and others (DIY)69318
-Ref: Font configurations for Org and others (DIY)-Footnote-171641
-Node: Custom Org user faces (DIY)71828
-Node: Measure color contrast (DIY)75182
-Node: Load theme depending on time of day77949
-Node: A theme-agnostic hook for theme loading (DIY)78986
-Node: Face coverage81338
-Node: Supported packages81808
-Node: Indirectly covered packages88420
-Node: Notes for individual packages88903
-Node: Note for display-fill-column-indicator-mode89489
-Node: Note for prism91067
-Node: Note on company-mode overlay pop-up94032
-Ref: Note on company-mode overlay pop-up-Footnote-194719
-Ref: Note on company-mode overlay pop-up-Footnote-294786
-Node: Note for ERC escaped color sequences94841
-Ref: Note for ERC escaped color sequences-Footnote-196272
-Node: Note for powerline or spaceline96382
-Node: Note on SHR colors96798
-Node: Note for Helm grep97211
-Node: Note on vc-annotate-background-mode98671
-Node: Note on pdf-tools link hints99556
-Node: Contributing101987
-Node: Sources of the themes102387
-Node: Issues you can help with103125
-Node: Patches require copyright assignment to the FSF104325
-Node: Acknowledgements106620
-Node: Meta108738
-Node: GNU Free Documentation License110578
-Node: Indices135588
-Node: Function index135767
-Node: Variable index137004
-Node: Concept index138926
+Node: Org mode blocks38895
+Node: Org agenda habits40253
+Node: Heading styles42088
+Node: Scaled headings46087
+Node: Scaled heading sizes46690
+Node: UI typeface49824
+Node: Headings' typeface50670
+Node: Advanced customization (do-it-yourself)51294
+Node: Per-theme customization settings (DIY)52452
+Node: Case-by-case face specs using the themes' palette (DIY)53798
+Node: Face specs at scale using the themes' palette (DIY)58262
+Node: Override colors (DIY)65185
+Node: Font configurations for Org and others (DIY)69807
+Ref: Font configurations for Org and others (DIY)-Footnote-172130
+Node: Custom Org user faces (DIY)72317
+Node: Measure color contrast (DIY)75671
+Node: Load theme depending on time of day78438
+Node: A theme-agnostic hook for theme loading (DIY)79475
+Node: Face coverage81870
+Node: Supported packages82340
+Node: Indirectly covered packages89024
+Node: Notes for individual packages89507
+Node: Note for display-fill-column-indicator-mode90093
+Node: Note for prism91671
+Node: Note on company-mode overlay pop-up94636
+Ref: Note on company-mode overlay pop-up-Footnote-195323
+Ref: Note on company-mode overlay pop-up-Footnote-295390
+Node: Note for ERC escaped color sequences95445
+Ref: Note for ERC escaped color sequences-Footnote-196876
+Node: Note for powerline or spaceline96986
+Node: Note on SHR colors97402
+Node: Note for Helm grep97815
+Node: Note on vc-annotate-background-mode99275
+Node: Note on pdf-tools link hints100160
+Node: Contributing102591
+Node: Sources of the themes102991
+Node: Issues you can help with103729
+Node: Patches require copyright assignment to the FSF104929
+Node: Acknowledgements107224
+Node: Meta109342
+Node: GNU Free Documentation License111182
+Node: Indices136192
+Node: Function index136371
+Node: Variable index137608
+Node: Concept index139530
 
 End Tag Table
 

@@ -1639,10 +1639,10 @@ Search for TODOs within all future entries." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210210.1449/dash-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210228.1304/dash-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210210.1449/dash-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210228.1304/dash-autoloads.el") (car load-path))))
 
 
 
@@ -1744,10 +1744,10 @@ Major mode for reading EPUB documents
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/mu4e-views-20201229.216/mu4e-views-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/mu4e-views-20210228.1556/mu4e-views-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/mu4e-views-20201229.216/mu4e-views-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/mu4e-views-20210228.1556/mu4e-views-autoloads.el") (car load-path))))
 
 
 
@@ -1874,10 +1874,10 @@ Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210224.1027/modus-themes-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210228.1456/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210224.1027/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210228.1456/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -2059,10 +2059,10 @@ Consult the I Ching using a particular METHOD.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/elfeed-20210212.1601/elfeed-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/elfeed-20210226.258/elfeed-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/elfeed-20210212.1601/elfeed-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/elfeed-20210226.258/elfeed-autoloads.el") (car load-path))))
 
 
 
@@ -2296,7 +2296,7 @@ Also see the related `auto-compile-on-save-mode'.
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/i-ching-20210222.1519" "/home/das/.emacs.d/elpa/modus-themes-20210224.1027" "/home/das/.emacs.d/elpa/dash-20210210.1449" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210214.2243" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
+	 '("/home/das/.emacs.d/elpa/i-ching-20210222.1519" "/home/das/.emacs.d/elpa/modus-themes-20210228.1456" "/home/das/.emacs.d/elpa/dash-20210228.1304" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210214.2243" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
 	 Info-directory-list)))
 
 ;; Local Variables:

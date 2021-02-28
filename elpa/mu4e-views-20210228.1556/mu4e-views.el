@@ -3,8 +3,8 @@
 ;; Author: Boris Glavic <lordpretzel@gmail.com>
 ;; Maintainer: Boris Glavic <lordpretzel@gmail.com>
 ;; Version: 0.3
-;; Package-Version: 20201229.216
-;; Package-Commit: 55e5467a25d424b2c10b5392e68b370164efa230
+;; Package-Version: 20210228.1556
+;; Package-Commit: 1a0ceeb874e2a56b3ebe06c8375221031bb90a5c
 ;; Package-Requires: ((emacs "26.1") (xwidgets-reuse "0.2") (ht "2.2"))
 ;; Homepage: https://github.com/lordpretzel/mu4e-views
 ;; Keywords: mail
@@ -632,15 +632,12 @@ Return the file's name.  Text messages are converted into html."
 				  (if (plist-get attachment :temp)
 					  (replace-match (format "src=\"%s\""
 									         (plist-get attachment :temp)))
-					(replace-match (format "src=\"%s%s\"" temporary-file-directory
-								           (plist-get attachment :name)))
-					(let ((tmp-attachment-name
-						   (format "%s%s" temporary-file-directory
-							       (plist-get attachment :name))))
+					(let ((tmp-attachment-name (save-match-data
+								     (mu4e-make-temp-file (file-name-extension (plist-get attachment :name))))))
+					  (replace-match (format "src=\"%s\"" tmp-attachment-name))
 					  (mu4e~proc-extract 'save (mu4e-message-field msg :docid)
 								         (plist-get attachment :index)
-								         mu4e-decryption-policy tmp-attachment-name)
-					  (mu4e-remove-file-later tmp-attachment-name)))))
+								         mu4e-decryption-policy tmp-attachment-name)))))
 			  attachments)
 		(save-buffer)
 		;; restore normal behaviour

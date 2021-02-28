@@ -1,6 +1,6 @@
-(define-package "elfeed" "20210212.1601" "an Emacs Atom/RSS feed reader"
+(define-package "elfeed" "20210226.258" "an Emacs Atom/RSS feed reader"
   '((emacs "24.3"))
-  :commit "0b44362cb93ce49c36a94289d5fa5da8279c5f52" :authors
+  :commit "0ccd59aaace34546017a1a0d7c393749747d5bc6" :authors
   '(("Christopher Wellons" . "wellons@nullprogram.com"))
   :maintainer
   '("Christopher Wellons" . "wellons@nullprogram.com")

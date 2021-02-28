@@ -1,0 +1,204 @@
+* Monday, 02/01/2021
+:PROPERTIES:
+:CREATED:  20210201
+:END:
+** 07:41 0014-0706, 6:10 86. Made it to 3rd Step.
+** 08:49 Overcast, forecast is snow showers turning to light snow, temps like yesterday. Valerie’s still asleep so I’ll wait until she gets up to finish dressing and take the birds their feed.
+** 11:04 She got up around 9, we had rolled oats.
+** 13:38 Actually working on the January Vestry minutes. Imagine that. All the backups are run and copied around as planned.
+** 16:19 Left listening to the Vestry audio for later.
+** 18:03 We walked to Miriam’s and picked up eggs and coffee that she’d gotten for us at Wegman’s.
+** 21:26 We made a great dinner with a chicken breast, potatoes and zucchini, all roast for 40 minutes or so. With a salad. Mmmm
+** 22:43 About to climb into a tub. Mmmm again.
+* Tuesday, 02/02/2021
+:PROPERTIES:
+:CREATED:  20210202
+:END:
+** 06:43 Up at 0626, solar-powered light was flashing again, went out with a screw driver and removed it and brought them both inside. That got me awake right away! 2327-0626, 6:24 81.
+** 08:44 A good meeting - 2nd tradition. Noticed that writing with my left hand was hurting, so I gave my right a little more practice. Might be worth working on - as I thought a year ago.
+** 11:33 Spoke with Janet the PT before Valerie’s appt. I really am going to have to attend to my shoulder sooner rather than later. Did a little bit of shoveling just now. Determined to only do a bit at a time - maybe one set of panels on the driveway each hour. See whether that sets my shoulder screaming at me or not. Updated the appearances.md instead of the ,org version - will need to do another conversion now, I guess.
+** 12:55 Had lunch, did another round of shoveling, updated the appearances.md by mistake (instead of org), so worked out exporting the md to org, then got the export from org to html (not using pandoc at all) carrying typographic quotes and dashes. Will have to go through it and get the “poetry” with line breaks fixed. Otherwise it looks good at first glance. The command is “M-x org-html-export-to-html”.
+** 13:23 Another shot at the driveway. Probably one more. See that the way to have the poetry formatted correctly is to use #+BEGIN_VERSE and #+END_VERSE. Makes sense.
+** 14:28 All seems good with the org export except for the head section - massive css with code for every type of “code” highlighting, and no way (that I know of yet) to manage things like the page title. I’ll get that handled, but for now, it’s good enough. Oops, I see now that it’s putting “&rsquo;” on the left where there should be “&lsquo;” - still room for improvement, I guess.
+** 20:15 I went back to using the markdown copy, made a few fixes to endnote formatting, generated html and then epub. From there, I generated an AZW3, which Amazon rejected, and then a mobi and sent it to kindle. That way I can edit the most current version.
+** 22:55 I’ve read through to the last chapter and it looks pretty good. Watched some videos about the GOT actors. Time for bed.
+* Wednesday, 02/03/2021
+:PROPERTIES:
+:CREATED:  20210203
+:END:
+** 07:13 Slept from 2330-0631, 6:17 86.
+** 10:21 The meeting was good - Joe N. led on steps 10-12. Met Michael and found that he’s been having constant urges and called yesterday morning while in a liquor store parking lot. He says that he trusts God in everything but his alcoholism, which is his fault and God won’t help him with. He’s to call me before he leaves home - every time. He’s thinking about attending Zoom treatment at a local rehab. I was clear that I didn’t think it would be that helpful, but go ahead if he wants to. He also told me that he’s bipolar and that his nurse wife says that his meds are ineffective if he drinks. We’ll have a zoom call tomorrow at 3. The walk totaled almost 3 miles, over 5,000 steps.
+** 13:02 Noon meeting is over - Michael has signed-up for the Colmac rehab.
+** 20:54 Nanaimo bar is started, chicken breasts are roasted. We’re on the way to being ready with Chuch and Uncle Hank’s dinner Friday evening.
+* Thursday, 02/04/2021
+:PROPERTIES:
+:CREATED:  20210204
+:END:
+** 07:29 2328-0650 - 6:49 85.
+** 09:05 A good meeting - Dan led, Elizabeth celebrated 32 years. Back feeder was empty when I checked at 0830 - deer tracks so that’s probably the culprit. Means taking it in every night again. Oh, well! We both had good sleeps last night. Today we prepare for Meal Train tomorrow, I go to the library around noon and can get any groceries we need, then talk Zoom with Michael at 1500 and RAC tonight.
+** 11:42 I’ll be going to the Library and Giant soon. Just learned that Jill from the Dr’s office died at the end of January. Very sad.
+** 13:20 Just got back from the library and Giant. Both were crowded, but everything went smoothly. Time to check on RAC entries to see whether I need to visit any of them.
+** 21:40 RAC dragged on a bit but wasn’t dull.
+* Friday, 02/05/2021
+:PROPERTIES:
+:CREATED:  20210205
+:END:
+** 07:29 0042-0635, 5:28 79. Logged into the 3rd Step Group now.
+** 08:38 Yet another good meeting. Valerie got up earlier than usual today. It’s sunny, 37F with a forecast high of 51F! Mild weather until Sunday when snow is predicted - 1.5”. Today we make chili and etc. for Chuck and Uncle Hank.
+** 14:44 Nanaimo bar is finished but not cut, chili is started, all the pieces are in house and ready to go. It’ll be a busy few hours but we’re doing OK.
+** 15:26 Chili is mostly together, just need to put beans and corn into the mix and cook some. Might have a problem getting it all into the Dutch oven and maybe will need to move it to the Big Pot.
+** 23:06 It did need to go into the big pot. It turned out to be very spicy, but we did get everything to Chuck right at 1700. I attended the Longfellow meeting at Chuck’s suggestion because Allan was celebrating 12 years. It was a nice meeting. I didn’t mention that I got a call from Michael that he’d drunk again today.
+* Saturday, 02/06/2021
+:PROPERTIES:
+:CREATED:  20210206
+:END:
+** 07:13 Didn’t wear my fitbit to bed so I only imagine that I slept OK but was awake off and on. Down before midnight, up by 0630 or so. Expect to see Ray at the meeting this morning.
+** 10:06 Today we bake bread and get the kitchen cleaned up from yesterday’s work. Won’t be a big deal. Should be warm and a good day to walk. Snow expected tomorrow morning, then cold most of next week.
+** 12:22 Bread is rising in the oven. We took food to the Other Barn and I walked home from there while the sponge rose.
+** 22:32 Bread got too gassy, tastes great, great texture, one had a big bubble on top. Last prove was probably too warm. We roast salmon, potatoes and squash with salad for supper, then watched the second half of “The Dig”. Now I’m planning to play a game or two and hit the sack.
+* Sunday, 02/07/2021
+:PROPERTIES:
+:CREATED:  20210207
+:END:
+** 08:20 I had decided to stick to my old Bloomington habit of going to 3rd Step six days a week and reserving Sunday for sleeping late. Didn’t really work that well - I awoke at 0600 and 0620 and 0645 or something like that, and finally got up at 0720. Fitbit gives me good marks anyway - 2320-0719, 7:15 89.
+** 08:23 Heard rain last night, probably fairly late/early, then saw “wintery mix” when I got up - snowflakes coming down the way rain would - straight down and not floating at all. It’s been steady now for the past hour or so, building up and being really steady snow. Forecast is 1-3” and a high of 42F, then 19F overnight. Only another hour or so of real snow changing to rain, then light rain, then showers ending around 1400. We shall see.
+** 16:57 It’s been dry and sunny for 2-3 hours. Starting to cool off. We’ve been indoors all day but have managed to stay busy. I finished the last edits to Appearances and broke it into chapters, then got them all into epub with a TOC. Learned too late that the Calibre E-book Editor will break the large html file into chapters for me. So, I did extra work, whatever! It displays fine in the Macbook iBooks, but won’t load into the iPad. Tried deleting some files but that didn’t help.
+** 22:57 Might play a game, but otherwise I’m off to bed.
+* Monday, 02/08/2021
+:PROPERTIES:
+:CREATED:  20210208
+:END:
+** 07:16 Asleep at 2347, up at 0619, 5:55 83. Around 19-22F outside (depending who you believe).
+** 09:40 Updated 8 packages:(elfeed-20210122.125 i-ching-20210124.1104 markdown-mode-20210128.41 modus-themes-20210130.945 org-journal-20210130.1410 slime-20210125.646 use-package-20210106.2145 dash-20210130.1611). 
+** 17:13 Got Vestry Minutes off to Cathy just now. About time, too!
+** 21:33 We had a wonderful dinner with chicken thighs, rice, carrots and a salad. Valerie found a great recipe that includes a tasty gravy. Dan led the Common Solution meeting - spoke a long time but that’s OK.
+* Tuesday, 02/09/2021
+:PROPERTIES:
+:CREATED:  20210209
+:END:
+** 07:18 Apparently I slept pretty well: 2331-0711 6:48 82. Of course, I was out of bed around 0640, so we’ll take that with a grain of salt.
+** 11:21 Cathy returned my January draft minutes with her comments - I incorporated them and sent December finals, the attached budget and the January draft.
+** 14:59 Been to Giant and returned the Doctorow books to the library. Got e-copies of Snowden’s autobiography and Paul Johnson’s “Jesus” from the library when I got home. Am now doing the tin-hat waltz following the unixsheikh suggestions - reinstalled Firefox ER and am tweaking it for privacy/security purposes. Will take a lot of fine-tuning.
+** 21:41 Attended a very long OMCA meeting. We had dinner from Pizza Man to support the Middle School PTA.
+* Wednesday, 02/10/2021
+:PROPERTIES:
+:CREATED:  20210210
+:END:
+** 06:23 Didn’t sleep all that well last night...oh, well. 2338-0531, 5:13 72, and was awake pretty often. Might have been partly due to needing to poop.
+** 07:10 Installed the most recent Firefox to ~bin/firefox and it’s working using the privacy profile that I created yesterday. Will probably delete the firefox-esr version and keep the local version current. Should probably update what I did yesterday? Or did it have any idea that I was using an old version, and just update the customizations in a week or so? At any rate, I’ll need to get into revising some of the uBlock and CAD settings to allow persistent cookies and enough js for Reader, Instapaper and GMail to work properly.
+** 21:02 Updated (markdown-mode-20210204.2346 modus-themes-20210208.1204 bind-key-20200805.1727 dash-20210202.1153)
+** 21:04 Installed shrink-whitespace.
+** 21:19 used “C-x h M-x replace-regexp RET ^ C-q C-j C-q C-j + RET C-q C-j RET” to replace multiple blank lines with a single blank line throughout the buffer.
+* Thursday, 02/11/2021
+:PROPERTIES:
+:CREATED:  20210211
+:END:
+** 07:22 Slept well - 2322-0637, 6:42 91.
+** 10:08 Alex led a good meeting. Got the birds fed a little while ago - with the snow overnight they appreciate it a lot. It’s hovering right at 32.7-9F all morning. Valerie has an eye appt. at 1150. 
+** 11:28 I shoveled the driveway just before 1000, not at all hard, but there’s a bit of slip on it still. Not a problem for the car, but care needed for walking. No plowing yet. I converted the Poetic Diction text file to org and set the chapter headings as top-level.
+** 12:14 Valerie’s 2021 TIAA RMD is $742.94, mine is $290.01. I downloaded the TIAA 1099Rs and the rest of the 2020 Quarterly Reports.
+** 22:39 I managed to be volunteered to create a web page for newcomers. I keep getting into things like that!
+* Friday, 02/12/2021
+:PROPERTIES:
+:CREATED:  20210212
+:END:
+** 08:32 I guess I slept well - had a long hot bath before bed - and woke up right at 0730. Thought to miss the meeting but then thought that Mickael S. would be there, so I grabbed a cuppa and joined. He wasn’t there, but he’d called me while I was in the tub last night and my phone was in my pants pocket. I texted him at 0757, haven’t heard back.
+** 08:34 Slept 0013-0729, 6:35 84.
+** 10:51 Turns out that the call from Michael was a butt dial. I’ll want to work on the html page for the beginners’ resources part of today.
+** 12:37 I’m going to have to brush up on responsive coding, and wade through the mess on the howardcoaa.org home page code to get the css that I need to match the colors and fonts. That may take a while.
+** 21:16 Found some stuff on the W3c site that got me headed in the right direction. Spent most of the day focused on that job.
+* Saturday, 02/13/2021
+:PROPERTIES:
+:CREATED:  20210213
+:END:
+** 07:22 Slept well, woke at 0630 and again at 0700. 2308-0700, 7:13 89.
+** 11:10 Mary says that what she really wants is a pdf, so I’m working on that now.
+** 14:19 I managed to get the pdf converted (by Adobe) to docx, but the format was really odd, so I ended up starting over from scratch. The header and footer were text fields, so I was able to copy/paste those, and made the two-column “normal” Word documant inbetween. The problem came up when I’d save the finished docx to pdf - the links never worked the way they should. Finally I sent the Word file back to Adobe and had it/them convert it to pdf. Seems to have worked, and I sent it to Mary and Carl, with the hint that if that’s really all they wanted I’d be happy to leave it at that. Got a call from Michael - he had a heart issue and spent the majority of the night in the hospital. He’s feeling OK now but was certainly shaken.
+** 17:13 Had a short nap, no harm.
+** 21:12 Supper was roast salmon, baked potato and peas. Salmon was a touch underdone, the potato was very underdone and finished in the microwave. Finished with peaches and tea.
+* Sunday, 02/14/2021
+:PROPERTIES:
+:CREATED:  20210214
+:END:
+** 07:26 2344-0653, 6:23 85.
+** 07:27 On the meeting now.
+** 17:03 Spent the day building the mockup for the Howard County AA newcomers page. It’s online now and I’m about to send Carl and Mary the link.
+** 18:01 Valerie and I (mainly Valerie) have prepared a chicken pot pie - it’s in the oven now. Should Mary and Carl choose to not use the newcomer page, I’m totally fine anyway, since it got me off my butt and I’ve learned some of how to do a basic responsive web page. So that’s fine.
+* Monday, 02/15/2021
+:PROPERTIES:
+:CREATED:  20210215
+:END:
+** 07:07 Slept better than Valerie did: 22:53-0626, 6:46 91.
+** 09:16 Trying (again) tab-bar-mode
+** 09:23 Updated elfeed-20210131.143 modus-themes-20210210.1613 org-static-blog-20210120.1931 slime-20210202.1426 request-20201026.2324
+** 10:13 Got a call from Michael - he attended the morning meeting. Still wondering whether he wants to stop drinking just because he still wants to. I tried to explain the difference, but he was due at the spin-dry Zoom. He may need more consequences, but I hope not.
+** 13:43 Valerie is up again - she’s not feeling well, she wondered whether it was covid. Probably not, of if so it’s too early to tell. She still has sense of taste, no fever, just achy and a headache. A February cold is an adequate diagnosis. She took Vitamin C and Zinc and is taking it easy. Carl says he’s ok with the sample page - waiting to hear from Mary now. I’ll “meet” with Sam about the OMU 501(c)(3) application on Thursday at 1000.
+** 22:42 Got an email from Scott’s Cheap Tickets that there were flights to Amsterdam for $378. Valerie and I talked briefly and bought two for August 9-16, $775 total plus bag ($95 for 1 up to 23kg) and maybe a fee to choose seats. So that’s exciting! Now for the EU to decide that we can go. Or for the US to decide that we could come home! Sounds like heavy rain outside.
+* Tuesday, 02/16/2021
+:PROPERTIES:
+:CREATED:  20210216
+:END:
+** 07:12 With all the excitement last night, got to bed late: 0014-0629, 5:35 84
+** 11:48 Bread is rising for the second time - have Vestry tonight.
+** 15:11 Bread still has bubbles on top. Was sure to not overheat while proving, didn’t overprove, all I can think of is the yeast is too old. Time to get some fleischman’s and try the proven way again.
+* Wednesday, 02/17/2021
+:PROPERTIES:
+:CREATED:  20210217
+:END:
+** 07:16 Slept 2312-0641, 6:52 90.
+** 09:11 I painted the undersides of the hanging shelves - it’s got one coat everywhere now. Valerie just woke up.
+** 13:04 Modified the District 7 newcomer’s pdf to use a different image at the bottom. Mary has already found an error - won’t finish editing until sometime next week. So that’s on hold. Had a good noon meeting, working on RAC now.
+** 14:17 Reviewed all the applications, off for a walk with Valerie now.
+** 17:45 Salmon and broccoli for dinner. Valerie isn’t feeling well, so I’ll be going to the Ash Wednesday mass alone.
+** 20:52 Part way into the mass, I remembered that this is Bonnie’s anniversary, and texted Valerie to remind her. Called her after at 8:10 and got through to her. Stopped at Giant and got milk. Snow expected to start at 0400 and continue to some degree through Friday morning. About 5” overall. May get to 40F on Friday.
+* Thursday, 02/18/2021
+:PROPERTIES:
+:CREATED:  20210218
+:END:
+** 07:08 Slept 2312-0641, 5:59 81. It’s mainly sleet outside, prediction has evolved to 1-3” ice and snow. A good day to stay indoors.
+** 21:49 Had a good talk with Sam Hahn and sent him some links about the limits of advocacy permitted to 501(c)(3) organizations, and the mHealth IRS application. Roast chicken breast and had sandwiches for supper.
+* Friday, 02/19/2021
+:PROPERTIES:
+:CREATED:  20210219
+:END:
+** 07:15 2337-0609, 6:11 83. Woke at 0609 for the first time all night, didn’t seem worth going back to sleep, although I tried. Valerie was restless - too warm. Got up at 0630. It’s 28F, 38F forecast, maybe some snow showers early. Sunny but colder tomorrow, then steadily warming the next week, 40 on Monday up to 57 Wednesday.
+** 08:47 Another good meeting. Religion as a topic again - and I waded in with my “Outside issue, 1st Tradition” bit.
+** 10:02 Realized that I’d completely forgotten the RAC meeting after I napped yesterday! I have Susan at 1300 today - have to remember that!
+** 16:40 Susan wants to see some writing for Foreign. Best get on with it. I just now got Windows Remote Desktop working, so I can connect to kootenay from minos without having to use a second keyboard and mouse. That’s a good thing, I think. Will need to see what that means for copying files and text.
+* Saturday, 02/20/2021
+:PROPERTIES:
+:CREATED:  20210220
+:END:
+** 07:14 Didn’t seem to sleep quite as well last night - 0017-0650, 5:46 77. Oh, well.
+** 09:47 It was a very nice meeting, stayed on 15 minutes for the “meeting after the meeting.” Got the clean clothes out of the dryer, took birds their seed (it’s profoundly slick out there today!) and Valerie is fixing us oatmeal. Very sunny, chilly (27 at 0730).
+** 18:01 I was lying down reading when I got a call from Ray - we were both on the meeting this morning - he goes to Cedar Lakes all week. He seems to be doing well. I spent some time this morning and afternoon on foreign.org, tidying it up and wrote a little more about the opening. Not quite ready to begin a rough draft, but it did roll along for a while.
+* Sunday, 02/21/2021
+:PROPERTIES:
+:CREATED:  20210221
+:END:
+** 07:01 Had the feeling that I spent the night singing “Uptown Funk” to myself, and got up at 0615 only to find that I’d slept 2320-0611, 6:06 83. Not that bad after all. It’s clear, 20F when I got up.
+** 08:46 Yet another good meeting. Read from “The Vicious Circle” story of one of the originals. One that’s also in the 3rd Edition. Mentioned Steve K. as being a founder who stayed in the middle, not trying to be on top or at the front.
+** 16:39 Just went for a short walk with Valerie. It’s about 38F outside and no wind, so it’s nice. The ice is almost all gone from the drive. Had an idea for an addition to foreign.org, then I’m going to lie down for a bit.
+* Monday, 02/22/2021
+:PROPERTIES:
+:CREATED:  20210222
+:END:
+** 09:00 2328-0624, 6:22 85. Up at 0400 and on and off after 0600. Valerie got up at 0622 also. We closed all the vents in the BR yesterday so that she wouldn’t be so warm in the morning. It helped, but not enough. Plan is to take the down cover off whenever I get up to pee. I took the compost out before the meeting - a good meeting on p. 66 anger/resentments. “The sunlight of the spirit.” Valerie took the bird seed out. It began snowing around 0700. Prediction is 1-3” by noon, then rain. Warm tonight, warmer and sunny the rest of the week, then rain showers all weekend into next week. Very little frost.
+** 11:54 Updated markdown-mode-20210216.852, org-static-blog.20210211.933
+** 14:16 Got another coat of paint on the shelves.
+** 17:58 Used the Poetic Diction pdf to create another epub at an online site. Much better since it isn’t based on tables like the first one. I’ve been cleaning it up a bit - get clean tests, and am inserting page breaks before each chapter. About half-way through and packing it in for now.
+** 22:53 Somehow most of what I’d done had been lost. Back through Chapter 1, setting the notes somewhat apart to be managed later, either at the end of each chapter or as a separate section before the Index. That’s it for tonight, though. Common Solution honored Allan and Uncle Hank.
+* Tuesday, 02/23/2021
+:PROPERTIES:
+:CREATED:  20210223
+:END:
+** 07:16 2352-0623, 5:52 87. Woke around 0445 and removed Valerie’s outer cover so she won’t be so hot when the heat comes on. Her request. 30F, light cloud cover.
+** 12:03 Miriam got two vaccine dates for me at Baltimore-area Walgreens. She’s working on getting dates for Valerie, too. Good kid!
+* Wednesday, 02/24/2021
+:PROPERTIES:
+:CREATED:  20210224
+:END:
+** 06:51 2335-0626, 6:16 87. Miriam and I are texting back and forth to get Valerie an appt. on CVS
+** 09:41 Yet another good meeting - reminded of the concentrator mill and “Joe, Dave, I have an opportunity for you to excel.” Thought of Charlie Hayes, but he wasn’t the super, he was a driver when I was working for Gordon Tatum. Memory is tricky. Bird seed is out, bread sponge is rising. Looks like another raccoon (or the same raccoon) is back to digging around. Probably time to get the insecticide and crabgrass killer planned. Maybe have it done by Herrera. Also time to have the tree in the front looked at.
+** 11:20 Bread is rising in the oven - punch down before the noon meeting starts, will have to leave the meeting early.
+** 21:30 Bread went well, used Fleischman’s yeast - don’t know if that was what made less of a bubble at the top of the loaf. Had spaghetti. Went for a long walk around 1630.
