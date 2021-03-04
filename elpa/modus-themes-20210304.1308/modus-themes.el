@@ -4,7 +4,7 @@
 
 ;; Author: Protesilaos Stavrou <info@protesilaos.com>
 ;; URL: https://gitlab.com/protesilaos/modus-themes
-;; Version: 1.1.1
+;; Version: 1.2.0
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: faces, theme, accessibility
 
@@ -331,6 +331,7 @@
 ;;     spaceline
 ;;     speedbar
 ;;     spell-fu
+;;     spray
 ;;     stripes
 ;;     suggest
 ;;     switch-window
@@ -3302,7 +3303,7 @@ by virtue of calling either of `modus-themes-load-operandi' and
     `(bm-fringe-persistent-face ((,class :inherit modus-theme-fringe-blue)))
     `(bm-persistent-face ((,class :inherit modus-theme-intense-blue :extend t)))
 ;;;;; bongo
-    `(bongo-album-title ((,class :foreground ,green-active)))
+    `(bongo-album-title ((,class :foreground ,yellow-active)))
     `(bongo-artist ((,class :foreground ,magenta-active)))
     `(bongo-currently-playing-track ((,class :inherit bold)))
     `(bongo-elapsed-track-part ((,class :inherit modus-theme-subtle-magenta :underline t)))
@@ -3696,15 +3697,16 @@ by virtue of calling either of `modus-themes-load-operandi' and
 ;;;;; dired-narrow
     `(dired-narrow-blink ((,class :inherit (modus-theme-subtle-cyan bold))))
 ;;;;; dired-subtree
-    ;; remove background from dired-subtree, else it breaks
+    ;; remove backgrounds from dired-subtree faces, else they break
     ;; dired-{flagged,marked} and any other face that sets a background
-    ;; such as hl-line
-    `(dired-subtree-depth-1-face ((,class :background nil)))
-    `(dired-subtree-depth-2-face ((,class :background nil)))
-    `(dired-subtree-depth-3-face ((,class :background nil)))
-    `(dired-subtree-depth-4-face ((,class :background nil)))
-    `(dired-subtree-depth-5-face ((,class :background nil)))
-    `(dired-subtree-depth-6-face ((,class :background nil)))
+    ;; such as hl-line.  Also, denoting depth by varying shades of gray
+    ;; is not good for accessibility.
+    `(dired-subtree-depth-1-face (()))
+    `(dired-subtree-depth-2-face (()))
+    `(dired-subtree-depth-3-face (()))
+    `(dired-subtree-depth-4-face (()))
+    `(dired-subtree-depth-5-face (()))
+    `(dired-subtree-depth-6-face (()))
 ;;;;; diredc
     `(diredc-face-chmod-font-lock-dir ((,class :foreground ,blue-alt)))
     `(diredc-face-chmod-font-lock-exec ((,class :foreground ,magenta)))
@@ -5357,7 +5359,8 @@ by virtue of calling either of `modus-themes-load-operandi' and
     `(org-checkbox-statistics-done ((,class :inherit org-done)))
     `(org-checkbox-statistics-todo ((,class :inherit org-todo)))
     `(org-clock-overlay ((,class :inherit modus-theme-special-cold)))
-    `(org-code ((,class ,@(modus-themes--mixed-fonts) :foreground ,magenta)))
+    `(org-code ((,class ,@(modus-themes--mixed-fonts)
+                        :background ,red-nuanced-bg :foreground ,magenta)))
     `(org-column ((,class :background ,bg-alt)))
     `(org-column-title ((,class :inherit bold :underline t :background ,bg-alt)))
     `(org-date ((,class :inherit ,(if modus-themes-no-mixed-fonts
@@ -5428,7 +5431,8 @@ by virtue of calling either of `modus-themes-load-operandi' and
     `(org-level-8 ((,class :inherit modus-theme-heading-8)))
     `(org-link ((,class :inherit button)))
     `(org-list-dt ((,class :inherit bold)))
-    `(org-macro ((,class :background ,blue-nuanced-bg :foreground ,magenta-alt-other)))
+    `(org-macro ((,class ,@(modus-themes--mixed-fonts)
+                         :background ,blue-nuanced-bg :foreground ,magenta-alt-other)))
     `(org-meta-line ((,class ,@(modus-themes--mixed-fonts) :foreground ,fg-alt)))
     `(org-mode-line-clock ((,class :foreground ,fg-main)))
     `(org-mode-line-clock-overrun ((,class :inherit modus-theme-active-red)))
@@ -5904,6 +5908,9 @@ by virtue of calling either of `modus-themes-load-operandi' and
     `(speedbar-tag-face ((,class :foreground ,yellow-alt-other)))
 ;;;;; spell-fu
     `(spell-fu-incorrect-face ((,class :inherit modus-theme-lang-error)))
+;;;;; spray
+    `(spray-accent-face ((,class :foreground ,red-intense)))
+    `(spray-base-face ((,class :inherit default :foreground ,fg-special-cold)))
 ;;;;; stripes
     `(stripes ((,class :inherit modus-theme-hl-line)))
 ;;;;; success

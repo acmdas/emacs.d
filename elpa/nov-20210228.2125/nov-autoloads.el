@@ -14,6 +14,13 @@ Major mode for reading EPUB documents
 
 \(fn)" t nil)
 
+(autoload 'nov-bookmark-jump-handler "nov" "\
+The bookmark handler-function interface for bookmark BMK.
+
+See also `nov-bookmark-make-record'.
+
+\(fn BMK)" nil nil)
+
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "nov" '("nov-")))
 
 ;;;***

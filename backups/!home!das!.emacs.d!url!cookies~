@@ -6,7 +6,9 @@
   [url-cookie "__cfduid" "d95d4bd9e0d261a86518c334f72d5b7c01611771364" "Fri, 26-Feb-21 18:16:04 GMT" "/" ".stevenpressfield.com" nil]))
 )
 (setq url-cookie-secure-storage
- 'nil)
+ '((".programminghistorian.org"
+  [url-cookie "__cfduid" "d35497c315771946a5fa6da80cb04f8db1612211354" "Wed, 03-Mar-21 20:29:14 GMT" "/" ".programminghistorian.org" t]))
+)
 
 ;; Local Variables:
 ;; version-control: never

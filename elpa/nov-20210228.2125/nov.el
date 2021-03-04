@@ -4,8 +4,8 @@
 
 ;; Author: Vasilij Schneidermann <mail@vasilij.de>
 ;; URL: https://depp.brause.cc/nov.el
-;; Package-Version: 20201207.3
-;; Package-Commit: 0ece7ccbf79c074a3e4fbad1d1fa06647093f8e4
+;; Package-Version: 20210228.2125
+;; Package-Commit: b6138895ace3042ed78140b6f4859e544fbca27e
 ;; Version: 0.3.3
 ;; Package-Requires: ((dash "2.12.0") (esxml "0.3.5") (emacs "24.4"))
 ;; Keywords: hypermedia, multimedia, epub
@@ -832,6 +832,7 @@ Saving is only done if `nov-save-place-file' is set."
           (position . ,(point))
           (handler . nov-bookmark-jump-handler))))
 
+;;;###autoload
 (defun nov-bookmark-jump-handler (bmk)
   "The bookmark handler-function interface for bookmark BMK.
 
@@ -859,9 +860,9 @@ See also `nov-bookmark-make-record'."
     (when (not (integerp nov-documents-index))
       (setq nov-documents-index 0))
     (let ((org-store-props-function
-           (if (version< org-version "9.3")
-               'org-store-link-props
-             'org-link-store-props))
+           (if (fboundp 'org-link-store-props)
+               'org-link-store-props
+             'org-store-link-props))
           (link (format "nov:%s::%d:%d"
                         nov-file-name
                         nov-documents-index
@@ -873,14 +874,14 @@ See also `nov-bookmark-make-record'."
                :description description))))
 
 (cond
- ((version< org-version "9.0")
-  (org-add-link-type "nov" 'nov-org-link-follow)
-  (add-hook 'org-store-link-functions 'nov-org-link-store))
- (t
+ ((fboundp 'org-link-set-parameters)
   (org-link-set-parameters
    "nov"
    :follow 'nov-org-link-follow
-   :store 'nov-org-link-store)))
+   :store 'nov-org-link-store))
+ ((fboundp 'org-add-link-type)
+  (org-add-link-type "nov" 'nov-org-link-follow)
+  (add-hook 'org-store-link-functions 'nov-org-link-store)))
 
 
 ;;; Imenu interop
