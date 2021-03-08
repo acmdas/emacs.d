@@ -1446,10 +1446,10 @@ buffer and returned as a string in Org format." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/org-static-blog-20210222.1035/org-static-blog-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/org-static-blog-20210306.1316/org-static-blog-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-static-blog-20210222.1035/org-static-blog-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-static-blog-20210306.1316/org-static-blog-autoloads.el") (car load-path))))
 
 
 
@@ -1639,10 +1639,10 @@ Search for TODOs within all future entries." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210228.2221/dash-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210308.1034/dash-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210228.2221/dash-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210308.1034/dash-autoloads.el") (car load-path))))
 
 
 
@@ -1881,10 +1881,10 @@ Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210304.1308/modus-themes-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210308.1420/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210304.1308/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210308.1420/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -1939,7 +1939,7 @@ Also runs `modus-themes-after-load-theme-hook' at its last stage
 by virtue of calling either of `modus-themes-load-operandi' and
 `modus-themes-load-vivendi' functions." t nil)
 
-(when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
+(when load-file-name (let ((dir (file-name-directory load-file-name))) (unless (equal dir (expand-file-name "themes/" data-directory)) (add-to-list 'custom-theme-load-path dir))))
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "modus-themes" '("modus-themes-")))
 
@@ -2303,7 +2303,7 @@ Also see the related `auto-compile-on-save-mode'.
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/i-ching-20210222.1519" "/home/das/.emacs.d/elpa/modus-themes-20210304.1308" "/home/das/.emacs.d/elpa/dash-20210228.2221" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210214.2243" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
+	 '("/home/das/.emacs.d/elpa/i-ching-20210222.1519" "/home/das/.emacs.d/elpa/modus-themes-20210308.1420" "/home/das/.emacs.d/elpa/dash-20210308.1034" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210214.2243" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
 	 Info-directory-list)))
 
 ;; Local Variables:
