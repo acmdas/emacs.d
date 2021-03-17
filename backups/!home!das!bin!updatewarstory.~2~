@@ -1,0 +1,20 @@
+#!/bin/bash
+echo "adding new post to my github website:https://acmdas.github.io"
+
+cd ~/data/org/warstory/
+
+echo "* git add --all"
+
+git add --all
+
+echo "* commit"
+
+git commit -m "added new material"
+
+echo "push to github"
+
+git push origin main
+
+echo "* Last run at"
+
+date

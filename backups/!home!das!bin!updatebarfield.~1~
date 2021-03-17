@@ -1,0 +1,24 @@
+#!/bin/bash
+echo "adding new post to my github website:https://acmdas.github.io"
+
+cd ~/data/md/barfield/
+
+echo "* converting markdown file to html"
+
+pandoc -s --metadata pagetitle="Owen Barfield Quotes" barfield_quotes.md -o barfield_quotes.html
+
+echo "* git add --all"
+
+git add --all
+
+echo "* commit"
+
+git commit -m "added new post"
+
+echo "*push to github"
+
+git push -u origin master
+
+echo "* Last run at"
+
+date

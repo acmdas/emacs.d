@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "adding new post to my github website:https://acmdas.github.io"
+
+cd ~/data/Writing/Writing/foreign/
+
+echo "* git add --all"
+
+git add --all
+
+echo "* commit"
+
+git commit -m "added to notes"
+
+echo "* Last run at"
+
+date

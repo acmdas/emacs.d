@@ -1,0 +1,36 @@
+#!/bin/bash
+echo "Backing up ~/data/* to backup01"
+
+rsync -tvr --delete ~/data/ /media/das/backup01/data 
+
+echo "Backing up ~/media/* to backup01"
+
+rsync -tvr --delete --exclude 'backup' ~/media/ /media/das/backup01/media
+
+echo "Backing up ~/data/* to NTFS/data/"
+
+rsync -tvr --delete ~/data/ /media/das/NTFS/data/
+
+echo "Backing up ~/media/* to NTFS/media/"
+
+rsync -tvr --delete --exclude 'backup' ~/media/ /media/das/NTFS/media/
+
+# echo "Backing up ~/data/* to porsche/home/das/data/"
+
+# rsync -tvr --delete ~/data/ /media/das/porsche/data/
+
+# echo "Backing up ~/media/* to porsche/home/das/media/"
+
+# rsync -tvr --delete --exclude 'backup' ~/media/ /media/das/porsche/media/
+
+echo "Backing up ~/data/* to WDBOOK/data/"
+
+rsync -tvr --delete ~/data/ /media/das/WDBOOK/data/
+
+echo "Backing up ~/media/* to WDBOOK/media/"
+
+rsync -tvr --delete --exclude 'backup' ~/media/ /media/das/WDBOOK/media/
+
+echo "Last run at"
+
+date
