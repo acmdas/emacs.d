@@ -1868,23 +1868,10 @@ Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-vivendi-theme-0.12.0/modus-vivendi-theme-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210319.543/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-vivendi-theme-0.12.0/modus-vivendi-theme-autoloads.el") (car load-path))))
-
-
-
-(when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "modus-vivendi-theme" '("modus-vivendi")))
-
-
-)
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210317.957/modus-themes-autoloads.el"))
-
-(add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210317.957/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210319.543/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -1951,16 +1938,17 @@ by virtue of calling either of `modus-themes-load-operandi' and
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-operandi-theme-0.12.0/modus-operandi-theme-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-vivendi-theme-0.13.1/modus-vivendi-theme-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-operandi-theme-0.12.0/modus-operandi-theme-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-vivendi-theme-0.13.1/modus-vivendi-theme-autoloads.el") (car load-path))))
 
 
+)
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-operandi-theme-0.13.1/modus-operandi-theme-autoloads.el"))
 
-(when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "modus-operandi-theme" '("modus-operandi")))
+(add-to-list 'load-path (directory-file-name
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-operandi-theme-0.13.1/modus-operandi-theme-autoloads.el") (car load-path))))
 
 
 )
@@ -2296,14 +2284,14 @@ Also see the related `auto-compile-on-save-mode'.
 )
 (setq package-activated-list
       (append
-       '(xwidgets-reuse whole-line-or-region bind-key use-package macrostep slime shrink-whitespace request recently packed org ox-hugo org-static-blog org-protocol-jekyll org-journal dash esxml nov ht mu4e-views modus-vivendi-theme modus-themes modus-operandi-theme markdown-mode i-ching elfeed auto-compile)
+       '(xwidgets-reuse whole-line-or-region bind-key use-package macrostep slime shrink-whitespace request recently packed org ox-hugo org-static-blog org-protocol-jekyll org-journal dash esxml nov ht mu4e-views modus-themes modus-vivendi-theme modus-operandi-theme markdown-mode i-ching elfeed auto-compile)
        package-activated-list))
 (progn
   (require 'info)
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/i-ching-20210222.1519" "/home/das/.emacs.d/elpa/modus-themes-20210317.957" "/home/das/.emacs.d/elpa/dash-20210308.2109" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210214.2243" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
+	 '("/home/das/.emacs.d/elpa/i-ching-20210222.1519" "/home/das/.emacs.d/elpa/modus-themes-20210319.543" "/home/das/.emacs.d/elpa/dash-20210308.2109" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210214.2243" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
 	 Info-directory-list)))
 
 ;; Local Variables:
