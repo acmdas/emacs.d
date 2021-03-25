@@ -1446,10 +1446,10 @@ buffer and returned as a string in Org format." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/org-static-blog-20210306.1316/org-static-blog-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/org-static-blog-20210321.2008/org-static-blog-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-static-blog-20210306.1316/org-static-blog-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-static-blog-20210321.2008/org-static-blog-autoloads.el") (car load-path))))
 
 
 
@@ -1700,10 +1700,21 @@ This allows Dash symbols to be looked up with \\[info-lookup-symbol]." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/esxml-20201226.2146/esxml-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/kv-20140108.1534/kv-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/esxml-20201226.2146/esxml-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/kv-20140108.1534/kv-autoloads.el") (car load-path))))
+
+
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "kv" '("dotass" "keyword->symbol" "map-bind")))
+
+
+)
+(let ((load-file-name "/home/das/.emacs.d/elpa/esxml-20210323.1102/esxml-autoloads.el"))
+
+(add-to-list 'load-path (directory-file-name
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/esxml-20210323.1102/esxml-autoloads.el") (car load-path))))
 
 
 
@@ -1717,10 +1728,10 @@ This allows Dash symbols to be looked up with \\[info-lookup-symbol]." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/nov-20210228.2125/nov-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/nov-20210323.1105/nov-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/nov-20210228.2125/nov-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/nov-20210323.1105/nov-autoloads.el") (car load-path))))
 
 
 
@@ -1868,10 +1879,10 @@ Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210319.543/modus-themes-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210324.1152/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210319.543/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210324.1152/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -1938,17 +1949,17 @@ by virtue of calling either of `modus-themes-load-operandi' and
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-vivendi-theme-0.13.1/modus-vivendi-theme-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-vivendi-theme-0.13.2/modus-vivendi-theme-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-vivendi-theme-0.13.1/modus-vivendi-theme-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-vivendi-theme-0.13.2/modus-vivendi-theme-autoloads.el") (car load-path))))
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-operandi-theme-0.13.1/modus-operandi-theme-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-operandi-theme-0.13.2/modus-operandi-theme-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-operandi-theme-0.13.1/modus-operandi-theme-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-operandi-theme-0.13.2/modus-operandi-theme-autoloads.el") (car load-path))))
 
 
 )
@@ -2284,14 +2295,14 @@ Also see the related `auto-compile-on-save-mode'.
 )
 (setq package-activated-list
       (append
-       '(xwidgets-reuse whole-line-or-region bind-key use-package macrostep slime shrink-whitespace request recently packed org ox-hugo org-static-blog org-protocol-jekyll org-journal dash esxml nov ht mu4e-views modus-themes modus-vivendi-theme modus-operandi-theme markdown-mode i-ching elfeed auto-compile)
+       '(xwidgets-reuse whole-line-or-region bind-key use-package macrostep slime shrink-whitespace request recently packed org ox-hugo org-static-blog org-protocol-jekyll org-journal dash kv esxml nov ht mu4e-views modus-themes modus-vivendi-theme modus-operandi-theme markdown-mode i-ching elfeed auto-compile)
        package-activated-list))
 (progn
   (require 'info)
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/i-ching-20210222.1519" "/home/das/.emacs.d/elpa/modus-themes-20210319.543" "/home/das/.emacs.d/elpa/dash-20210308.2109" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210214.2243" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
+	 '("/home/das/.emacs.d/elpa/i-ching-20210222.1519" "/home/das/.emacs.d/elpa/modus-themes-20210324.1152" "/home/das/.emacs.d/elpa/dash-20210308.2109" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210214.2243" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
 	 Info-directory-list)))
 
 ;; Local Variables:

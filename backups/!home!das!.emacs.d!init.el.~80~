@@ -155,7 +155,7 @@
 	  ("https://judithcurry.com/feed/" climate science)
 	  ("http://www.ncobrief.com/index.php/feed/" ncobrief)
 	  ("http://www.thepassivevoice.com/feed/" passivevoice)
-	  ; ("https://pluralistic.net/feed/" doctorow)
+	  ("https://pluralistic.net/feed/" doctorow)
 	  ; ("https://readingjunkie.com/feed/" readingjunkie)
 	  ("http://www.thesavvystreet.com/feed/" savvystreet)
 	  ("http://www.smalldeadanimals.com/feed/" small dead animals)
@@ -163,7 +163,7 @@
 	  ("https://wattsupwiththat.com/feed/" climate science)
 	  ("https://stevenpressfield.com/feed/" pressfield writing)
 	  ("http://feeds.feedburner.com/typepad/sethsmainblog" godin)
-	  ; ("http://voxday.blogspot.com/feeds/posts/default" Vox)
+	  ("http://voxday.blogspot.com/feeds/posts/default" Vox)
 	  ))
   (setq-default elfeed-search-filter "@1-year-old"))
 
