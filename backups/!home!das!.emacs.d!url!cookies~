@@ -3,7 +3,7 @@
 
 (setq url-cookie-storage
  '((".stevenpressfield.com"
-  [url-cookie "__cfduid" "d95d4bd9e0d261a86518c334f72d5b7c01611771364" "Fri, 26-Feb-21 18:16:04 GMT" "/" ".stevenpressfield.com" nil]))
+  [url-cookie "__cfduid" "da65bd477dd8076d613f48413fa79a7a31614785292" "Fri, 02-Apr-21 15:28:12 GMT" "/" ".stevenpressfield.com" nil]))
 )
 (setq url-cookie-secure-storage
  '((".programminghistorian.org"

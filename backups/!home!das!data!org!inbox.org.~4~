@@ -1,0 +1,35 @@
+*+STARTUP: overview
+*+TITLE:Inbox
+
+* Tasks
+** IN-PROGRESS [#A] Get Refunds from Europe Trip
+   DEADLINE: <2020-08-15 Sat>
+ - [X] BA Refund or Voucher or Insurance
+ - [X] KLM Refund rec'd 20200721
+ - [X] Eurostar Voucher
+ - [ ] Travelodge Voucher?
+** WAITING [#B]  Get recent working in emacs-search only on first letters
+** IN-PROGRESS [#A]  Schedule Colinoscopy
+** IN-PROGRESS [#A]  Review Estate Plan
+   - [X] Contact Steven Katz
+   - [ ] Schedule Meeting
+   - [ ] Decide on Changes
+   - [ ] Implement Changes
+** TODO [#A]  Sell Time Share
+   - [ ] Contact Sales Office
+
+* Email
+** IN-PROGRESS [#B]  Get email working in emacs
+   SCHEDULED: <2020-07-24 Fri>
+ - [X] Configure offlineimap - pretty good now (9/4)
+ - [X] Configure mu
+ - [X] Configure mu4e
+ - [X] Use them all - do I like them?
+ - [ ] Configure smtp
+ - [ ] Configure contexts
+ - [ ] Better HTML viewing
+** TODO [#A]  Mu4e - display html better
+   SCHEDULED: <2020-10-22 Thu>
+** TODO [#A]  Mu4e send mail with contexts for acm, gmail, daslearns and consultingsmiths
+   SCHEDULED: <2020-10-22 Thu>
+

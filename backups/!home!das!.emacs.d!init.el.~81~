@@ -140,7 +140,6 @@
 	  ("https://protesilaos.com/codelog.xml" protesilaos emacs)
 	  ("https://www.rousette.org.uk/index.xml" bsag emacs)
 	  ("https://sachachua.com/blog/feed" sachachua emacs)
-	  ("https://tech.toryanderson.com/index.xml" tory emacs)
 	  ("http://unixsheikh.com/feed.rss" unixsheikh)
 	  ;; commentary
 	  ("https://jamesaltucher.com/feed/" altucher)
@@ -166,7 +165,7 @@
 	  ("http://feeds.feedburner.com/typepad/sethsmainblog" godin)
 	  ; ("http://voxday.blogspot.com/feeds/posts/default" Vox)
 	  ))
-  (setq-default elfeed-search-filter "@2-year-old"))
+  (setq-default elfeed-search-filter "@1-year-old"))
 
 ;; configuring org
 (use-package org

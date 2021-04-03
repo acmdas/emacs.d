@@ -1,0 +1,50 @@
+*+TITLE:Inbox
+
+* Notes
+
+* Tasks
+** IN-PROGRESS [#A] Get Refunds from Europe Trip
+   DEADLINE: <2020-08-15 Sat>
+ - [X] BA Refund or Voucher or Insurance
+ - [X] KLM Refund rec'd 20200721
+ - [X] Eurostar Voucher
+ - [ ] Travelodge Voucher?
+** IN-PROGRESS [#B]  Get email working in emacs
+   SCHEDULED: <2020-07-24 Fri>
+ - [X] Configure offlineimap - pretty good now (9/4)
+ - [X] Configure mu
+ - [X] Configure mu4e
+ - [X] Use them all - do I like them?
+ - [ ] Configure smtp
+ - [ ] Configure contexts
+ - [ ] Better HTML viewing
+** WAITING [#B]  Get recent working in emacs-search only on first letters
+** TODO [#A]  Contact AssetMark for new password
+   SCHEDULED: <2020-09-01 Tue>
+** IN-PROGRESS [#A]  Schedule Colinoscopy
+   SCHEDULED: <2020-08-24 Mon>
+** TODO [#A]  Get file box for WWII letters
+   SCHEDULED: <2020-09-01 Tue>
+** IN-PROGRESS [#A]  Configure Linksys Router
+   SCHEDULED: <2020-08-25 Tue>
+** TODO [#A]  Mu4e - display html better
+   SCHEDULED: <2020-10-22 Thu>
+** TODO [#A]  Mu4e send mail with contexts for acm, gmail, daslearns and consultingsmiths
+   SCHEDULED: <2020-10-22 Thu>
+** DONE [#A]  Covid Test
+   SCHEDULED: <2020-10-27 Tue>
+** IN-PROGRESS [#A]  Review Estate Plan
+   SCHEDULED: <2020-12-14 Fri>
+   [ ] Contact Steven Katz
+   [ ] Schedule Meeting
+   [ ] Decide on Changes
+   [ ] Implement Changes
+** TODO [#A]  Sell Time Share
+   SCHEDULED: <2021-01-04 Fri>
+   [ ] Contact Sales Office
+** TODO [#A]  Apply for Canada Pension
+   SCHEDULED: <2020-12-14 Fri>
+   [ ] Complete Forms
+   [ ] Mail Forms
+* 2020
+

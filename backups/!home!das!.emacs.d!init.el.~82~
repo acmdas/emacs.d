@@ -140,7 +140,6 @@
 	  ("https://protesilaos.com/codelog.xml" protesilaos emacs)
 	  ("https://www.rousette.org.uk/index.xml" bsag emacs)
 	  ("https://sachachua.com/blog/feed" sachachua emacs)
-	  ("https://tech.toryanderson.com/index.xml" tory emacs)
 	  ("http://unixsheikh.com/feed.rss" unixsheikh)
 	  ;; commentary
 	  ("https://jamesaltucher.com/feed/" altucher)
