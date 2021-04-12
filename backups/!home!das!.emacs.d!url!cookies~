@@ -2,13 +2,11 @@
 ;; Automatically generated file!!! DO NOT EDIT!!!
 
 (setq url-cookie-storage
- '((".stevenpressfield.com"
-  [url-cookie "__cfduid" "da65bd477dd8076d613f48413fa79a7a31614785292" "Fri, 02-Apr-21 15:28:12 GMT" "/" ".stevenpressfield.com" nil]))
+ '((".sachachua.com"
+  [url-cookie "__cfduid" "df1de47639a330e2eae6ce7b7c101b7f91617380337" "Sun, 02-May-21 16:18:57 GMT" "/" ".sachachua.com" nil]))
 )
 (setq url-cookie-secure-storage
- '((".programminghistorian.org"
-  [url-cookie "__cfduid" "d35497c315771946a5fa6da80cb04f8db1612211354" "Wed, 03-Mar-21 20:29:14 GMT" "/" ".programminghistorian.org" t]))
-)
+ 'nil)
 
 ;; Local Variables:
 ;; version-control: never

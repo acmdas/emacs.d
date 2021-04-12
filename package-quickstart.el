@@ -532,10 +532,10 @@ Shrink whitespace surrounding point." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/request-20210214.37/request-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/request-20210410.2218/request-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/request-20210214.37/request-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/request-20210410.2218/request-autoloads.el") (car load-path))))
 
 
 
@@ -1879,10 +1879,10 @@ Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210331.1458/modus-themes-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210412.616/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210331.1458/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210412.616/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -1963,10 +1963,10 @@ by virtue of calling either of `modus-themes-load-operandi' and
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/markdown-mode-20210220.1301/markdown-mode-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/markdown-mode-20210405.1349/markdown-mode-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/markdown-mode-20210220.1301/markdown-mode-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/markdown-mode-20210405.1349/markdown-mode-autoloads.el") (car load-path))))
 
 
 
@@ -2302,7 +2302,7 @@ Also see the related `auto-compile-on-save-mode'.
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/i-ching-20210222.1519" "/home/das/.emacs.d/elpa/modus-themes-20210331.1458" "/home/das/.emacs.d/elpa/dash-20210330.1544" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210214.2243" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
+	 '("/home/das/.emacs.d/elpa/i-ching-20210222.1519" "/home/das/.emacs.d/elpa/modus-themes-20210412.616" "/home/das/.emacs.d/elpa/dash-20210330.1544" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210214.2243" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
 	 Info-directory-list)))
 
 ;; Local Variables:
