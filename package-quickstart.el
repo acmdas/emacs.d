@@ -453,7 +453,7 @@ behaviors.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/slime-20210214.2243/slime-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/slime-20210417.1210/slime-autoloads.el"))
 
 
 
@@ -461,7 +461,7 @@ behaviors.
 
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/slime-20210214.2243/slime-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/slime-20210417.1210/slime-autoloads.el") (car load-path))))
 
 (autoload 'slime "slime"
   "Start a Lisp subprocess and connect to its Swank server." t)
@@ -1879,10 +1879,10 @@ Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210412.616/modus-themes-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210418.327/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210412.616/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210418.327/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -2302,7 +2302,7 @@ Also see the related `auto-compile-on-save-mode'.
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/i-ching-20210222.1519" "/home/das/.emacs.d/elpa/modus-themes-20210412.616" "/home/das/.emacs.d/elpa/dash-20210330.1544" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210214.2243" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
+	 '("/home/das/.emacs.d/elpa/i-ching-20210222.1519" "/home/das/.emacs.d/elpa/modus-themes-20210418.327" "/home/das/.emacs.d/elpa/dash-20210330.1544" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210417.1210" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
 	 Info-directory-list)))
 
 ;; Local Variables:
