@@ -16,11 +16,11 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/das/Downloads/"
  "/home/das/"
  "/"
  "/home/das/Desktop/notes/"
  "/home/das/data/org/das_fieldstones/"
+ "/home/das/Downloads/"
  "/home/das/.emacs.d/"
  "/home/das/data/blogs/"
  "/home/das/data/md/das_fieldstones/"
@@ -37,7 +37,6 @@
 
 ;; ----- ido-work-file-list -----
 (
- "toolshed.txt"
  "hello.lisp"
  "Debian.org"
  "morefieldstones2021.md"
@@ -47,13 +46,12 @@
  "20210127_elites.org"
  "morefieldstones2021.org"
  "postamble.html"
+ "manual.css"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/das/Downloads/" (24700 19719 671658 872000) "Forms/" "Jesse-Grade10.pdf" "4-20-2021 Agenda.docx" "PayPal Donations.pdf" "BOB.org" "word_jokes.txt" "CorticelliNeedlework.pdf" "Many_Shades_of_BOB.pdf" "Man-at-Arms-excerpt.pdf" "MeditationinaToolShed.pdf" "Katz/" "images/" "readmeenu-SP_211.pdf" "../" "./")
-
- ("/home/das/" (24698 60132 436466 284000) ".emacs.d/" ".gnupg/" ".gphoto/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" "quicklisp/" ".bashrc" ".offlineimaprc" ".presage/" "../" ".config/" ".nbrc" ".xfce4-session.verbose-log.last" ".mozilla/" "quicklisp.lisp" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" ".w3m/" "Dropbox/" ".dropbox/" ".recently-used" ".aspell.en.pws" ".pki/" ".nb/" ".offlineimap/" "backup/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".elfeed/" ".bash_profile" ".bash_history" ".authinfo.bak" ".wget-hsts" ".aspell.en.prepl" "Downloads/" ".Xauthority" "./" ".dbus/" ".gtk-bookmarks" ".xmodmap" "hello.lisp" ".sbclrc" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
+ ("/home/das/" (24703 34896 952527 3000) ".emacs.d/" ".gnupg/" ".gphoto/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" "quicklisp/" ".bashrc" ".offlineimaprc" ".presage/" "../" ".config/" ".nbrc" ".xfce4-session.verbose-log.last" ".mozilla/" "quicklisp.lisp" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" ".w3m/" "Dropbox/" ".dropbox/" ".recently-used" ".aspell.en.pws" ".pki/" ".nb/" ".offlineimap/" "backup/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".elfeed/" ".bash_profile" ".bash_history" ".authinfo.bak" ".wget-hsts" ".aspell.en.prepl" "Downloads/" ".Xauthority" "./" ".dbus/" ".gtk-bookmarks" ".xmodmap" "hello.lisp" ".sbclrc" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
 
  ("/home/das/data/notes/" (24647 41439 214682 896000) "Debian.txt~" "Ubuntu.txt" "emacsnotes.org" "../" "emacsnotes.txt" "mu4e.txt" "venmo.txt" "Debian.txt" "Zoom.txt" "Namecheap/" "./" "fb.txt" "Tex.txt" "html.cheat" "Debian.org" "2015-minos/" "network/" "orgnotes.org" "org.md" "SMTPError.txt" "time.txt")
 
@@ -64,6 +62,8 @@
  ("/home/das/data/blogs/" (24659 21029 288424 303000) "Blog.txt" "samples/" "consultingsmiths.dns.pdf" "daslearns.ca/" "../" "web/" "Blog.md" "consultingsmiths.com/" "./" "dasmith.xyz/" "ayftx/" "20210127_elites.org" "Blog.tiff" "google57aaffcb358509af.html" "Blog.pdf" "Gazette/" "YRPI/")
 
  ("/home/das/.emacs.d/" (24660 3336 161037 309000) "early-init.el" "url/" ".offlineimaprc" "../" "org-journal.cache" "init.el" ".org-id-locations" "recentf" "log.txt" "transient/" ".git/" "package-quickstart.el" "org-roam.db" ".gitignore" "./" "auto-save-list/" "elpa/" "bookmarks" "ido.last" "config.el.bak" "README.md" "backups/" "init.el.20201229" "lisp/" "recentf.old" "nov-places")
+
+ ("/home/das/Downloads/" (24659 44427 600773 894000) "Jesse-Grade10.pdf" "Rockefeller Foundation.pdf" "BOB.org" "competition_in_digital_markets.pdf" "CorticelliNeedlework.pdf" "Many_Shades_of_BOB.pdf" "3_18_2021 RAC Agenda.xlsx - 12_3_2020.pdf" "Katz/" "readmeenu-SP_211.pdf" "../" "./")
 
  ("/home/das/data/org/das_fieldstones/" (24653 1493 11534 58000) "morefieldstones2020.org" "fieldstones2015.html" "morefieldstones2011.org" "morefieldstones2009.org" "fieldstones2021_pandoc.html" "morefieldstones2013.org" "README.md" "consultingsmiths-2019-04-13.org" "fieldstones2017.html" "morefieldstones2018.org" "../" ".git/" "lehrer.html" "morefieldstones2012.org" "index.html" "morefieldstones2015.md" "fieldstones2009.html" "morefieldstones2010.md" "fs.html" "morefieldstones2017.org" "morefieldstones2013.md" "morefieldstones2010.org" "morefieldstones2017.md" "media/" "morefieldstones2020.md" "consultingsmiths-2019-04-13.md" "fieldstones2019.html" "./" "morefieldstones2016.org" "fieldstones2020.html" "morefieldstones2021.org" "morefieldstones2019.org" "fieldstones2011.html" "fieldstones2021.html" "morefieldstones2021.md" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2015.org" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "README.md.org" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
 
