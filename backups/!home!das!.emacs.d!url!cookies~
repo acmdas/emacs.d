@@ -2,7 +2,9 @@
 ;; Automatically generated file!!! DO NOT EDIT!!!
 
 (setq url-cookie-storage
- '((".sachachua.com"
+ '((".stevenpressfield.com"
+  [url-cookie "__cfduid" "d4e7da549af74e0984304e89c9f983e191617816323" "Fri, 07-May-21 17:25:23 GMT" "/" ".stevenpressfield.com" nil])
+ (".sachachua.com"
   [url-cookie "__cfduid" "df1de47639a330e2eae6ce7b7c101b7f91617380337" "Sun, 02-May-21 16:18:57 GMT" "/" ".sachachua.com" nil]))
 )
 (setq url-cookie-secure-storage
