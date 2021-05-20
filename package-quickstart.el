@@ -453,7 +453,7 @@ behaviors.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/slime-20210504.2053/slime-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/slime-20210512.1220/slime-autoloads.el"))
 
 
 
@@ -461,7 +461,7 @@ behaviors.
 
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/slime-20210504.2053/slime-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/slime-20210512.1220/slime-autoloads.el") (car load-path))))
 
 (autoload 'slime "slime"
   "Start a Lisp subprocess and connect to its Swank server." t)
@@ -1198,10 +1198,10 @@ Inserted by installing Org or when a release is made." nil nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/ox-hugo-20210330.1758/ox-hugo-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/ox-hugo-20210518.108/ox-hugo-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/ox-hugo-20210330.1758/ox-hugo-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/ox-hugo-20210518.108/ox-hugo-autoloads.el") (car load-path))))
 
 
 
@@ -1289,6 +1289,7 @@ Return output file name.
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ox-blackfriday" '("org-blackfriday-")))
 
 
+ (put 'org-hugo-base-dir 'safe-local-variable 'stringp)
  (put 'org-hugo-section 'safe-local-variable 'stringp)
  (put 'org-hugo-front-matter-format 'safe-local-variable 'stringp)
  (put 'org-hugo-footer 'safe-local-variable 'stringp)
@@ -1879,10 +1880,10 @@ Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210506.1622/modus-themes-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210520.1651/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210506.1622/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210520.1651/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -2165,10 +2166,10 @@ Show the bookmarked entry saved in the `RECORD'.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/auto-compile-20210503.2047/auto-compile-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/auto-compile-20210518.1020/auto-compile-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/auto-compile-20210503.2047/auto-compile-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/auto-compile-20210518.1020/auto-compile-autoloads.el") (car load-path))))
 
 
 
@@ -2302,7 +2303,7 @@ Also see the related `auto-compile-on-save-mode'.
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/i-ching-20210222.1519" "/home/das/.emacs.d/elpa/modus-themes-20210506.1622" "/home/das/.emacs.d/elpa/dash-20210330.1544" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210504.2053" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
+	 '("/home/das/.emacs.d/elpa/i-ching-20210222.1519" "/home/das/.emacs.d/elpa/modus-themes-20210520.1651" "/home/das/.emacs.d/elpa/dash-20210330.1544" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210512.1220" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
 	 Info-directory-list)))
 
 ;; Local Variables:
