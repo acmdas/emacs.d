@@ -1447,10 +1447,10 @@ buffer and returned as a string in Org format." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/org-static-blog-20210329.848/org-static-blog-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/org-static-blog-20210606.1806/org-static-blog-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-static-blog-20210329.848/org-static-blog-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-static-blog-20210606.1806/org-static-blog-autoloads.el") (car load-path))))
 
 
 
@@ -1640,10 +1640,10 @@ Search for TODOs within all future entries." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210330.1544/dash-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210602.1928/dash-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210330.1544/dash-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210602.1928/dash-autoloads.el") (car load-path))))
 
 
 
@@ -1763,10 +1763,10 @@ See also `nov-bookmark-make-record'.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/mu4e-views-20210228.1556/mu4e-views-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/mu4e-views-20210601.1402/mu4e-views-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/mu4e-views-20210228.1556/mu4e-views-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/mu4e-views-20210601.1402/mu4e-views-autoloads.el") (car load-path))))
 
 
 
@@ -1876,14 +1876,14 @@ Toggle automatic viewing of message when moving around in the mu4e-headers view.
 (autoload 'mu4e-views-unload-function "mu4e-views" "\
 Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "mu4e-views" '("mu4e-views-")))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "mu4e-views" '("mu4e-view")))
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210530.818/modus-themes-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210607.917/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210530.818/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210607.917/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -2066,10 +2066,10 @@ Consult the I Ching using a particular METHOD.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/elfeed-20210309.2323/elfeed-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/elfeed-20210606.1130/elfeed-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/elfeed-20210309.2323/elfeed-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/elfeed-20210606.1130/elfeed-autoloads.el") (car load-path))))
 
 
 
@@ -2303,7 +2303,7 @@ Also see the related `auto-compile-on-save-mode'.
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/i-ching-20210222.1519" "/home/das/.emacs.d/elpa/modus-themes-20210530.818" "/home/das/.emacs.d/elpa/dash-20210330.1544" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210512.1220" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
+	 '("/home/das/.emacs.d/elpa/i-ching-20210222.1519" "/home/das/.emacs.d/elpa/modus-themes-20210607.917" "/home/das/.emacs.d/elpa/dash-20210602.1928" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210512.1220" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
 	 Info-directory-list)))
 
 ;; Local Variables:
