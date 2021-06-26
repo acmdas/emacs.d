@@ -453,7 +453,7 @@ behaviors.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/slime-20210512.1220/slime-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/slime-20210614.1523/slime-autoloads.el"))
 
 
 
@@ -461,7 +461,7 @@ behaviors.
 
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/slime-20210512.1220/slime-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/slime-20210614.1523/slime-autoloads.el") (car load-path))))
 
 (autoload 'slime "slime"
   "Start a Lisp subprocess and connect to its Swank server." t)
@@ -1447,10 +1447,10 @@ buffer and returned as a string in Org format." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/org-static-blog-20210606.1806/org-static-blog-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/org-static-blog-20210616.809/org-static-blog-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-static-blog-20210606.1806/org-static-blog-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/org-static-blog-20210616.809/org-static-blog-autoloads.el") (car load-path))))
 
 
 
@@ -1640,10 +1640,10 @@ Search for TODOs within all future entries." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210602.1928/dash-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/dash-20210609.1330/dash-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210602.1928/dash-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/dash-20210609.1330/dash-autoloads.el") (car load-path))))
 
 
 
@@ -1880,10 +1880,10 @@ Uninstalls the advices on mu4e functions created by mu4e-views." t nil)
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210607.917/modus-themes-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/modus-themes-20210623.1637/modus-themes-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210607.917/modus-themes-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/modus-themes-20210623.1637/modus-themes-autoloads.el") (car load-path))))
 
 
 
@@ -1964,10 +1964,10 @@ by virtue of calling either of `modus-themes-load-operandi' and
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/markdown-mode-20210530.1825/markdown-mode-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/markdown-mode-20210616.122/markdown-mode-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/markdown-mode-20210530.1825/markdown-mode-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/markdown-mode-20210616.122/markdown-mode-autoloads.el") (car load-path))))
 
 
 
@@ -2166,10 +2166,10 @@ Show the bookmarked entry saved in the `RECORD'.
 
 
 )
-(let ((load-file-name "/home/das/.emacs.d/elpa/auto-compile-20210518.1020/auto-compile-autoloads.el"))
+(let ((load-file-name "/home/das/.emacs.d/elpa/auto-compile-20210615.1457/auto-compile-autoloads.el"))
 
 (add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory "/home/das/.emacs.d/elpa/auto-compile-20210518.1020/auto-compile-autoloads.el") (car load-path))))
+                         (or (file-name-directory "/home/das/.emacs.d/elpa/auto-compile-20210615.1457/auto-compile-autoloads.el") (car load-path))))
 
 
 
@@ -2303,7 +2303,7 @@ Also see the related `auto-compile-on-save-mode'.
   (info-initialize)
   (setq Info-directory-list
 	(append
-	 '("/home/das/.emacs.d/elpa/i-ching-20210222.1519" "/home/das/.emacs.d/elpa/modus-themes-20210607.917" "/home/das/.emacs.d/elpa/dash-20210602.1928" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210512.1220" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
+	 '("/home/das/.emacs.d/elpa/i-ching-20210222.1519" "/home/das/.emacs.d/elpa/modus-themes-20210623.1637" "/home/das/.emacs.d/elpa/dash-20210609.1330" "/home/das/.emacs.d/elpa/org-20201216" "/home/das/.emacs.d/elpa/slime-20210614.1523" "/home/das/.emacs.d/elpa/use-package-20210207.1926")
 	 Info-directory-list)))
 
 ;; Local Variables:
