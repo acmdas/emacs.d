@@ -9,18 +9,18 @@
  ("/home/das/data/Writing/Writing/acmdas/" . "das_fieldstones/")
  ("/home/das/data/Writing/Writing/" . "acmdas/")
  ("/home/das/data/Writing/" . "Writing/")
- ("/home/das/data/" . "org/")
+ ("/home/das/data/" . "blogs/")
  ("/home/das/Desktop/" . "notes/")
  ("/home/das/" . "Desktop/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/das/data/org/das_fieldstones/"
  "/home/das/Downloads/"
  "/home/das/"
  "/"
  "/home/das/Desktop/notes/"
+ "/home/das/data/org/das_fieldstones/"
  "/home/das/.emacs.d/"
  "/home/das/data/blogs/"
  "/home/das/data/md/das_fieldstones/"
@@ -37,8 +37,6 @@
 
 ;; ----- ido-work-file-list -----
 (
- "morefieldstones2021.org"
- "RAC-0617.txt"
  "xfce-install.txt"
  "hello.lisp"
  "Debian.org"
@@ -47,31 +45,33 @@
  "Ultraconserved_Words.pdf"
  "init.el"
  "20210127_elites.org"
+ "morefieldstones2021.org"
+ "postamble.html"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/das/data/org/das_fieldstones/" (24782 4016 783185 617000) "morefieldstones2020.org" "fieldstones2015.html" "morefieldstones2011.org" "morefieldstones2009.org" "fieldstones2021_pandoc.html" "morefieldstones2013.org" "README.md" "consultingsmiths-2019-04-13.org" "fieldstones2017.html" "morefieldstones2018.org" "../" ".git/" "lehrer.html" "morefieldstones2012.org" "index.html" "morefieldstones2015.md" "fieldstones2009.html" "morefieldstones2010.md" "fs.html" "morefieldstones2017.org" "morefieldstones2013.md" "morefieldstones2010.org" "morefieldstones2017.md" "media/" "morefieldstones2020.md" "consultingsmiths-2019-04-13.md" "fieldstones2019.html" "./" "morefieldstones2016.org" "fieldstones2020.html" "morefieldstones2021.org" "morefieldstones2019.org" "fieldstones2011.html" "fieldstones2021.html" "morefieldstones2021.md" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2015.org" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "README.md.org" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
-
- ("/home/das/data/org/" (24750 49127 690323 838000) "inbox.org" "das_fieldstones/" "org-mode/" "foreign/" "emacs/" "git_commands.txt" "misc/" "inbox.archive.org" "cady/" "journal/" "barfield/" "warstory/" "org-roam/" "blood_pressure.txt" "muse.org" "../" "./")
-
- ("/home/das/data/" (24779 36811 950767 140000) "hobbies/" ".Trash-1000/" "elfeeddb/" "recipes/" "org/" "wiki/" "../" "Calibre Library/" "texts/" "Zotero/" "Writing/" "Church/" "Maildir/" "aa/" "notes/" "texts2/" "./" "images/" "blogs/" "backups/" "Lookup/" "manuals/" "Valerie/" "bills/" "davids/" "Columbia/" "family/" "Www/")
-
- ("/home/das/Downloads/" (24779 18442 692764 856000) "2021 Water Quality Report.pdf" "Jesse-Grade10.pdf" "12799-9466 Greco Garth.pdf" "BOB.org" "fireplace.dxf~" "Forgotten_Prophet_a_short_Review_of_Savi.pdf" "invite.ics" "89-3-763.pdf.gif" "Many_Shades_of_BOB.pdf" "RAC-0617.txt" "Man-at-Arms-excerpt.pdf" ".directory" "20210615-vestry.wma" "89-3-762.pdf.gif" "images/" "Opening Speech For RAC Chair plain text.docx" "readmeenu-SP_211.pdf" "../" "./")
-
- ("/home/das/" (24771 44981 511856 544000) ".emacs.d/" ".gnupg/" ".gphoto/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" "quicklisp/" ".bashrc" ".offlineimaprc" ".presage/" "../" ".config/" ".nbrc" ".xfce4-session.verbose-log.last" ".mozilla/" "quicklisp.lisp" ".gtkrc-2.0" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" ".w3m/" "Dropbox/" ".dropbox/" ".recently-used" ".aspell.en.pws" ".pki/" ".nb/" ".kde/" ".offlineimap/" "backup/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".elfeed/" ".bash_profile" ".bash_history" ".authinfo.bak" ".wget-hsts" ".aspell.en.prepl" "Downloads/" ".Xauthority" "./" ".directory" ".dbus/" ".gtk-bookmarks" ".xmodmap" "hello.lisp" ".sbclrc" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
-
  ("/home/das/data/org/journal/" (24747 47303 648740 244000) "2020-07-07.org" "2020-05-08.org" "2020-08-11.org" "2020-08-16.org" "2020-07-10.org" "2020-04-18.org" "2020-07-18.org" "2020-07-22.org" "20210101" "20210301" "2020-04-09.org" "2020-08-08.org" "2020-02-28.org" "2020-08-21.org" "2020-04-02.org" "20210501" "2020-08-06.org" "2020-02-21.org" "2020-08-09.org" "2020-07-21.org" "2020-03-21.org" "2020-03-06.org" "2020-08-04.org" "2020-02-23.org" "2020-07-26.org" "2020-05-16.org" "2020-07-11.org" "../" "2020-03-15.org" "2020-04-28.org" "2020-08-05.org" "2020-07-06.org" "2020-03-05.org" "20210401" "2020-02-22.org" "2020-08-26.org" "2020-05-15.org" "2020-08-02.org" "2020-08-27.org" "20201101" "2020-03-08.org" "20210201" "2020-07-01.org" "2020-08-31.org" "2020-07-04.org" "2020-05-09.org" "2020-03-31.org" "2020-08-30.org" "2020-08-29.org" "2020-02-24.org" "2020-06-30.org" "2020-03-30.org" "2020-07-20.org" "2020-08-19.org" "2020-07-31.org" "2020-03-07.org" "2020-03-22.org" "2020-06-29.org" "2020-07-29.org" "2020-07-16.org" "2020-07-14.org" "2020-03-12.org" "2020-03-11.org" "2020-07-02.org" "20201001" "2020-03-28.org" "2020-07-03.org" "2020-08.org" "2020-07-05.org" "./" "2020-03-16.org" "2020-02-27.org" "2020-08-01.org" "2020-03-23.org" "2020-08-18.org" "2020-07-09.org" "2020-02-29.org" "2020-08-20.org" "2020-02-25.org" "2020-05-20.org" "2020-04-11.org" "2020-04-05.org" "2020-02-20.org" "2020-06-28.org" "2020-07-27.org" "2020.txt" "2020-08-14.org" "2020-08-12.org" "2020-08-03.org" "2020-08-24.org" "2020-04-26.org" "2020-08-17.org" "2020-08-25.org" "2020-07-24.org" "2020-05-03.org" "2020-03-01.org" "2020-03-09.org" "2020-05-18.org" "2020-05-07.org" "2020-07-19.org" "2020-08-07.org" "2020-08-13.org" "20201201" "2020-04-27.org" "2020-02-26.org" "2020-07-17.org" "2020-03-04.org" "2020-07-15.org" "2020-03-02.org" "2020-08-10.org" "2020-07-08.org" "2020-08-23.org" "2020-07-28.org" "2020-07-12.org" "2020-03-27.org" "2020-04-03.org" "2020-08-15.org" "2020-07-23.org" "2020-08-28.org" "2020-03-20.org" "2020-05-19.org" "2020-07-30.org" "20200901" "2020-07-25.org" "2020-07-13.org")
 
  ("/home/das/bin/" (24718 4922 168337 373000) "warstory" "update2013" "update" "Filmulator_v0.11.0.AppImage" "backup~" "../" "updatebarfield" "money~" "quote" "kindlegen" "update2012" "update2015" "backup_all" "money" "backup" "updateforeign" "appearance" "update2017" "epubcheck/" "update2018" "update2020" "tor-browser_en-US/" "meaning" "ccl64" "racket/" "su" "habit" "./" "update2016" "update2009" "update2019" "literal" "update2010" "Zotero/" "worlds" "backup2" "ssh.davidrsync.net" "update2011")
+
+ ("/home/das/data/org/" (24689 65305 578180 735000) "inbox.org" "das_fieldstones/" "org-mode/" "foreign/" "emacs/" "git_commands.txt" "misc/" "inbox.archive.org" "cady/" "journal/" "barfield/" "warstory/" "org-roam/" "blood_pressure.txt" "../" "./")
 
  ("/home/das/data/blogs/" (24677 55013 856375 535000) "samples/" "daslearns.ca/" "../" "web/" "consultingsmiths.com/" "./" "dasmith.xyz/" "ayftx/" "20210127_elites.org" "google57aaffcb358509af.html" "Gazette/" "YRPI/")
 
  ("/home/das/.emacs.d/" (24748 1431 584153 444000) "early-init.el" "url/" ".offlineimaprc" "../" "org-journal.cache" "init.el" ".org-id-locations" "recentf" "log.txt" "transient/" ".git/" "package-quickstart.el" "org-roam.db" ".gitignore" "./" "auto-save-list/" "elpa/" "bookmarks" "ido.last" "config.el.bak" "README.md" "backups/" "init.el.20201229" "lisp/" "recentf.old" "nov-places")
 
+ ("/home/das/data/org/das_fieldstones/" (24739 8988 4044 43000) "morefieldstones2020.org" "fieldstones2015.html" "morefieldstones2011.org" "morefieldstones2009.org" "fieldstones2021_pandoc.html" "morefieldstones2013.org" "README.md" "consultingsmiths-2019-04-13.org" "fieldstones2017.html" "morefieldstones2018.org" "../" ".git/" "lehrer.html" "morefieldstones2012.org" "index.html" "morefieldstones2015.md" "fieldstones2009.html" "morefieldstones2010.md" "fs.html" "morefieldstones2017.org" "morefieldstones2013.md" "morefieldstones2010.org" "morefieldstones2017.md" "media/" "morefieldstones2020.md" "consultingsmiths-2019-04-13.md" "fieldstones2019.html" "./" "morefieldstones2016.org" "fieldstones2020.html" "morefieldstones2021.org" "morefieldstones2019.org" "fieldstones2011.html" "fieldstones2021.html" "morefieldstones2021.md" "morefieldstones2011.md" "fieldstones2018.html" "fieldstones2010.html" "morefieldstones2019.md" "morefieldstones2015.org" "morefieldstones2012.md" "fieldstones2013.html" "fieldstones2016.html" "morefieldstones2018.md" "README.md.org" "morefieldstones2009.md" "fieldstones2012.html" "morefieldstones2016.md")
+
  ("/home/das/Desktop/notes/" (24716 33293 130037 834000) "mu4e.txt" "../" "SMTPError.txt" "Debian.txt~" "fb.txt" "Zoom.txt" "time.txt" "emacsnotes.org~" "orgnotes.org" "./" "html.cheat" "venmo.txt" "linux/" "emacsnotes.org" "Debian.org" "Tex.txt")
 
+ ("/home/das/Downloads/" (24748 2120 803006 866000) "Forms/" "home/" "Jesse-Grade10.pdf" "PayPal Donations.pdf" "BOB.org" "fireplace.dxf~" "No-Trade-for-Nice-Guys-by-DJ-Butler.pdf" "Many_Shades_of_BOB.pdf" "548288.pdf" "Man-at-Arms-excerpt.pdf" ".directory" "fireplace.dxf" "CSGC 11_20.docx" "Alcoholics Anonymous, ed. 4 - AA.pdf" "VIDEO-2021-04-16-14-21-46.mp4" "images/" "readmeenu-SP_211.pdf" "../" "./")
+
+ ("/home/das/" (24748 2836 61337 394000) ".emacs.d/" ".gnupg/" ".gphoto/" ".xfce4-session.verbose-log" ".ssh/" ".xinitrc~" "quicklisp/" ".bashrc" ".offlineimaprc" ".presage/" "../" ".config/" "home/" ".nbrc" ".xfce4-session.verbose-log.last" ".mozilla/" "quicklisp.lisp" ".gtkrc-2.0" "media/" ".bashrc~" ".cache/" ".local/" ".thunderbird/" ".w3m/" "Dropbox/" ".dropbox/" ".recently-used" ".aspell.en.pws" ".pki/" ".nb/" ".kde/" ".offlineimap/" "backup/" "data/" ".putty/" ".gitconfig" ".dropbox-dist/" ".profile" ".stardict/" ".ICEauthority" ".zotero/" ".elfeed/" ".bash_profile" ".bash_history" ".authinfo.bak" ".wget-hsts" ".aspell.en.prepl" "Downloads/" ".Xauthority" "./" ".directory" ".dbus/" ".gtk-bookmarks" ".xmodmap" "hello.lisp" ".sbclrc" "bin/" ".dmrc" ".xsession-errors" ".bash_logout" ".sdcv_history" "Desktop/" ".xsession-errors.old")
+
  ("/home/das/data/notes/" (24647 41439 214682 896000) "Debian.txt~" "Ubuntu.txt" "emacsnotes.org" "../" "emacsnotes.txt" "mu4e.txt" "venmo.txt" "Debian.txt" "Zoom.txt" "Namecheap/" "./" "fb.txt" "Tex.txt" "html.cheat" "Debian.org" "2015-minos/" "network/" "orgnotes.org" "org.md" "SMTPError.txt" "time.txt")
+
+ ("/home/das/data/" (24587 17216 872301 84000) "hobbies/" ".Trash-1000/" "elfeeddb/" "recipes/" "org/" "../" "Calibre Library/" "texts/" "Zotero/" "Writing/" "Church/" "Maildir/" "aa/" "notes/" "texts2/" "./" "blogs/" "backups/" "Lookup/" "manuals/" "Valerie/" "bills/" "davids/" "Columbia/" "family/" "Www/")
 
  ("/home/das/Desktop/" (24530 20923 598912 271000) "../" "./" "notes/")
 

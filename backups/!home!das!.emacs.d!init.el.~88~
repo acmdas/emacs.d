@@ -148,7 +148,7 @@
 	  ("http://charltonteaching.blogspot.com/feeds/posts/default" charlton)
 	  ("https://judithcurry.com/feed/" climate science)
 	  ("http://www.ncobrief.com/index.php/feed/" ncobrief)
-;;	  ("http://www.thepassivevoice.com/feed/" passivevoice publishing)
+	  ("http://www.thepassivevoice.com/feed/" passivevoice publishing)
 	  ("http://rachelbythebay.com/w/atom.xml" rachelbythebay)
 	  ("http://wmbriggs.com/feed/" briggs statistics aquinas watts)
 	  ("https://wattsupwiththat.com/feed/" climate science)
